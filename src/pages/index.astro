@@ -1,9 +1,39 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "LDR Visa",
+    "url": "https://ldrvisa.org",
+    "description": "Plain-English guides for international couples navigating U.S. immigration — K-1, CR-1, and beyond.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://ldrvisa.org/?s={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LDR Visa",
+    "url": "https://ldrvisa.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ldrvisa.org/favicon.svg"
+    },
+    "sameAs": []
+  }
+]);
 ---
 <Base
   title="LDR Visa — U.S. Visa Guides for International Couples"
   description="Plain-English guides for K-1 fiancé visas, CR-1 spousal visas, affidavit of support, bona fide marriage evidence, and adjustment of status — updated for 2026."
+  schema={schema}
 >
 
   <!-- Hero -->

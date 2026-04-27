@@ -1,9 +1,121 @@
 ---
 import Base from '../layouts/Base.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "K-1 Fiancé Visa: Complete Guide for 2026",
+    "description": "Everything you need to know about the K-1 fiancé visa in 2026 — requirements, processing time, documents, costs, and what happens after you arrive in the U.S.",
+    "url": "https://ldrvisa.org/k1-visa",
+    "dateModified": "2026-04-27",
+    "datePublished": "2026-04-27",
+    "author": {
+      "@type": "Organization",
+      "name": "LDR Visa",
+      "url": "https://ldrvisa.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LDR Visa",
+      "url": "https://ldrvisa.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ldrvisa.org/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ldrvisa.org/k1-visa"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ldrvisa.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "K-1 Fiancé Visa",
+        "item": "https://ldrvisa.org/k1-visa"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does the K-1 visa take in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The petition stage at USCIS currently takes 7–12 months. Add NVC forwarding (~4 weeks) and consular processing (~2 months) and the total to K-1 visa in hand is typically 9–15 months. The full timeline to a green card — including adjustment of status after marriage — is 21–40 months total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I file Form I-129F online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No — as of 2026, Form I-129F must be filed by paper mail to the appropriate USCIS lockbox. USCIS has not yet added I-129F to its online filing system."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if we don't marry within 90 days?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The K-1 visa expires and the foreign fiancé(e) must leave the United States. Staying beyond the 90 days without marrying is an immigration violation and can lead to removal proceedings and future bars to re-entry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are common K-1 visa denial reasons?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common denial reasons include: insufficient evidence of a bona fide relationship, failure to meet the in-person requirement, prior immigration violations, criminal history, or the petitioner not meeting income requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much income is required for a K-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The U.S. petitioner should earn at least 125% of the federal poverty guideline for their household size. For a household of 2 in 2026, that's approximately $31,937/year. A joint sponsor can be used if the petitioner doesn't meet the threshold."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does my fiancé(e) need to attend an interview?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The fiancé(e) must attend an in-person interview at the U.S. embassy or consulate in their home country. The U.S. petitioner does not typically attend the embassy interview."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can my fiancé(e)'s children come on a K-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Unmarried children under 21 of the K-1 beneficiary can accompany or follow to join their parent using a K-2 derivative visa. The K-2 is filed as part of the same I-129F petition."
+        }
+      }
+    ]
+  }
+]);
 ---
 <Base
   title="K-1 Fiancé Visa: Complete Guide for 2026 — LDR Visa"
   description="Everything you need to know about the K-1 fiancé visa in 2026 — requirements, processing time, documents, costs, and what happens after you arrive in the U.S."
+  ogType="article"
+  schema={schema}
 >
 
 <style>

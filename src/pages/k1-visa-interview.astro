@@ -1,0 +1,767 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "K-1 Visa Interview: 70 Questions, Best Answers & Complete Prep Guide (2026)",
+    "description": "Everything you need to ace the K-1 fiancé visa interview — the most common questions with ideal answers, what to bring, red flags to avoid, and a printable checklist.",
+    "url": "https://ldrvisa.org/k1-visa-interview",
+    "dateModified": "2026-04-27",
+    "datePublished": "2026-04-27",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/k1-visa-interview" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org" },
+      { "@type": "ListItem", "position": 2, "name": "K-1 Fiancé Visa", "item": "https://ldrvisa.org/k1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "Interview Prep", "item": "https://ldrvisa.org/k1-visa-interview" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What questions are asked at a K-1 visa interview?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The consular officer will ask questions about how you met, the timeline of your relationship, your fiancé's background, your plans after arriving in the U.S., and your intention to marry within 90 days. Common questions include: How did you meet? When did you get engaged? How many times have you visited each other? What does your fiancé do for work? Where will you live after you arrive?"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the K-1 visa interview take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most K-1 visa interviews last 10–20 minutes. Some are as short as 5 minutes if the officer is satisfied quickly; others can run 30+ minutes if additional questions arise. The wait time at the embassy is usually longer than the interview itself."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the K-1 visa be denied at the interview?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Common denial reasons at the interview include: insufficient proof of a genuine relationship, inability to answer basic questions about each other, prior immigration violations, criminal history, or the petitioner not meeting income requirements. If denied, the officer provides a written explanation of the grounds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the U.S. citizen attend the K-1 interview?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The K-1 interview takes place at the U.S. embassy or consulate in the fiancé(e)'s home country. Only the foreign fiancé(e) attends. The U.S. citizen petitioner is not present — they remain in the United States."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I bring to the K-1 visa interview?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You should bring: valid passport, DS-160 confirmation page, appointment letter, sealed medical exam results, birth certificate with translation, police certificates, divorce decrees (if applicable), evidence of your relationship (photos, messages, call logs), proof of the petitioner's income or I-134, and the visa application fee receipt."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="K-1 Visa Interview: 70 Questions, Best Answers & Prep Guide 2026 — LDR Visa"
+  description="Everything you need to ace the K-1 fiancé visa interview — 70 questions with ideal answers, what to bring, red flags to avoid, and a printable checklist."
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 72px 0 64px;
+  }
+  .page-hero .breadcrumb { font-size: 0.8125rem; color: #60a5fa; margin-bottom: 16px; }
+  .page-hero .breadcrumb a { color: #60a5fa; }
+  .page-hero .breadcrumb span { color: #64748b; margin: 0 6px; }
+  .page-hero h1 { font-size: clamp(1.875rem, 4vw, 3rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px; max-width: 820px; }
+  .page-hero p { font-size: 1.125rem; color: #94a3b8; max-width: 600px; line-height: 1.7; margin-bottom: 28px; }
+  .hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.8125rem; color: #60a5fa; font-weight: 600; }
+
+  .content-layout { display: grid; grid-template-columns: 1fr 280px; gap: 48px; padding: 56px 0 80px; align-items: start; }
+  @media (max-width: 900px) { .content-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+
+  .article h2 { font-size: 1.625rem; font-weight: 800; letter-spacing: -0.02em; margin: 48px 0 16px; padding-top: 48px; border-top: 1px solid var(--color-border); }
+  .article h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  .article h3 { font-size: 1.125rem; font-weight: 700; margin: 28px 0 12px; color: var(--color-accent); }
+  .article p { font-size: 1rem; line-height: 1.75; color: #374151; margin-bottom: 16px; }
+  .article ul, .article ol { margin: 12px 0 20px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .article li { font-size: 1rem; line-height: 1.65; color: #374151; }
+  .article a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+  .article strong { color: var(--color-text); font-weight: 700; }
+
+  /* Key stats */
+  .key-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 14px; margin: 28px 0; }
+  .stat-box { background: var(--color-accent-light); border: 1px solid #bfdbfe; border-radius: 10px; padding: 18px; text-align: center; }
+  .stat-box .num { font-size: 1.75rem; font-weight: 800; color: var(--color-accent); letter-spacing: -0.03em; line-height: 1; margin-bottom: 4px; }
+  .stat-box .label { font-size: 0.8125rem; color: #1e40af; font-weight: 600; line-height: 1.4; }
+
+  /* Checklist */
+  .checklist { margin: 20px 0; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; }
+  .checklist-section { border-bottom: 1px solid var(--color-border); }
+  .checklist-section:last-child { border-bottom: none; }
+  .checklist-head { padding: 12px 18px; background: var(--color-surface); font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); }
+  .checklist-items { padding: 6px 0; }
+  .checklist-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 18px; font-size: 0.9375rem; color: #374151; border-bottom: 1px solid var(--color-border); }
+  .checklist-item:last-child { border-bottom: none; }
+  .check { width: 18px; height: 18px; border: 2px solid var(--color-accent); border-radius: 4px; flex-shrink: 0; margin-top: 2px; }
+
+  /* Q&A sections */
+  .qa-category { margin: 8px 0 24px; }
+  .qa-item { border: 1px solid var(--color-border); border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+  .qa-q { padding: 14px 18px; font-weight: 700; font-size: 0.9375rem; background: var(--color-surface); display: flex; gap: 12px; align-items: flex-start; }
+  .qa-num { color: var(--color-accent); font-weight: 800; font-size: 0.875rem; flex-shrink: 0; min-width: 28px; }
+  .qa-a { padding: 14px 18px 14px 58px; background: #fff; border-top: 1px solid var(--color-border); }
+  .qa-answer-label { font-size: 0.75rem; font-weight: 700; color: #16a34a; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px; }
+  .qa-a p { font-size: 0.9375rem; color: #374151; line-height: 1.65; margin: 0; }
+  .qa-tip { margin-top: 8px; font-size: 0.8375rem; color: #92400e; background: #fff7ed; border-radius: 4px; padding: 8px 10px; line-height: 1.5; }
+  .qa-tip::before { content: "💡 Tip: "; font-weight: 700; }
+
+  /* Red flags */
+  .red-flags { margin: 20px 0; display: flex; flex-direction: column; gap: 12px; }
+  .red-flag { display: flex; gap: 14px; align-items: flex-start; padding: 16px 18px; background: #fef2f2; border: 1px solid #fecaca; border-radius: 8px; }
+  .red-flag-icon { font-size: 1.25rem; flex-shrink: 0; }
+  .red-flag h4 { font-size: 0.9375rem; font-weight: 700; color: #991b1b; margin-bottom: 4px; }
+  .red-flag p { font-size: 0.875rem; color: #7f1d1d; margin: 0; line-height: 1.5; }
+
+  /* Timeline */
+  .interview-timeline { margin: 20px 0; display: flex; flex-direction: column; gap: 0; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; }
+  .tl-item { display: grid; grid-template-columns: 56px 1fr; border-bottom: 1px solid var(--color-border); }
+  .tl-item:last-child { border-bottom: none; }
+  .tl-num { background: var(--color-accent); display: flex; align-items: flex-start; justify-content: center; padding: 18px 0; font-size: 0.875rem; font-weight: 800; color: #fff; }
+  .tl-body { padding: 16px 20px; }
+  .tl-body h4 { font-size: 0.9375rem; font-weight: 700; margin-bottom: 3px; }
+  .tl-body p { font-size: 0.875rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* Info/warning */
+  .info-box { background: var(--color-accent-light); border-left: 4px solid var(--color-accent); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0; }
+  .info-box p { margin: 0; font-size: 0.9375rem; line-height: 1.65; }
+  .warning-box { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0; }
+  .warning-box p { margin: 0; font-size: 0.9375rem; color: #92400e; line-height: 1.65; }
+
+  /* FAQ */
+  .faq { margin: 24px 0; }
+  .faq-item { border: 1px solid var(--color-border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+  .faq-q { padding: 18px 20px; font-weight: 700; font-size: 1rem; background: var(--color-surface); }
+  .faq-a { padding: 16px 20px; font-size: 0.9375rem; color: #374151; line-height: 1.7; border-top: 1px solid var(--color-border); }
+
+  /* Related */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+  .related-card { border: 1px solid var(--color-border); border-radius: 8px; padding: 18px 20px; transition: border-color 0.15s, transform 0.15s; }
+  .related-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+  .related-card .cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); margin-bottom: 6px; }
+  .related-card h4 { font-size: 0.9375rem; font-weight: 700; margin-bottom: 4px; line-height: 1.4; }
+  .related-card p { font-size: 0.8125rem; color: var(--color-muted); margin: 0; }
+
+  /* Sidebar */
+  .sidebar { position: sticky; top: 80px; }
+  .sidebar-card { border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+  .sidebar-card-head { padding: 14px 18px; background: var(--color-text); color: #fff; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+  .sidebar-card-body { padding: 4px 0; }
+  .sidebar-link { display: flex; align-items: center; justify-content: space-between; padding: 11px 18px; font-size: 0.875rem; color: var(--color-text); border-bottom: 1px solid var(--color-border); transition: background 0.12s; }
+  .sidebar-link:last-child { border-bottom: none; }
+  .sidebar-link:hover { background: var(--color-accent-light); color: var(--color-accent); }
+  .sidebar-link span { color: var(--color-muted); font-size: 0.8rem; }
+  .sidebar-cta { background: var(--color-accent); border-radius: 10px; padding: 22px; color: #fff; text-align: center; margin-bottom: 20px; }
+  .sidebar-cta h4 { font-size: 0.9375rem; font-weight: 700; margin-bottom: 8px; }
+  .sidebar-cta p { font-size: 0.85rem; opacity: 0.85; margin-bottom: 14px; line-height: 1.5; }
+  .sidebar-cta a { display: block; background: #fff; color: var(--color-accent); font-weight: 700; font-size: 0.875rem; padding: 9px 14px; border-radius: 6px; }
+</style>
+
+<!-- Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a><span>/</span>
+      <SmartLink href="/k1-visa">K-1 Fiancé Visa</SmartLink><span>/</span>
+      Interview Prep
+    </div>
+    <h1>K-1 Visa Interview: 70 Questions, Best Answers & Complete Prep Guide</h1>
+    <p>What the consular officer will actually ask, how to answer confidently, what to bring, and the red flags that cause denials — updated for 2026.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 20 min read</span>
+      <span class="hero-meta-item">✅ 70 Q&amp;As included</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content-layout">
+    <article class="article">
+
+      <h2>What to Expect at the K-1 Interview</h2>
+      <p>The K-1 visa interview takes place at the U.S. embassy or consulate in the fiancé(e)'s home country. Only the foreign fiancé(e) attends — the U.S. citizen petitioner stays home. The consular officer's job is to verify the petition is legitimate: that you met in person, your relationship is genuine, and you intend to marry within 90 days of entry.</p>
+
+      <div class="key-stats">
+        <div class="stat-box"><div class="num">10–20</div><div class="label">minutes avg. interview length</div></div>
+        <div class="stat-box"><div class="num">90 days</div><div class="label">to marry after entering the U.S.</div></div>
+        <div class="stat-box"><div class="num">~74%</div><div class="label">K-1 approval rate (global avg.)</div></div>
+        <div class="stat-box"><div class="num">1 entry</div><div class="label">K-1 visa allows (single-entry)</div></div>
+      </div>
+
+      <div class="info-box">
+        <p><strong>Key mindset:</strong> The officer isn't trying to trick you. They're verifying that your relationship is real. Honest, specific answers beat rehearsed-sounding ones. If you don't know an answer, say so — inconsistency is more damaging than a gap.</p>
+      </div>
+
+      <h2>What to Bring to the Interview</h2>
+      <div class="checklist">
+        <div class="checklist-section">
+          <div class="checklist-head">Required Documents</div>
+          <div class="checklist-items">
+            <div class="checklist-item"><div class="check"></div>Valid passport (valid 6+ months beyond intended stay)</div>
+            <div class="checklist-item"><div class="check"></div>DS-160 nonimmigrant visa application confirmation page</div>
+            <div class="checklist-item"><div class="check"></div>Interview appointment letter from the embassy</div>
+            <div class="checklist-item"><div class="check"></div>Sealed medical exam results (do not open the envelope)</div>
+            <div class="checklist-item"><div class="check"></div>Birth certificate + certified translation</div>
+            <div class="checklist-item"><div class="check"></div>Police certificate(s) from every country lived in 6+ months since age 16</div>
+            <div class="checklist-item"><div class="check"></div>Divorce decree / death certificate if previously married</div>
+            <div class="checklist-item"><div class="check"></div>Visa application fee receipt (MRV fee, currently $265)</div>
+          </div>
+        </div>
+        <div class="checklist-section">
+          <div class="checklist-head">Relationship Evidence</div>
+          <div class="checklist-items">
+            <div class="checklist-item"><div class="check"></div>Photos together (varied — daily life, travel, with families)</div>
+            <div class="checklist-item"><div class="check"></div>Call logs / chat history screenshots (WhatsApp, FaceTime, etc.)</div>
+            <div class="checklist-item"><div class="check"></div>Travel records showing in-person visits (flight itineraries, hotel stays)</div>
+            <div class="checklist-item"><div class="check"></div>Letters or affidavits from friends and family</div>
+            <div class="checklist-item"><div class="check"></div>Any joint financial evidence (transfers, shared expenses)</div>
+          </div>
+        </div>
+        <div class="checklist-section">
+          <div class="checklist-head">Petitioner's Financial Support</div>
+          <div class="checklist-items">
+            <div class="checklist-item"><div class="check"></div>Form I-134 (Declaration of Financial Support) signed by the U.S. petitioner</div>
+            <div class="checklist-item"><div class="check"></div>Petitioner's most recent federal tax return or transcript</div>
+            <div class="checklist-item"><div class="check"></div>Petitioner's pay stubs or employment letter</div>
+          </div>
+        </div>
+      </div>
+
+      <h2>How the Interview Is Structured</h2>
+      <div class="interview-timeline">
+        <div class="tl-item">
+          <div class="tl-num">1</div>
+          <div class="tl-body"><h4>Arrival &amp; document check</h4><p>Arrive 15–30 min early. Security check, then document submission at a window. Staff review your paperwork before the interview.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-num">2</div>
+          <div class="tl-body"><h4>Biometrics (fingerprints)</h4><p>Many embassies collect biometrics before or during the interview appointment.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-num">3</div>
+          <div class="tl-body"><h4>Wait time</h4><p>Waiting room time varies from 30 minutes to several hours. Bring water and patience. Keep your documents organized and within reach.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-num">4</div>
+          <div class="tl-body"><h4>Interview with consular officer</h4><p>Conducted through a glass window. Officer asks questions about you, your petitioner, and your relationship. Average 10–20 minutes.</p></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-num">5</div>
+          <div class="tl-body"><h4>Decision</h4><p>Approved: passport is kept for visa stamp, returned in a few days. Denied: written refusal notice with grounds. 221(g): administrative processing, pending additional review.</p></div>
+        </div>
+      </div>
+
+      <!-- 70 QUESTIONS -->
+      <h2>70 K-1 Visa Interview Questions &amp; Best Answers</h2>
+      <p>These are the most frequently asked questions, organized by category. Study them together with your fiancé(e) so your answers are consistent — officers sometimes compare answers across both of you.</p>
+
+      <h3>How You Met</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">1.</span> How did you and your fiancé(e) meet?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Be specific: platform, date, circumstances. "We met on [app/website] in [month, year]. I sent the first message because [reason]." Vague answers like "online" with no detail raise suspicion.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">2.</span> When did you first meet in person?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Name the city, approximate date, and who traveled. "I flew to [city] in [month, year] — my first visit. We spent [X days] together." Have your travel records ready to support this.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">3.</span> How many times have you met in person?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Give the exact number and a brief breakdown by year if possible. Officers look for a pattern of effort — regular visits over time show commitment.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">4.</span> How long have you been together?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Count from your first serious conversation or your first date — whichever feels most natural — and be consistent with what your fiancé(e) will say.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">5.</span> How do you communicate day-to-day?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Name specific apps (WhatsApp, FaceTime, Telegram) and frequency. "We call every night around 9 PM my time. During the day we text throughout." Have call logs available.</p></div>
+        </div>
+      </div>
+
+      <h3>The Engagement</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">6.</span> When did you get engaged?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Provide the date and location. Describe how the proposal happened briefly. Both you and your fiancé(e) should know this by heart — it's one of the most cross-checked details.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">7.</span> Where were you when you got engaged?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Be specific: city, country, even the type of place (restaurant, beach, home). If you have photos from the engagement, bring them.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">8.</span> Do you have an engagement ring?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>If yes, wear it to the interview. If there's no ring (cultural or financial reasons), explain simply and honestly.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">9.</span> Have you met each other's families?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Yes answers are stronger. Name family members you've met and how (in person vs. video call). Photos with families are excellent evidence here.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">10.</span> Do your families know about the relationship?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Ideally yes on both sides. If family isn't fully supportive, be honest but frame it carefully. Support letters from relatives are helpful.</p></div>
+        </div>
+      </div>
+
+      <h3>About Your Fiancé(e)</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">11.</span> What does your fiancé(e) do for work?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Know their job title, employer name, and general responsibilities. "He works as a [job] at [company] in [city]."</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">12.</span> Where does your fiancé(e) live?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>City and state. Know whether they rent or own, and who else lives with them.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">13.</span> How old is your fiancé(e)?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Know their exact date of birth, not just the year.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">14.</span> Has your fiancé(e) been married before?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer truthfully. If yes, know the approximate years and how the marriage ended.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">15.</span> Does your fiancé(e) have children?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Know names, ages, and living situation. If children are coming on K-2 visas, they should be part of the same petition.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">16.</span> What is your fiancé(e)'s highest level of education?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Know the degree type, field, and school name.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">17.</span> What does your fiancé(e) look like?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Describe basic physical features — height, hair color, eye color. Officers occasionally ask this to test whether you've actually spent time together.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">18.</span> What are your fiancé(e)'s hobbies or interests?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Name 2–3 specific things. "He loves hiking, is really into cooking Italian food, and watches a lot of soccer." Specific beats generic.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">19.</span> What religion does your fiancé(e) practice (if any)?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer honestly. If this is a sensitive cultural topic, keep the answer factual and brief.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">20.</span> Does your fiancé(e) speak your language?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Be honest about the level. Many international couples communicate in English. If there's a language difference, explain how you manage (translation apps, learning the language, etc.).</p></div>
+        </div>
+      </div>
+
+      <h3>Your Plans in the U.S.</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">21.</span> When do you plan to get married?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Have a specific plan — even an approximate month. "We're planning to marry within the first month after I arrive." Saying "I don't know yet" raises flags about intent.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">22.</span> Where will you live after you arrive in the U.S.?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Name the city and state. Know whether you'll live with your fiancé(e) or elsewhere temporarily.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">23.</span> Do you plan to work in the U.S.?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>You can't work on the K-1 visa itself — but after the wedding, you can apply for an Employment Authorization Document (EAD). Be honest: "After we marry and I apply for adjustment of status, I plan to apply for work authorization."</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">24.</span> What will you do in the U.S. before you marry?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Focus on wedding planning, settling in, and spending time with your fiancé(e). Avoid mentioning work or school, since the K-1 doesn't authorize those activities before marriage and AOS.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">25.</span> Do you have any family or friends in the U.S.?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>List anyone relevant. This isn't a trick — the officer is building a picture of your support network.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">26.</span> What do you know about [city where fiancé lives]?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Know basic facts and ideally something personal — a neighborhood, a restaurant you visited, or a landmark your fiancé mentioned. Shows you've discussed life there.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">27.</span> Will you give up your job/career here to move?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Address this honestly. If your career will change, explain your plan. If you're freelance or remote, mention that you can continue working remotely after authorization.</p></div>
+        </div>
+      </div>
+
+      <h3>Your Background</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">28.</span> Have you ever been to the United States before?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>If yes, explain the purpose and duration. If you overstayed a prior visa, consult an attorney — this is a serious red flag and needs to be addressed carefully.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">29.</span> Have you ever been arrested or convicted of a crime?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer truthfully. Lying is grounds for permanent inadmissibility. Minor offenses with police certificates that show clearance are usually manageable. Major offenses require an attorney.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">30.</span> Have you ever applied for a U.S. visa before?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>If yes, explain the type, when, and outcome. Prior denials must be disclosed — failing to disclose is worse than the denial itself.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">31.</span> Have you ever been married before?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>If yes, provide dates and how it ended. Bring divorce decree or death certificate. Officers will cross-check this with your petition.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">32.</span> Do you have any children?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Disclose all children. Children under 21 who are unmarried may be eligible for K-2 visas. Omitting children is a serious problem.</p></div>
+        </div>
+      </div>
+
+      <h3>Relationship Details</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">33.</span> How did you know this was a serious relationship?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer from the heart with a specific moment or realization. Generic answers ("we just knew") are weaker than a real story.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">34.</span> What do you like most about your fiancé(e)?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Be genuine and specific. "He's incredibly patient and always makes me laugh even when I'm stressed" is stronger than "He's kind and caring."</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">35.</span> What do you argue about?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>This is a test of honesty. Every real couple has disagreements. Saying "we never fight" is a red flag. Give a realistic, minor example — the time zone difference, who visits whom, etc.</p><div class="qa-tip">Officers know that couples who claim zero conflict are often performing, not being genuine.</div></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">36.</span> How do you handle the long-distance aspect?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Describe your communication routine and any coping strategies. This shows the relationship has depth beyond occasional contact.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">37.</span> What language do you communicate in?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Be specific. If both languages are used, explain when and how. Language switching is common in international couples.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">38.</span> Did anyone introduce you, or did you find each other independently?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Either answer is fine. What matters is consistency with your fiancé(e)'s account.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">39.</span> Have you ever broken up or had a serious crisis in the relationship?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>If this happened and it's in your communications, it may come up. Honesty is better — real relationships have ups and downs. Explain what brought you back together.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">40.</span> What are your shared interests or hobbies?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Name 2–3 things you genuinely enjoy together — movies you watched, places you visited, food you cooked together. Specific and shared beats a list of individual hobbies.</p></div>
+        </div>
+      </div>
+
+      <h3>Visits &amp; Travel</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">41.</span> Who paid for the visits?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Be truthful. Sometimes one person pays, sometimes it's split. Neither is wrong. If there's a financial imbalance, that's normal for international couples.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">42.</span> Where did you stay during visits?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Hotel, Airbnb, fiancé's home, or family's home — all are fine. Know the details: location, how long, what you did.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">43.</span> Describe your most recent visit together.</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Give a narrative: where you went, what you did, how long it lasted, how you felt leaving. The more vivid and personal, the more convincing.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">44.</span> Have you traveled together outside your home countries?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>If yes, name the destinations. Third-country travel is strong evidence of a genuine relationship — it requires effort from both sides.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">45.</span> What did you do on your first in-person meeting?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Describe it like a story. Where you met at the airport or hotel, what you did the first day, how it felt to meet in person after communicating online.</p></div>
+        </div>
+      </div>
+
+      <h3>Financial &amp; Practical</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">46.</span> Does your fiancé(e) earn enough to support you?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Know the income threshold for your household size (125% of poverty guidelines — see <SmartLink href="/affidavit-of-support">affidavit of support guide</SmartLink>). Have the I-134 and supporting financial documents ready.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">47.</span> Will you be financially dependent on your fiancé(e)?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Be honest. Initially yes is expected and fine — the I-134 exists precisely for this purpose. If you have your own income plan (remote work, savings), mention it.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">48.</span> Have you or your fiancé(e) ever sent money to each other?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>If yes, be truthful. Financial ties are actually positive evidence of a real relationship. Officers look for patterns of mutual support.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">49.</span> What will happen to your property / apartment here?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Have a plan: subletting, giving it up, or leaving belongings with family. This shows you're genuinely planning to move, not just visit.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">50.</span> Do you have any outstanding loans or debts here?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer honestly. Unresolved debt in the home country can be a sign of ties that might prevent someone from leaving — address it calmly if it comes up.</p></div>
+        </div>
+      </div>
+
+      <h3>Cultural &amp; Lifestyle Questions</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">51.</span> How will cultural differences affect your marriage?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Show that you've discussed this and have a plan. Officers are looking for awareness, not a perfect answer. "We talk about it often and have visited each other's families to understand the differences."</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">52.</span> Will you continue practicing your religion in the U.S.?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Brief, honest answer. Not a trick question — just gathering context about your lifestyle plans.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">53.</span> Do you plan to have children?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer what you and your fiancé(e) have actually discussed. Consistency matters — if this topic came up in prior communications, match that.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">54.</span> How does your family feel about you moving to the U.S.?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Be honest. Supportive families are ideal, but even if there's some hesitation, explain that you've made a considered decision.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">55.</span> Do you speak English?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Your interview is likely conducted in English (or with a translator). Demonstrate your level honestly. If you're still learning, mention that and show willingness to improve.</p></div>
+        </div>
+      </div>
+
+      <h3>Logistical &amp; Process Questions</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">56.</span> Who filed the petition for this visa?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Your fiancé(e)'s name, and that they filed Form I-129F. Know when it was approved approximately.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">57.</span> Do you know what happens after you enter the U.S.?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>"Yes — we must marry within 90 days. After the wedding, I'll apply for adjustment of status to get a green card." Knowing the process shows you understand what you're entering into.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">58.</span> What happens if you don't marry within 90 days?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>"The K-1 visa expires and I'd have to leave the U.S." Correct and concise.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">59.</span> Have you used a lawyer or immigration consultant?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer truthfully. Using an attorney is perfectly fine and not a red flag.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">60.</span> When do you plan to enter the United States?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Have an approximate timeframe. The K-1 visa is valid for 6 months from issuance, allowing a single entry.</p></div>
+        </div>
+      </div>
+
+      <h3>Harder / Probing Questions</h3>
+      <div class="qa-category">
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">61.</span> How much does your fiancé(e) earn per year?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Know the approximate annual salary. Exact figures aren't required, but a ballpark shows you've actually discussed finances.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">62.</span> What is your fiancé(e)'s home address?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Know the street and city at minimum. This is a basic detail that should be second nature.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">63.</span> What did your fiancé(e) give you for your last birthday?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>A specific answer — even a simple one — shows intimacy. "He sent flowers and we had a long video call" is real. Saying "I don't remember" is a yellow flag.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">64.</span> Have you ever met someone from the internet before for romantic purposes?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer honestly. This contextualizes your situation. Officers are looking for a pattern of how the relationship developed, not judging online dating.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">65.</span> Why didn't you just get married abroad and apply for a CR-1?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>A question that tests intent. Good answer: "We wanted to marry in the U.S. so our families there could attend" or "We chose K-1 because we wanted to make sure we were compatible living together first."</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">66.</span> What does your fiancé(e)'s typical day look like?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Describe their routine: wake-up time, commute, work schedule, evening habits. Shows genuine knowledge of their daily life.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">67.</span> Have you ever had any visa problems in any country?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Disclose any prior denials, overstays, or deportations honestly. Concealment is far worse than the underlying issue.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">68.</span> Is this your first serious relationship?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>Answer naturally. This is about understanding your relationship history — not a judgment call either way.</p></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">69.</span> Would you still want to come to the U.S. if you weren't marrying your fiancé(e)?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>The expected answer is no — you're coming specifically to marry. Any suggestion that immigration to the U.S. is the primary motivation, not the marriage, is a red flag.</p><div class="qa-tip">The purpose of the K-1 is marriage, not immigration. Frame your entire motivation around the relationship.</div></div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q"><span class="qa-num">70.</span> Is there anything else you'd like me to know about your relationship?</div>
+          <div class="qa-a"><div class="qa-answer-label">Strong answer</div><p>This is your moment to add any context that strengthens your case. Mention a meaningful shared experience, a challenge you overcame together, or a specific reason you're confident this marriage will work. Keep it brief and genuine.</p></div>
+        </div>
+      </div>
+
+      <h2>Red Flags That Cause Denials</h2>
+      <div class="red-flags">
+        <div class="red-flag">
+          <div class="red-flag-icon">🚩</div>
+          <div>
+            <h4>Inconsistent answers with your fiancé(e)</h4>
+            <p>Officers sometimes compare your answers to what your petitioner stated on the I-129F. Different dates for when you met, different descriptions of the engagement, or different counts of visits are major red flags. Study your timeline together before the interview.</p>
+          </div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">🚩</div>
+          <div>
+            <h4>Vague or rehearsed-sounding answers</h4>
+            <p>Answers that sound scripted — especially about how you met or why you love each other — raise suspicion. Officers are trained to detect coached responses. Genuine hesitation and specific details are more convincing than perfect recall.</p>
+          </div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">🚩</div>
+          <div>
+            <h4>Inability to describe your fiancé(e) in detail</h4>
+            <p>Not knowing basic facts — job, address, family members, habits — suggests you haven't actually spent time together. Know your fiancé(e) the way a person in love would know them.</p>
+          </div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">🚩</div>
+          <div>
+            <h4>Prior immigration violations</h4>
+            <p>Overstays, deportations, or prior visa denials that weren't disclosed are grounds for denial or permanent inadmissibility. Always disclose and address proactively.</p>
+          </div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">🚩</div>
+          <div>
+            <h4>Large age gap without clear relationship narrative</h4>
+            <p>Age gaps alone aren't disqualifying, but officers may probe more. A strong, detailed relationship story and evidence of genuine connection address this naturally.</p>
+          </div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">🚩</div>
+          <div>
+            <h4>Immigration as the stated primary motivation</h4>
+            <p>Any suggestion that moving to the U.S. — rather than marrying your specific fiancé(e) — is the goal will result in denial. Every answer should frame the marriage as the reason, not immigration.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+        <div class="faq-item">
+          <div class="faq-q">What questions are asked at a K-1 visa interview?</div>
+          <div class="faq-a">Questions focus on how you met, your relationship timeline, your fiancé(e)'s background, your plans in the U.S., and your intent to marry within 90 days. The 70 questions above cover virtually every category that comes up.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">How long does the K-1 visa interview take?</div>
+          <div class="faq-a">Most interviews last 10–20 minutes. The wait time at the embassy is usually longer. Bring everything organized in a folder so you can produce documents quickly when asked.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Can the K-1 visa be denied at the interview?</div>
+          <div class="faq-a">Yes. Common denial reasons include insufficient relationship evidence, inconsistent answers, prior immigration violations, or the petitioner not meeting income requirements. A denial at the interview comes with a written explanation of the specific grounds.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">Does the U.S. citizen attend the K-1 interview?</div>
+          <div class="faq-a">No. The interview is at the U.S. embassy or consulate in the foreign fiancé(e)'s country. Only the foreign fiancé(e) attends. The U.S. citizen petitioner remains in the United States.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q">What happens after a successful K-1 interview?</div>
+          <div class="faq-a">Your passport is kept at the embassy for visa stamping and returned within a few business days. The K-1 visa is then valid for 6 months and allows a single entry. After entering the U.S. and marrying within 90 days, you file for adjustment of status.</div>
+        </div>
+      </div>
+
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <SmartLink href="/k1-visa" class="related-card">
+          <div class="cat">K-1 Visa</div>
+          <h4>K-1 Fiancé Visa Complete Guide</h4>
+          <p>Full process, requirements, and costs.</p>
+        </SmartLink>
+        <SmartLink href="/bona-fide-marriage" class="related-card">
+          <div class="cat">Evidence</div>
+          <h4>Bona Fide Marriage Evidence</h4>
+          <p>What to bring and how to organize your proof.</p>
+        </SmartLink>
+        <SmartLink href="/affidavit-of-support" class="related-card">
+          <div class="cat">Finances</div>
+          <h4>Affidavit of Support (I-864)</h4>
+          <p>Income requirements for the K-1 interview.</p>
+        </SmartLink>
+        <SmartLink href="/k1-visa-processing-time" class="related-card">
+          <div class="cat">Timeline</div>
+          <h4>K-1 Processing Time 2026</h4>
+          <p>How long until your interview is scheduled.</p>
+        </SmartLink>
+        <SmartLink href="/adjustment-of-status" class="related-card">
+          <div class="cat">After Marriage</div>
+          <h4>Adjustment of Status After K-1</h4>
+          <p>The green card process after your wedding.</p>
+        </SmartLink>
+        <SmartLink href="/k1-vs-cr1" class="related-card">
+          <div class="cat">Compare</div>
+          <h4>K-1 vs CR-1</h4>
+          <p>Which visa path is right for your situation.</p>
+        </SmartLink>
+      </div>
+
+    </article>
+
+    <aside class="sidebar">
+      <div class="sidebar-cta">
+        <h4>Study with your partner</h4>
+        <p>Go through these 70 questions together. Your answers must be consistent — the officer may compare them to the I-129F.</p>
+        <SmartLink href="/k1-visa">Back to K-1 guide →</SmartLink>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-head">On This Page</div>
+        <div class="sidebar-card-body">
+          <a href="#" class="sidebar-link">What to expect <span>↓</span></a>
+          <a href="#" class="sidebar-link">What to bring <span>↓</span></a>
+          <a href="#" class="sidebar-link">Interview structure <span>↓</span></a>
+          <a href="#" class="sidebar-link">70 Q&amp;As <span>↓</span></a>
+          <a href="#" class="sidebar-link">Red flags <span>↓</span></a>
+          <a href="#" class="sidebar-link">FAQ <span>↓</span></a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-head">Question Categories</div>
+        <div class="sidebar-card-body">
+          <a href="#" class="sidebar-link">How you met (1–5) <span>↓</span></a>
+          <a href="#" class="sidebar-link">The engagement (6–10) <span>↓</span></a>
+          <a href="#" class="sidebar-link">About your fiancé (11–20) <span>↓</span></a>
+          <a href="#" class="sidebar-link">Plans in the U.S. (21–27) <span>↓</span></a>
+          <a href="#" class="sidebar-link">Your background (28–32) <span>↓</span></a>
+          <a href="#" class="sidebar-link">Relationship details (33–40) <span>↓</span></a>
+          <a href="#" class="sidebar-link">Visits &amp; travel (41–45) <span>↓</span></a>
+          <a href="#" class="sidebar-link">Financial (46–50) <span>↓</span></a>
+          <a href="#" class="sidebar-link">Cultural (51–55) <span>↓</span></a>
+          <a href="#" class="sidebar-link">Process (56–60) <span>↓</span></a>
+          <a href="#" class="sidebar-link">Harder questions (61–70) <span>↓</span></a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-head">Key Pages</div>
+        <div class="sidebar-card-body">
+          <SmartLink href="/k1-visa" class="sidebar-link">K-1 Complete Guide <span>→</span></SmartLink>
+          <SmartLink href="/bona-fide-marriage" class="sidebar-link">Bona Fide Evidence <span>→</span></SmartLink>
+          <SmartLink href="/affidavit-of-support" class="sidebar-link">Affidavit of Support <span>→</span></SmartLink>
+          <SmartLink href="/adjustment-of-status" class="sidebar-link">Adjustment of Status <span>→</span></SmartLink>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+</Base>

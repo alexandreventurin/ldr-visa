@@ -1,0 +1,718 @@
+---
+import Base from '../layouts/Base.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Affidavit of Support (I-864): Income Requirements & Complete Guide for 2026",
+    "description": "Everything about Form I-864 — 2026 income requirements, poverty guidelines, joint sponsors, common mistakes, and a step-by-step filing guide.",
+    "url": "https://ldrvisa.org/affidavit-of-support",
+    "dateModified": "2026-04-27",
+    "datePublished": "2026-04-27",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LDR Visa",
+      "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/affidavit-of-support" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org" },
+      { "@type": "ListItem", "position": 2, "name": "Affidavit of Support", "item": "https://ldrvisa.org/affidavit-of-support" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much income is required for the Affidavit of Support in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "In 2026, the sponsor must earn at least 125% of the federal poverty guideline for their household size. For a household of 2 (sponsor + immigrant), that is $31,937/year. For a household of 3, it is $40,188/year. For a household of 4, it is $48,438/year."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I don't meet the income requirement?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can use a joint sponsor — a second person who also signs an I-864 and meets the income requirement independently. The joint sponsor takes on equal legal responsibility. You can also combine income with a household member by filing Form I-864A."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the Affidavit of Support legally binding?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. By signing Form I-864, the sponsor makes a legally enforceable contract with the U.S. government to support the immigrant at 125% of the poverty level. This obligation lasts until the immigrant becomes a U.S. citizen, has 40 qualifying work quarters, leaves the U.S. permanently, or dies."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use assets instead of income for the Affidavit of Support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If your income falls short, you can supplement with assets worth at least 5 times the income shortfall (3 times for a U.S. citizen sponsoring a spouse or child). Assets include savings accounts, stocks, bonds, and real estate equity (minus mortgage)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between I-864 and I-134?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Form I-864 is the legally binding Affidavit of Support used for immigrant visas (CR-1, IR-1) and adjustment of status. Form I-134 is a declaration of financial support used for some nonimmigrant visa purposes, including at the K-1 embassy interview. I-134 is not legally binding in the same way as I-864."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the Affidavit of Support obligation last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The I-864 obligation ends when the immigrant: becomes a U.S. citizen, accumulates 40 qualifying quarters of work (about 10 years), permanently departs the U.S., or dies. Divorce does NOT end the obligation."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="Affidavit of Support (I-864): Income Requirements & Complete Guide 2026 — LDR Visa"
+  description="Everything about Form I-864 — 2026 income requirements, poverty guidelines, joint sponsors, common mistakes, and a step-by-step filing guide."
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    padding: 72px 0 64px;
+  }
+  .page-hero .breadcrumb { font-size: 0.8125rem; color: #60a5fa; margin-bottom: 16px; }
+  .page-hero .breadcrumb a { color: #60a5fa; }
+  .page-hero .breadcrumb span { color: #64748b; margin: 0 6px; }
+  .page-hero h1 {
+    font-size: clamp(1.875rem, 4vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    max-width: 820px;
+  }
+  .page-hero p { font-size: 1.125rem; color: #94a3b8; max-width: 600px; line-height: 1.7; margin-bottom: 28px; }
+  .hero-meta { display: flex; gap: 24px; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.8125rem; color: #60a5fa; font-weight: 600; }
+
+  /* Layout */
+  .content-layout {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: 48px;
+    padding: 56px 0 80px;
+    align-items: start;
+  }
+  @media (max-width: 900px) { .content-layout { grid-template-columns: 1fr; } .sidebar { display: none; } }
+
+  /* Article */
+  .article h2 { font-size: 1.625rem; font-weight: 800; letter-spacing: -0.02em; margin: 48px 0 16px; padding-top: 48px; border-top: 1px solid var(--color-border); }
+  .article h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  .article h3 { font-size: 1.125rem; font-weight: 700; margin: 28px 0 10px; }
+  .article p { font-size: 1rem; line-height: 1.75; color: #374151; margin-bottom: 16px; }
+  .article ul, .article ol { margin: 12px 0 20px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .article li { font-size: 1rem; line-height: 1.65; color: #374151; }
+  .article a { color: var(--color-accent); text-decoration: underline; text-underline-offset: 3px; }
+  .article strong { color: var(--color-text); font-weight: 700; }
+
+  /* Key number callout */
+  .key-numbers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 28px 0;
+  }
+  .key-number {
+    background: var(--color-accent-light);
+    border: 1px solid #bfdbfe;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  .key-number .num { font-size: 1.75rem; font-weight: 800; color: var(--color-accent); letter-spacing: -0.03em; line-height: 1; margin-bottom: 6px; }
+  .key-number .label { font-size: 0.8125rem; color: #1e40af; font-weight: 600; line-height: 1.4; }
+
+  /* Income table */
+  .income-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9375rem;
+  }
+  .income-table thead th {
+    padding: 13px 16px;
+    background: var(--color-text);
+    color: #fff;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    text-align: left;
+    border-bottom: 2px solid var(--color-border);
+  }
+  .income-table td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--color-border);
+    line-height: 1.5;
+  }
+  .income-table tr:last-child td { border-bottom: none; }
+  .income-table tbody tr:hover td { background: #f8fafc; }
+  .income-table td:first-child { font-weight: 600; }
+  .income-table .highlight td { background: var(--color-accent-light); font-weight: 700; }
+  .income-table .highlight td:first-child { color: var(--color-accent); }
+  .threshold { font-weight: 700; color: var(--color-accent); }
+  .tag-note { font-size: 0.75rem; color: var(--color-muted); font-weight: 400; display: block; margin-top: 2px; }
+
+  /* Calculator widget */
+  .calc-widget {
+    background: var(--color-surface);
+    border: 2px solid var(--color-accent);
+    border-radius: 12px;
+    padding: 28px;
+    margin: 28px 0;
+  }
+  .calc-widget h3 { font-size: 1.125rem; font-weight: 800; color: var(--color-accent); margin-bottom: 6px; margin-top: 0; }
+  .calc-widget p { font-size: 0.9rem; color: var(--color-muted); margin-bottom: 20px; }
+  .calc-row { display: flex; gap: 12px; align-items: flex-end; flex-wrap: wrap; margin-bottom: 16px; }
+  .calc-field { display: flex; flex-direction: column; gap: 6px; flex: 1; min-width: 160px; }
+  .calc-field label { font-size: 0.8125rem; font-weight: 700; color: var(--color-text); }
+  .calc-field select, .calc-field input {
+    padding: 10px 12px;
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    background: #fff;
+    color: var(--color-text);
+    font-family: inherit;
+  }
+  .calc-field select:focus, .calc-field input:focus { outline: 2px solid var(--color-accent); border-color: transparent; }
+  .calc-result {
+    display: none;
+    margin-top: 16px;
+    padding: 18px 20px;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+  }
+  .calc-result.pass { background: #dcfce7; border-left: 4px solid #16a34a; color: #14532d; display: block; }
+  .calc-result.fail { background: #fef2f2; border-left: 4px solid #dc2626; color: #7f1d1d; display: block; }
+  .calc-result strong { font-weight: 700; }
+  .calc-btn {
+    padding: 11px 24px;
+    background: var(--color-accent);
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s;
+    align-self: flex-end;
+  }
+  .calc-btn:hover { background: var(--color-accent-hover); }
+
+  /* Steps */
+  .steps { margin: 24px 0; display: flex; flex-direction: column; gap: 0; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; }
+  .step-item { display: grid; grid-template-columns: 56px 1fr; border-bottom: 1px solid var(--color-border); }
+  .step-item:last-child { border-bottom: none; }
+  .step-num-col { background: var(--color-accent); display: flex; align-items: flex-start; justify-content: center; padding: 20px 0; font-size: 1rem; font-weight: 800; color: #fff; }
+  .step-body { padding: 18px 22px; }
+  .step-body h4 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+  .step-body p { font-size: 0.9rem; color: var(--color-muted); margin: 0; line-height: 1.55; }
+
+  /* Mistakes */
+  .mistakes { margin: 24px 0; display: flex; flex-direction: column; gap: 14px; }
+  .mistake-item {
+    border: 1px solid #fecaca;
+    border-left: 4px solid #dc2626;
+    border-radius: 0 8px 8px 0;
+    padding: 18px 20px;
+    background: #fef2f2;
+  }
+  .mistake-item h4 { font-size: 1rem; font-weight: 700; color: #991b1b; margin-bottom: 6px; }
+  .mistake-item p { font-size: 0.9rem; color: #7f1d1d; margin: 0; line-height: 1.55; }
+  .mistake-item .fix { margin-top: 8px; font-size: 0.875rem; color: #15803d; font-weight: 600; }
+  .mistake-item .fix::before { content: "✓ Fix: "; }
+
+  /* Documents grid */
+  .docs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 14px; margin: 20px 0; }
+  .doc-item { border: 1px solid var(--color-border); border-radius: 8px; padding: 16px 18px; background: var(--color-surface); }
+  .doc-item h4 { font-size: 0.9375rem; font-weight: 700; margin-bottom: 6px; }
+  .doc-item p { font-size: 0.8375rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* Info / warning */
+  .info-box { background: var(--color-accent-light); border-left: 4px solid var(--color-accent); border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0; }
+  .info-box p { margin: 0; font-size: 0.9375rem; line-height: 1.65; }
+  .warning-box { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 0 8px 8px 0; padding: 20px 24px; margin: 24px 0; }
+  .warning-box p { margin: 0; font-size: 0.9375rem; color: #92400e; line-height: 1.65; }
+
+  /* FAQ */
+  .faq { margin: 24px 0; }
+  .faq-item { border: 1px solid var(--color-border); border-radius: 8px; margin-bottom: 12px; overflow: hidden; }
+  .faq-q { padding: 18px 20px; font-weight: 700; font-size: 1rem; background: var(--color-surface); }
+  .faq-a { padding: 16px 20px; font-size: 0.9375rem; color: #374151; line-height: 1.7; border-top: 1px solid var(--color-border); }
+  .faq-a a { color: var(--color-accent); text-decoration: underline; }
+
+  /* Related */
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin-top: 24px; }
+  .related-card { border: 1px solid var(--color-border); border-radius: 8px; padding: 18px 20px; transition: border-color 0.15s, transform 0.15s; }
+  .related-card:hover { border-color: var(--color-accent); transform: translateY(-2px); }
+  .related-card .cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); margin-bottom: 6px; }
+  .related-card h4 { font-size: 0.9375rem; font-weight: 700; margin-bottom: 4px; line-height: 1.4; }
+  .related-card p { font-size: 0.8125rem; color: var(--color-muted); margin: 0; }
+
+  /* Sidebar */
+  .sidebar { position: sticky; top: 80px; }
+  .sidebar-card { border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; margin-bottom: 20px; }
+  .sidebar-card-head { padding: 14px 18px; background: var(--color-text); color: #fff; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+  .sidebar-card-body { padding: 4px 0; }
+  .sidebar-link { display: flex; align-items: center; justify-content: space-between; padding: 11px 18px; font-size: 0.875rem; color: var(--color-text); border-bottom: 1px solid var(--color-border); transition: background 0.12s; }
+  .sidebar-link:last-child { border-bottom: none; }
+  .sidebar-link:hover { background: var(--color-accent-light); color: var(--color-accent); }
+  .sidebar-link span { color: var(--color-muted); font-size: 0.8rem; }
+  .sidebar-income {
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .sidebar-income-head { padding: 14px 18px; background: var(--color-accent); color: #fff; font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+  .sidebar-income-row { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; border-bottom: 1px solid var(--color-border); font-size: 0.875rem; }
+  .sidebar-income-row:last-child { border-bottom: none; }
+  .sidebar-income-row .hh { color: var(--color-muted); }
+  .sidebar-income-row .amt { font-weight: 700; color: var(--color-accent); }
+</style>
+
+<!-- Hero -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a>
+      <span>/</span>
+      Affidavit of Support
+    </div>
+    <h1>Affidavit of Support (I-864): Income Requirements & Complete Guide for 2026</h1>
+    <p>How much you need to earn, how to calculate your household size, what to do if you fall short, and the most common filing mistakes — all in one place.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 12 min read</span>
+      <span class="hero-meta-item">✅ 2026 Poverty Guidelines</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="content-layout">
+
+    <article class="article">
+
+      <h2>What Is the Affidavit of Support?</h2>
+      <p>Form I-864 — the Affidavit of Support — is a legally binding contract between the U.S. sponsor and the federal government. By signing it, the petitioner promises to financially support the immigrating person and keep them from becoming a "public charge" (relying on government assistance).</p>
+      <p>It is required for almost all family-based immigrant visas, including the <a href="/cr1-visa">CR-1/IR-1 spousal visa</a> and the adjustment of status after a <a href="/k1-visa">K-1 fiancé visa</a>.</p>
+
+      <div class="info-box">
+        <p><strong>K-1 note:</strong> At the K-1 embassy interview, consulates typically ask for Form I-134 (a non-binding declaration of support), not I-864. The legally binding I-864 is filed later, during adjustment of status inside the U.S. after the wedding.</p>
+      </div>
+
+      <div class="key-numbers">
+        <div class="key-number">
+          <div class="num">125%</div>
+          <div class="label">of federal poverty guideline required</div>
+        </div>
+        <div class="key-number">
+          <div class="num">$31,937</div>
+          <div class="label">minimum for household of 2 (2026)</div>
+        </div>
+        <div class="key-number">
+          <div class="num">10 yrs</div>
+          <div class="label">approx. obligation until 40 work quarters</div>
+        </div>
+      </div>
+
+      <h2>2026 Income Requirements</h2>
+      <p>The sponsor must earn at least <strong>125% of the federal poverty guideline</strong> for their household size. The household size includes the sponsor, all dependents, anyone counted on past tax returns, and the immigrant(s) being sponsored.</p>
+      <p>Active duty military sponsors only need to meet <strong>100%</strong> of the guideline.</p>
+
+      <table class="income-table">
+        <thead>
+          <tr>
+            <th>Household Size</th>
+            <th>100% Poverty Line</th>
+            <th>125% (Required)</th>
+            <th>Military (100%)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>2 people</td>
+            <td>$25,550</td>
+            <td class="threshold">$31,937</td>
+            <td>$25,550</td>
+          </tr>
+          <tr class="highlight">
+            <td>3 people <span class="tag-note">most common</span></td>
+            <td>$32,150</td>
+            <td class="threshold">$40,188</td>
+            <td>$32,150</td>
+          </tr>
+          <tr>
+            <td>4 people</td>
+            <td>$38,750</td>
+            <td class="threshold">$48,438</td>
+            <td>$38,750</td>
+          </tr>
+          <tr>
+            <td>5 people</td>
+            <td>$45,350</td>
+            <td class="threshold">$56,688</td>
+            <td>$45,350</td>
+          </tr>
+          <tr>
+            <td>6 people</td>
+            <td>$51,950</td>
+            <td class="threshold">$64,938</td>
+            <td>$51,950</td>
+          </tr>
+          <tr>
+            <td>7 people</td>
+            <td>$58,550</td>
+            <td class="threshold">$73,188</td>
+            <td>$58,550</td>
+          </tr>
+          <tr>
+            <td>8 people</td>
+            <td>$65,150</td>
+            <td class="threshold">$81,438</td>
+            <td>$65,150</td>
+          </tr>
+          <tr>
+            <td>Each additional person</td>
+            <td>+ $6,600</td>
+            <td class="threshold">+ $8,250</td>
+            <td>+ $6,600</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>These figures are based on the 2026 HHS Poverty Guidelines for the 48 contiguous states and D.C. Alaska and Hawaii have higher thresholds.</p>
+
+      <h2>Income Calculator</h2>
+      <p>Use this tool to check if you meet the requirement and see your exact threshold.</p>
+
+      <div class="calc-widget">
+        <h3>Do I meet the income requirement?</h3>
+        <p>Enter your household size and annual income to see if you qualify.</p>
+        <div class="calc-row">
+          <div class="calc-field">
+            <label for="hhSize">Household size</label>
+            <select id="hhSize">
+              <option value="2">2 (sponsor + 1 immigrant)</option>
+              <option value="3" selected>3 people</option>
+              <option value="4">4 people</option>
+              <option value="5">5 people</option>
+              <option value="6">6 people</option>
+              <option value="7">7 people</option>
+              <option value="8">8 people</option>
+            </select>
+          </div>
+          <div class="calc-field">
+            <label for="annualIncome">Annual income (USD)</label>
+            <input type="number" id="annualIncome" placeholder="e.g. 45000" min="0" />
+          </div>
+          <button class="calc-btn" onclick="calcAOS()">Check →</button>
+        </div>
+        <div id="calcResult" class="calc-result"></div>
+      </div>
+
+      <script is:inline>
+        const thresholds = { 2: 31937, 3: 40188, 4: 48438, 5: 56688, 6: 64938, 7: 73188, 8: 81438 };
+        function calcAOS() {
+          const hh = parseInt(document.getElementById('hhSize').value);
+          const income = parseFloat(document.getElementById('annualIncome').value);
+          const result = document.getElementById('calcResult');
+          if (!income || income <= 0) { result.className = 'calc-result fail'; result.innerHTML = '<strong>Please enter your annual income.</strong>'; return; }
+          const required = thresholds[hh] || (81438 + (hh - 8) * 8250);
+          const fmt = (n) => '$' + n.toLocaleString('en-US');
+          if (income >= required) {
+            const surplus = income - required;
+            result.className = 'calc-result pass';
+            result.innerHTML = '<strong>✓ You qualify.</strong> Your income of ' + fmt(income) + ' meets the ' + fmt(required) + ' threshold for a household of ' + hh + '. You have a surplus of ' + fmt(Math.round(surplus)) + '.';
+          } else {
+            const shortfall = required - income;
+            result.className = 'calc-result fail';
+            result.innerHTML = '<strong>✗ You\'re $' + Math.round(shortfall).toLocaleString('en-US') + ' short.</strong> The requirement for a household of ' + hh + ' is ' + fmt(required) + '. Consider a joint sponsor or supplementing with assets (5× the shortfall = ' + fmt(Math.round(shortfall * 5)) + ').';
+          }
+        }
+      </script>
+
+      <h2>How to Calculate Your Household Size</h2>
+      <p>Your household size for I-864 purposes is <strong>not</strong> just who lives in your home. It includes everyone the sponsor is legally responsible for:</p>
+      <ol>
+        <li>The sponsor themselves</li>
+        <li>The sponsor's spouse (if married and not the immigrant being sponsored)</li>
+        <li>All children of the sponsor under 21 who are unmarried, regardless of where they live</li>
+        <li>Any other person the sponsor claimed as a dependent on their most recent federal tax return</li>
+        <li>Any immigrants the sponsor has previously sponsored on an I-864 who are still subject to that sponsorship</li>
+        <li>The intending immigrant(s) being sponsored in the current petition</li>
+      </ol>
+
+      <div class="warning-box">
+        <p><strong>Common mistake:</strong> Sponsors forget to count prior immigrants they sponsored on I-864s. If you sponsored someone before and they haven't yet become a citizen or completed 40 work quarters, they still count toward your household size.</p>
+      </div>
+
+      <h2>What If You Don't Meet the Income Requirement?</h2>
+      <p>You have three options if your income falls below the 125% threshold:</p>
+
+      <h3>Option 1: Use a Joint Sponsor</h3>
+      <p>A joint sponsor is a separate U.S. citizen or LPR who files their own I-864 and independently meets the income requirement for their own household size. The joint sponsor takes on <strong>equal legal responsibility</strong> for supporting the immigrant. They don't need to be related to you or to the immigrant.</p>
+
+      <h3>Option 2: Count Household Member Income (I-864A)</h3>
+      <p>If someone who lives with you (or the immigrant) earns income and is willing to be jointly liable, they can complete Form I-864A (Contract Between Sponsor and Household Member). Their income is then added to yours. This only works for people in the same household.</p>
+
+      <h3>Option 3: Supplement with Assets</h3>
+      <p>If your income is short, you can use assets — savings, stocks, bonds, or real estate equity — to make up the difference. The asset value must be worth at least <strong>5 times the income shortfall</strong> (3 times if you're a U.S. citizen sponsoring a spouse or child).</p>
+
+      <p>Example: If you're $5,000 short, you need at least $25,000 in qualifying assets.</p>
+
+      <h2>Documents to Attach to Form I-864</h2>
+      <div class="docs-grid">
+        <div class="doc-item">
+          <h4>Federal Tax Returns</h4>
+          <p>Most recent 1–3 years of federal tax returns (Form 1040) or IRS tax transcripts. USCIS prefers transcripts over photocopies.</p>
+        </div>
+        <div class="doc-item">
+          <h4>W-2s and 1099s</h4>
+          <p>All W-2s and 1099s from the most recent tax year to support the income reported on your return.</p>
+        </div>
+        <div class="doc-item">
+          <h4>Recent Pay Stubs</h4>
+          <p>The 3–6 most recent pay stubs showing current employment and salary. Especially important if current income differs from last year's return.</p>
+        </div>
+        <div class="doc-item">
+          <h4>Employment Letter</h4>
+          <p>Letter from employer on company letterhead confirming your position, start date, and annual salary.</p>
+        </div>
+        <div class="doc-item">
+          <h4>Proof of Assets (if needed)</h4>
+          <p>Bank statements, brokerage statements, property deed + appraisal with mortgage statement to show net equity.</p>
+        </div>
+        <div class="doc-item">
+          <h4>Proof of Relationship</h4>
+          <p>A copy of the petitioner's U.S. citizenship document (passport, naturalization certificate, or birth certificate) and proof of relationship to the immigrant.</p>
+        </div>
+      </div>
+
+      <h2>Step-by-Step: How to Complete I-864</h2>
+      <div class="steps">
+        <div class="step-item">
+          <div class="step-num-col">1</div>
+          <div class="step-body">
+            <h4>Download the current version of I-864</h4>
+            <p>Always use the version directly from uscis.gov — outdated versions are rejected. As of 2026, the current edition date is shown in the bottom-left corner of the form.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num-col">2</div>
+          <div class="step-body">
+            <h4>Calculate your household size (Part 3)</h4>
+            <p>Count everyone as listed above. An incorrect household size is one of the most common rejection reasons — it changes the income threshold.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num-col">3</div>
+          <div class="step-body">
+            <h4>Fill in your income (Part 6)</h4>
+            <p>Report your current annual income. If it's different from last year's tax return, attach a letter of explanation plus recent pay stubs.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num-col">4</div>
+          <div class="step-body">
+            <h4>Attach supporting documents</h4>
+            <p>Federal tax transcripts (or returns + W-2s), recent pay stubs, employment letter, and any asset documentation. Check the instructions for the full list.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num-col">5</div>
+          <div class="step-body">
+            <h4>Sign in blue or black ink — in front of a notary if required</h4>
+            <p>For adjustment of status (I-485), USCIS accepts the I-864 signed under penalty of perjury without notarization. For consular processing, some embassies require notarization — check your specific consulate's requirements.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num-col">6</div>
+          <div class="step-body">
+            <h4>Submit with the correct application</h4>
+            <p>For adjustment of status: include with Form I-485 package. For CR-1/IR-1 consular processing: submit through the NVC document portal or bring to the embassy interview, per consulate instructions.</p>
+          </div>
+        </div>
+      </div>
+
+      <h2>Common I-864 Mistakes to Avoid</h2>
+      <div class="mistakes">
+        <div class="mistake-item">
+          <h4>Wrong household size</h4>
+          <p>Forgetting to count prior sponsored immigrants, unmarried children under 21 who don't live with you, or the immigrant themselves in the count.</p>
+          <div class="fix">Recount step by step using the 6-category list above before filling in Part 3.</div>
+        </div>
+        <div class="mistake-item">
+          <h4>Submitting an outdated form version</h4>
+          <p>USCIS rejects I-864s filed on outdated form versions, even by a few months. This causes significant delays.</p>
+          <div class="fix">Always download a fresh copy from uscis.gov on the day you file.</div>
+        </div>
+        <div class="mistake-item">
+          <h4>Income doesn't match tax returns</h4>
+          <p>Reporting current income that's significantly higher than last year's return without explanation raises red flags. USCIS compares the two.</p>
+          <div class="fix">Include a brief explanation letter plus recent pay stubs if current income differs from your most recent return.</div>
+        </div>
+        <div class="mistake-item">
+          <h4>Missing signature or undated</h4>
+          <p>An unsigned or undated I-864 is automatically rejected. This is a surprisingly common error even among careful filers.</p>
+          <div class="fix">Sign and date in the exact fields on the last page. Check twice before submitting.</div>
+        </div>
+        <div class="mistake-item">
+          <h4>No tax return on file (didn't file taxes)</h4>
+          <p>If you weren't required to file taxes and didn't, you must explain why and provide alternative income evidence. Simply leaving it blank causes delays.</p>
+          <div class="fix">Write "Did not file — income below filing threshold" and attach alternative proof (pay stubs, bank statements, employer letter).</div>
+        </div>
+        <div class="mistake-item">
+          <h4>Forgetting to attach W-2s and 1099s</h4>
+          <p>Sending only the 1040 without the supporting W-2s and 1099s is a frequent mistake that leads to Requests for Evidence (RFEs).</p>
+          <div class="fix">Always attach all W-2s and 1099s from the most recent tax year.</div>
+        </div>
+      </div>
+
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq">
+
+        <div class="faq-item">
+          <div class="faq-q">How much income is required for the Affidavit of Support in 2026?</div>
+          <div class="faq-a">125% of the federal poverty guideline for your household size. For a household of 2 (the most common for a couple with no children), the 2026 threshold is <strong>$31,937/year</strong>. See the full table above for larger household sizes.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What happens if I don't meet the income requirement?</div>
+          <div class="faq-a">You can use a <strong>joint sponsor</strong> — someone who independently meets the requirement and files their own I-864. You can also combine income with a household member via I-864A, or supplement with assets worth 5× the shortfall.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Is the Affidavit of Support legally binding?</div>
+          <div class="faq-a">Yes. By signing I-864 you make a legally enforceable promise to support the immigrant at 125% of the poverty level. This obligation survives divorce and lasts until the immigrant becomes a U.S. citizen, completes 40 qualifying work quarters, permanently departs the U.S., or dies.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Can I use assets instead of income?</div>
+          <div class="faq-a">Yes. If your income falls short, you can use liquid assets (savings, stocks, bonds) or real estate equity. The asset value must be at least <strong>5× the income shortfall</strong> — or 3× if you're a U.S. citizen sponsoring a spouse or child.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What is the difference between I-864 and I-134?</div>
+          <div class="faq-a">I-864 is the legally binding form used for immigrant visas and adjustment of status. I-134 is a non-binding declaration used at some nonimmigrant stages — including K-1 embassy interviews. After the K-1 wedding, the I-864 is required during adjustment of status.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Does divorce end my Affidavit of Support obligation?</div>
+          <div class="faq-a">No. Divorce does <strong>not</strong> terminate the I-864 obligation. The obligation ends only when the immigrant becomes a U.S. citizen, accumulates 40 qualifying work quarters, permanently departs the U.S., or dies. This is a common misconception that can have serious financial consequences.</div>
+        </div>
+
+      </div>
+
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a href="/k1-visa" class="related-card">
+          <div class="cat">K-1 Visa</div>
+          <h4>K-1 Fiancé Visa Complete Guide</h4>
+          <p>When I-134 is needed vs I-864.</p>
+        </a>
+        <a href="/cr1-visa" class="related-card">
+          <div class="cat">CR-1 Visa</div>
+          <h4>CR-1 Spousal Visa Complete Guide</h4>
+          <p>Where I-864 fits in the CR-1 process.</p>
+        </a>
+        <a href="/adjustment-of-status" class="related-card">
+          <div class="cat">After Marriage</div>
+          <h4>Adjustment of Status After K-1</h4>
+          <p>Filing I-864 as part of the I-485 package.</p>
+        </a>
+        <a href="/bona-fide-marriage" class="related-card">
+          <div class="cat">Evidence</div>
+          <h4>Bona Fide Marriage Evidence</h4>
+          <p>What else USCIS needs beyond finances.</p>
+        </a>
+        <a href="/k1-vs-cr1" class="related-card">
+          <div class="cat">Compare</div>
+          <h4>K-1 vs CR-1</h4>
+          <p>How financial requirements compare by path.</p>
+        </a>
+        <a href="/i-129f" class="related-card">
+          <div class="cat">Forms</div>
+          <h4>Form I-129F Guide</h4>
+          <p>Complete checklist for the K-1 petition.</p>
+        </a>
+      </div>
+
+    </article>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+
+      <div class="sidebar-income">
+        <div class="sidebar-income-head">2026 Income Thresholds (125%)</div>
+        <div class="sidebar-income-row"><span class="hh">2 people</span><span class="amt">$31,937</span></div>
+        <div class="sidebar-income-row"><span class="hh">3 people</span><span class="amt">$40,188</span></div>
+        <div class="sidebar-income-row"><span class="hh">4 people</span><span class="amt">$48,438</span></div>
+        <div class="sidebar-income-row"><span class="hh">5 people</span><span class="amt">$56,688</span></div>
+        <div class="sidebar-income-row"><span class="hh">6 people</span><span class="amt">$64,938</span></div>
+        <div class="sidebar-income-row"><span class="hh">7 people</span><span class="amt">$73,188</span></div>
+        <div class="sidebar-income-row"><span class="hh">8 people</span><span class="amt">$81,438</span></div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-head">On This Page</div>
+        <div class="sidebar-card-body">
+          <a href="#" class="sidebar-link">What is I-864? <span>↓</span></a>
+          <a href="#" class="sidebar-link">2026 income table <span>↓</span></a>
+          <a href="#" class="sidebar-link">Income calculator <span>↓</span></a>
+          <a href="#" class="sidebar-link">Household size <span>↓</span></a>
+          <a href="#" class="sidebar-link">If you fall short <span>↓</span></a>
+          <a href="#" class="sidebar-link">Documents needed <span>↓</span></a>
+          <a href="#" class="sidebar-link">How to complete <span>↓</span></a>
+          <a href="#" class="sidebar-link">Common mistakes <span>↓</span></a>
+          <a href="#" class="sidebar-link">FAQ <span>↓</span></a>
+        </div>
+      </div>
+
+      <div class="sidebar-card">
+        <div class="sidebar-card-head">Key Pages</div>
+        <div class="sidebar-card-body">
+          <a href="/k1-visa" class="sidebar-link">K-1 Complete Guide <span>→</span></a>
+          <a href="/cr1-visa" class="sidebar-link">CR-1 Complete Guide <span>→</span></a>
+          <a href="/k1-vs-cr1" class="sidebar-link">K-1 vs CR-1 <span>→</span></a>
+          <a href="/bona-fide-marriage" class="sidebar-link">Bona Fide Evidence <span>→</span></a>
+          <a href="/adjustment-of-status" class="sidebar-link">Adjustment of Status <span>→</span></a>
+        </div>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+</Base>

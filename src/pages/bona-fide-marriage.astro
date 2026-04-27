@@ -1,0 +1,812 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Bona Fide Marriage Evidence: The Complete Guide for 2026",
+    "description": "Learn exactly what USCIS considers bona fide marriage evidence — the 4 pillars, document checklist, photo tips, support letter templates, and red flags to avoid.",
+    "url": "https://ldrvisa.org/bona-fide-marriage",
+    "dateModified": "2026-04-24",
+    "datePublished": "2026-04-24",
+    "author": {
+      "@type": "Organization",
+      "name": "LDR Visa",
+      "url": "https://ldrvisa.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LDR Visa",
+      "url": "https://ldrvisa.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ldrvisa.org/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ldrvisa.org/bona-fide-marriage"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Bona Fide Marriage Evidence", "item": "https://ldrvisa.org/bona-fide-marriage" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What does bona fide marriage mean for USCIS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS uses 'bona fide marriage' to describe a genuine marriage entered in good faith — not arranged solely for immigration benefits. You must show you have a real shared life: finances, cohabitation, children, and genuine emotional commitment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many photos do I need for a K-1 or CR-1 petition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS doesn't specify a minimum, but most immigration attorneys recommend 15–30 photos showing you together in different times, places, and contexts. Include photos with each other's family and friends."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I submit screenshots of WhatsApp or text messages as evidence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Screenshots of message threads, video call logs, and chat histories are accepted. Print them clearly, include timestamps and contact names, and organize them chronologically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if we haven't lived together?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Long-distance couples (LDRs) are common in K-1 and CR-1 cases. Emphasize communication records, visit documentation (boarding passes, stamps, hotel receipts), and future plans. USCIS understands cross-border couples may not have shared addresses."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do we need a bona fide marriage letter from friends and family?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Support letters from friends and family are optional but strongly recommended. Each letter should describe how the writer knows both of you, observations of your relationship, and their belief in your genuine intent to marry."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a marriage fraud investigation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS and ICE conduct marriage fraud investigations (site visits, Stokes interviews) when there are red flags — significant age gaps, short courtship, no common language, or prior fraud history. Strong, consistent evidence dramatically reduces this risk."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="Bona Fide Marriage Evidence: The Complete USCIS Guide (2026)"
+  description="What USCIS considers bona fide marriage evidence — the 4 pillars, document checklist, photo tips, support letter templates, and red flags to avoid. Updated 2026."
+  canonical="https://ldrvisa.org/bona-fide-marriage"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  /* Page hero */
+  .page-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 0.4rem; }
+
+  /* Key stats */
+  .key-stats { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 2rem 0; }
+  .key-stats .container { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; max-width: 900px; }
+  .kstat { text-align: center; min-width: 160px; }
+  .kstat-num { font-size: 2rem; font-weight: 800; color: var(--color-accent); }
+  .kstat-label { font-size: 0.85rem; color: var(--color-muted); margin-top: 0.25rem; }
+
+  /* Content layout */
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 800px){ .content-wrap { grid-template-columns: 1fr; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  /* Section styles */
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .section h3 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+
+  /* 4 Pillars */
+  .pillars-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.25rem; }
+  @media(max-width: 600px){ .pillars-grid { grid-template-columns: 1fr; } }
+  .pillar-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; border-top: 4px solid var(--color-accent); }
+  .pillar-num { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+  .pillar-card h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+  .pillar-card p { font-size: 0.9rem; color: var(--color-muted); margin: 0 0 0.75rem; line-height: 1.6; }
+  .pillar-examples { list-style: none; padding: 0; margin: 0; }
+  .pillar-examples li { font-size: 0.85rem; color: var(--color-text); padding: 0.2rem 0 0.2rem 1.2rem; position: relative; }
+  .pillar-examples li::before { content: "✓"; position: absolute; left: 0; color: #22c55e; font-weight: 700; }
+
+  /* Evidence table */
+  .evidence-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 1rem; }
+  .evidence-table th { background: var(--color-accent); color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .evidence-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  .evidence-table tr:hover td { background: var(--color-surface); }
+  .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px; text-transform: uppercase; }
+  .badge-strong { background: #dcfce7; color: #166534; }
+  .badge-good { background: #dbeafe; color: #1e40af; }
+  .badge-optional { background: #f3f4f6; color: #6b7280; }
+
+  /* Photo tips */
+  .photo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .photo-tip { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1.25rem; }
+  .photo-tip-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .photo-tip h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.4rem; }
+  .photo-tip p { font-size: 0.85rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* Letter template */
+  .letter-template { background: #f8fafc; border: 1px solid var(--color-border); border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1.5rem; font-family: 'Georgia', serif; font-size: 0.9rem; line-height: 1.9; color: #374151; white-space: pre-line; margin: 1rem 0; }
+  .letter-template .placeholder { background: #dbeafe; color: #1e40af; border-radius: 3px; padding: 0 3px; font-style: italic; }
+
+  /* Red flags */
+  .red-flags { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem; }
+  .red-flag { background: #fff5f5; border: 1px solid #fecaca; border-radius: 10px; padding: 1.25rem; }
+  .red-flag-icon { font-size: 1.25rem; margin-bottom: 0.4rem; }
+  .red-flag h4 { font-size: 0.95rem; font-weight: 700; color: #dc2626; margin: 0 0 0.4rem; }
+  .red-flag p { font-size: 0.85rem; color: #7f1d1d; margin: 0; line-height: 1.5; }
+  .red-flag .fix { margin-top: 0.5rem; font-size: 0.82rem; color: #374151; background: #fff; border-radius: 6px; padding: 0.4rem 0.6rem; }
+  .red-flag .fix strong { color: #166534; }
+
+  /* Checklist */
+  .checklist-section { margin: 1rem 0; }
+  .checklist-section h4 { font-size: 1rem; font-weight: 700; margin: 1rem 0 0.5rem; color: var(--color-accent); }
+  .checklist { list-style: none; padding: 0; margin: 0; }
+  .checklist li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist input[type=checkbox] { margin-top: 0.15rem; width: 1rem; height: 1rem; flex-shrink: 0; accent-color: var(--color-accent); }
+  .checklist .item-label { flex: 1; }
+  .checklist .item-note { font-size: 0.8rem; color: var(--color-muted); display: block; margin-top: 0.15rem; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.7; font-size: 0.95rem; }
+
+  /* Sidebar */
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--color-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--color-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: #1d4ed8; }
+
+  /* Info callout */
+  .callout { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #1e40af; line-height: 1.6; }
+
+  /* Warning callout */
+  .warning { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #f97316; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .warning p { margin: 0; font-size: 0.9rem; color: #9a3412; line-height: 1.6; }
+
+  /* Related guides */
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--color-accent); box-shadow: 0 2px 12px rgba(37,99,235,0.08); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+</style>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › Bona Fide Marriage Evidence
+    </div>
+    <h1>Bona Fide Marriage Evidence:<br/>The Complete USCIS Guide (2026)</h1>
+    <p class="hero-desc">
+      What USCIS actually looks for, the 4 pillars of evidence, a full document checklist, photo tips, and a support letter template you can use today.
+    </p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 15 min read</span>
+      <span class="hero-meta-item">✅ Applies to K-1 and CR-1</span>
+    </div>
+  </div>
+</section>
+
+<!-- Key Stats -->
+<section class="key-stats">
+  <div class="container">
+    <div class="kstat">
+      <div class="kstat-num">4</div>
+      <div class="kstat-label">Pillars USCIS evaluates</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">15–30</div>
+      <div class="kstat-label">Photos recommended</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">3+</div>
+      <div class="kstat-label">Support letters ideal</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">&lt;1%</div>
+      <div class="kstat-label">Fraud rate among genuine couples</div>
+    </div>
+  </div>
+</section>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <!-- What is Bona Fide -->
+    <section class="section" id="what-is">
+      <h2>What Does "Bona Fide Marriage" Mean?</h2>
+      <p>
+        USCIS defines a <strong>bona fide marriage</strong> as one entered in good faith — meaning both spouses genuinely intended to establish a life together, not merely to obtain an immigration benefit. This standard applies to K-1 fiancé visa petitions (I-129F) and spousal visa petitions (I-130).
+      </p>
+      <p>
+        The legal definition comes from the <strong>Immigration Marriage Fraud Amendments of 1986</strong>, which created the conditional green card system specifically to deter sham marriages. A fraudulent marriage — one entered solely for immigration purposes — is a federal crime carrying up to 5 years in prison and $250,000 in fines.
+      </p>
+      <div class="callout">
+        <p><strong>Key distinction:</strong> USCIS isn't asking whether your marriage is happy or perfect. They're asking whether it's genuine — that both of you entered into it intending to build a shared life. Couples going through rough patches can still have a bona fide marriage.</p>
+      </div>
+      <p>
+        The burden of proof is on the petitioner. You must affirmatively demonstrate the marriage is real — USCIS won't assume good faith. The more evidence you provide, the stronger your case.
+      </p>
+    </section>
+
+    <!-- 4 Pillars -->
+    <section class="section" id="pillars">
+      <h2>The 4 Pillars of Bona Fide Marriage Evidence</h2>
+      <p>Immigration officers evaluate four broad categories. A strong petition covers all four — weakness in any one area can trigger RFEs (Requests for Evidence) or even denial.</p>
+
+      <div class="pillars-grid">
+        <div class="pillar-card">
+          <div class="pillar-num">Pillar 1</div>
+          <h3>Financial Commingling</h3>
+          <p>Evidence that you share money, property, or financial obligations — the strongest indicator of a shared life.</p>
+          <ul class="pillar-examples">
+            <li>Joint bank account statements</li>
+            <li>Joint credit card or loan</li>
+            <li>Co-signed lease or mortgage</li>
+            <li>Joint tax returns (if married)</li>
+            <li>Named as beneficiary on insurance/retirement</li>
+            <li>Wire transfers between you</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">Pillar 2</div>
+          <h3>Cohabitation</h3>
+          <p>Evidence you have lived together or plan to share a home — shows you're building a real domestic life.</p>
+          <ul class="pillar-examples">
+            <li>Lease/mortgage with both names</li>
+            <li>Utility bills at shared address</li>
+            <li>Mail addressed to both at same address</li>
+            <li>Property records showing joint ownership</li>
+            <li>Rental agreement with both signatures</li>
+            <li>Driver's license or ID at same address</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">Pillar 3</div>
+          <h3>Children &amp; Family</h3>
+          <p>Children from the relationship and integration into each other's family networks signal genuine commitment.</p>
+          <ul class="pillar-examples">
+            <li>Birth certificates naming both parents</li>
+            <li>Photos with each other's family</li>
+            <li>Communications with in-laws</li>
+            <li>Family event invitations / attendance</li>
+            <li>Support letters from family members</li>
+            <li>Joint decisions about children</li>
+          </ul>
+        </div>
+
+        <div class="pillar-card">
+          <div class="pillar-num">Pillar 4</div>
+          <h3>Communication &amp; Visits</h3>
+          <p>For long-distance couples, consistent communication and documented visits are the primary evidence of the relationship.</p>
+          <ul class="pillar-examples">
+            <li>Phone / video call logs</li>
+            <li>Message thread screenshots (WhatsApp, iMessage)</li>
+            <li>Flight boarding passes and passport stamps</li>
+            <li>Hotel receipts or Airbnb bookings</li>
+            <li>Travel photos with date/location data</li>
+            <li>Gifts, flowers, money transfer records</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>LDR note:</strong> If you haven't lived together yet (common for K-1 filers), lean heavily on Pillar 4. USCIS officers are familiar with long-distance international couples and will not penalize you for lack of cohabitation if you have strong communication and visit evidence.</p>
+      </div>
+    </section>
+
+    <!-- Evidence Table -->
+    <section class="section" id="evidence-table">
+      <h2>Complete Evidence Checklist by Strength</h2>
+      <p>Not all evidence carries equal weight. This table shows what USCIS considers strongest, what helps, and what is optional.</p>
+
+      <table class="evidence-table">
+        <thead>
+          <tr>
+            <th>Evidence Item</th>
+            <th>Category</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Joint bank account statements</td>
+            <td>Financial</td>
+            <td><span class="badge badge-strong">Strongest</span></td>
+          </tr>
+          <tr>
+            <td>Joint tax returns (Form 1040 MFJ)</td>
+            <td>Financial</td>
+            <td><span class="badge badge-strong">Strongest</span></td>
+          </tr>
+          <tr>
+            <td>Co-signed lease or mortgage</td>
+            <td>Cohabitation</td>
+            <td><span class="badge badge-strong">Strongest</span></td>
+          </tr>
+          <tr>
+            <td>Children's birth certificates</td>
+            <td>Children</td>
+            <td><span class="badge badge-strong">Strongest</span></td>
+          </tr>
+          <tr>
+            <td>Photos together (various dates/places)</td>
+            <td>Relationship</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Named beneficiary on life insurance / retirement</td>
+            <td>Financial</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Passport stamps + boarding passes from visits</td>
+            <td>Travel</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>WhatsApp / iMessage / email thread screenshots</td>
+            <td>Communication</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Video call logs (FaceTime, WhatsApp, Skype)</td>
+            <td>Communication</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Support letters from friends and family</td>
+            <td>Affidavits</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Engagement photos / wedding photos</td>
+            <td>Relationship</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Hotel receipts, Airbnb bookings from visits</td>
+            <td>Travel</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Money transfer records (Wise, PayPal, Zelle)</td>
+            <td>Financial</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Utility bills at shared address</td>
+            <td>Cohabitation</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Photos with in-laws and extended family</td>
+            <td>Family</td>
+            <td><span class="badge badge-good">Strong</span></td>
+          </tr>
+          <tr>
+            <td>Gift receipts, flowers, anniversary items</td>
+            <td>Relationship</td>
+            <td><span class="badge badge-optional">Supplemental</span></td>
+          </tr>
+          <tr>
+            <td>Social media posts showing relationship</td>
+            <td>Communication</td>
+            <td><span class="badge badge-optional">Supplemental</span></td>
+          </tr>
+          <tr>
+            <td>Joint insurance (health, car, renters)</td>
+            <td>Financial</td>
+            <td><span class="badge badge-optional">Supplemental</span></td>
+          </tr>
+          <tr>
+            <td>Wedding invitations and RSVPs</td>
+            <td>Relationship</td>
+            <td><span class="badge badge-optional">Supplemental</span></td>
+          </tr>
+          <tr>
+            <td>Relationship timeline / personal statement</td>
+            <td>Narrative</td>
+            <td><span class="badge badge-optional">Supplemental</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Photo Tips -->
+    <section class="section" id="photos">
+      <h2>Photo Evidence: What to Include</h2>
+      <p>Photos are the most universally available evidence for international couples. USCIS officers look for variety — different settings, dates, and people in the background. A stack of nearly identical selfies is much weaker than 20 photos showing your relationship across time.</p>
+
+      <div class="photo-grid">
+        <div class="photo-tip">
+          <div class="photo-tip-icon">📅</div>
+          <h4>Show different time periods</h4>
+          <p>Include photos spanning the full history of your relationship — when you first met, visits over the years, your engagement, and recent shots. Chronological variety demonstrates a lasting relationship.</p>
+        </div>
+        <div class="photo-tip">
+          <div class="photo-tip-icon">🌍</div>
+          <h4>Show different locations</h4>
+          <p>Include photos from both countries, airports, travel destinations, and your everyday life. Multiple locations prove you've actually spent time together, not just posed for camera.</p>
+        </div>
+        <div class="photo-tip">
+          <div class="photo-tip-icon">👨‍👩‍👧‍👦</div>
+          <h4>Include family and friends</h4>
+          <p>Photos with each other's parents, siblings, or close friends are powerful. They show you've been integrated into each other's lives — something nearly impossible to fake.</p>
+        </div>
+        <div class="photo-tip">
+          <div class="photo-tip-icon">📍</div>
+          <h4>Use geotagged photos</h4>
+          <p>If your phone saves location data in photo EXIF data, these are gold. When printed, include the date and location. Screenshots from Google Photos showing location/date markers are also accepted.</p>
+        </div>
+        <div class="photo-tip">
+          <div class="photo-tip-icon">🖨️</div>
+          <h4>Print clearly, label the back</h4>
+          <p>Print photos at least 4×6 inches. Write your name, your partner's name, the date, and location on the back of each photo, or label them in the packet cover sheet.</p>
+        </div>
+        <div class="photo-tip">
+          <div class="photo-tip-icon">🚫</div>
+          <h4>Avoid common photo mistakes</h4>
+          <p>Don't submit blurry, dark, or heavily filtered photos. Don't include photos of just one of you. Don't over-rely on group photos where you're barely visible together.</p>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>How many?</strong> Most attorneys recommend submitting <strong>15–30 photos</strong>. More isn't always better — a curated selection of great, varied photos beats a huge stack of repetitive ones. Organize them chronologically and include a brief caption sheet.</p>
+      </div>
+    </section>
+
+    <!-- Support Letter Template -->
+    <section class="section" id="support-letters">
+      <h2>Support Letters from Friends &amp; Family</h2>
+      <p>
+        Third-party affidavits carry significant weight because they come from people with no immigration benefit at stake. USCIS treats them as credible, independent confirmation of your relationship. Aim for <strong>3–5 letters</strong> — a mix of your family members, their family members, and mutual friends who have observed you together.
+      </p>
+
+      <h3>What a strong support letter includes:</h3>
+      <ul class="pillar-examples" style="margin: 0.75rem 0 1.25rem 1rem; list-style: disc;">
+        <li style="list-style: disc; padding: 0.2rem 0; color: var(--color-text);">Writer's full name, address, and relationship to the couple</li>
+        <li style="list-style: disc; padding: 0.2rem 0; color: var(--color-text);">How long they have known each of you</li>
+        <li style="list-style: disc; padding: 0.2rem 0; color: var(--color-text);">Specific examples of the relationship they've personally witnessed</li>
+        <li style="list-style: disc; padding: 0.2rem 0; color: var(--color-text);">Statement of their belief that the relationship is genuine</li>
+        <li style="list-style: disc; padding: 0.2rem 0; color: var(--color-text);">Dated signature (and notarization is a plus, not required)</li>
+      </ul>
+
+      <h3>Sample support letter template:</h3>
+      <div class="letter-template">To Whom It May Concern,
+
+My name is <span class="placeholder">[Writer's Full Name]</span>, and I am writing in support of the K-1 visa petition filed by <span class="placeholder">[Petitioner's Name]</span> on behalf of <span class="placeholder">[Beneficiary's Name]</span>.
+
+I have known <span class="placeholder">[Petitioner's Name]</span> for <span class="placeholder">[X years]</span> as their <span class="placeholder">[friend / coworker / family member]</span>. I met <span class="placeholder">[Beneficiary's Name]</span> for the first time in <span class="placeholder">[month/year]</span> when <span class="placeholder">[Petitioner]</span> introduced us <span class="placeholder">[in person / via video call]</span>.
+
+Over the course of their relationship, I have personally observed their strong bond. Specifically, I recall <span class="placeholder">[describe a specific memory or observation — e.g., "attending their engagement dinner in March 2025" or "seeing how devoted [Petitioner] was during [Beneficiary's] mother's illness"]</span>.
+
+It is my sincere belief that <span class="placeholder">[Petitioner's Name]</span> and <span class="placeholder">[Beneficiary's Name]</span> are in a genuine, loving relationship and intend to build a life together in the United States. I have never had any reason to doubt the sincerity of their commitment to one another.
+
+I am happy to provide further information if needed.
+
+Sincerely,
+<span class="placeholder">[Writer's Full Name]</span>
+<span class="placeholder">[Address]</span>
+<span class="placeholder">[Phone / Email]</span>
+<span class="placeholder">[Date]</span></div>
+
+      <div class="warning">
+        <p><strong>Do not:</strong> Have all letters use the same template verbatim. USCIS will notice identical phrasing across letters and it undermines credibility. Each letter should be in the writer's own words, with their own specific observations and memories.</p>
+      </div>
+    </section>
+
+    <!-- For LDR couples -->
+    <section class="section" id="ldr-evidence">
+      <h2>Evidence Guide for Long-Distance Couples</h2>
+      <p>
+        The majority of K-1 and CR-1 petitioners are in long-distance relationships. USCIS understands this. You won't be penalized for not having shared utility bills or a joint lease if you're filing from different countries — but you need to make up for it with strong communication and visit documentation.
+      </p>
+
+      <h3>Communication records (most important for LDRs)</h3>
+      <p>Print screenshots of your ongoing message threads. Show depth — not just "I miss you" texts, but real conversations about daily life, future plans, and shared experiences. Include:</p>
+      <ul class="pillar-examples" style="margin: 0.75rem 0 1.25rem 1rem;">
+        <li>WhatsApp chat thread — show months of daily conversation</li>
+        <li>FaceTime / WhatsApp call logs showing frequency and duration</li>
+        <li>Email threads (especially early in the relationship)</li>
+        <li>Instagram or Facebook DMs if that's how you communicated</li>
+        <li>Video call platform history (Zoom, Skype, Google Meet)</li>
+      </ul>
+
+      <h3>Visit documentation</h3>
+      <p>Every visit you've made to each other is evidence. For each trip, assemble:</p>
+      <ul class="pillar-examples" style="margin: 0.75rem 0 1.25rem 1rem;">
+        <li>Passport pages showing entry/exit stamps</li>
+        <li>Boarding passes (save them — physical or email)</li>
+        <li>Hotel, Airbnb, or accommodation receipts</li>
+        <li>Restaurant receipts, attraction tickets, tour bookings</li>
+        <li>Photos from the visit with geotagging or location labels</li>
+      </ul>
+
+      <h3>Financial connection across borders</h3>
+      <ul class="pillar-examples" style="margin: 0.75rem 0 1.25rem 1rem;">
+        <li>Wise / Remitly / PayPal transfer history between accounts</li>
+        <li>International wire transfer records from your bank</li>
+        <li>Gift purchases shipped internationally (Amazon, Etsy orders)</li>
+        <li>Shared streaming accounts (Netflix, Spotify family plan)</li>
+      </ul>
+    </section>
+
+    <!-- Relationship Statement -->
+    <section class="section" id="statement">
+      <h2>Writing Your Personal Relationship Statement</h2>
+      <p>
+        A personal relationship statement (sometimes called a "cover letter" or "personal statement") is your opportunity to tell your story in your own words. It's optional for I-129F petitions but strongly recommended — it gives the officer context for all the evidence in your packet.
+      </p>
+
+      <h3>What to cover in your statement:</h3>
+      <ul class="pillar-examples" style="margin: 0.75rem 0 1.25rem 1rem;">
+        <li>How you met (platform, date, circumstances)</li>
+        <li>When you first communicated and what the early relationship was like</li>
+        <li>Your first in-person meeting — when, where, what happened</li>
+        <li>Key milestones (first "I love you," decision to pursue a future together)</li>
+        <li>How you've maintained the relationship across the distance</li>
+        <li>Your engagement — when, how, what you plan</li>
+        <li>Your future plans in the U.S. — where you'll live, work, what you're excited about</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Length:</strong> 1–3 pages is typical. Be specific and personal. Generic statements ("we fell in love and want to be together") are weak. Specific details ("we met on Hinge in September 2023 and had our first video call three days later — we talked for four hours") are strong.</p>
+      </div>
+    </section>
+
+    <!-- Red Flags to Avoid -->
+    <section class="section" id="red-flags">
+      <h2>Red Flags USCIS Looks For</h2>
+      <p>These patterns trigger extra scrutiny. If any apply to you, address them proactively in your statement — don't let the officer draw their own conclusions.</p>
+
+      <div class="red-flags">
+        <div class="red-flag">
+          <div class="red-flag-icon">⚠️</div>
+          <h4>Large age gap</h4>
+          <p>Age differences of 15+ years attract attention, especially with certain country combinations.</p>
+          <div class="fix"><strong>Address it:</strong> Explain your relationship naturally. Officers understand that compatibility transcends age.</div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">⚠️</div>
+          <h4>Very short courtship</h4>
+          <p>Filing a K-1 petition within months of first meeting raises questions about whether the relationship is genuine.</p>
+          <div class="fix"><strong>Address it:</strong> Provide extensive communication logs showing the depth and pace of the relationship.</div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">⚠️</div>
+          <h4>No common language</h4>
+          <p>If you don't share a fluent language, USCIS may question how you could have a deep relationship.</p>
+          <div class="fix"><strong>Address it:</strong> Show translation tools used, language learning efforts, or mutual contacts who bridge communication.</div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">⚠️</div>
+          <h4>Prior marriage fraud history</h4>
+          <p>If either party has been flagged for fraud in a prior immigration case, current petitions face intense scrutiny.</p>
+          <div class="fix"><strong>Address it:</strong> Consult an immigration attorney before filing. Be fully transparent.</div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">⚠️</div>
+          <h4>Met only online, never in person</h4>
+          <p>For K-1 specifically, you must have met in person within the past 2 years. No in-person meeting = automatic denial.</p>
+          <div class="fix"><strong>Requirement:</strong> You must meet before filing. Document that meeting thoroughly.</div>
+        </div>
+        <div class="red-flag">
+          <div class="red-flag-icon">⚠️</div>
+          <h4>Inconsistent story between partners</h4>
+          <p>If you and your partner give different answers about how/when you met, this is a major fraud indicator.</p>
+          <div class="fix"><strong>Address it:</strong> Review your relationship timeline together before the interview. Know the key dates.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Document Checklist -->
+    <section class="section" id="checklist">
+      <h2>Full Document Checklist</h2>
+      <p>Use this before submitting your petition. Check off each item you've gathered.</p>
+
+      <div class="checklist-section">
+        <h4>Communication Evidence</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">Chat screenshots (WhatsApp, iMessage, Telegram)<span class="item-note">Organize chronologically, show months of conversation</span></div></li>
+          <li><input type="checkbox" /><div class="item-label">Video/voice call logs<span class="item-note">FaceTime, WhatsApp calls — show frequency and duration</span></div></li>
+          <li><input type="checkbox" /><div class="item-label">Email threads<span class="item-note">Especially early in the relationship</span></div></li>
+          <li><input type="checkbox" /><div class="item-label">Social media messages or timeline posts<span class="item-note">If relevant to your relationship history</span></div></li>
+        </ul>
+      </div>
+
+      <div class="checklist-section">
+        <h4>Visit &amp; Travel Documentation</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">Passport pages with entry/exit stamps<span class="item-note">Both passports, all relevant visits</span></div></li>
+          <li><input type="checkbox" /><div class="item-label">Boarding passes<span class="item-note">Physical or email confirmations</span></div></li>
+          <li><input type="checkbox" /><div class="item-label">Hotel / Airbnb / accommodation receipts<span class="item-note">Showing both names if possible</span></div></li>
+          <li><input type="checkbox" /><div class="item-label">Travel photos with date and location labels</div></li>
+          <li><input type="checkbox" /><div class="item-label">Tour, restaurant, or attraction receipts from visits<span class="item-note">Any dated receipt proving you were both present</span></div></li>
+        </ul>
+      </div>
+
+      <div class="checklist-section">
+        <h4>Photos</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">15–30 photos together across different time periods</div></li>
+          <li><input type="checkbox" /><div class="item-label">Photos with each other's family members</div></li>
+          <li><input type="checkbox" /><div class="item-label">Photos in different locations (both countries)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Engagement photos (if applicable)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Photo caption sheet with dates and locations</div></li>
+        </ul>
+      </div>
+
+      <div class="checklist-section">
+        <h4>Financial Evidence</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">Joint bank account statements (if available)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Money transfer records (Wise, PayPal, Venmo, bank wires)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Joint tax returns (if married and filed jointly)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Insurance policy naming spouse/fiancé as beneficiary</div></li>
+          <li><input type="checkbox" /><div class="item-label">Retirement or investment account beneficiary designation</div></li>
+        </ul>
+      </div>
+
+      <div class="checklist-section">
+        <h4>Affidavits &amp; Letters</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">3–5 support letters from friends and family<span class="item-note">Mix of your family, their family, and mutual friends</span></div></li>
+          <li><input type="checkbox" /><div class="item-label">Each letter signed and dated</div></li>
+          <li><input type="checkbox" /><div class="item-label">Personal relationship statement (optional but recommended)</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">What does bona fide marriage mean for USCIS?</div>
+        <div class="faq-a">USCIS uses "bona fide marriage" to describe a genuine marriage entered in good faith — not arranged solely for immigration benefits. You must show you have a real shared life: finances, cohabitation, children, and genuine emotional commitment.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">How many photos do I need for a K-1 or CR-1 petition?</div>
+        <div class="faq-a">USCIS doesn't specify a minimum, but most immigration attorneys recommend 15–30 photos showing you together in different times, places, and contexts. Include photos with each other's family and friends. Quality and variety matter more than volume.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I submit screenshots of WhatsApp or text messages as evidence?</div>
+        <div class="faq-a">Yes. Screenshots of message threads, video call logs, and chat histories are accepted. Print them clearly, include timestamps and contact names, and organize them chronologically. Make sure sender/receiver names are visible in the screenshots.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What if we haven't lived together?</div>
+        <div class="faq-a">Long-distance couples (LDRs) are common in K-1 and CR-1 cases. Emphasize communication records, visit documentation (boarding passes, stamps, hotel receipts), and future plans. USCIS understands cross-border couples may not have shared addresses.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Do we need a bona fide marriage letter from friends and family?</div>
+        <div class="faq-a">Support letters are optional but strongly recommended. Each letter should describe how the writer knows both of you, observations of your relationship, and their belief in your genuine intent. Aim for 3–5 letters from people who know you both.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is a Stokes interview?</div>
+        <div class="faq-a">A Stokes interview is a separate, simultaneous interview conducted when USCIS suspects marriage fraud. Both spouses are interviewed separately and asked detailed questions about their relationship. Answers are compared for consistency. Strong evidence and honest preparation significantly reduce the chance of this happening.</div>
+      </div>
+    </section>
+
+    <!-- Related Guides -->
+    <section class="section" id="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <SmartLink href="/k1-visa" class="related-card">
+          <div class="related-cat">K-1 Visa</div>
+          <div class="related-title">K-1 Fiancé Visa: Complete 2026 Guide</div>
+        </SmartLink>
+        <SmartLink href="/k1-visa-interview" class="related-card">
+          <div class="related-cat">Interview Prep</div>
+          <div class="related-title">70 K-1 Interview Questions &amp; Best Answers</div>
+        </SmartLink>
+        <SmartLink href="/affidavit-of-support" class="related-card">
+          <div class="related-cat">I-864</div>
+          <div class="related-title">Affidavit of Support: Income Requirements 2026</div>
+        </SmartLink>
+        <SmartLink href="/adjustment-of-status" class="related-card">
+          <div class="related-cat">Green Card</div>
+          <div class="related-title">Adjustment of Status After K-1 Entry</div>
+        </SmartLink>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="cta-box">
+      <h4>K-1 Interview Prep</h4>
+      <p>70 questions with strong answers, organized by category — practice before your consulate interview.</p>
+      <SmartLink href="/k1-visa-interview" class="btn">Start Prep Guide →</SmartLink>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#what-is">What is bona fide marriage?</a></li>
+        <li><a href="#pillars">The 4 pillars of evidence</a></li>
+        <li><a href="#evidence-table">Evidence checklist by strength</a></li>
+        <li><a href="#photos">Photo evidence tips</a></li>
+        <li><a href="#support-letters">Support letter template</a></li>
+        <li><a href="#ldr-evidence">Evidence for LDR couples</a></li>
+        <li><a href="#statement">Personal relationship statement</a></li>
+        <li><a href="#red-flags">Red flags to avoid</a></li>
+        <li><a href="#checklist">Full document checklist</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Key Pages</h4>
+      <ul>
+        <li><SmartLink href="/k1-visa">K-1 Fiancé Visa Guide</SmartLink></li>
+        <li><SmartLink href="/k1-vs-cr1">K-1 vs CR-1 Comparison</SmartLink></li>
+        <li><SmartLink href="/affidavit-of-support">Affidavit of Support (I-864)</SmartLink></li>
+        <li><SmartLink href="/k1-visa-interview">Interview Prep (70 Qs)</SmartLink></li>
+        <li><SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink></li>
+        <li><SmartLink href="/i-129f">Form I-129F Guide</SmartLink></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

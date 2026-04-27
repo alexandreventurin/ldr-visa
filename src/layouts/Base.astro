@@ -1,4 +1,6 @@
 ---
+import SmartLink from '../components/SmartLink.astro';
+
 export interface Props {
   title: string;
   description: string;
@@ -56,11 +58,11 @@ const ogImage = `${site}/og-default.png`;
       <div class="nav-inner">
         <a href="/" class="nav-logo">LDR Visa</a>
         <ul class="nav-links">
-          <li><a href="/k1-visa">K-1 Fiancé Visa</a></li>
-          <li><a href="/cr1-visa">CR-1 Spousal Visa</a></li>
-          <li><a href="/affidavit-of-support">Affidavit of Support</a></li>
-          <li><a href="/adjustment-of-status">Adjustment of Status</a></li>
-          <li><a href="/k1-vs-cr1" class="nav-cta">K-1 vs CR-1 →</a></li>
+          <li><SmartLink href="/k1-visa">K-1 Fiancé Visa</SmartLink></li>
+          <li><SmartLink href="/cr1-visa">CR-1 Spousal Visa</SmartLink></li>
+          <li><SmartLink href="/affidavit-of-support">Affidavit of Support</SmartLink></li>
+          <li><SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink></li>
+          <li><SmartLink href="/k1-vs-cr1" class="nav-cta">K-1 vs CR-1 →</SmartLink></li>
         </ul>
       </div>
     </div>
@@ -78,36 +80,36 @@ const ogImage = `${site}/og-default.png`;
         <div class="footer-col">
           <h4>Visa Types</h4>
           <ul>
-            <li><a href="/k1-visa">K-1 Fiancé Visa</a></li>
-            <li><a href="/cr1-visa">CR-1 Spousal Visa</a></li>
-            <li><a href="/ir1-visa">IR-1 Visa</a></li>
-            <li><a href="/k2-visa">K-2 Visa (Children)</a></li>
-            <li><a href="/k1-vs-cr1">K-1 vs CR-1</a></li>
+            <li><SmartLink href="/k1-visa">K-1 Fiancé Visa</SmartLink></li>
+            <li><SmartLink href="/cr1-visa">CR-1 Spousal Visa</SmartLink></li>
+            <li><SmartLink href="/ir1-visa">IR-1 Visa</SmartLink></li>
+            <li><SmartLink href="/k2-visa">K-2 Visa (Children)</SmartLink></li>
+            <li><SmartLink href="/k1-vs-cr1">K-1 vs CR-1</SmartLink></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Key Topics</h4>
           <ul>
-            <li><a href="/affidavit-of-support">Affidavit of Support</a></li>
-            <li><a href="/bona-fide-marriage">Bona Fide Marriage</a></li>
-            <li><a href="/adjustment-of-status">Adjustment of Status</a></li>
-            <li><a href="/k1-visa-interview">Interview Prep</a></li>
-            <li><a href="/i-129f">Form I-129F</a></li>
+            <li><SmartLink href="/affidavit-of-support">Affidavit of Support</SmartLink></li>
+            <li><SmartLink href="/bona-fide-marriage">Bona Fide Marriage</SmartLink></li>
+            <li><SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink></li>
+            <li><SmartLink href="/k1-visa-interview">Interview Prep</SmartLink></li>
+            <li><SmartLink href="/i-129f">Form I-129F</SmartLink></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Processing Times</h4>
           <ul>
-            <li><a href="/k1-visa-processing-time">K-1 Timeline 2026</a></li>
-            <li><a href="/cr1-visa-processing-time">CR-1 Timeline 2026</a></li>
-            <li><a href="/adjustment-of-status-processing-time">AOS Timeline</a></li>
-            <li><a href="/i-129f-processing-time">I-129F Processing</a></li>
+            <li><SmartLink href="/k1-visa-processing-time">K-1 Timeline 2026</SmartLink></li>
+            <li><SmartLink href="/cr1-visa-processing-time">CR-1 Timeline 2026</SmartLink></li>
+            <li><SmartLink href="/adjustment-of-status-processing-time">AOS Timeline</SmartLink></li>
+            <li><SmartLink href="/i-129f-processing-time">I-129F Processing</SmartLink></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>&copy; {new Date().getFullYear()} LDR Visa. For informational purposes only — not legal advice.</p>
-        <p><a href="/privacy">Privacy</a> · <a href="/disclaimer">Disclaimer</a></p>
+        <p><SmartLink href="/privacy">Privacy</SmartLink> · <SmartLink href="/disclaimer">Disclaimer</SmartLink></p>
       </div>
     </div>
   </footer>

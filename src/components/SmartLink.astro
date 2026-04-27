@@ -1,0 +1,15 @@
+---
+import { PUBLISHED } from '../data/published';
+
+interface Props {
+  href: string;
+  class?: string;
+}
+
+const { href, class: className } = Astro.props;
+const isLive = PUBLISHED.has(href);
+---
+{isLive
+  ? <a href={href} class={className}><slot /></a>
+  : <span class={className} data-pending={href}><slot /></span>
+}

@@ -26,6 +26,7 @@ body {
 }
 
 a { color: inherit; text-decoration: none; }
+[data-pending] { cursor: default; color: var(--color-muted); text-decoration: none; }
 
 img { display: block; max-width: 100%; }
 

@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
 
 const schema = JSON.stringify([
   {
@@ -304,7 +305,7 @@ const schema = JSON.stringify([
 <div class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="/">Home</a>
+      <a href="/">Home</SmartLink>
       <span>/</span>
       Affidavit of Support
     </div>
@@ -325,7 +326,7 @@ const schema = JSON.stringify([
 
       <h2>What Is the Affidavit of Support?</h2>
       <p>Form I-864 — the Affidavit of Support — is a legally binding contract between the U.S. sponsor and the federal government. By signing it, the petitioner promises to financially support the immigrating person and keep them from becoming a "public charge" (relying on government assistance).</p>
-      <p>It is required for almost all family-based immigrant visas, including the <a href="/cr1-visa">CR-1/IR-1 spousal visa</a> and the adjustment of status after a <a href="/k1-visa">K-1 fiancé visa</a>.</p>
+      <p>It is required for almost all family-based immigrant visas, including the <SmartLink href="/cr1-visa">CR-1/IR-1 spousal visa</SmartLink> and the adjustment of status after a <SmartLink href="/k1-visa">K-1 fiancé visa</SmartLink>.</p>
 
       <div class="info-box">
         <p><strong>K-1 note:</strong> At the K-1 embassy interview, consulates typically ask for Form I-134 (a non-binding declaration of support), not I-864. The legally binding I-864 is filed later, during adjustment of status inside the U.S. after the wedding.</p>
@@ -636,36 +637,36 @@ const schema = JSON.stringify([
 
       <h2>Related Guides</h2>
       <div class="related-grid">
-        <a href="/k1-visa" class="related-card">
+        <SmartLink href="/k1-visa" class="related-card">
           <div class="cat">K-1 Visa</div>
           <h4>K-1 Fiancé Visa Complete Guide</h4>
           <p>When I-134 is needed vs I-864.</p>
-        </a>
-        <a href="/cr1-visa" class="related-card">
+        </SmartLink>
+        <SmartLink href="/cr1-visa" class="related-card">
           <div class="cat">CR-1 Visa</div>
           <h4>CR-1 Spousal Visa Complete Guide</h4>
           <p>Where I-864 fits in the CR-1 process.</p>
-        </a>
-        <a href="/adjustment-of-status" class="related-card">
+        </SmartLink>
+        <SmartLink href="/adjustment-of-status" class="related-card">
           <div class="cat">After Marriage</div>
           <h4>Adjustment of Status After K-1</h4>
           <p>Filing I-864 as part of the I-485 package.</p>
-        </a>
-        <a href="/bona-fide-marriage" class="related-card">
+        </SmartLink>
+        <SmartLink href="/bona-fide-marriage" class="related-card">
           <div class="cat">Evidence</div>
           <h4>Bona Fide Marriage Evidence</h4>
           <p>What else USCIS needs beyond finances.</p>
-        </a>
-        <a href="/k1-vs-cr1" class="related-card">
+        </SmartLink>
+        <SmartLink href="/k1-vs-cr1" class="related-card">
           <div class="cat">Compare</div>
           <h4>K-1 vs CR-1</h4>
           <p>How financial requirements compare by path.</p>
-        </a>
-        <a href="/i-129f" class="related-card">
+        </SmartLink>
+        <SmartLink href="/i-129f" class="related-card">
           <div class="cat">Forms</div>
           <h4>Form I-129F Guide</h4>
           <p>Complete checklist for the K-1 petition.</p>
-        </a>
+        </SmartLink>
       </div>
 
     </article>
@@ -687,26 +688,26 @@ const schema = JSON.stringify([
       <div class="sidebar-card">
         <div class="sidebar-card-head">On This Page</div>
         <div class="sidebar-card-body">
-          <a href="#" class="sidebar-link">What is I-864? <span>↓</span></a>
-          <a href="#" class="sidebar-link">2026 income table <span>↓</span></a>
-          <a href="#" class="sidebar-link">Income calculator <span>↓</span></a>
-          <a href="#" class="sidebar-link">Household size <span>↓</span></a>
-          <a href="#" class="sidebar-link">If you fall short <span>↓</span></a>
-          <a href="#" class="sidebar-link">Documents needed <span>↓</span></a>
-          <a href="#" class="sidebar-link">How to complete <span>↓</span></a>
-          <a href="#" class="sidebar-link">Common mistakes <span>↓</span></a>
-          <a href="#" class="sidebar-link">FAQ <span>↓</span></a>
+          <a href="#" class="sidebar-link">What is I-864? <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">2026 income table <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Income calculator <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Household size <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">If you fall short <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Documents needed <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">How to complete <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Common mistakes <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">FAQ <span>↓</span></SmartLink>
         </div>
       </div>
 
       <div class="sidebar-card">
         <div class="sidebar-card-head">Key Pages</div>
         <div class="sidebar-card-body">
-          <a href="/k1-visa" class="sidebar-link">K-1 Complete Guide <span>→</span></a>
-          <a href="/cr1-visa" class="sidebar-link">CR-1 Complete Guide <span>→</span></a>
-          <a href="/k1-vs-cr1" class="sidebar-link">K-1 vs CR-1 <span>→</span></a>
-          <a href="/bona-fide-marriage" class="sidebar-link">Bona Fide Evidence <span>→</span></a>
-          <a href="/adjustment-of-status" class="sidebar-link">Adjustment of Status <span>→</span></a>
+          <SmartLink href="/k1-visa" class="sidebar-link">K-1 Complete Guide <span>→</span></SmartLink>
+          <SmartLink href="/cr1-visa" class="sidebar-link">CR-1 Complete Guide <span>→</span></SmartLink>
+          <SmartLink href="/k1-vs-cr1" class="sidebar-link">K-1 vs CR-1 <span>→</span></SmartLink>
+          <SmartLink href="/bona-fide-marriage" class="sidebar-link">Bona Fide Evidence <span>→</span></SmartLink>
+          <SmartLink href="/adjustment-of-status" class="sidebar-link">Adjustment of Status <span>→</span></SmartLink>
         </div>
       </div>
 

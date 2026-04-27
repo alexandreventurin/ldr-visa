@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
 
 const schema = JSON.stringify([
   {
@@ -364,7 +365,7 @@ const schema = JSON.stringify([
 <div class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="/">Home</a>
+      <a href="/">Home</SmartLink>
       <span>/</span>
       K-1 vs CR-1
     </div>
@@ -634,7 +635,7 @@ const schema = JSON.stringify([
             <li>The petitioner is a U.S. citizen</li>
             <li>You're comfortable with the 90-day pressure</li>
           </ul>
-          <a href="/k1-visa">K-1 complete guide →</a>
+          <SmartLink href="/k1-visa">K-1 complete guide →</SmartLink>
         </div>
         <div class="decision-box cr1-box">
           <h3>Choose CR-1 if…</h3>
@@ -645,7 +646,7 @@ const schema = JSON.stringify([
             <li>The petitioner is an LPR (green card holder)</li>
             <li>You want fewer steps after arriving in the U.S.</li>
           </ul>
-          <a href="/cr1-visa">CR-1 complete guide →</a>
+          <SmartLink href="/cr1-visa">CR-1 complete guide →</SmartLink>
         </div>
       </div>
 
@@ -669,7 +670,7 @@ const schema = JSON.stringify([
 
         <div class="faq-item">
           <div class="faq-q">Does the K-1 or CR-1 have more risk of denial?</div>
-          <div class="faq-a">The K-1 consular interview can be more scrutinized because the couple isn't married yet — officers rely entirely on relationship evidence. CR-1 applicants have a marriage certificate as baseline proof. That said, both visas require strong evidence of a bona fide relationship. See our <a href="/bona-fide-marriage">bona fide marriage evidence guide</a>.</div>
+          <div class="faq-a">The K-1 consular interview can be more scrutinized because the couple isn't married yet — officers rely entirely on relationship evidence. CR-1 applicants have a marriage certificate as baseline proof. That said, both visas require strong evidence of a bona fide relationship. See our <SmartLink href="/bona-fide-marriage">bona fide marriage evidence guide</SmartLink>.</div>
         </div>
 
         <div class="faq-item">
@@ -686,36 +687,36 @@ const schema = JSON.stringify([
 
       <h2>Related Guides</h2>
       <div class="related-grid">
-        <a href="/k1-visa" class="related-card">
+        <SmartLink href="/k1-visa" class="related-card">
           <div class="cat">K-1 Visa</div>
           <h4>K-1 Fiancé Visa Complete Guide</h4>
           <p>Requirements, process, costs and timeline.</p>
-        </a>
-        <a href="/cr1-visa" class="related-card">
+        </SmartLink>
+        <SmartLink href="/cr1-visa" class="related-card">
           <div class="cat">CR-1 Visa</div>
           <h4>CR-1 Spousal Visa Complete Guide</h4>
           <p>Requirements, process, costs and timeline.</p>
-        </a>
-        <a href="/k1-visa-processing-time" class="related-card">
+        </SmartLink>
+        <SmartLink href="/k1-visa-processing-time" class="related-card">
           <div class="cat">Processing Time</div>
           <h4>K-1 Processing Time by Country 2026</h4>
           <p>Current USCIS and embassy wait times.</p>
-        </a>
-        <a href="/affidavit-of-support" class="related-card">
+        </SmartLink>
+        <SmartLink href="/affidavit-of-support" class="related-card">
           <div class="cat">Finances</div>
           <h4>Affidavit of Support (I-864)</h4>
           <p>Income requirements for both visa paths.</p>
-        </a>
-        <a href="/bona-fide-marriage" class="related-card">
+        </SmartLink>
+        <SmartLink href="/bona-fide-marriage" class="related-card">
           <div class="cat">Evidence</div>
           <h4>Bona Fide Marriage Evidence</h4>
           <p>What both K-1 and CR-1 need to prove.</p>
-        </a>
-        <a href="/adjustment-of-status" class="related-card">
+        </SmartLink>
+        <SmartLink href="/adjustment-of-status" class="related-card">
           <div class="cat">After K-1</div>
           <h4>Adjustment of Status After Marriage</h4>
           <p>The green card process after a K-1 wedding.</p>
-        </a>
+        </SmartLink>
       </div>
 
     </article>
@@ -754,25 +755,25 @@ const schema = JSON.stringify([
       <div class="sidebar-card">
         <div class="sidebar-card-head">On This Page</div>
         <div class="sidebar-card-body">
-          <a href="#" class="sidebar-link">Core difference <span>↓</span></a>
-          <a href="#" class="sidebar-link">Full comparison table <span>↓</span></a>
-          <a href="#" class="sidebar-link">Cost breakdown <span>↓</span></a>
-          <a href="#" class="sidebar-link">Which is faster? <span>↓</span></a>
-          <a href="#" class="sidebar-link">Pros &amp; cons <span>↓</span></a>
-          <a href="#" class="sidebar-link">Who should choose which? <span>↓</span></a>
-          <a href="#" class="sidebar-link">FAQ <span>↓</span></a>
+          <a href="#" class="sidebar-link">Core difference <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Full comparison table <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Cost breakdown <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Which is faster? <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Pros &amp; cons <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">Who should choose which? <span>↓</span></SmartLink>
+          <a href="#" class="sidebar-link">FAQ <span>↓</span></SmartLink>
         </div>
       </div>
 
       <div class="sidebar-card">
         <div class="sidebar-card-head">Key Pages</div>
         <div class="sidebar-card-body">
-          <a href="/k1-visa" class="sidebar-link">K-1 Complete Guide <span>→</span></a>
-          <a href="/cr1-visa" class="sidebar-link">CR-1 Complete Guide <span>→</span></a>
-          <a href="/affidavit-of-support" class="sidebar-link">Affidavit of Support <span>→</span></a>
-          <a href="/bona-fide-marriage" class="sidebar-link">Bona Fide Evidence <span>→</span></a>
-          <a href="/k1-visa-interview" class="sidebar-link">Interview Prep <span>→</span></a>
-          <a href="/adjustment-of-status" class="sidebar-link">Adjustment of Status <span>→</span></a>
+          <SmartLink href="/k1-visa" class="sidebar-link">K-1 Complete Guide <span>→</span></SmartLink>
+          <SmartLink href="/cr1-visa" class="sidebar-link">CR-1 Complete Guide <span>→</span></SmartLink>
+          <SmartLink href="/affidavit-of-support" class="sidebar-link">Affidavit of Support <span>→</span></SmartLink>
+          <SmartLink href="/bona-fide-marriage" class="sidebar-link">Bona Fide Evidence <span>→</span></SmartLink>
+          <SmartLink href="/k1-visa-interview" class="sidebar-link">Interview Prep <span>→</span></SmartLink>
+          <SmartLink href="/adjustment-of-status" class="sidebar-link">Adjustment of Status <span>→</span></SmartLink>
         </div>
       </div>
 

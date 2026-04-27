@@ -450,3 +450,19 @@ img { display: block; max-width: 100%; }
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
+
+/* Sidebar link — global so SmartLink-rendered <a>/<span> elements receive styles */
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 11px 18px;
+  font-size: 0.875rem;
+  color: var(--color-text);
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.12s;
+  text-decoration: none;
+}
+.sidebar-link:last-child { border-bottom: none; }
+.sidebar-link:hover { background: var(--color-accent-light); color: var(--color-accent); }
+.sidebar-link span { color: var(--color-muted); font-size: 0.8rem; }

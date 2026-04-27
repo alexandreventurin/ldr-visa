@@ -1,0 +1,101 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+}
+const { title, description, canonical } = Astro.props;
+const site = "https://ldrvisa.org";
+const url = canonical ?? site + Astro.url.pathname;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={url} />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content={url} />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:site_name" content="LDR Visa" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={description} />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles/global.css" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/" class="nav-logo">LDR Visa</a>
+        <ul class="nav-links">
+          <li><a href="/k1-visa">K-1 Fiancé Visa</a></li>
+          <li><a href="/cr1-visa">CR-1 Spousal Visa</a></li>
+          <li><a href="/affidavit-of-support">Affidavit of Support</a></li>
+          <li><a href="/adjustment-of-status">Adjustment of Status</a></li>
+          <li><a href="/k1-vs-cr1" class="nav-cta">K-1 vs CR-1 →</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <slot />
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="nav-logo">LDR Visa</a>
+          <p>Plain-English guides for international couples navigating U.S. immigration — K-1, CR-1, and beyond.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Visa Types</h4>
+          <ul>
+            <li><a href="/k1-visa">K-1 Fiancé Visa</a></li>
+            <li><a href="/cr1-visa">CR-1 Spousal Visa</a></li>
+            <li><a href="/ir1-visa">IR-1 Visa</a></li>
+            <li><a href="/k2-visa">K-2 Visa (Children)</a></li>
+            <li><a href="/k1-vs-cr1">K-1 vs CR-1</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Key Topics</h4>
+          <ul>
+            <li><a href="/affidavit-of-support">Affidavit of Support</a></li>
+            <li><a href="/bona-fide-marriage">Bona Fide Marriage</a></li>
+            <li><a href="/adjustment-of-status">Adjustment of Status</a></li>
+            <li><a href="/k1-visa-interview">Interview Prep</a></li>
+            <li><a href="/i-129f">Form I-129F</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Processing Times</h4>
+          <ul>
+            <li><a href="/k1-visa-processing-time">K-1 Timeline 2026</a></li>
+            <li><a href="/cr1-visa-processing-time">CR-1 Timeline 2026</a></li>
+            <li><a href="/adjustment-of-status-processing-time">AOS Timeline</a></li>
+            <li><a href="/i-129f-processing-time">I-129F Processing</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; {new Date().getFullYear()} LDR Visa. For informational purposes only — not legal advice.</p>
+        <p><a href="/privacy">Privacy</a> · <a href="/disclaimer">Disclaimer</a></p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

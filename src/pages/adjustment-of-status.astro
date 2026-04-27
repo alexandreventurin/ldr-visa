@@ -1,0 +1,786 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Adjustment of Status After Marriage: Complete 2026 Guide",
+    "description": "Everything about adjusting status after K-1 entry or marriage — I-485, timeline, fees, work permit (EAD), advance parole, biometrics, and the 90-day rule.",
+    "url": "https://ldrvisa.org/adjustment-of-status",
+    "dateModified": "2026-04-24",
+    "datePublished": "2026-04-24",
+    "author": {
+      "@type": "Organization",
+      "name": "LDR Visa",
+      "url": "https://ldrvisa.org"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "LDR Visa",
+      "url": "https://ldrvisa.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ldrvisa.org/favicon.svg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ldrvisa.org/adjustment-of-status"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Adjustment of Status", "item": "https://ldrvisa.org/adjustment-of-status" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does adjustment of status take in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Processing times vary by field office. In 2026, most AOS cases (I-485) are processing in 12–24 months at major field offices. USCIS publishes monthly processing time estimates at egov.uscis.gov/processing-times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I work while my adjustment of status is pending?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, once USCIS approves your Employment Authorization Document (EAD), which is filed as part of the I-485 package using Form I-765. EAD approval typically takes 3–7 months. You may also receive advance parole (I-131) at the same time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 90-day rule for K-1 visa holders?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "K-1 visa holders must marry their U.S. citizen petitioner within 90 days of entering the U.S. After marriage, they can file for adjustment of status (I-485). Failing to marry within 90 days means you must leave the U.S."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What forms do I need for adjustment of status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The core AOS package includes: I-485 (Application to Register Permanent Residence), I-864 (Affidavit of Support), I-765 (EAD/Work Permit), I-131 (Advance Parole), I-693 (Medical Exam by USCIS civil surgeon), and supporting documents including passport, marriage certificate, birth certificate, and photos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I travel outside the U.S. while my I-485 is pending?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You need Advance Parole (Form I-131) approved before traveling outside the U.S. while your I-485 is pending. Leaving without Advance Parole will be treated as abandoning your application — your I-485 will be denied and you will need to restart."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between CR-1 and IR-1 conditional vs. permanent green card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A CR-1 (Conditional Resident) is issued when the marriage is less than 2 years old at the time the green card is approved. It expires after 2 years and requires filing Form I-751 (Petition to Remove Conditions) within the 90-day window before it expires. An IR-1 (Immediate Relative) is a 10-year permanent green card, issued when the marriage is over 2 years old at approval."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="Adjustment of Status After Marriage: Complete Guide (2026)"
+  description="How to file for adjustment of status after K-1 entry or marriage — I-485, processing times, EAD work permit, advance parole, biometrics, and the 90-day rule."
+  canonical="https://ldrvisa.org/adjustment-of-status"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); display: flex; align-items: center; gap: 0.4rem; }
+
+  .key-stats { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 2rem 0; }
+  .key-stats .container { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; max-width: 900px; }
+  .kstat { text-align: center; min-width: 160px; }
+  .kstat-num { font-size: 2rem; font-weight: 800; color: var(--color-accent); }
+  .kstat-label { font-size: 0.85rem; color: var(--color-muted); margin-top: 0.25rem; }
+
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 800px){ .content-wrap { grid-template-columns: 1fr; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .section h3 { font-size: 1.15rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+
+  /* Quick answer banner */
+  .quick-answer { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+  .quick-answer-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 0.5rem; }
+  .quick-answer h3 { font-size: 1.1rem; margin: 0 0 0.5rem; }
+  .quick-answer p { margin: 0; font-size: 0.95rem; color: #1e40af; line-height: 1.7; }
+
+  /* Process steps */
+  .process-steps { counter-reset: step; list-style: none; padding: 0; margin: 1rem 0; }
+  .process-step { display: flex; gap: 1.25rem; padding: 1.25rem 0; border-bottom: 1px solid var(--color-border); align-items: flex-start; }
+  .process-step:last-child { border-bottom: none; }
+  .step-icon { width: 2.5rem; height: 2.5rem; border-radius: 50%; background: var(--color-accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1rem; flex-shrink: 0; }
+  .step-body { flex: 1; }
+  .step-body h4 { font-size: 1rem; font-weight: 700; margin: 0 0 0.3rem; }
+  .step-body p { font-size: 0.9rem; color: var(--color-muted); margin: 0; line-height: 1.6; }
+  .step-time { display: inline-block; font-size: 0.78rem; font-weight: 700; color: var(--color-accent); background: #eff6ff; border-radius: 999px; padding: 0.15rem 0.6rem; margin-top: 0.4rem; }
+
+  /* Forms table */
+  .forms-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 1rem; }
+  .forms-table th { background: var(--color-accent); color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .forms-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  .forms-table tr:hover td { background: var(--color-surface); }
+  .form-num { font-weight: 700; color: var(--color-accent); white-space: nowrap; }
+  .badge { display: inline-block; font-size: 0.7rem; font-weight: 700; padding: 0.15rem 0.5rem; border-radius: 999px; }
+  .badge-required { background: #dcfce7; color: #166534; }
+  .badge-optional { background: #f3f4f6; color: #6b7280; }
+
+  /* Fee table */
+  .fee-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin-top: 1rem; }
+  .fee-table th { background: #1a1a2e; color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.8rem; }
+  .fee-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .fee-table tr:hover td { background: var(--color-surface); }
+  .fee-table .total-row td { font-weight: 700; border-top: 2px solid var(--color-accent); background: var(--color-surface); }
+  .fee-amount { font-weight: 700; text-align: right; }
+  .fee-note { font-size: 0.8rem; color: var(--color-muted); }
+
+  /* Timeline */
+  .timeline-visual { margin: 1.5rem 0; }
+  .tv-step { display: flex; gap: 1rem; margin-bottom: 0; }
+  .tv-left { display: flex; flex-direction: column; align-items: center; width: 2rem; }
+  .tv-dot { width: 1rem; height: 1rem; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; }
+  .tv-line { width: 2px; background: var(--color-border); flex: 1; min-height: 2rem; }
+  .tv-step:last-child .tv-line { display: none; }
+  .tv-body { padding-bottom: 1.5rem; flex: 1; }
+  .tv-title { font-weight: 700; font-size: 0.95rem; }
+  .tv-time { font-size: 0.8rem; color: var(--color-accent); font-weight: 700; margin: 0.1rem 0; }
+  .tv-desc { font-size: 0.85rem; color: var(--color-muted); line-height: 1.5; }
+
+  /* Callouts */
+  .callout { background: #eff6ff; border: 1px solid #bfdbfe; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #1e40af; line-height: 1.6; }
+  .warning { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #f97316; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .warning p { margin: 0; font-size: 0.9rem; color: #9a3412; line-height: 1.6; }
+  .danger { background: #fff5f5; border: 1px solid #fecaca; border-left: 4px solid #dc2626; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .danger p { margin: 0; font-size: 0.9rem; color: #7f1d1d; line-height: 1.6; }
+
+  /* Checklist */
+  .checklist-section h4 { font-size: 1rem; font-weight: 700; margin: 1.25rem 0 0.5rem; color: var(--color-accent); }
+  .checklist { list-style: none; padding: 0; margin: 0; }
+  .checklist li { display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.5rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist input[type=checkbox] { margin-top: 0.15rem; width: 1rem; height: 1rem; flex-shrink: 0; accent-color: var(--color-accent); }
+  .checklist .item-label { flex: 1; }
+  .checklist .item-note { font-size: 0.8rem; color: var(--color-muted); display: block; margin-top: 0.15rem; }
+
+  /* CR-1 vs conditional -->
+  .card-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.25rem 0; }
+  @media(max-width: 600px){ .card-pair { grid-template-columns: 1fr; } }
+  .card-side { border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; }
+  .card-side h4 { font-size: 1rem; font-weight: 700; margin: 0 0 0.5rem; }
+  .card-side p { font-size: 0.9rem; color: var(--color-muted); margin: 0 0 0.75rem; line-height: 1.6; }
+  .card-side ul { list-style: none; padding: 0; margin: 0; }
+  .card-side ul li { font-size: 0.85rem; padding: 0.2rem 0 0.2rem 1.2rem; position: relative; color: var(--color-text); }
+  .card-side ul li::before { content: "•"; position: absolute; left: 0.3rem; color: var(--color-accent); }
+  .card-cr1 { border-top: 4px solid #f97316; }
+  .card-ir1 { border-top: 4px solid #22c55e; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.7; font-size: 0.95rem; }
+
+  /* Sidebar */
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--color-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--color-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: #1d4ed8; }
+
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--color-accent); box-shadow: 0 2px 12px rgba(37,99,235,0.08); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+</style>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › Adjustment of Status
+    </div>
+    <h1>Adjustment of Status After Marriage:<br/>Complete Guide (2026)</h1>
+    <p class="hero-desc">
+      Everything you need to know about filing I-485 after K-1 entry or marriage — forms, fees, processing times, work permit, advance parole, and the conditional green card.
+    </p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 12 min read</span>
+      <span class="hero-meta-item">✅ K-1 and marriage-based AOS</span>
+    </div>
+  </div>
+</section>
+
+<!-- Key Stats -->
+<section class="key-stats">
+  <div class="container">
+    <div class="kstat">
+      <div class="kstat-num">12–24 mo</div>
+      <div class="kstat-label">Avg. I-485 processing time</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">$1,440</div>
+      <div class="kstat-label">I-485 filing fee (2026)</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">90 days</div>
+      <div class="kstat-label">K-1 must marry before AOS</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">2 years</div>
+      <div class="kstat-label">CR-1 conditional period</div>
+    </div>
+  </div>
+</section>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <!-- What is AOS -->
+    <section class="section" id="what-is">
+      <h2>What Is Adjustment of Status?</h2>
+
+      <div class="quick-answer">
+        <div class="quick-answer-label">Quick Answer</div>
+        <h3>AOS = changing your status to permanent resident without leaving the U.S.</h3>
+        <p>Adjustment of Status (AOS) is the process of applying for a green card while you're already inside the United States. Instead of going to a U.S. consulate abroad (consular processing), you file Form I-485 with USCIS and wait for approval at the same field office that covers your area.</p>
+      </div>
+
+      <p>
+        For K-1 visa holders, AOS is the <em>only</em> path to a green card after entering the U.S. — you entered specifically to marry your U.S. citizen petitioner and then adjust. For people who are already married to a U.S. citizen and entered on a different visa (tourist, student, work), AOS may also be available depending on how you entered and your status history.
+      </p>
+      <p>
+        The result of a successful AOS is a <strong>green card</strong> (Form I-551, Permanent Resident Card) — either a 2-year conditional card (CR-1) or a 10-year permanent card (IR-1).
+      </p>
+    </section>
+
+    <!-- K-1 vs Marriage-based -->
+    <section class="section" id="who-can-file">
+      <h2>Who Can File for Adjustment of Status?</h2>
+
+      <h3>K-1 visa holders (after marriage)</h3>
+      <p>
+        If you entered the U.S. on a K-1 fiancé visa, you <strong>must marry your U.S. citizen petitioner within 90 days</strong> of entry. After marriage, you're eligible to file for AOS. You cannot transfer your intent and marry someone else on a K-1.
+      </p>
+      <div class="warning">
+        <p><strong>90-day rule:</strong> K-1 visa holders who don't marry within 90 days must leave the U.S. Filing for AOS does not extend your authorized stay if you miss this deadline. Don't confuse "pending AOS" with authorization to remain — file promptly after marriage.</p>
+      </div>
+
+      <h3>Immediate relatives of U.S. citizens (marriage-based)</h3>
+      <p>
+        If you're already married to a U.S. citizen and you're currently inside the U.S. in valid status (or entered with inspection), you may file I-485 concurrently with Form I-130 (the immigrant visa petition). This concurrent filing is a major advantage of AOS — you don't have to wait for I-130 approval before filing I-485.
+      </p>
+
+      <h3>Who is NOT eligible for AOS</h3>
+      <ul style="margin: 0.75rem 0 1rem 1.5rem; color: var(--color-text); line-height: 1.9;">
+        <li>People who entered the U.S. without inspection (crossed the border illegally) — unless covered by INA § 245(i)</li>
+        <li>People who violated their visa status for more than 180 days before filing</li>
+        <li>People previously ordered removed from the U.S.</li>
+        <li>K-1 visa holders who didn't marry their original petitioner</li>
+        <li>Spouses of LPRs (green card holders) — they must use consular processing or wait for a visa number</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Spouses of LPRs:</strong> If your spouse has a green card (not citizenship), you're in the F2A preference category with a wait for a visa number. Consult an immigration attorney about whether to wait for AOS or pursue consular processing in parallel.</p>
+      </div>
+    </section>
+
+    <!-- Forms required -->
+    <section class="section" id="forms">
+      <h2>Forms Required for Adjustment of Status</h2>
+      <p>AOS is a package — you file multiple forms together. Missing any required form or supporting document is the #1 cause of Requests for Evidence (RFEs) and delays.</p>
+
+      <table class="forms-table">
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th>Name</th>
+            <th>Purpose</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="form-num">I-485</td>
+            <td>Application to Register Permanent Residence or Adjust Status</td>
+            <td>The main green card application</td>
+            <td><span class="badge badge-required">Required</span></td>
+          </tr>
+          <tr>
+            <td class="form-num">I-864</td>
+            <td>Affidavit of Support</td>
+            <td>U.S. citizen sponsor proves financial ability to support</td>
+            <td><span class="badge badge-required">Required</span></td>
+          </tr>
+          <tr>
+            <td class="form-num">I-693</td>
+            <td>Medical Examination (civil surgeon)</td>
+            <td>Immigration medical exam by USCIS-approved civil surgeon</td>
+            <td><span class="badge badge-required">Required</span></td>
+          </tr>
+          <tr>
+            <td class="form-num">I-765</td>
+            <td>Application for Employment Authorization (EAD)</td>
+            <td>Work permit while I-485 is pending</td>
+            <td><span class="badge badge-required">Recommended</span></td>
+          </tr>
+          <tr>
+            <td class="form-num">I-131</td>
+            <td>Application for Travel Document (Advance Parole)</td>
+            <td>Permission to travel outside U.S. while I-485 pending</td>
+            <td><span class="badge badge-required">Recommended</span></td>
+          </tr>
+          <tr>
+            <td class="form-num">I-130</td>
+            <td>Petition for Alien Relative</td>
+            <td>Required for marriage-based AOS (not needed for K-1)</td>
+            <td><span class="badge badge-optional">If married (not K-1)</span></td>
+          </tr>
+          <tr>
+            <td class="form-num">I-751</td>
+            <td>Petition to Remove Conditions on Residence</td>
+            <td>Filed after 2 years to convert CR-1 to permanent green card</td>
+            <td><span class="badge badge-optional">Later (if CR-1)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Fees -->
+    <section class="section" id="fees">
+      <h2>Adjustment of Status Fees (2026)</h2>
+      <p>USCIS updated its fee schedule in April 2024. The following are 2026 fees for the standard AOS package.</p>
+
+      <table class="fee-table">
+        <thead>
+          <tr>
+            <th>Form</th>
+            <th>Description</th>
+            <th class="fee-amount">Fee</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="form-num">I-485</td>
+            <td>Main green card application (age 14–78)</td>
+            <td class="fee-amount">$1,440</td>
+          </tr>
+          <tr>
+            <td class="form-num">I-485</td>
+            <td>Applicant under 14 with parent filing simultaneously</td>
+            <td class="fee-amount">$950</td>
+          </tr>
+          <tr>
+            <td class="form-num">I-765</td>
+            <td>Employment Authorization Document (EAD)</td>
+            <td class="fee-amount">$0 <span class="fee-note">(free when filed with I-485)</span></td>
+          </tr>
+          <tr>
+            <td class="form-num">I-131</td>
+            <td>Advance Parole (travel document)</td>
+            <td class="fee-amount">$0 <span class="fee-note">(free when filed with I-485)</span></td>
+          </tr>
+          <tr>
+            <td class="form-num">I-130</td>
+            <td>Petition for Alien Relative (marriage-based, not K-1)</td>
+            <td class="fee-amount">$675</td>
+          </tr>
+          <tr>
+            <td>I-693</td>
+            <td>Medical exam by civil surgeon (varies by provider)</td>
+            <td class="fee-amount">$200–$500</td>
+          </tr>
+          <tr>
+            <td>Biometrics</td>
+            <td>Included in I-485 fee since 2024</td>
+            <td class="fee-amount">$0</td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="2"><strong>Total (K-1 AOS, typical)</strong></td>
+            <td class="fee-amount"><strong>~$1,640–$1,940</strong></td>
+          </tr>
+          <tr class="total-row">
+            <td colspan="2"><strong>Total (marriage-based AOS with I-130)</strong></td>
+            <td class="fee-amount"><strong>~$2,315–$2,615</strong></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout">
+        <p><strong>Fee waivers:</strong> If you cannot afford fees, you may request a fee waiver using Form I-912. You must demonstrate financial hardship. Fee waivers are not available for I-485 itself, but are available for I-765 and I-131 when not filed with I-485.</p>
+      </div>
+    </section>
+
+    <!-- Process Timeline -->
+    <section class="section" id="timeline">
+      <h2>Adjustment of Status Timeline (2026)</h2>
+      <p>Timeline varies significantly by USCIS field office. These are general estimates for 2026.</p>
+
+      <div class="timeline-visual">
+        <div class="tv-step">
+          <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+          <div class="tv-body">
+            <div class="tv-title">File the AOS package</div>
+            <div class="tv-time">Day 0</div>
+            <div class="tv-desc">Mail I-485 package to USCIS lockbox facility. Include all required forms, supporting documents, photos, and checks or money orders for fees.</div>
+          </div>
+        </div>
+        <div class="tv-step">
+          <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+          <div class="tv-body">
+            <div class="tv-title">Receipt Notice (I-797)</div>
+            <div class="tv-time">2–6 weeks after filing</div>
+            <div class="tv-desc">USCIS sends a receipt notice with your case number. Use this to check status online at my.uscis.gov. Keep this document — it proves your application is pending.</div>
+          </div>
+        </div>
+        <div class="tv-step">
+          <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+          <div class="tv-body">
+            <div class="tv-title">Biometrics Appointment</div>
+            <div class="tv-time">2–4 months after filing</div>
+            <div class="tv-desc">USCIS schedules an appointment at an Application Support Center (ASC) to take your fingerprints and photo. Attendance is mandatory — missing it can delay or end your case.</div>
+          </div>
+        </div>
+        <div class="tv-step">
+          <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+          <div class="tv-body">
+            <div class="tv-title">EAD / Advance Parole Approval</div>
+            <div class="tv-time">3–7 months after filing</div>
+            <div class="tv-desc">If you filed I-765 and I-131 with your I-485, your work permit and travel document are typically approved first. You can start working legally once the EAD card arrives.</div>
+          </div>
+        </div>
+        <div class="tv-step">
+          <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+          <div class="tv-body">
+            <div class="tv-title">Interview Notice</div>
+            <div class="tv-time">8–20 months after filing</div>
+            <div class="tv-desc">Most marriage-based AOS cases include an in-person interview at your local USCIS field office. Both spouses must attend. USCIS may waive the interview for straightforward cases, but this is uncommon.</div>
+          </div>
+        </div>
+        <div class="tv-step">
+          <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+          <div class="tv-body">
+            <div class="tv-title">AOS Interview</div>
+            <div class="tv-time">Typically 30–60 minutes</div>
+            <div class="tv-desc">The officer reviews your case and asks questions about your relationship and background. Bring original documents for everything in your petition. Most genuine couples are approved on the same day or receive an approval notice within weeks.</div>
+          </div>
+        </div>
+        <div class="tv-step">
+          <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+          <div class="tv-body">
+            <div class="tv-title">Green Card Approved &amp; Mailed</div>
+            <div class="tv-time">1–4 weeks after interview</div>
+            <div class="tv-desc">If approved, your green card is mailed to your address within a few weeks. Check that your address is current in your USCIS account before the interview.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Check your office:</strong> Processing times vary widely by field office. Chicago, San Francisco, and New York tend to take longer than field offices in smaller cities. Check current times at <strong>egov.uscis.gov/processing-times</strong> — select "I-485" and your field office.</p>
+      </div>
+    </section>
+
+    <!-- EAD and Travel -->
+    <section class="section" id="ead-ap">
+      <h2>Work Permit (EAD) &amp; Advance Parole</h2>
+      <p>Filing I-765 (EAD) and I-131 (Advance Parole) concurrently with I-485 is essentially free. File them together — there's no reason not to.</p>
+
+      <h3>Employment Authorization Document (EAD)</h3>
+      <p>
+        The EAD (work permit) lets you work for any U.S. employer while your I-485 is pending. You're not authorized to work until the actual EAD card arrives — approval notice alone is not sufficient for I-9 verification.
+      </p>
+      <p>
+        EADs for pending I-485 applicants are currently being approved in <strong>3–7 months</strong> at most offices. Once approved, the EAD is valid for the duration of your I-485 case (up to 5 years, auto-renewed if needed).
+      </p>
+
+      <h3>Advance Parole (travel document)</h3>
+      <p>
+        Advance Parole (AP) is permission to travel outside the U.S. and re-enter while your I-485 is pending. Without AP, leaving the U.S. abandons your I-485 — it will be denied and you'll have to start over.
+      </p>
+      <div class="danger">
+        <p><strong>Critical:</strong> Do NOT leave the U.S. while your I-485 is pending unless you have Advance Parole in hand and it is still valid. A brief trip to Canada, Mexico, or anywhere else will result in your I-485 being abandoned. This applies even to K-1 visa holders whose I-94 has expired.</p>
+      </div>
+
+      <div class="callout">
+        <p><strong>Combo card:</strong> USCIS now issues an EAD/AP combo card — a single card that serves as both your work permit and travel document. If you have a combo card, you can work and travel with the same document.</p>
+      </div>
+    </section>
+
+    <!-- AOS Interview prep -->
+    <section class="section" id="interview">
+      <h2>What to Expect at the AOS Interview</h2>
+      <p>
+        The AOS interview is the final in-person hurdle before your green card is approved. Both the applicant and the U.S. citizen spouse must attend. The officer's goal is to confirm your marriage is genuine and that you have no bars to admissibility.
+      </p>
+
+      <h3>Documents to bring (originals + copies)</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" /><div class="item-label">USCIS interview appointment notice</div></li>
+        <li><input type="checkbox" /><div class="item-label">Both passports (all pages)</div></li>
+        <li><input type="checkbox" /><div class="item-label">Original marriage certificate</div></li>
+        <li><input type="checkbox" /><div class="item-label">Original birth certificates (both)</div></li>
+        <li><input type="checkbox" /><div class="item-label">Divorce decrees (if either previously married)</div></li>
+        <li><input type="checkbox" /><div class="item-label">EAD/AP combo card (if received)</div></li>
+        <li><input type="checkbox" /><div class="item-label">I-693 medical exam (sealed envelope from civil surgeon)</div></li>
+        <li><input type="checkbox" /><div class="item-label">Proof of bona fide marriage: photos, joint financials, lease</div></li>
+        <li><input type="checkbox" /><div class="item-label">Tax returns (past 1–2 years) for the U.S. citizen sponsor</div></li>
+        <li><input type="checkbox" /><div class="item-label">Pay stubs and employer letter for the U.S. citizen sponsor</div></li>
+        <li><input type="checkbox" /><div class="item-label">Any prior USCIS approval notices (I-797)</div></li>
+      </ul>
+
+      <h3>Interview questions you'll likely face</h3>
+      <p>AOS interview questions are similar to the K-1 consular interview — how you met, your living situation, finances, and future plans. The officer may also ask about:</p>
+      <ul style="margin: 0.75rem 0 1rem 1.5rem; color: var(--color-text); line-height: 1.9;">
+        <li>Any criminal history or arrests (even without conviction)</li>
+        <li>Prior immigration violations or overstays</li>
+        <li>Any prior marriages and how they ended</li>
+        <li>Current address, neighbors, daily routine</li>
+        <li>Your spouse's job, daily schedule, and family</li>
+      </ul>
+
+      <div class="callout">
+        <p><strong>Prepare together:</strong> Review your shared history before the interview — date you met, first visit, proposal, where you've lived, joint accounts. Inconsistent answers between spouses are the #1 red flag for fraud. You don't need a perfect memory, but major discrepancies trigger extra scrutiny.</p>
+      </div>
+    </section>
+
+    <!-- CR-1 vs IR-1 -->
+    <section class="section" id="cr1-ir1">
+      <h2>Conditional Green Card (CR-1) vs. Permanent (IR-1)</h2>
+      <p>The type of green card you receive depends on how long you've been married at the time your AOS is approved.</p>
+
+      <div class="card-pair">
+        <div class="card-side card-cr1">
+          <h4>CR-1: Conditional Resident</h4>
+          <p>Issued when the marriage is <strong>less than 2 years old</strong> at the time of AOS approval.</p>
+          <ul>
+            <li>Valid for 2 years only</li>
+            <li>Must file I-751 within 90 days before expiration</li>
+            <li>Both spouses must jointly file I-751 (unless divorced or abuse exception)</li>
+            <li>I-751 approval converts you to a 10-year permanent green card</li>
+            <li>Working and traveling rights are the same as IR-1 during the 2-year period</li>
+          </ul>
+        </div>
+        <div class="card-side card-ir1">
+          <h4>IR-1: Immediate Relative</h4>
+          <p>Issued when the marriage is <strong>2 years or older</strong> at the time of AOS approval.</p>
+          <ul>
+            <li>Valid for 10 years</li>
+            <li>No removal of conditions needed</li>
+            <li>Renewable every 10 years</li>
+            <li>Can apply for citizenship after 3 years as a permanent resident (married to U.S. citizen)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>CR-1 to IR-1:</strong> If you married more than 2 years ago but your green card was approved when you were under 2 years married (because AOS took so long), you'll start with a CR-1. This is common and not a problem — the I-751 process is straightforward for genuine couples.</p>
+      </div>
+    </section>
+
+    <!-- Full Document Checklist -->
+    <section class="section" id="checklist">
+      <h2>Complete Filing Checklist</h2>
+
+      <div class="checklist-section">
+        <h4>Core Forms</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">Form I-485 (completed, signed, two passport photos)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Form I-864 (signed by U.S. citizen sponsor with their documents)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Form I-693 (sealed envelope from civil surgeon — do not open)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Form I-765 (EAD application)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Form I-131 (Advance Parole application)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Form I-130 + I-130A (if marriage-based, not K-1)</div></li>
+        </ul>
+      </div>
+
+      <div class="checklist-section">
+        <h4>Identity &amp; Relationship Documents</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">Copy of your passport (all pages)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Copy of your U.S. citizen spouse's passport or U.S. birth certificate</div></li>
+          <li><input type="checkbox" /><div class="item-label">Original marriage certificate + certified translation (if not in English)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Birth certificates for both spouses</div></li>
+          <li><input type="checkbox" /><div class="item-label">Divorce decrees for all prior marriages (if applicable)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Copy of your I-94 Arrival/Departure Record (K-1 entry)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Copy of your K-1 visa page (if filing AOS after K-1)</div></li>
+        </ul>
+      </div>
+
+      <div class="checklist-section">
+        <h4>Supporting Documents for I-864 (Affidavit of Support)</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">Most recent federal tax return (1040) + W-2s</div></li>
+          <li><input type="checkbox" /><div class="item-label">Recent pay stubs (most recent 6 months)</div></li>
+          <li><input type="checkbox" /><div class="item-label">Employer letter confirming employment, salary, and position</div></li>
+          <li><input type="checkbox" /><div class="item-label">Bank statements (most recent 3 months)</div></li>
+        </ul>
+      </div>
+
+      <div class="checklist-section">
+        <h4>Bona Fide Marriage Evidence</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">Joint bank account statements</div></li>
+          <li><input type="checkbox" /><div class="item-label">Joint lease or mortgage</div></li>
+          <li><input type="checkbox" /><div class="item-label">15–30 photos together across different times and places</div></li>
+          <li><input type="checkbox" /><div class="item-label">3–5 support letters from friends and family</div></li>
+          <li><input type="checkbox" /><div class="item-label">Communication records (chat screenshots, call logs)</div></li>
+        </ul>
+      </div>
+
+      <div class="checklist-section">
+        <h4>Payment</h4>
+        <ul class="checklist">
+          <li><input type="checkbox" /><div class="item-label">Check or money order for $1,440 (I-485 fee) payable to "U.S. Department of Homeland Security"</div></li>
+          <li><input type="checkbox" /><div class="item-label">Check or money order for $675 (I-130 fee, if applicable)</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">How long does adjustment of status take in 2026?</div>
+        <div class="faq-a">Processing times vary by field office. In 2026, most AOS cases (I-485) are processing in 12–24 months at major field offices. Check your specific office at egov.uscis.gov/processing-times. Filing in a less-backlogged office area can cut months off your wait.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I work while my adjustment of status is pending?</div>
+        <div class="faq-a">Yes, once USCIS approves your Employment Authorization Document (EAD), filed as Form I-765. File it with your I-485 package. EAD approval typically takes 3–7 months. You cannot work until the physical EAD card arrives — approval notice alone is not sufficient.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the 90-day rule for K-1 visa holders?</div>
+        <div class="faq-a">K-1 visa holders must marry their U.S. citizen petitioner within 90 days of entering the U.S. After marriage, they can file for adjustment of status. Failing to marry within 90 days means you must leave the U.S. — even if your I-485 is pending.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I travel outside the U.S. while my I-485 is pending?</div>
+        <div class="faq-a">Only with Advance Parole (Form I-131) approved and in hand before you depart. Leaving without AP is considered abandonment of your I-485 — it will be denied and you must start over. K-1 visa status does NOT protect you from this rule.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is the difference between a CR-1 and IR-1 green card?</div>
+        <div class="faq-a">A CR-1 (Conditional Resident) is issued when the marriage is less than 2 years old at approval — it expires after 2 years and requires Form I-751 to remove conditions. An IR-1 (Immediate Relative) is a 10-year permanent green card issued when the marriage is 2+ years old at approval.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Do I need an immigration attorney for AOS?</div>
+        <div class="faq-a">Not legally required, but many couples benefit from one. If your case is straightforward (K-1 entry, married within 90 days, clean background), DIY is very achievable. If there are complications — prior visa violations, criminal history, prior deportation, complex financials — strongly consider an attorney.</div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="section" id="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <SmartLink href="/k1-visa" class="related-card">
+          <div class="related-cat">K-1 Visa</div>
+          <div class="related-title">K-1 Fiancé Visa: Complete 2026 Guide</div>
+        </SmartLink>
+        <SmartLink href="/affidavit-of-support" class="related-card">
+          <div class="related-cat">I-864</div>
+          <div class="related-title">Affidavit of Support Income Requirements (2026)</div>
+        </SmartLink>
+        <SmartLink href="/bona-fide-marriage" class="related-card">
+          <div class="related-cat">Evidence</div>
+          <div class="related-title">Bona Fide Marriage Evidence: The 4 Pillars</div>
+        </SmartLink>
+        <SmartLink href="/k1-visa-interview" class="related-card">
+          <div class="related-cat">Interview</div>
+          <div class="related-title">70 K-1 Interview Questions &amp; Best Answers</div>
+        </SmartLink>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="cta-box">
+      <h4>Bona Fide Marriage Evidence</h4>
+      <p>The 4 pillars, photo tips, support letter template, and full document checklist for your I-485 package.</p>
+      <SmartLink href="/bona-fide-marriage" class="btn">Evidence Guide →</SmartLink>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#what-is">What is adjustment of status?</a></li>
+        <li><a href="#who-can-file">Who can file?</a></li>
+        <li><a href="#forms">Required forms</a></li>
+        <li><a href="#fees">Fees (2026)</a></li>
+        <li><a href="#timeline">Processing timeline</a></li>
+        <li><a href="#ead-ap">EAD &amp; Advance Parole</a></li>
+        <li><a href="#interview">AOS interview prep</a></li>
+        <li><a href="#cr1-ir1">CR-1 vs IR-1 green card</a></li>
+        <li><a href="#checklist">Filing checklist</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Key Fees</h4>
+      <ul>
+        <li>I-485 filing: <strong>$1,440</strong></li>
+        <li>I-130 (if needed): <strong>$675</strong></li>
+        <li>I-765 EAD with I-485: <strong>$0</strong></li>
+        <li>I-131 AP with I-485: <strong>$0</strong></li>
+        <li>Medical exam: <strong>$200–500</strong></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Key Pages</h4>
+      <ul>
+        <li><SmartLink href="/k1-visa">K-1 Fiancé Visa Guide</SmartLink></li>
+        <li><SmartLink href="/k1-vs-cr1">K-1 vs CR-1 Comparison</SmartLink></li>
+        <li><SmartLink href="/affidavit-of-support">Affidavit of Support (I-864)</SmartLink></li>
+        <li><SmartLink href="/bona-fide-marriage">Bona Fide Marriage Evidence</SmartLink></li>
+        <li><SmartLink href="/k1-visa-interview">Interview Prep (70 Qs)</SmartLink></li>
+        <li><SmartLink href="/cr1-visa">CR-1 Spousal Visa Guide</SmartLink></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

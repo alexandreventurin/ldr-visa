@@ -7,4 +7,5 @@ export const PUBLISHED: Set<string> = new Set([
   '/affidavit-of-support',
   '/k1-visa-interview',
   '/bona-fide-marriage',
+  '/adjustment-of-status',
 ]);

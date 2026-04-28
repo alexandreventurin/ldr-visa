@@ -11,4 +11,5 @@ export const PUBLISHED: Set<string> = new Set([
   '/cr1-visa',
   '/i-129f',
   '/ir1-visa',
+  '/k1-visa-processing-time',
 ]);

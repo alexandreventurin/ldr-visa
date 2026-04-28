@@ -1,0 +1,578 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "K-1 Visa Processing Time 2026: USCIS + NVC + Embassy Breakdown",
+    "description": "Current K-1 fiancé visa processing times for 2026 — USCIS I-129F wait times, NVC transfer, embassy interview scheduling, and total timeline by stage.",
+    "url": "https://ldrvisa.org/k1-visa-processing-time",
+    "dateModified": "2026-04-27",
+    "datePublished": "2026-04-27",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/k1-visa-processing-time" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "K-1 Visa Processing Time", "item": "https://ldrvisa.org/k1-visa-processing-time" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does the K-1 visa take in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The total K-1 visa process takes approximately 12–18 months in 2026. USCIS takes 7–14 months to approve the I-129F petition, NVC transfer takes 3–6 weeks, and the embassy interview and visa issuance adds 1–3 months depending on the country."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does USCIS take to process Form I-129F?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS is currently processing Form I-129F in approximately 7–14 months at the California and Vermont Service Centers as of April 2026. Processing times vary and should be verified at egov.uscis.gov/processing-times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I check my K-1 visa case status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can check your I-129F case status using your receipt number at my.uscis.gov. After your case transfers to NVC, log in to ceac.state.gov with your NVC case number and invoice ID to track NVC progress. For embassy status after NVC, contact the specific embassy or consulate."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which countries have the fastest K-1 visa processing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Countries with smaller backlogs and efficient embassies tend to process faster — many Western European posts, Canada, Australia, and Japan often schedule interviews within 1–2 months of NVC transfer. Countries with high K-1 volume like the Philippines, Mexico, and Ukraine typically have longer embassy wait times of 2–4 months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What can I do if my K-1 is taking too long?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your I-129F has been pending longer than USCIS's published processing time, you can submit a case inquiry (service request) at my.uscis.gov. For cases outside normal time, you can also contact your Congressional representative's office, which can make a formal inquiry on your behalf."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="K-1 Visa Processing Time 2026: USCIS + NVC + Embassy Breakdown"
+  description="Current K-1 fiancé visa processing times in 2026 — I-129F USCIS wait times by service center, NVC transfer timeline, embassy interview scheduling, and how to check your case status."
+  canonical="https://ldrvisa.org/k1-visa-processing-time"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  /* Timeline banner */
+  .timeline-banner { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 0; overflow: hidden; }
+  .tl-stages { display: flex; }
+  .tl-stage { flex: 1; padding: 1.25rem 1rem; text-align: center; border-right: 1px solid var(--color-border); position: relative; }
+  .tl-stage:last-child { border-right: none; }
+  .tl-stage::after { content: "›"; position: absolute; right: -0.6rem; top: 50%; transform: translateY(-50%); color: var(--color-muted); font-size: 1.2rem; z-index: 1; }
+  .tl-stage:last-child::after { display: none; }
+  .tl-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin-bottom: 0.3rem; }
+  .tl-time { font-size: 1.1rem; font-weight: 800; color: var(--color-accent); }
+  .tl-sublabel { font-size: 0.75rem; color: var(--color-muted); margin-top: 0.2rem; }
+  @media(max-width: 600px){ .tl-stages { flex-direction: column; } .tl-stage::after { display: none; } }
+
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 860px){ .content-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .section h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+  .section ul { margin: 0.75rem 0 0.75rem 1.5rem; color: var(--color-text); line-height: 1.9; }
+
+  /* Stage cards */
+  .stage-card { border: 1px solid var(--color-border); border-radius: 12px; margin-bottom: 1.5rem; overflow: hidden; }
+  .stage-head { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+  .stage-num { width: 2rem; height: 2rem; border-radius: 50%; background: var(--color-accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; }
+  .stage-head-info { flex: 1; }
+  .stage-head-title { font-weight: 700; font-size: 1rem; }
+  .stage-head-sub { font-size: 0.8rem; color: var(--color-muted); }
+  .stage-time-badge { background: var(--color-accent); color: #fff; font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 999px; white-space: nowrap; }
+  .stage-body { padding: 1.25rem; }
+  .stage-body p { font-size: 0.9rem; color: var(--color-text); margin: 0 0 0.75rem; line-height: 1.7; }
+  .stage-body p:last-child { margin-bottom: 0; }
+
+  /* USCIS service center table */
+  .sc-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .sc-table th { background: var(--color-accent); color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .sc-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .sc-table tr:hover td { background: var(--color-surface); }
+  .sc-table .fast { color: #16a34a; font-weight: 700; }
+  .sc-table .slow { color: #dc2626; font-weight: 700; }
+  .sc-table .mid { color: #d97706; font-weight: 700; }
+
+  /* Country table */
+  .country-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1rem 0; }
+  .country-table th { background: #1a1a2e; color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .country-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .country-table tr:hover td { background: var(--color-surface); }
+  .country-flag { margin-right: 0.4rem; }
+  .vol-badge { display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 999px; }
+  .vol-high { background: #fee2e2; color: #991b1b; }
+  .vol-mid { background: #fef3c7; color: #92400e; }
+  .vol-low { background: #dcfce7; color: #166534; }
+
+  /* Factors grid */
+  .factors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+  .factor-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1.25rem; }
+  .factor-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .factor-card h4 { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.35rem; }
+  .factor-card p { font-size: 0.85rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* How to check */
+  .check-steps { list-style: none; padding: 0; margin: 1rem 0; counter-reset: step; }
+  .check-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); align-items: flex-start; }
+  .check-step:last-child { border-bottom: none; }
+  .check-step-num { width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--color-accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+  .check-step-body h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.2rem; }
+  .check-step-body p { font-size: 0.875rem; color: var(--color-muted); margin: 0; line-height: 1.6; }
+  .check-step-body a { color: var(--color-accent); }
+
+  /* Callouts */
+  .callout { background: #eff6ff; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #1e40af; line-height: 1.6; }
+  .warning { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .warning p { margin: 0; font-size: 0.9rem; color: #9a3412; line-height: 1.6; }
+  .tip { background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .tip p { margin: 0; font-size: 0.9rem; color: #166534; line-height: 1.6; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.75; font-size: 0.95rem; }
+
+  /* Related */
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--color-accent); box-shadow: 0 2px 12px rgba(37,99,235,0.08); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+
+  /* Sidebar */
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--color-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--color-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: #1d4ed8; }
+  .snapshot-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .snapshot-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .snap-row { display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.875rem; }
+  .snap-row:last-child { border-bottom: none; font-weight: 700; }
+  .snap-time { font-weight: 700; color: var(--color-accent); }
+  .updated-note { font-size: 0.75rem; color: var(--color-muted); margin-top: 0.5rem; text-align: center; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › <a href="/k1-visa">K-1 Visa</a> › Processing Time
+    </div>
+    <h1>K-1 Visa Processing Time 2026:<br/>USCIS + NVC + Embassy Breakdown</h1>
+    <p class="hero-desc">Where your case actually spends its time — current USCIS I-129F wait times, NVC transfer, embassy scheduling, and the realistic total timeline from filing to visa in hand.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 8 min read</span>
+      <span class="hero-meta-item">📊 USCIS data + community reports</span>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Banner -->
+<div class="timeline-banner">
+  <div class="container" style="padding: 0;">
+    <div class="tl-stages">
+      <div class="tl-stage">
+        <div class="tl-label">Stage 1 — USCIS</div>
+        <div class="tl-time">7–14 months</div>
+        <div class="tl-sublabel">I-129F approval</div>
+      </div>
+      <div class="tl-stage">
+        <div class="tl-label">Stage 2 — NVC</div>
+        <div class="tl-time">3–6 weeks</div>
+        <div class="tl-sublabel">Case transfer</div>
+      </div>
+      <div class="tl-stage">
+        <div class="tl-label">Stage 3 — Embassy</div>
+        <div class="tl-time">1–3 months</div>
+        <div class="tl-sublabel">Interview + visa</div>
+      </div>
+      <div class="tl-stage" style="background: #eff6ff;">
+        <div class="tl-label">Total</div>
+        <div class="tl-time">12–18 months</div>
+        <div class="tl-sublabel">Filing to K-1 in hand</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <section class="section" id="overview">
+      <h2>K-1 Timeline Overview (2026)</h2>
+      <p>The K-1 fiancé visa process moves through three independent agencies — USCIS, the National Visa Center (NVC), and a U.S. embassy abroad. Each has its own queue, and time spent in one stage doesn't affect the others.</p>
+      <p>In 2026, the dominant bottleneck remains <strong>USCIS's I-129F adjudication</strong>, which accounts for roughly 75–85% of total wait time. The NVC stage is fast. Embassy scheduling depends heavily on your fiancé's country.</p>
+      <div class="callout">
+        <p><strong>Always check the official source:</strong> Processing times fluctuate monthly. Verify current I-129F times at <strong>egov.uscis.gov/processing-times</strong> (select "I-129F, Petition for Alien Fiancé(e)"). The times on this page reflect April 2026 data.</p>
+      </div>
+    </section>
+
+    <section class="section" id="stage1">
+      <h2>Stage 1 — USCIS I-129F Processing</h2>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <div class="stage-num">1</div>
+          <div class="stage-head-info">
+            <div class="stage-head-title">USCIS Adjudication of Form I-129F</div>
+            <div class="stage-head-sub">From receipt to approval notice</div>
+          </div>
+          <span class="stage-time-badge">7–14 months</span>
+        </div>
+        <div class="stage-body">
+          <p>After USCIS receives your I-129F, they issue a receipt notice (I-797C) within 2–6 weeks. The petition then enters the adjudication queue. An officer reviews your evidence, confirms eligibility, and either approves the petition, issues an RFE (Request for Evidence), or denies.</p>
+          <p>Processing times vary by which USCIS service center handles your case. USCIS assigns cases to service centers based on their internal workload — you don't choose.</p>
+        </div>
+      </div>
+
+      <h3>Processing times by service center (April 2026)</h3>
+      <table class="sc-table">
+        <thead>
+          <tr><th>Service Center</th><th>Current Processing Time</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>California Service Center (CSC)</td>
+            <td class="mid">10–13 months</td>
+            <td>Within published time</td>
+          </tr>
+          <tr>
+            <td>Vermont Service Center (VSC)</td>
+            <td class="mid">8–11 months</td>
+            <td>Within published time</td>
+          </tr>
+          <tr>
+            <td>Nebraska Service Center (NSC)</td>
+            <td class="fast">7–10 months</td>
+            <td>Faster than average</td>
+          </tr>
+          <tr>
+            <td>Texas Service Center (TSC)</td>
+            <td class="slow">11–14 months</td>
+            <td>Slower than average</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="note" style="font-size:0.8rem; color: var(--color-muted);">* These times are approximate and change monthly. Always verify at egov.uscis.gov/processing-times.</p>
+
+      <div class="warning">
+        <p><strong>Outside normal time?</strong> If your case has been pending longer than USCIS's published processing time for your service center, you can submit a case inquiry (service request) at my.uscis.gov. You can also contact your U.S. Congressional representative's office — they can make a formal congressional inquiry on your behalf, which sometimes accelerates stuck cases.</p>
+      </div>
+
+      <h3>What triggers delays at USCIS?</h3>
+      <ul>
+        <li><strong>Request for Evidence (RFE)</strong> — USCIS asks for more documentation. You typically have 87 days to respond. The case clock pauses while USCIS waits for your reply, then restarts after they receive it.</li>
+        <li><strong>Name check / background check flags</strong> — Cases involving names that trigger security database matches may be held longer for additional review.</li>
+        <li><strong>Incomplete or confusing initial filing</strong> — Missing documents or inconsistent information slow the officer's review and may trigger an RFE.</li>
+        <li><strong>Prior immigration issues</strong> — Overstays, prior denials, or criminal history associated with either party can require additional review.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="stage2">
+      <h2>Stage 2 — National Visa Center (NVC)</h2>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <div class="stage-num">2</div>
+          <div class="stage-head-info">
+            <div class="stage-head-title">NVC Transfer &amp; Case Preparation</div>
+            <div class="stage-head-sub">From USCIS approval to embassy scheduling</div>
+          </div>
+          <span class="stage-time-badge">3–6 weeks</span>
+        </div>
+        <div class="stage-body">
+          <p>After USCIS approves the I-129F, the case file is mailed to the NVC in Portsmouth, NH. The NVC assigns a case number and an invoice ID, then notifies both petitioner and beneficiary by email (at the addresses listed on the I-129F).</p>
+          <p>For K-1 visas, the NVC's role is limited — they primarily transfer the case to the appropriate U.S. embassy. Unlike the CR-1 process, K-1 petitioners do not pay fees or upload documents through the NVC portal. The NVC stage for K-1 is typically 3–6 weeks.</p>
+        </div>
+      </div>
+
+      <div class="tip">
+        <p><strong>Watch your email:</strong> The NVC notification goes to the email address you listed on Form I-129F. Check your spam folder. If you don't receive an email within 6–8 weeks of the USCIS approval date, log in to my.uscis.gov to confirm the transfer and then contact the NVC.</p>
+      </div>
+    </section>
+
+    <section class="section" id="stage3">
+      <h2>Stage 3 — U.S. Embassy Interview &amp; Visa</h2>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <div class="stage-num">3</div>
+          <div class="stage-head-info">
+            <div class="stage-head-title">Embassy Interview Scheduling &amp; Visa Issuance</div>
+            <div class="stage-head-sub">From NVC transfer to K-1 visa in hand</div>
+          </div>
+          <span class="stage-time-badge">1–3 months</span>
+        </div>
+        <div class="stage-body">
+          <p>After NVC transfers the case, the U.S. embassy in your fiancé's country schedules the K-1 interview. Wait times vary significantly by country — high-volume embassies (Philippines, Mexico) have longer queues than smaller posts.</p>
+          <p>After a successful interview, the visa is typically issued within 3–7 business days and the passport is returned via courier. The K-1 visa is valid for 6 months — your fiancé must enter the U.S. within that window.</p>
+        </div>
+      </div>
+
+      <h3>Embassy wait times by country/region (April 2026)</h3>
+      <table class="country-table">
+        <thead>
+          <tr><th>Country / Post</th><th>Avg. Interview Wait</th><th>K-1 Volume</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="country-flag">🇵🇭</span>Philippines (Manila)</td><td>2–4 months</td><td><span class="vol-badge vol-high">Very High</span></td></tr>
+          <tr><td><span class="country-flag">🇲🇽</span>Mexico (Ciudad Juárez, CDMX)</td><td>2–3 months</td><td><span class="vol-badge vol-high">Very High</span></td></tr>
+          <tr><td><span class="country-flag">🇩🇴</span>Dominican Republic (Santo Domingo)</td><td>2–3 months</td><td><span class="vol-badge vol-high">High</span></td></tr>
+          <tr><td><span class="country-flag">🇨🇴</span>Colombia (Bogotá)</td><td>1–2 months</td><td><span class="vol-badge vol-mid">Medium</span></td></tr>
+          <tr><td><span class="country-flag">🇧🇷</span>Brazil (São Paulo, Brasília)</td><td>1–2 months</td><td><span class="vol-badge vol-mid">Medium</span></td></tr>
+          <tr><td><span class="country-flag">🇬🇧</span>United Kingdom (London)</td><td>1–2 months</td><td><span class="vol-badge vol-mid">Medium</span></td></tr>
+          <tr><td><span class="country-flag">🇵🇱</span>Poland (Warsaw)</td><td>1–2 months</td><td><span class="vol-badge vol-mid">Medium</span></td></tr>
+          <tr><td><span class="country-flag">🇺🇦</span>Ukraine (Kyiv, Warsaw for displaced)</td><td>1–3 months</td><td><span class="vol-badge vol-mid">Medium</span></td></tr>
+          <tr><td><span class="country-flag">🇷🇴</span>Romania (Bucharest)</td><td>1–2 months</td><td><span class="vol-badge vol-low">Lower</span></td></tr>
+          <tr><td><span class="country-flag">🇻🇳</span>Vietnam (Ho Chi Minh City)</td><td>1–2 months</td><td><span class="vol-badge vol-mid">Medium</span></td></tr>
+          <tr><td><span class="country-flag">🇹🇭</span>Thailand (Bangkok)</td><td>1–2 months</td><td><span class="vol-badge vol-mid">Medium</span></td></tr>
+          <tr><td><span class="country-flag">🇩🇪</span>Germany (Frankfurt)</td><td>&lt;1 month</td><td><span class="vol-badge vol-low">Lower</span></td></tr>
+          <tr><td><span class="country-flag">🇦🇺</span>Australia (Sydney)</td><td>&lt;1 month</td><td><span class="vol-badge vol-low">Lower</span></td></tr>
+          <tr><td><span class="country-flag">🇨🇦</span>Canada (various)</td><td>&lt;1 month</td><td><span class="vol-badge vol-low">Lower</span></td></tr>
+        </tbody>
+      </table>
+      <p class="note" style="font-size:0.8rem; color: var(--color-muted);">* Embassy times vary month to month. Check Visa Appointment Wait Times at travel.state.gov for the most current data for your specific post.</p>
+    </section>
+
+    <section class="section" id="factors">
+      <h2>What Affects Your Processing Time?</h2>
+      <div class="factors-grid">
+        <div class="factor-card">
+          <div class="factor-icon">📋</div>
+          <h4>Quality of your initial filing</h4>
+          <p>A complete, well-organized petition with strong evidence is less likely to receive an RFE. An RFE can add 3–6 months to your timeline.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">🌍</div>
+          <h4>Your fiancé's country</h4>
+          <p>Embassy workload and staffing levels vary enormously. High-volume posts like Manila or Ciudad Juárez consistently have longer queues than lower-volume posts.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">🏢</div>
+          <h4>USCIS service center assigned</h4>
+          <p>You can't choose your service center. Cases are assigned based on USCIS's internal workload balancing. CSC and TSC tend to run slower than NSC.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">🔍</div>
+          <h4>Background checks &amp; security</h4>
+          <p>Name checks against national security databases can hold a case for weeks or months if there are matches — even if innocent.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">📅</div>
+          <h4>Time of year</h4>
+          <p>USCIS typically slows in December due to holiday staffing. Embassy appointment availability also fluctuates with local conditions and U.S. federal holidays.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">📜</div>
+          <h4>Prior immigration history</h4>
+          <p>Prior visa denials, overstays, or removal orders involving either party trigger additional review and typically extend processing times.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="check-status">
+      <h2>How to Check Your Case Status</h2>
+      <ul class="check-steps">
+        <li class="check-step">
+          <div class="check-step-num">1</div>
+          <div class="check-step-body">
+            <h4>USCIS stage — my.uscis.gov</h4>
+            <p>Use your receipt number (starts with EAC, WAC, LIN, or MSC) to check your I-129F status at <a href="https://my.uscis.gov" target="_blank" rel="noopener">my.uscis.gov</a>. The status will show "Case Received," "Case Is Being Actively Reviewed," or "Case Was Approved." You can also sign up for email/SMS notifications.</p>
+          </div>
+        </li>
+        <li class="check-step">
+          <div class="check-step-num">2</div>
+          <div class="check-step-body">
+            <h4>After USCIS approval — check if NVC received it</h4>
+            <p>Call the NVC at 603-334-0700 or email NVCInquiry@state.gov with your USCIS receipt number to confirm they received your case. Give it 4–6 weeks after the USCIS approval before inquiring.</p>
+          </div>
+        </li>
+        <li class="check-step">
+          <div class="check-step-num">3</div>
+          <div class="check-step-body">
+            <h4>Embassy stage — contact the specific post</h4>
+            <p>Once the embassy has your case, contact them directly for interview scheduling timelines. Most embassies have appointment scheduling portals or email inquiry systems. Check the specific embassy's website for their process.</p>
+          </div>
+        </li>
+        <li class="check-step">
+          <div class="check-step-num">4</div>
+          <div class="check-step-body">
+            <h4>If stuck — congressional inquiry</h4>
+            <p>Contact your U.S. Representative or Senator's office (the petitioner's Congressional district). Most have immigration caseworkers who can submit a formal congressional inquiry to USCIS. This often moves stuck cases. It's free and legal — use it.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="after-entry">
+      <h2>After the K-1 Visa: The 90-Day Clock</h2>
+      <p>Once your fiancé enters the U.S. on the K-1 visa, a 90-day clock starts. You <strong>must marry within those 90 days</strong>. After marriage, you file for Adjustment of Status (Form I-485) to get the green card.</p>
+      <p>The AOS process adds another 12–24 months and approximately $1,440 to the total cost. Factor this into your overall timeline planning.</p>
+
+      <table class="sc-table">
+        <thead>
+          <tr><th>Phase</th><th>Timeline</th><th>Key Form</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>I-129F filing to USCIS approval</td><td>7–14 months</td><td>I-129F</td></tr>
+          <tr><td>NVC transfer</td><td>3–6 weeks</td><td>—</td></tr>
+          <tr><td>Embassy interview + visa issuance</td><td>1–3 months</td><td>DS-160</td></tr>
+          <tr><td>Entry to U.S. + marriage</td><td>Within 90 days</td><td>—</td></tr>
+          <tr><td>Adjustment of Status (green card)</td><td>12–24 months</td><td>I-485</td></tr>
+          <tr style="font-weight:700; background: var(--color-surface);"><td>Total: Filing to green card</td><td>24–42 months</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">How long does the K-1 visa take in 2026?</div>
+        <div class="faq-a">The total K-1 process takes approximately 12–18 months from filing to visa in hand: 7–14 months for USCIS to approve I-129F, 3–6 weeks for NVC, and 1–3 months for embassy processing. This does not include the subsequent Adjustment of Status process after marriage (additional 12–24 months).</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I check my K-1 case status?</div>
+        <div class="faq-a">During USCIS processing, use your receipt number at my.uscis.gov. After USCIS approves and transfers to NVC, contact NVC at 603-334-0700 or NVCInquiry@state.gov. For embassy status, contact the specific U.S. embassy or consulate where your fiancé will interview.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why is my K-1 taking so long?</div>
+        <div class="faq-a">The most common reasons are: USCIS backlog at your service center, an RFE (Request for Evidence) that paused the clock, name check holds, or prior immigration issues triggering additional review. If you've passed the published processing time, submit a case inquiry at my.uscis.gov or contact your congressional representative.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I speed up my K-1 visa processing?</div>
+        <div class="faq-a">There is no premium processing (expedite) available for I-129F. You can request expedited processing from USCIS only in very specific circumstances — severe financial loss, emergency, or humanitarian reasons — and approval is rare and discretionary. The best way to minimize delays is to file a complete, well-documented petition from the start.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does a K-1 RFE mean my petition will be denied?</div>
+        <div class="faq-a">No. An RFE is a request for more information, not a denial. Most RFEs result in approval after the petitioner provides the requested documents. Respond completely and within the stated deadline (typically 87 days). If the RFE is complex, consider consulting an immigration attorney for the response.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the K-1 or CR-1 faster in 2026?</div>
+        <div class="faq-a">To get your partner physically in the U.S., the K-1 is usually faster (12–18 months vs. 14–24 months for CR-1). However, the CR-1 bypasses the 12–24 month Adjustment of Status process after arrival. For total time to green card, the CR-1 is often comparable or faster. See our <SmartLink href="/k1-vs-cr1">K-1 vs CR-1 comparison</SmartLink> for a full breakdown.</div>
+      </div>
+    </section>
+
+    <section class="section" id="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <SmartLink href="/k1-visa" class="related-card">
+          <div class="related-cat">K-1 Visa</div>
+          <div class="related-title">K-1 Fiancé Visa: Complete 2026 Guide</div>
+        </SmartLink>
+        <SmartLink href="/k1-vs-cr1" class="related-card">
+          <div class="related-cat">Compare</div>
+          <div class="related-title">K-1 vs CR-1: Which is Faster in 2026?</div>
+        </SmartLink>
+        <SmartLink href="/i-129f" class="related-card">
+          <div class="related-cat">I-129F</div>
+          <div class="related-title">Form I-129F: Instructions &amp; Checklist</div>
+        </SmartLink>
+        <SmartLink href="/adjustment-of-status" class="related-card">
+          <div class="related-cat">Green Card</div>
+          <div class="related-title">Adjustment of Status After K-1 Entry</div>
+        </SmartLink>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="snapshot-box">
+      <h4>2026 Timeline Snapshot</h4>
+      <div class="snap-row"><span>USCIS I-129F</span><span class="snap-time">7–14 mo</span></div>
+      <div class="snap-row"><span>NVC transfer</span><span class="snap-time">3–6 wks</span></div>
+      <div class="snap-row"><span>Embassy interview</span><span class="snap-time">1–3 mo</span></div>
+      <div class="snap-row"><span><strong>Total to visa</strong></span><span class="snap-time">12–18 mo</span></div>
+      <div class="snap-row"><span>+ AOS (green card)</span><span class="snap-time">12–24 mo</span></div>
+      <p class="updated-note">Updated April 2026 · Verify at egov.uscis.gov</p>
+    </div>
+
+    <div class="cta-box">
+      <h4>Preparing for the Interview?</h4>
+      <p>70 K-1 interview questions with the best answers — organized by category.</p>
+      <SmartLink href="/k1-visa-interview" class="btn">Interview Prep →</SmartLink>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#overview" class="sidebar-link">Timeline overview <span>↓</span></a></li>
+        <li><a href="#stage1" class="sidebar-link">Stage 1 — USCIS <span>↓</span></a></li>
+        <li><a href="#stage2" class="sidebar-link">Stage 2 — NVC <span>↓</span></a></li>
+        <li><a href="#stage3" class="sidebar-link">Stage 3 — Embassy <span>↓</span></a></li>
+        <li><a href="#factors" class="sidebar-link">What causes delays <span>↓</span></a></li>
+        <li><a href="#check-status" class="sidebar-link">How to check status <span>↓</span></a></li>
+        <li><a href="#after-entry" class="sidebar-link">After entry (AOS) <span>↓</span></a></li>
+        <li><a href="#faq" class="sidebar-link">FAQ <span>↓</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Key Pages</h4>
+      <ul>
+        <li><SmartLink href="/k1-visa">K-1 Fiancé Visa Guide</SmartLink></li>
+        <li><SmartLink href="/i-129f">Form I-129F Guide</SmartLink></li>
+        <li><SmartLink href="/k1-vs-cr1">K-1 vs CR-1</SmartLink></li>
+        <li><SmartLink href="/k1-visa-interview">Interview Prep</SmartLink></li>
+        <li><SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink></li>
+        <li><SmartLink href="/cr1-visa-processing-time">CR-1 Processing Time</SmartLink></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

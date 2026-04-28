@@ -12,4 +12,5 @@ export const PUBLISHED: Set<string> = new Set([
   '/i-129f',
   '/ir1-visa',
   '/k1-visa-processing-time',
+  '/k1-visa-denial-reasons',
 ]);

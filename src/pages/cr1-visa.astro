@@ -1,0 +1,599 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "CR-1 Spousal Visa: Complete Guide for 2026",
+    "description": "Everything about the CR-1 spousal visa — requirements, processing time, costs, documents, NVC process, and what happens after you arrive in the U.S.",
+    "url": "https://ldrvisa.org/cr1-visa",
+    "dateModified": "2026-04-27",
+    "datePublished": "2026-04-27",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/cr1-visa" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "CR-1 Spousal Visa", "item": "https://ldrvisa.org/cr1-visa" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the difference between CR-1 and IR-1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "CR-1 (Conditional Resident) is issued when your marriage is less than 2 years old at visa approval — you get a 2-year green card and must file I-751 to remove conditions. IR-1 (Immediate Relative) is issued when the marriage is 2+ years old at approval — you get a 10-year permanent green card with no conditions to remove."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the CR-1 visa take in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The CR-1 visa typically takes 14–24 months total in 2026: 8–14 months for USCIS to approve the I-130 petition, 2–3 months for NVC processing, and 1–3 months for the consular appointment and visa issuance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a green card holder (LPR) file for a CR-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, but there is a key difference. Spouses of U.S. citizens are 'immediate relatives' with no visa backlog. Spouses of LPRs (green card holders) are in the F2A preference category and must wait for a visa number to become available, which can add years to the process."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to attend an interview for the CR-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The foreign spouse attends an in-person interview at the U.S. embassy or consulate in their home country. The U.S. citizen spouse does not typically need to attend the consular interview, though some embassies may request their presence."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after I enter the U.S. on a CR-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You enter as a conditional permanent resident. Your green card (Form I-551) is mailed to your U.S. address within a few weeks. If you receive a CR-1 (conditional), you must file Form I-751 (Petition to Remove Conditions) jointly with your spouse within the 90-day window before your 2-year anniversary."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the income requirement for the CR-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The U.S. citizen or LPR sponsor must earn at least 125% of the federal poverty level for their household size. For a household of 2 in 2026, that is $25,550 per year. This is demonstrated by filing Form I-864 (Affidavit of Support)."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="CR-1 Spousal Visa: Complete Guide for 2026 — LDR Visa"
+  description="The CR-1 spousal visa explained — eligibility, I-130 petition, NVC process, consular interview, costs, documents, and what happens after you arrive. Updated 2026."
+  canonical="https://ldrvisa.org/cr1-visa"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  .key-stats { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 2rem 0; }
+  .key-stats .container { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; max-width: 900px; }
+  .kstat { text-align: center; min-width: 150px; }
+  .kstat-num { font-size: 2rem; font-weight: 800; color: var(--color-accent); }
+  .kstat-label { font-size: 0.85rem; color: var(--color-muted); margin-top: 0.25rem; }
+
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 860px){ .content-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .section h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+  .section ul { margin: 0.75rem 0 0.75rem 1.5rem; color: var(--color-text); line-height: 1.9; }
+  .section li { margin: 0.2rem 0; }
+
+  .quick-answer { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+  .qa-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 0.5rem; }
+  .quick-answer h3 { font-size: 1.05rem; margin: 0 0 0.4rem; }
+  .quick-answer p { margin: 0; font-size: 0.95rem; color: #1e40af; line-height: 1.7; }
+
+  /* CR-1 vs IR-1 cards */
+  .visa-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.25rem 0; }
+  @media(max-width: 600px){ .visa-pair { grid-template-columns: 1fr; } }
+  .visa-card { border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; }
+  .visa-card.cr1 { border-top: 4px solid #f97316; }
+  .visa-card.ir1 { border-top: 4px solid #22c55e; }
+  .visa-card h4 { font-size: 1.05rem; font-weight: 700; margin: 0 0 0.4rem; }
+  .visa-card p { font-size: 0.9rem; color: var(--color-muted); margin: 0 0 0.75rem; line-height: 1.6; }
+  .visa-card ul { list-style: none; padding: 0; margin: 0; }
+  .visa-card ul li { font-size: 0.875rem; padding: 0.25rem 0 0.25rem 1.25rem; position: relative; color: var(--color-text); border-bottom: 1px solid var(--color-border); }
+  .visa-card ul li:last-child { border-bottom: none; }
+  .visa-card ul li::before { content: "•"; position: absolute; left: 0.3rem; color: var(--color-accent); font-weight: 700; }
+
+  /* Process steps */
+  .process-steps { margin: 1.25rem 0; }
+  .ps { display: flex; gap: 1rem; padding: 1.25rem 0; border-bottom: 1px solid var(--color-border); }
+  .ps:last-child { border-bottom: none; }
+  .ps-num { width: 2.25rem; height: 2.25rem; border-radius: 50%; background: var(--color-accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.95rem; flex-shrink: 0; }
+  .ps-body { flex: 1; }
+  .ps-body h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.25rem; }
+  .ps-body p { font-size: 0.875rem; color: var(--color-muted); margin: 0; line-height: 1.6; }
+  .ps-time { display: inline-block; font-size: 0.75rem; font-weight: 700; color: var(--color-accent); background: #eff6ff; border-radius: 999px; padding: 0.1rem 0.55rem; margin-top: 0.35rem; }
+
+  /* Tables */
+  .data-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .data-table th { background: var(--color-accent); color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .data-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--color-border); vertical-align: top; }
+  .data-table tr:hover td { background: var(--color-surface); }
+  .data-table .total-row td { font-weight: 700; background: var(--color-surface); border-top: 2px solid var(--color-accent); }
+  .amt { font-weight: 700; text-align: right; }
+  .note { font-size: 0.78rem; color: var(--color-muted); }
+
+  /* Req grid */
+  .req-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+  .req-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1.25rem; }
+  .req-icon { font-size: 1.5rem; margin-bottom: 0.5rem; }
+  .req-card h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.4rem; }
+  .req-card p { font-size: 0.85rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* Checklist */
+  .cl-section h4 { font-size: 0.95rem; font-weight: 700; color: var(--color-accent); margin: 1.25rem 0 0.5rem; }
+  .cl { list-style: none; padding: 0; margin: 0; }
+  .cl li { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.45rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .cl li:last-child { border-bottom: none; }
+  .cl input[type=checkbox] { margin-top: 0.15rem; width: 1rem; height: 1rem; flex-shrink: 0; accent-color: var(--color-accent); }
+  .cl .il { flex: 1; }
+  .cl .in { display: block; font-size: 0.8rem; color: var(--color-muted); margin-top: 0.1rem; }
+
+  /* Callouts */
+  .callout { background: #eff6ff; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #1e40af; line-height: 1.6; }
+  .warning { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .warning p { margin: 0; font-size: 0.9rem; color: #9a3412; line-height: 1.6; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.75; font-size: 0.95rem; }
+
+  /* Related */
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--color-accent); box-shadow: 0 2px 12px rgba(37,99,235,0.08); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+
+  /* Sidebar */
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--color-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--color-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: #1d4ed8; }
+  .fee-summary { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .fee-summary h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .fee-row { display: flex; justify-content: space-between; padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.875rem; }
+  .fee-row:last-child { border-bottom: none; font-weight: 700; }
+  .fee-row span:last-child { font-weight: 600; color: var(--color-accent); }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › CR-1 Spousal Visa
+    </div>
+    <h1>CR-1 Spousal Visa:<br/>Complete Guide for 2026</h1>
+    <p class="hero-desc">Already married to a U.S. citizen or green card holder? The CR-1 is your path to a green card without setting foot in the U.S. first. Here's everything you need to know.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 14 min read</span>
+      <span class="hero-meta-item">✅ Spouse of U.S. citizen or LPR</span>
+    </div>
+  </div>
+</section>
+
+<section class="key-stats">
+  <div class="container">
+    <div class="kstat"><div class="kstat-num">14–24 mo</div><div class="kstat-label">Avg. total timeline</div></div>
+    <div class="kstat"><div class="kstat-num">$1,440</div><div class="kstat-label">Approx. total government fees</div></div>
+    <div class="kstat"><div class="kstat-num">3 stages</div><div class="kstat-label">USCIS → NVC → Embassy</div></div>
+    <div class="kstat"><div class="kstat-num">2 yrs</div><div class="kstat-label">CR-1 conditional period</div></div>
+  </div>
+</section>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <section class="section" id="what-is">
+      <h2>What Is the CR-1 Spousal Visa?</h2>
+      <div class="quick-answer">
+        <div class="qa-label">Quick Answer</div>
+        <h3>The CR-1 lets a foreign spouse immigrate to the U.S. as a permanent resident — no 90-day deadline, no adjustment of status.</h3>
+        <p>Unlike the K-1 (which requires marrying after entry and then adjusting status), the CR-1 is an immigrant visa. You arrive at the U.S. port of entry already as a permanent resident — your green card is mailed to your address within weeks.</p>
+      </div>
+      <p>The "CR" in CR-1 stands for <strong>Conditional Resident</strong>. It's issued when the marriage is less than 2 years old at the time of visa approval. If your marriage is 2+ years old at approval, you receive an <strong>IR-1</strong> (Immediate Relative) — a 10-year permanent green card with no conditions to remove.</p>
+      <p>Both CR-1 and IR-1 are processed through the exact same I-130 petition and NVC pipeline. The type of card you get depends only on how long you've been married when the visa is approved.</p>
+    </section>
+
+    <section class="section" id="cr1-vs-ir1">
+      <h2>CR-1 vs IR-1: What's the Difference?</h2>
+      <p>Same process, different outcome based on marriage length at approval time.</p>
+      <div class="visa-pair">
+        <div class="visa-card cr1">
+          <h4>CR-1 — Conditional Resident</h4>
+          <p>Marriage less than 2 years old at visa approval</p>
+          <ul>
+            <li>Green card valid for 2 years</li>
+            <li>Must file I-751 within 90 days before expiry</li>
+            <li>Joint filing with spouse (or exceptions apply)</li>
+            <li>After I-751 approved: 10-year green card</li>
+            <li>Can work and travel immediately on arrival</li>
+          </ul>
+        </div>
+        <div class="visa-card ir1">
+          <h4>IR-1 — Immediate Relative</h4>
+          <p>Marriage 2+ years old at visa approval</p>
+          <ul>
+            <li>Green card valid for 10 years</li>
+            <li>No removal of conditions needed</li>
+            <li>Renewable every 10 years</li>
+            <li>Eligible for citizenship in 3 years</li>
+            <li>Can work and travel immediately on arrival</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        <p><strong>Tip:</strong> If your marriage is close to the 2-year mark, it may be worth waiting until you hit 2 years before filing — you'll arrive with an IR-1 and skip the I-751 process entirely. That said, every month you wait is a month longer before your spouse arrives.</p>
+      </div>
+    </section>
+
+    <section class="section" id="who-can-apply">
+      <h2>Who Can Apply for a CR-1 Visa?</h2>
+      <div class="req-grid">
+        <div class="req-card">
+          <div class="req-icon">💍</div>
+          <h4>Legally married</h4>
+          <p>The marriage must be legally valid in the country where it took place and recognized under U.S. law. Common-law marriages accepted in some jurisdictions may qualify.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">🇺🇸</div>
+          <h4>U.S. citizen or LPR petitioner</h4>
+          <p>The petitioner must be a U.S. citizen (no wait) or a lawful permanent resident (F2A category — may involve a wait for a visa number to become available).</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">✅</div>
+          <h4>Bona fide marriage</h4>
+          <p>The marriage must be genuine — entered in good faith, not solely for immigration purposes. USCIS and the consulate both evaluate this.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">💰</div>
+          <h4>Income requirement</h4>
+          <p>The U.S. petitioner must earn at least 125% of the federal poverty guideline for their household size. In 2026, that's $25,550 for a household of 2.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">📋</div>
+          <h4>Prior marriages dissolved</h4>
+          <p>Both spouses must be legally free to marry — any prior marriages must be terminated by divorce, annulment, or death of a prior spouse.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">🚫</div>
+          <h4>No bars to admissibility</h4>
+          <p>The foreign spouse must be admissible to the U.S. — no serious criminal record, immigration violations, or prior fraud that would trigger a ground of inadmissibility.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <h2>CR-1 Visa Process: Step by Step</h2>
+      <p>Three agencies are involved: USCIS approves the petition, NVC prepares the case, and the U.S. embassy conducts the interview and issues the visa.</p>
+      <div class="process-steps">
+        <div class="ps">
+          <div class="ps-num">1</div>
+          <div class="ps-body">
+            <h4>File Form I-130 with USCIS</h4>
+            <p>The U.S. citizen or LPR spouse files Form I-130 (Petition for Alien Relative) with supporting documents. This can be filed online at my.uscis.gov or by paper mail. Filing fee: $675.</p>
+            <span class="ps-time">⏱ 8–14 months processing</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-num">2</div>
+          <div class="ps-body">
+            <h4>USCIS approves the I-130</h4>
+            <p>Once approved, USCIS transfers the case to the National Visa Center (NVC). You receive a Notice of Action (I-797) confirming approval and a case number.</p>
+            <span class="ps-time">⏱ Included in step 1 timeline</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-num">3</div>
+          <div class="ps-body">
+            <h4>NVC processing &amp; fee payment</h4>
+            <p>The NVC assigns a case number and requests immigrant visa fees ($325 visa application fee + $120 Affidavit of Support review fee). Both fees paid online via ceac.state.gov. Then you upload documents through the CEAC portal.</p>
+            <span class="ps-time">⏱ 2–4 months</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-num">4</div>
+          <div class="ps-body">
+            <h4>NVC completeness check &amp; interview scheduling</h4>
+            <p>NVC reviews all documents for completeness (Documentarily Qualified / DQ status). Once DQ, NVC forwards the case to the U.S. embassy in the foreign spouse's country and an interview is scheduled.</p>
+            <span class="ps-time">⏱ 1–3 months</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-num">5</div>
+          <div class="ps-body">
+            <h4>Medical exam</h4>
+            <p>The foreign spouse completes a medical exam at a USCIS-designated civil surgeon in their home country before or shortly before the interview. The sealed medical envelope is brought to the interview.</p>
+            <span class="ps-time">⏱ Schedule 1–2 weeks before interview</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-num">6</div>
+          <div class="ps-body">
+            <h4>Consular interview</h4>
+            <p>The foreign spouse attends the interview at the U.S. embassy or consulate. The officer reviews documents and asks questions about the relationship. Most genuine couples are approved on the day. Visa is typically issued within a few days.</p>
+            <span class="ps-time">⏱ 30–60 min interview</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-num">7</div>
+          <div class="ps-body">
+            <h4>Visa issued &amp; travel to U.S.</h4>
+            <p>After approval, the passport is returned with the immigrant visa stamped inside, plus a sealed immigrant packet. You must enter the U.S. before the visa expiry (typically 6 months). Do not open the sealed packet — the CBP officer at the border will take it.</p>
+            <span class="ps-time">⏱ Entry must be within 6 months</span>
+          </div>
+        </div>
+        <div class="ps">
+          <div class="ps-num">8</div>
+          <div class="ps-body">
+            <h4>Entry &amp; green card mailed</h4>
+            <p>At the port of entry, CBP processes your entry as a permanent resident. Your CR-1 or IR-1 green card (Form I-551) is mailed to the U.S. address within 2–4 weeks. You're a permanent resident from the moment of entry.</p>
+            <span class="ps-time">⏱ Green card arrives 2–4 weeks</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="costs">
+      <h2>CR-1 Visa Costs (2026)</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Fee</th><th>Who Pays</th><th class="amt">Amount</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Form I-130 filing fee</td><td>U.S. petitioner</td><td class="amt">$675</td></tr>
+          <tr><td>Immigrant visa application (DS-260)</td><td>Foreign spouse (via NVC)</td><td class="amt">$325</td></tr>
+          <tr><td>Affidavit of Support review fee (I-864)</td><td>U.S. petitioner (via NVC)</td><td class="amt">$120</td></tr>
+          <tr><td>Medical exam (civil surgeon)</td><td>Foreign spouse</td><td class="amt">$200–$500</td></tr>
+          <tr><td>Visa delivery / courier fee</td><td>Foreign spouse</td><td class="amt">$30–$80</td></tr>
+          <tr><td>Immigration attorney (optional)</td><td>Either</td><td class="amt">$1,500–$3,000</td></tr>
+          <tr class="total-row">
+            <td colspan="2"><strong>Total (without attorney)</strong></td>
+            <td class="amt"><strong>~$1,350–$1,700</strong></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout">
+        <p><strong>No USCIS biometrics fee:</strong> Unlike many other applications, the I-130 for immediate relatives doesn't require a separate biometrics fee. The $675 covers the full petition filing.</p>
+      </div>
+    </section>
+
+    <section class="section" id="documents">
+      <h2>Documents Checklist</h2>
+
+      <div class="cl-section">
+        <h4>For the I-130 Petition (filed by U.S. petitioner)</h4>
+        <ul class="cl">
+          <li><input type="checkbox" /><div class="il">Form I-130 (completed and signed)<span class="in">Also Form I-130A (supplemental information for beneficiary spouse)</span></div></li>
+          <li><input type="checkbox" /><div class="il">Proof of U.S. citizenship or LPR status<span class="in">U.S. passport, birth certificate, naturalization certificate, or green card</span></div></li>
+          <li><input type="checkbox" /><div class="il">Original marriage certificate + certified English translation</div></li>
+          <li><input type="checkbox" /><div class="il">Passport-style photos of both spouses</div></li>
+          <li><input type="checkbox" /><div class="il">Divorce decrees for all prior marriages (both spouses)</div></li>
+          <li><input type="checkbox" /><div class="il">Proof of bona fide marriage<span class="in">Joint bank statements, lease, photos together, communication records</span></div></li>
+        </ul>
+      </div>
+
+      <div class="cl-section">
+        <h4>For NVC Processing (uploaded to CEAC portal)</h4>
+        <ul class="cl">
+          <li><input type="checkbox" /><div class="il">Form DS-260 (Online immigrant visa application — completed by foreign spouse)</div></li>
+          <li><input type="checkbox" /><div class="il">Form I-864 Affidavit of Support<span class="in">With petitioner's most recent tax return, W-2s, pay stubs, employer letter</span></div></li>
+          <li><input type="checkbox" /><div class="il">Foreign spouse's passport (valid at least 6 months beyond interview date)</div></li>
+          <li><input type="checkbox" /><div class="il">Foreign spouse's birth certificate + certified English translation</div></li>
+          <li><input type="checkbox" /><div class="il">Police certificates from all countries lived in for 6+ months since age 16</div></li>
+          <li><input type="checkbox" /><div class="il">Military records (if applicable)</div></li>
+          <li><input type="checkbox" /><div class="il">Court and prison records (if applicable)</div></li>
+        </ul>
+      </div>
+
+      <div class="cl-section">
+        <h4>For the Consular Interview</h4>
+        <ul class="cl">
+          <li><input type="checkbox" /><div class="il">NVC interview appointment letter</div></li>
+          <li><input type="checkbox" /><div class="il">Valid passport (original)</div></li>
+          <li><input type="checkbox" /><div class="il">Sealed medical exam envelope (from civil surgeon — do not open)</div></li>
+          <li><input type="checkbox" /><div class="il">Original marriage certificate</div></li>
+          <li><input type="checkbox" /><div class="il">2 passport-style photos (per embassy requirements)</div></li>
+          <li><input type="checkbox" /><div class="il">All original civil documents (birth cert, police certs)</div></li>
+          <li><input type="checkbox" /><div class="il">Bona fide marriage evidence<span class="in">Photos together, communication records, financial ties</span></div></li>
+          <li><input type="checkbox" /><div class="il">Visa delivery fee payment confirmation</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="interview">
+      <h2>What to Expect at the Consular Interview</h2>
+      <p>The consular interview is the most important step. The foreign spouse attends alone (the U.S. citizen typically does not attend). The interviewing officer reviews documents and asks questions about the relationship.</p>
+      <h3>Common interview topics</h3>
+      <ul>
+        <li>How and when you met</li>
+        <li>Details about your wedding — date, location, who attended</li>
+        <li>Your spouse's daily routine, job, family members</li>
+        <li>Where you plan to live in the U.S.</li>
+        <li>Future plans together</li>
+        <li>How you communicate and how often</li>
+        <li>Prior visits to each other's countries</li>
+      </ul>
+      <div class="warning">
+        <p><strong>Prepare together before the interview:</strong> Both spouses should review key facts — wedding date, location, how you met, each other's family members. Inconsistent answers are the #1 red flag. You don't need a perfect memory, but major discrepancies on basic facts can trigger a request for more evidence (221(g) administrative processing).</p>
+      </div>
+      <h3>What happens after the interview</h3>
+      <p>Most cases are approved on the day. Possible outcomes:</p>
+      <ul>
+        <li><strong>Approved:</strong> Passport returned with visa stamped. Sealed immigrant packet provided. Travel to U.S. within 6 months.</li>
+        <li><strong>221(g) — administrative processing:</strong> More evidence needed or security checks pending. Common for certain countries. Can take weeks to months.</li>
+        <li><strong>Refused:</strong> A specific ground of inadmissibility was found. You'll receive a written notice of the reason. Some refusals can be overcome with waivers.</li>
+      </ul>
+    </section>
+
+    <section class="section" id="after-arrival">
+      <h2>After You Arrive in the U.S.</h2>
+      <h3>Your first days as a permanent resident</h3>
+      <p>When you enter at the port of entry, CBP stamps your passport as proof of permanent resident status. Your physical green card (Form I-551) is mailed to your U.S. address within 2–4 weeks. In the meantime, your passport stamp serves as temporary proof of status.</p>
+      <h3>What you can do immediately</h3>
+      <ul>
+        <li>Apply for a Social Security Number (SSN) — visit your local SSA office with your passport and entry stamp</li>
+        <li>Get a state driver's license or ID</li>
+        <li>Open a U.S. bank account</li>
+        <li>Work for any U.S. employer (no separate work permit needed)</li>
+        <li>Travel internationally (with your green card)</li>
+      </ul>
+      <h3>If you received a CR-1 (conditional green card)</h3>
+      <p>Your green card expires 2 years after your entry. <strong>Within the 90-day window before expiry</strong>, you must file Form I-751 (Petition to Remove Conditions on Residence) jointly with your spouse. Filing I-751 extends your status automatically while it's pending. Approval converts your CR-1 to a 10-year permanent green card.</p>
+      <div class="warning">
+        <p><strong>Don't miss the I-751 window:</strong> You must file within the 90 days before your CR-1 expires — not before, not after. Filing late requires a written explanation and may cause problems. Mark the date in your calendar when you receive your green card.</p>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">What is the difference between CR-1 and IR-1?</div>
+        <div class="faq-a">CR-1 (Conditional Resident) is for marriages under 2 years old at visa approval — you get a 2-year green card. IR-1 (Immediate Relative) is for marriages 2+ years old — you get a 10-year green card with no conditions. Both use the same I-130 process.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does the CR-1 visa take in 2026?</div>
+        <div class="faq-a">Typically 14–24 months total: 8–14 months for USCIS to approve the I-130, 2–4 months for NVC processing, and 1–3 months for the consular appointment. Times vary significantly by country and USCIS service center.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can a green card holder file for a CR-1?</div>
+        <div class="faq-a">Yes, but spouses of LPRs (F2A category) must wait for a visa number, which can add significant time. Spouses of U.S. citizens are immediate relatives with no numerical limit and no visa wait.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is the CR-1 faster than the K-1?</div>
+        <div class="faq-a">It depends on the situation. The K-1 is often faster to get your partner into the U.S., but the CR-1 skips the adjustment of status process after arrival (saving 12–24 months and ~$1,440). For couples who are already married, the CR-1 is usually the better long-term choice. See our <SmartLink href="/k1-vs-cr1">K-1 vs CR-1 full comparison</SmartLink>.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do I need an immigration attorney for the CR-1?</div>
+        <div class="faq-a">Not required. Many couples complete the CR-1 process without an attorney. If your situation is straightforward (valid marriage, clean background, no prior immigration issues), DIY is very manageable. An attorney adds value when there are complications like prior visa denials, criminal history, or prior overstays.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the income requirement for the CR-1 visa?</div>
+        <div class="faq-a">The U.S. petitioner must earn at least 125% of the federal poverty guideline for their household size. For a household of 2 in 2026, that's $25,550/year. If the petitioner doesn't meet this, a joint sponsor can co-sign the I-864. See our <SmartLink href="/affidavit-of-support">Affidavit of Support guide</SmartLink>.</div>
+      </div>
+    </section>
+
+    <section class="section" id="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <SmartLink href="/k1-vs-cr1" class="related-card">
+          <div class="related-cat">Compare</div>
+          <div class="related-title">K-1 vs CR-1: Cost, Timeline &amp; Which is Faster</div>
+        </SmartLink>
+        <SmartLink href="/affidavit-of-support" class="related-card">
+          <div class="related-cat">I-864</div>
+          <div class="related-title">Affidavit of Support Income Requirements 2026</div>
+        </SmartLink>
+        <SmartLink href="/bona-fide-marriage" class="related-card">
+          <div class="related-cat">Evidence</div>
+          <div class="related-title">Bona Fide Marriage Evidence: The 4 Pillars</div>
+        </SmartLink>
+        <SmartLink href="/ir1-visa" class="related-card">
+          <div class="related-cat">IR-1</div>
+          <div class="related-title">IR-1 Visa: 10-Year Green Card for Spouses</div>
+        </SmartLink>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="cta-box">
+      <h4>K-1 vs CR-1</h4>
+      <p>Not sure which visa fits your situation? Compare costs, timelines, and pros &amp; cons side by side.</p>
+      <SmartLink href="/k1-vs-cr1" class="btn">Compare Now →</SmartLink>
+    </div>
+
+    <div class="fee-summary">
+      <h4>Fee Summary</h4>
+      <div class="fee-row"><span>I-130 petition</span><span>$675</span></div>
+      <div class="fee-row"><span>DS-260 visa fee</span><span>$325</span></div>
+      <div class="fee-row"><span>I-864 review</span><span>$120</span></div>
+      <div class="fee-row"><span>Medical exam</span><span>~$300</span></div>
+      <div class="fee-row"><span><strong>Total (approx.)</strong></span><span>~$1,420+</span></div>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#what-is" class="sidebar-link">What is CR-1? <span>↓</span></a></li>
+        <li><a href="#cr1-vs-ir1" class="sidebar-link">CR-1 vs IR-1 <span>↓</span></a></li>
+        <li><a href="#who-can-apply" class="sidebar-link">Who can apply? <span>↓</span></a></li>
+        <li><a href="#process" class="sidebar-link">Step-by-step process <span>↓</span></a></li>
+        <li><a href="#costs" class="sidebar-link">Costs &amp; fees <span>↓</span></a></li>
+        <li><a href="#documents" class="sidebar-link">Documents checklist <span>↓</span></a></li>
+        <li><a href="#interview" class="sidebar-link">Consular interview <span>↓</span></a></li>
+        <li><a href="#after-arrival" class="sidebar-link">After arrival <span>↓</span></a></li>
+        <li><a href="#faq" class="sidebar-link">FAQ <span>↓</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Key Pages</h4>
+      <ul>
+        <li><SmartLink href="/k1-vs-cr1">K-1 vs CR-1 Comparison</SmartLink></li>
+        <li><SmartLink href="/ir1-visa">IR-1 Visa Guide</SmartLink></li>
+        <li><SmartLink href="/affidavit-of-support">Affidavit of Support</SmartLink></li>
+        <li><SmartLink href="/bona-fide-marriage">Bona Fide Marriage Evidence</SmartLink></li>
+        <li><SmartLink href="/cr1-visa-processing-time">CR-1 Processing Time 2026</SmartLink></li>
+        <li><SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

@@ -1,0 +1,687 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Form I-129F: Complete Guide, Instructions &amp; Checklist (2026)",
+    "description": "How to fill out Form I-129F to petition for a K-1 fiancé visa — step-by-step instructions, document checklist, sample answers, and common mistakes to avoid.",
+    "url": "https://ldrvisa.org/i-129f",
+    "dateModified": "2026-04-27",
+    "datePublished": "2026-04-27",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/i-129f" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Form I-129F", "item": "https://ldrvisa.org/i-129f" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who files Form I-129F?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The U.S. citizen petitioner files Form I-129F — not the foreign fiancé(e). The petitioner must be a U.S. citizen (not a green card holder). The form initiates the K-1 fiancé visa petition with USCIS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I file Form I-129F online?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. As of 2026, Form I-129F cannot be filed online. It must be printed, signed, and mailed by paper to the USCIS Dallas Lockbox facility, regardless of where in the U.S. the petitioner lives."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does USCIS take to process Form I-129F?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS currently processes Form I-129F in approximately 7–14 months at the California and Vermont Service Centers. Processing times fluctuate — check the current estimate at egov.uscis.gov/processing-times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the filing fee for Form I-129F?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The USCIS filing fee for Form I-129F is $675, effective April 2024. Make the check or money order payable to 'U.S. Department of Homeland Security.' Personal checks and money orders are accepted; credit cards are not accepted for paper filings."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the in-person meeting requirement for I-129F?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both the petitioner (U.S. citizen) and the beneficiary (foreign fiancé) must have met in person within 2 years before filing the I-129F. If you haven't met in person yet, you must do so before filing — there is no exception for this requirement except on specific religious or cultural grounds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after USCIS approves the I-129F?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS sends the approval notice and transfers the case to the National Visa Center (NVC), which then forwards it to the U.S. embassy in the fiancé's country. The embassy schedules a visa interview. The full timeline from I-129F approval to visa in hand is typically 3–6 more months."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="Form I-129F: Complete Instructions &amp; Checklist (2026) — LDR Visa"
+  description="Step-by-step guide to filing Form I-129F — who files, how to fill it out section by section, documents needed, mailing instructions, and common mistakes. Updated 2026."
+  canonical="https://ldrvisa.org/i-129f"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  .key-stats { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 2rem 0; }
+  .key-stats .container { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; max-width: 900px; }
+  .kstat { text-align: center; min-width: 150px; }
+  .kstat-num { font-size: 2rem; font-weight: 800; color: var(--color-accent); }
+  .kstat-label { font-size: 0.85rem; color: var(--color-muted); margin-top: 0.25rem; }
+
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 860px){ .content-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .section h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+  .section ul, .section ol { margin: 0.75rem 0 0.75rem 1.5rem; color: var(--color-text); line-height: 1.9; }
+
+  .quick-answer { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+  .qa-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--color-accent); margin-bottom: 0.5rem; }
+  .quick-answer h3 { font-size: 1.05rem; margin: 0 0 0.4rem; }
+  .quick-answer p { margin: 0; font-size: 0.95rem; color: #1e40af; line-height: 1.7; }
+
+  /* Parts of the form */
+  .part-card { border: 1px solid var(--color-border); border-radius: 12px; margin-bottom: 1.25rem; overflow: hidden; }
+  .part-header { background: var(--color-accent); color: #fff; padding: 0.75rem 1.25rem; display: flex; justify-content: space-between; align-items: center; }
+  .part-header h4 { font-size: 0.95rem; font-weight: 700; margin: 0; }
+  .part-label { font-size: 0.75rem; opacity: 0.8; }
+  .part-body { padding: 1.25rem; }
+  .part-body p { font-size: 0.9rem; color: var(--color-muted); margin: 0 0 0.75rem; line-height: 1.6; }
+  .part-fields { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+  .part-fields li { font-size: 0.875rem; color: var(--color-text); padding: 0.4rem 0.6rem; background: var(--color-surface); border-radius: 6px; display: flex; gap: 0.5rem; }
+  .part-fields li::before { content: "→"; color: var(--color-accent); font-weight: 700; flex-shrink: 0; }
+  .tip-inline { font-size: 0.82rem; color: var(--color-accent); font-weight: 600; margin-top: 0.5rem; display: block; }
+
+  /* Requirements list */
+  .req-list { list-style: none; padding: 0; margin: 1rem 0; }
+  .req-list li { display: flex; gap: 0.75rem; padding: 0.75rem; border-bottom: 1px solid var(--color-border); align-items: flex-start; font-size: 0.9rem; }
+  .req-list li:last-child { border-bottom: none; }
+  .req-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.05rem; }
+  .req-text strong { display: block; font-size: 0.95rem; margin-bottom: 0.2rem; }
+  .req-text span { color: var(--color-muted); font-size: 0.85rem; line-height: 1.5; }
+
+  /* Checklist */
+  .cl-section h4 { font-size: 0.95rem; font-weight: 700; color: var(--color-accent); margin: 1.25rem 0 0.5rem; }
+  .cl { list-style: none; padding: 0; margin: 0; }
+  .cl li { display: flex; gap: 0.75rem; align-items: flex-start; padding: 0.45rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .cl li:last-child { border-bottom: none; }
+  .cl input[type=checkbox] { margin-top: 0.15rem; width: 1rem; height: 1rem; flex-shrink: 0; accent-color: var(--color-accent); }
+  .cl .il { flex: 1; }
+  .cl .in { display: block; font-size: 0.8rem; color: var(--color-muted); margin-top: 0.1rem; }
+
+  /* Mistakes */
+  .mistakes-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+  .mistake-card { background: #fff5f5; border: 1px solid #fecaca; border-radius: 10px; padding: 1.25rem; }
+  .mistake-card h4 { font-size: 0.9rem; font-weight: 700; color: #dc2626; margin: 0 0 0.4rem; }
+  .mistake-card p { font-size: 0.85rem; color: #7f1d1d; margin: 0 0 0.5rem; line-height: 1.5; }
+  .fix { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 6px; padding: 0.4rem 0.65rem; font-size: 0.82rem; color: #166534; }
+  .fix strong { color: #15803d; }
+
+  /* Mailing box */
+  .mail-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.5rem; margin: 1.25rem 0; }
+  .mail-box h4 { font-size: 1rem; font-weight: 700; margin: 0 0 0.75rem; }
+  .mail-address { font-family: monospace; font-size: 0.9rem; line-height: 2; background: #f8fafc; border: 1px solid var(--color-border); border-radius: 8px; padding: 1rem 1.25rem; margin: 0.75rem 0; color: #1a1a2e; }
+  .mail-box p { font-size: 0.875rem; color: var(--color-muted); margin: 0.5rem 0 0; line-height: 1.6; }
+
+  /* Timeline */
+  .tv-step { display: flex; gap: 1rem; margin-bottom: 0; }
+  .tv-left { display: flex; flex-direction: column; align-items: center; width: 2rem; }
+  .tv-dot { width: 1rem; height: 1rem; border-radius: 50%; background: var(--color-accent); flex-shrink: 0; }
+  .tv-line { width: 2px; background: var(--color-border); flex: 1; min-height: 2rem; }
+  .tv-step:last-child .tv-line { display: none; }
+  .tv-body { padding-bottom: 1.5rem; flex: 1; }
+  .tv-title { font-weight: 700; font-size: 0.95rem; }
+  .tv-time { font-size: 0.78rem; color: var(--color-accent); font-weight: 700; margin: 0.1rem 0 0.3rem; }
+  .tv-desc { font-size: 0.85rem; color: var(--color-muted); line-height: 1.55; }
+
+  /* Callouts */
+  .callout { background: #eff6ff; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #1e40af; line-height: 1.6; }
+  .warning { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .warning p { margin: 0; font-size: 0.9rem; color: #9a3412; line-height: 1.6; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.75; font-size: 0.95rem; }
+
+  /* Related */
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--color-accent); box-shadow: 0 2px 12px rgba(37,99,235,0.08); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+
+  /* Sidebar */
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--color-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--color-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: #1d4ed8; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › Form I-129F
+    </div>
+    <h1>Form I-129F: Complete Guide,<br/>Instructions &amp; Checklist (2026)</h1>
+    <p class="hero-desc">The I-129F petition is the first step in the K-1 fiancé visa process. Here's exactly how to fill it out, what to include, and how to avoid the mistakes that delay approvals.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 12 min read</span>
+      <span class="hero-meta-item">✅ Paper filing — Dallas Lockbox</span>
+    </div>
+  </div>
+</section>
+
+<section class="key-stats">
+  <div class="container">
+    <div class="kstat"><div class="kstat-num">$675</div><div class="kstat-label">Filing fee (2026)</div></div>
+    <div class="kstat"><div class="kstat-num">7–14 mo</div><div class="kstat-label">USCIS processing time</div></div>
+    <div class="kstat"><div class="kstat-num">Paper only</div><div class="kstat-label">No online filing available</div></div>
+    <div class="kstat"><div class="kstat-num">2 years</div><div class="kstat-label">Must have met in person within</div></div>
+  </div>
+</section>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <section class="section" id="what-is">
+      <h2>What Is Form I-129F?</h2>
+      <div class="quick-answer">
+        <div class="qa-label">Quick Answer</div>
+        <h3>I-129F = the petition that starts the K-1 fiancé visa process.</h3>
+        <p>The Petition for Alien Fiancé(e) — Form I-129F — is filed by the U.S. citizen petitioner with USCIS to establish the legitimacy of the relationship and request permission for their foreign fiancé to travel to the U.S. to get married. It is the very first form in the K-1 process.</p>
+      </div>
+      <p>After USCIS approves the I-129F, the case transfers to the National Visa Center (NVC) and then to the U.S. embassy in your fiancé's country. The foreign fiancé attends an interview and, if approved, receives the K-1 visa.</p>
+      <div class="callout">
+        <p><strong>Already married?</strong> The I-129F is only for couples who are not yet married. If you are already married to a foreign national, you file Form I-130 instead, which starts the CR-1/IR-1 spousal visa process. See our <SmartLink href="/cr1-visa">CR-1 spousal visa guide</SmartLink>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="requirements">
+      <h2>Requirements to File I-129F</h2>
+      <ul class="req-list">
+        <li>
+          <div class="req-icon">🇺🇸</div>
+          <div class="req-text">
+            <strong>U.S. citizen petitioner</strong>
+            <span>Only U.S. citizens can petition for a K-1 visa. Lawful permanent residents (green card holders) cannot file I-129F — they must use Form I-130 for a spousal visa instead.</span>
+          </div>
+        </li>
+        <li>
+          <div class="req-icon">💍</div>
+          <div class="req-text">
+            <strong>Legally free to marry</strong>
+            <span>Both the petitioner and beneficiary must be unmarried at the time of filing. Any prior marriages must be legally terminated (divorce decree, annulment, or death certificate).</span>
+          </div>
+        </li>
+        <li>
+          <div class="req-icon">🤝</div>
+          <div class="req-text">
+            <strong>Met in person within the past 2 years</strong>
+            <span>This is a firm legal requirement. You must have physically met your fiancé within 24 months before filing. Online meetings (video calls, social media) do not count. If you haven't met yet, you must do so before filing.</span>
+          </div>
+        </li>
+        <li>
+          <div class="req-icon">❤️</div>
+          <div class="req-text">
+            <strong>Genuine intent to marry within 90 days</strong>
+            <span>Both parties must intend to marry within 90 days of the fiancé's entry into the U.S. on the K-1 visa. USCIS looks for evidence that the relationship is real and the wedding is actually planned.</span>
+          </div>
+        </li>
+        <li>
+          <div class="req-icon">💰</div>
+          <div class="req-text">
+            <strong>Income above poverty guidelines</strong>
+            <span>The petitioner must be able to demonstrate income of at least 100% of the federal poverty guideline (some embassies require 125%). For a household of 2 in 2026, that's approximately $20,440–$25,550/year.</span>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="how-to-fill">
+      <h2>How to Fill Out Form I-129F — Section by Section</h2>
+      <p>Download the current version of Form I-129F from <strong>uscis.gov</strong> (look for the edition date at the bottom right of each page — use only the most recent version). Fill it out on a computer and print — do not handwrite the form.</p>
+
+      <div class="part-card">
+        <div class="part-header">
+          <h4>Part 1 — Information About You (the Petitioner)</h4>
+          <span class="part-label">U.S. citizen only</span>
+        </div>
+        <div class="part-body">
+          <p>Your personal information as the U.S. citizen filing the petition.</p>
+          <ul class="part-fields">
+            <li>Legal name exactly as it appears on your U.S. passport or birth certificate</li>
+            <li>All other names used (maiden name, aliases, prior legal names)</li>
+            <li>Date and city/country of birth</li>
+            <li>Social Security Number</li>
+            <li>Current U.S. address (must be a real address — no P.O. boxes for primary address)</li>
+            <li>Marital status history — list all prior marriages with dates and how they ended</li>
+            <li>Number of times you have previously filed I-129F</li>
+          </ul>
+          <span class="tip-inline">⚠ If you have previously filed I-129F for someone else, USCIS will ask for details. Repeat filers receive extra scrutiny — this is normal, but be honest and accurate.</span>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-header">
+          <h4>Part 2 — Information About Your Fiancé(e) (the Beneficiary)</h4>
+          <span class="part-label">Foreign fiancé's details</span>
+        </div>
+        <div class="part-body">
+          <p>Information about the foreign national you want to bring to the U.S.</p>
+          <ul class="part-fields">
+            <li>Legal name exactly as it appears on their foreign passport</li>
+            <li>All other names used (maiden name, name changes)</li>
+            <li>Date and place of birth</li>
+            <li>Country of citizenship and country of last residence</li>
+            <li>Current address abroad</li>
+            <li>U.S. embassy or consulate where they will apply for the K-1 visa</li>
+            <li>Prior immigration history in the U.S. (visas, entries, overstays)</li>
+            <li>Children — list all children of the beneficiary (including those not traveling)</li>
+          </ul>
+          <span class="tip-inline">💡 For the consulate field: choose the U.S. embassy in your fiancé's home country — this is where they will interview. If they live in a third country, they can sometimes request interview at a different post, but it may delay processing.</span>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-header">
+          <h4>Part 3 — Biographic Information</h4>
+          <span class="part-label">Both petitioner and beneficiary</span>
+        </div>
+        <div class="part-body">
+          <p>Physical characteristics and ethnicity — used by USCIS for identification purposes.</p>
+          <ul class="part-fields">
+            <li>Ethnicity (Hispanic/Latino or not)</li>
+            <li>Race (check all that apply)</li>
+            <li>Height and weight</li>
+            <li>Eye color and hair color</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-header">
+          <h4>Part 4 — Information About Your Proposed Marriage</h4>
+          <span class="part-label">Most important section</span>
+        </div>
+        <div class="part-body">
+          <p>Details about how you met, your relationship history, and your wedding plans.</p>
+          <ul class="part-fields">
+            <li>Date you first met in person (must be within the past 2 years)</li>
+            <li>Place you first met — city, country</li>
+            <li>How you communicate — describe your communication methods</li>
+            <li>Have you met in person since that first meeting? (list all in-person meetings)</li>
+            <li>Date you became engaged — month, year</li>
+            <li>Where you plan to get married</li>
+            <li>Any cultural or religious reason you could not have met before? (very few qualify for an exemption)</li>
+          </ul>
+          <span class="tip-inline">💡 Be specific and honest. "We met online in June 2023 and first met in person in Manila in September 2023" is stronger than vague answers. Keep a personal statement document to reference when writing the petition letter.</span>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-header">
+          <h4>Part 5 — Petitioner's Statement, Contact Info &amp; Signature</h4>
+          <span class="part-label">Must sign in blue or black ink</span>
+        </div>
+        <div class="part-body">
+          <p>Your certification that all information is accurate and your signature.</p>
+          <ul class="part-fields">
+            <li>Daytime phone number</li>
+            <li>Mobile phone number (optional)</li>
+            <li>Email address</li>
+            <li>Interpreter information (if applicable)</li>
+            <li>Signature — must be handwritten on the printed form</li>
+            <li>Date of signature</li>
+          </ul>
+          <span class="tip-inline">⚠ Never sign before printing — the form must be signed by hand after printing. An unsigned form will be rejected.</span>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-header">
+          <h4>Part 6 — Interpreter's Contact Info &amp; Certification</h4>
+          <span class="part-label">Only if you used an interpreter</span>
+        </div>
+        <div class="part-body">
+          <p>If someone translated the form for you because you are not fluent in English, that person must complete this section. Immigration attorneys completing the form for their clients do NOT use this section — that's Part 7.</p>
+          <ul class="part-fields">
+            <li>Interpreter's full name</li>
+            <li>Language interpreted</li>
+            <li>Interpreter's signature and date</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="part-card">
+        <div class="part-header">
+          <h4>Part 7 — Contact Info, Declaration &amp; Signature of the Person Preparing This Form</h4>
+          <span class="part-label">Only if an attorney or preparer helped</span>
+        </div>
+        <div class="part-body">
+          <p>If an attorney or accredited representative prepared the form for you, they complete this section. If you filled it out yourself, leave this section blank.</p>
+          <ul class="part-fields">
+            <li>Preparer's full name and organization</li>
+            <li>Preparer's address and phone</li>
+            <li>Preparer's signature and date</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="documents">
+      <h2>Complete Document Checklist</h2>
+      <p>Attach these documents behind the completed, signed I-129F form. Do not staple — use binder clips or rubber bands so officers can easily review individual documents.</p>
+
+      <div class="cl-section">
+        <h4>Required from the U.S. Petitioner</h4>
+        <ul class="cl">
+          <li><input type="checkbox" /><div class="il">Proof of U.S. citizenship<span class="in">Copy of U.S. passport, or U.S. birth certificate + government-issued photo ID, or naturalization certificate</span></div></li>
+          <li><input type="checkbox" /><div class="il">Divorce decrees for all prior marriages (if applicable)<span class="in">Final divorce judgment — not a separation agreement or annulment filing alone</span></div></li>
+          <li><input type="checkbox" /><div class="il">Proof of legal name change (if name on citizenship docs differs from current name)</div></li>
+          <li><input type="checkbox" /><div class="il">Filing fee check or money order for $675<span class="in">Payable to "U.S. Department of Homeland Security." Do not send cash.</span></div></li>
+        </ul>
+      </div>
+
+      <div class="cl-section">
+        <h4>Proof of In-Person Meeting</h4>
+        <ul class="cl">
+          <li><input type="checkbox" /><div class="il">Passport pages showing entry/exit stamps from visit<span class="in">U.S. petitioner's and/or beneficiary's passport stamps when you visited each other</span></div></li>
+          <li><input type="checkbox" /><div class="il">Boarding passes, flight confirmations, or airline itineraries</div></li>
+          <li><input type="checkbox" /><div class="il">Hotel receipts, Airbnb confirmations, accommodation bookings</div></li>
+          <li><input type="checkbox" /><div class="il">Photos together from the visit (date and location labeled)</div></li>
+        </ul>
+      </div>
+
+      <div class="cl-section">
+        <h4>Evidence of Bona Fide Relationship</h4>
+        <ul class="cl">
+          <li><input type="checkbox" /><div class="il">Photos together across different dates and locations (15–30 recommended)<span class="in">Include photos with each other's family and friends</span></div></li>
+          <li><input type="checkbox" /><div class="il">Communication records — screenshots of WhatsApp, iMessage, email threads<span class="in">Show months of regular conversation — not just a few messages</span></div></li>
+          <li><input type="checkbox" /><div class="il">Video call logs (FaceTime, WhatsApp calls, Skype)</div></li>
+          <li><input type="checkbox" /><div class="il">3–5 support letters from friends or family who know both of you</div></li>
+          <li><input type="checkbox" /><div class="il">Personal relationship statement (optional but strongly recommended)<span class="in">1–2 page narrative of how you met, your relationship history, and your plans</span></div></li>
+          <li><input type="checkbox" /><div class="il">Money transfers between you (Wise, PayPal, bank wires)</div></li>
+        </ul>
+      </div>
+
+      <div class="cl-section">
+        <h4>Information About the Beneficiary (attach copies)</h4>
+        <ul class="cl">
+          <li><input type="checkbox" /><div class="il">Copy of beneficiary's passport bio page</div></li>
+          <li><input type="checkbox" /><div class="il">Copy of beneficiary's birth certificate + English translation</div></li>
+          <li><input type="checkbox" /><div class="il">Divorce decrees for any prior marriages of the beneficiary</div></li>
+          <li><input type="checkbox" /><div class="il">For any children traveling on K-2 visas: their birth certificates</div></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="mailing">
+      <h2>Where to Mail Your I-129F</h2>
+      <p>As of 2026, all I-129F petitions are mailed to the USCIS Dallas Lockbox, regardless of where in the U.S. the petitioner lives. There is no online filing option.</p>
+
+      <div class="mail-box">
+        <h4>📬 USPS Regular Mail</h4>
+        <div class="mail-address">
+          USCIS<br/>
+          Attn: I-129F<br/>
+          P.O. Box 660151<br/>
+          Dallas, TX 75266
+        </div>
+        <p>Use this address for standard USPS mail (first class or certified mail).</p>
+      </div>
+
+      <div class="mail-box">
+        <h4>📦 UPS, FedEx, or DHL (courier services)</h4>
+        <div class="mail-address">
+          USCIS<br/>
+          Attn: I-129F<br/>
+          2501 S. State Hwy 121 Business<br/>
+          Suite 400<br/>
+          Lewisville, TX 75067
+        </div>
+        <p>Use this address when sending via courier services like FedEx or UPS. Do not use this address for USPS.</p>
+      </div>
+
+      <div class="callout">
+        <p><strong>Use certified mail or courier:</strong> Send your petition with a tracking number so you have proof it was received. Keep copies of everything you send — take photos of every document before mailing.</p>
+      </div>
+    </section>
+
+    <section class="section" id="after-filing">
+      <h2>What Happens After You File</h2>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">Receipt Notice (I-797C)</div>
+          <div class="tv-time">2–6 weeks after mailing</div>
+          <div class="tv-desc">USCIS sends a receipt notice confirming they received your petition. It includes your receipt number — use this to check your case status online at my.uscis.gov.</div>
+        </div>
+      </div>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">Biometrics Appointment (sometimes required)</div>
+          <div class="tv-time">1–3 months after receipt</div>
+          <div class="tv-desc">USCIS may schedule a biometrics appointment for the petitioner. Not all I-129F cases require this, but be prepared. Missing the appointment will delay your case.</div>
+        </div>
+      </div>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">RFE (Request for Evidence) — if applicable</div>
+          <div class="tv-time">Any point during processing</div>
+          <div class="tv-desc">If USCIS needs more information, they issue an RFE. Respond within the deadline stated in the letter (typically 87 days). A strong initial filing minimizes this risk.</div>
+        </div>
+      </div>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">Approval Notice (I-797)</div>
+          <div class="tv-time">7–14 months after filing</div>
+          <div class="tv-desc">USCIS approves the petition and sends an approval notice. The case is automatically transferred to the National Visa Center (NVC).</div>
+        </div>
+      </div>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">NVC Transfer → Embassy Interview</div>
+          <div class="tv-time">3–6 months after approval</div>
+          <div class="tv-desc">NVC transfers the case to the U.S. embassy. The embassy schedules the K-1 interview for your fiancé. After a successful interview, the K-1 visa is issued.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mistakes">
+      <h2>7 Most Common I-129F Mistakes</h2>
+      <div class="mistakes-grid">
+        <div class="mistake-card">
+          <h4>Wrong form edition</h4>
+          <p>Using an outdated version of I-129F downloaded from a third-party site.</p>
+          <div class="fix"><strong>Fix:</strong> Always download from uscis.gov — the edition date is in the bottom right corner of each page.</div>
+        </div>
+        <div class="mistake-card">
+          <h4>Missing or unsigned form</h4>
+          <p>Forgetting to sign Part 5, or signing the PDF before printing (electronic signature).</p>
+          <div class="fix"><strong>Fix:</strong> Print first, then sign in pen. A missing signature gets the entire package rejected.</div>
+        </div>
+        <div class="mistake-card">
+          <h4>Wrong filing fee amount</h4>
+          <p>Sending the old $535 fee instead of the current $675 (updated April 2024).</p>
+          <div class="fix"><strong>Fix:</strong> The fee is $675 in 2026. Always verify the current fee at uscis.gov/forms before mailing.</div>
+        </div>
+        <div class="mistake-card">
+          <h4>No proof of in-person meeting</h4>
+          <p>Forgetting to include any documentation that you actually met in person.</p>
+          <div class="fix"><strong>Fix:</strong> Include passport stamps, boarding passes, hotel receipts, and photos from your visit.</div>
+        </div>
+        <div class="mistake-card">
+          <h4>No relationship evidence</h4>
+          <p>Filing with only the form and proof of citizenship — no photos, messages, or letters.</p>
+          <div class="fix"><strong>Fix:</strong> Include communication records, 15–30 photos, and 3+ support letters. USCIS needs to see the relationship is real.</div>
+        </div>
+        <div class="mistake-card">
+          <h4>Wrong mailing address</h4>
+          <p>Using an old or incorrect USCIS lockbox address from outdated instructions.</p>
+          <div class="fix"><strong>Fix:</strong> As of 2026, all I-129F petitions go to the Dallas Lockbox. Verify the current address at uscis.gov before mailing.</div>
+        </div>
+        <div class="mistake-card">
+          <h4>Inconsistent names or dates</h4>
+          <p>Name spelled differently on I-129F vs. passport, or conflicting dates across documents.</p>
+          <div class="fix"><strong>Fix:</strong> Use the exact name on official documents. If there's a discrepancy, explain it in a cover letter.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">Who files Form I-129F?</div>
+        <div class="faq-a">The U.S. citizen petitioner files — not the foreign fiancé. The petitioner must be a U.S. citizen. Green card holders cannot use I-129F; they must file I-130 for a spousal visa instead.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I file Form I-129F online?</div>
+        <div class="faq-a">No. As of 2026, I-129F must be filed by paper mail to the USCIS Dallas Lockbox. There is no online filing option for this form.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does USCIS take to process I-129F?</div>
+        <div class="faq-a">Currently 7–14 months at most service centers. Processing times fluctuate — check the current estimate at egov.uscis.gov/processing-times and select Form I-129F.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the filing fee for I-129F in 2026?</div>
+        <div class="faq-a">$675. This fee was updated in April 2024. Make the check or money order payable to "U.S. Department of Homeland Security." USCIS does not accept cash or credit cards for paper filings.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the in-person meeting requirement?</div>
+        <div class="faq-a">Both the petitioner and beneficiary must have met in person within the 2 years before filing. Video calls don't count. If you haven't met yet, you must do so before filing. Very limited religious/cultural exceptions exist.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What happens after USCIS approves the I-129F?</div>
+        <div class="faq-a">USCIS transfers the case to the NVC, which forwards it to the U.S. embassy in your fiancé's country. The embassy schedules an interview. From I-129F approval to visa in hand is typically 3–6 more months.</div>
+      </div>
+    </section>
+
+    <section class="section" id="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <SmartLink href="/k1-visa" class="related-card">
+          <div class="related-cat">K-1 Visa</div>
+          <div class="related-title">K-1 Fiancé Visa: Complete 2026 Guide</div>
+        </SmartLink>
+        <SmartLink href="/k1-visa-interview" class="related-card">
+          <div class="related-cat">Interview</div>
+          <div class="related-title">K-1 Interview Prep: 70 Questions &amp; Answers</div>
+        </SmartLink>
+        <SmartLink href="/bona-fide-marriage" class="related-card">
+          <div class="related-cat">Evidence</div>
+          <div class="related-title">Bona Fide Relationship Evidence Guide</div>
+        </SmartLink>
+        <SmartLink href="/affidavit-of-support" class="related-card">
+          <div class="related-cat">I-864</div>
+          <div class="related-title">Affidavit of Support Income Requirements</div>
+        </SmartLink>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="cta-box">
+      <h4>Interview coming up?</h4>
+      <p>70 K-1 interview questions with strong answers — organized by category for easy practice.</p>
+      <SmartLink href="/k1-visa-interview" class="btn">Interview Prep →</SmartLink>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>At a Glance</h4>
+      <ul>
+        <li>Fee: <strong>$675</strong></li>
+        <li>Processing: <strong>7–14 months</strong></li>
+        <li>Filing: <strong>Paper mail only</strong></li>
+        <li>Who files: <strong>U.S. citizen</strong></li>
+        <li>Sent to: <strong>Dallas Lockbox</strong></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#what-is" class="sidebar-link">What is I-129F? <span>↓</span></a></li>
+        <li><a href="#requirements" class="sidebar-link">Requirements <span>↓</span></a></li>
+        <li><a href="#how-to-fill" class="sidebar-link">How to fill it out <span>↓</span></a></li>
+        <li><a href="#documents" class="sidebar-link">Documents checklist <span>↓</span></a></li>
+        <li><a href="#mailing" class="sidebar-link">Where to mail <span>↓</span></a></li>
+        <li><a href="#after-filing" class="sidebar-link">After you file <span>↓</span></a></li>
+        <li><a href="#mistakes" class="sidebar-link">Common mistakes <span>↓</span></a></li>
+        <li><a href="#faq" class="sidebar-link">FAQ <span>↓</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Key Pages</h4>
+      <ul>
+        <li><SmartLink href="/k1-visa">K-1 Fiancé Visa Guide</SmartLink></li>
+        <li><SmartLink href="/k1-visa-interview">Interview Prep (70 Qs)</SmartLink></li>
+        <li><SmartLink href="/bona-fide-marriage">Bona Fide Evidence</SmartLink></li>
+        <li><SmartLink href="/affidavit-of-support">Affidavit of Support</SmartLink></li>
+        <li><SmartLink href="/k1-vs-cr1">K-1 vs CR-1</SmartLink></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

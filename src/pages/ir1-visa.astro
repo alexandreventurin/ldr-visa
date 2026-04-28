@@ -1,0 +1,535 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "IR-1 Visa: Immediate Relative Spousal Visa Guide (2026)",
+    "description": "The IR-1 visa gives foreign spouses of U.S. citizens a 10-year green card on arrival — no conditions to remove. Learn requirements, process, timeline, and how it differs from CR-1.",
+    "url": "https://ldrvisa.org/ir1-visa",
+    "dateModified": "2026-04-27",
+    "datePublished": "2026-04-27",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/ir1-visa" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "IR-1 Visa", "item": "https://ldrvisa.org/ir1-visa" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the IR-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The IR-1 (Immediate Relative) visa is an immigrant visa for the foreign spouse of a U.S. citizen when the marriage is 2 or more years old at the time the visa is approved. The IR-1 grants a 10-year permanent green card on arrival — no conditions to remove, unlike the CR-1."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is the IR-1 different from the CR-1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Both CR-1 and IR-1 are processed through the same I-130 petition and NVC pipeline. The difference is the length of marriage at approval: CR-1 is for marriages under 2 years (2-year conditional green card); IR-1 is for marriages of 2+ years (10-year permanent green card). Same process, different card."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I apply for the IR-1 visa if I'm already in the U.S.?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you are already in the U.S., you would typically apply for adjustment of status (Form I-485) rather than the IR-1 immigrant visa through consular processing. Both paths lead to the same green card. Adjustment of status is processed domestically; IR-1 is processed at a U.S. embassy abroad."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the IR-1 visa take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The IR-1 visa uses the same process as the CR-1, typically taking 14–24 months total: 8–14 months for USCIS to approve the I-130 petition, 2–4 months for NVC processing, and 1–3 months for the consular appointment and visa issuance."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do IR-1 holders need to remove conditions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The IR-1 grants a 10-year permanent green card with no conditions attached. There is no need to file Form I-751 (Petition to Remove Conditions), which is required for CR-1 holders. The IR-1 card simply needs to be renewed after 10 years."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When can an IR-1 green card holder apply for U.S. citizenship?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An IR-1 green card holder who is married to and living with a U.S. citizen can apply for naturalization after 3 years of continuous permanent residence, provided they meet all other citizenship requirements. This is shorter than the standard 5-year requirement for other green card holders."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="IR-1 Visa: Immediate Relative Spousal Visa Guide (2026) — LDR Visa"
+  description="The IR-1 visa — a 10-year green card for foreign spouses of U.S. citizens married 2+ years. Requirements, process, how it differs from CR-1, and path to citizenship. Updated 2026."
+  canonical="https://ldrvisa.org/ir1-visa"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  .key-stats { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 2rem 0; }
+  .key-stats .container { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; max-width: 900px; }
+  .kstat { text-align: center; min-width: 150px; }
+  .kstat-num { font-size: 2rem; font-weight: 800; color: var(--color-accent); }
+  .kstat-label { font-size: 0.85rem; color: var(--color-muted); margin-top: 0.25rem; }
+
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 860px){ .content-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .section h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+  .section ul { margin: 0.75rem 0 0.75rem 1.5rem; color: var(--color-text); line-height: 1.9; }
+
+  .quick-answer { background: linear-gradient(135deg, #f0fdf4, #dcfce7); border: 1px solid #bbf7d0; border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+  .qa-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #16a34a; margin-bottom: 0.5rem; }
+  .quick-answer h3 { font-size: 1.05rem; margin: 0 0 0.4rem; }
+  .quick-answer p { margin: 0; font-size: 0.95rem; color: #166534; line-height: 1.7; }
+
+  /* Comparison table */
+  .compare-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1.25rem 0; }
+  .compare-table th { padding: 0.7rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; }
+  .compare-table th:first-child { background: #374151; }
+  .compare-table th.cr1-col { background: #f97316; }
+  .compare-table th.ir1-col { background: #22c55e; }
+  .compare-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .compare-table tr:hover td { background: var(--color-surface); }
+  .compare-table .row-label { font-weight: 600; color: var(--color-text); }
+  .compare-table .ir1-col { color: #15803d; font-weight: 600; }
+  .compare-table .cr1-col { color: #c2410c; }
+  .tag-good { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.7rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 999px; margin-left: 0.3rem; }
+
+  /* Benefits grid */
+  .benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+  .benefit-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1.25rem; border-top: 3px solid #22c55e; }
+  .benefit-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .benefit-card h4 { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.35rem; }
+  .benefit-card p { font-size: 0.85rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* Timeline */
+  .tv-step { display: flex; gap: 1rem; }
+  .tv-left { display: flex; flex-direction: column; align-items: center; width: 2rem; }
+  .tv-dot { width: 1rem; height: 1rem; border-radius: 50%; background: #22c55e; flex-shrink: 0; }
+  .tv-line { width: 2px; background: var(--color-border); flex: 1; min-height: 2rem; }
+  .tv-step:last-child .tv-line { display: none; }
+  .tv-body { padding-bottom: 1.5rem; flex: 1; }
+  .tv-title { font-weight: 700; font-size: 0.95rem; }
+  .tv-time { font-size: 0.78rem; color: #16a34a; font-weight: 700; margin: 0.1rem 0 0.3rem; }
+  .tv-desc { font-size: 0.85rem; color: var(--color-muted); line-height: 1.55; }
+
+  /* Citizenship path */
+  .citizenship-path { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 2rem; margin: 1.25rem 0; }
+  .citizenship-path h3 { color: #60a5fa; margin: 0 0 1rem; font-size: 1.1rem; }
+  .cp-steps { display: flex; gap: 0; flex-wrap: wrap; }
+  .cp-step { flex: 1; min-width: 120px; text-align: center; padding: 1rem 0.75rem; position: relative; }
+  .cp-step::after { content: "→"; position: absolute; right: -0.5rem; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.4); font-size: 1.1rem; }
+  .cp-step:last-child::after { display: none; }
+  .cp-icon { font-size: 1.5rem; margin-bottom: 0.4rem; }
+  .cp-label { font-size: 0.75rem; color: rgba(255,255,255,0.7); line-height: 1.4; }
+  .cp-time { font-size: 0.7rem; color: #60a5fa; font-weight: 700; margin-top: 0.25rem; }
+
+  /* Callouts */
+  .callout { background: #eff6ff; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #1e40af; line-height: 1.6; }
+  .callout-green { background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout-green p { margin: 0; font-size: 0.9rem; color: #166534; line-height: 1.6; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.75; font-size: 0.95rem; }
+
+  /* Related */
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--color-accent); box-shadow: 0 2px 12px rgba(37,99,235,0.08); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+
+  /* Sidebar */
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--color-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--color-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: #1d4ed8; }
+  .highlight-box { background: var(--color-surface); border: 2px solid #22c55e; border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .highlight-box h4 { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.5rem; color: #15803d; }
+  .highlight-box p { font-size: 0.85rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › IR-1 Visa
+    </div>
+    <h1>IR-1 Visa: Immediate Relative<br/>Spousal Visa Guide (2026)</h1>
+    <p class="hero-desc">The IR-1 is the best outcome for a married couple applying for a U.S. spousal visa — you arrive as a permanent resident with a 10-year green card and no conditions to remove.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 10 min read</span>
+      <span class="hero-meta-item">✅ Marriage 2+ years at approval</span>
+    </div>
+  </div>
+</section>
+
+<section class="key-stats">
+  <div class="container">
+    <div class="kstat"><div class="kstat-num">10 years</div><div class="kstat-label">Green card validity</div></div>
+    <div class="kstat"><div class="kstat-num">14–24 mo</div><div class="kstat-label">Avg. total timeline</div></div>
+    <div class="kstat"><div class="kstat-num">2+ years</div><div class="kstat-label">Marriage length required at approval</div></div>
+    <div class="kstat"><div class="kstat-num">3 years</div><div class="kstat-label">Until eligible for citizenship</div></div>
+  </div>
+</section>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <section class="section" id="what-is">
+      <h2>What Is the IR-1 Visa?</h2>
+      <div class="quick-answer">
+        <div class="qa-label">Best Outcome</div>
+        <h3>IR-1 = 10-year green card on arrival. No conditions, no I-751, no follow-up.</h3>
+        <p>The IR-1 (Immediate Relative) visa is issued to the foreign spouse of a U.S. citizen when the marriage has been in place for 2 or more years at the time the immigrant visa is approved. You enter the U.S. as a permanent resident, and your 10-year green card arrives in the mail within weeks.</p>
+      </div>
+      <p>The IR-1 and CR-1 are processed through the <strong>exact same application pipeline</strong> — both start with Form I-130, go through the NVC, and end at a consular interview. The only thing that determines which card you receive is the length of your marriage at the moment your visa is approved.</p>
+      <p>If your marriage is under 2 years at approval, you get a CR-1 (conditional, 2-year card). If your marriage is 2+ years at approval, you get an IR-1 (permanent, 10-year card). Since processing takes 14–24 months, many couples who file as CR-1 candidates end up receiving an IR-1 by the time the visa is issued.</p>
+    </section>
+
+    <section class="section" id="ir1-vs-cr1">
+      <h2>IR-1 vs CR-1: Side-by-Side Comparison</h2>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th class="cr1-col">CR-1</th>
+            <th class="ir1-col">IR-1 ✓ Better</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Marriage length at approval</td>
+            <td class="cr1-col">Under 2 years</td>
+            <td class="ir1-col">2+ years <span class="tag-good">win</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Green card validity</td>
+            <td class="cr1-col">2 years (conditional)</td>
+            <td class="ir1-col">10 years <span class="tag-good">win</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Must file I-751?</td>
+            <td class="cr1-col">Yes — within 90 days before expiry</td>
+            <td class="ir1-col">No <span class="tag-good">win</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">I-751 filing fee</td>
+            <td class="cr1-col">$750 (plus biometrics)</td>
+            <td class="ir1-col">$0 <span class="tag-good">win</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Work authorization on arrival</td>
+            <td>Yes — immediate</td>
+            <td class="ir1-col">Yes — immediate</td>
+          </tr>
+          <tr>
+            <td class="row-label">Travel freely</td>
+            <td>Yes (with green card)</td>
+            <td class="ir1-col">Yes (with green card)</td>
+          </tr>
+          <tr>
+            <td class="row-label">Path to citizenship</td>
+            <td class="cr1-col">3 years from entry (after removing conditions)</td>
+            <td class="ir1-col">3 years from entry <span class="tag-good">win</span></td>
+          </tr>
+          <tr>
+            <td class="row-label">Application process</td>
+            <td>Same — I-130 → NVC → Consular interview</td>
+            <td class="ir1-col">Same — I-130 → NVC → Consular interview</td>
+          </tr>
+          <tr>
+            <td class="row-label">Government fees (total)</td>
+            <td>~$1,420 + $750 (I-751)</td>
+            <td class="ir1-col">~$1,420 only <span class="tag-good">saves $750+</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="callout-green">
+        <p><strong>The IR-1 saves you one step and ~$750:</strong> No I-751 to file, no conditions period to worry about, no extra USCIS interaction after you arrive. If your marriage will hit the 2-year mark soon, consider waiting before filing — but weigh that against the months of separation it costs.</p>
+      </div>
+    </section>
+
+    <section class="section" id="benefits">
+      <h2>Benefits of the IR-1 Visa</h2>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🟢</div>
+          <h4>Permanent resident on day one</h4>
+          <p>You enter the U.S. as a lawful permanent resident. No waiting period, no conditional status, no hoops to jump through.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">💼</div>
+          <h4>Work for any employer</h4>
+          <p>Your green card is your work authorization. No separate EAD needed. Start working from the day you arrive.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">✈️</div>
+          <h4>Travel internationally</h4>
+          <p>Your green card is a re-entry document. Travel abroad and return without needing advance parole or special permission.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🎓</div>
+          <h4>In-state tuition at universities</h4>
+          <p>As a permanent resident, you qualify for in-state tuition rates at public universities in most states — a major financial advantage.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🏥</div>
+          <h4>Access to public benefits</h4>
+          <p>After the required waiting periods, permanent residents can access federal benefit programs including Medicare and Social Security.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon">🇺🇸</div>
+          <h4>Citizenship in 3 years</h4>
+          <p>As the spouse of a U.S. citizen, you can apply for naturalization after just 3 years of permanent residence — faster than the standard 5 years.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <h2>IR-1 Visa Process (Same as CR-1)</h2>
+      <p>The IR-1 and CR-1 are processed identically. Here's the full flow:</p>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">File Form I-130 with USCIS</div>
+          <div class="tv-time">⏱ 8–14 months processing</div>
+          <div class="tv-desc">The U.S. citizen spouse files I-130 (Petition for Alien Relative) online at my.uscis.gov or by paper mail. Fee: $675. Approval establishes the qualifying relationship.</div>
+        </div>
+      </div>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">NVC processing &amp; document submission</div>
+          <div class="tv-time">⏱ 2–4 months</div>
+          <div class="tv-desc">National Visa Center collects immigrant visa fees ($325 + $120) and documents via the CEAC portal — DS-260 application, I-864 Affidavit of Support, and civil documents.</div>
+        </div>
+      </div>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">Medical exam at USCIS-designated civil surgeon</div>
+          <div class="tv-time">⏱ Schedule ~2 weeks before interview</div>
+          <div class="tv-desc">Completed in the foreign spouse's home country by a USCIS-approved physician. Results are sealed and brought to the consular interview.</div>
+        </div>
+      </div>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">Consular interview at U.S. embassy</div>
+          <div class="tv-time">⏱ 1–3 months after NVC completes</div>
+          <div class="tv-desc">Foreign spouse attends the interview alone. Officer reviews documents, verifies the marriage is genuine, and approves or refuses the visa.</div>
+        </div>
+      </div>
+      <div class="tv-step">
+        <div class="tv-left"><div class="tv-dot"></div><div class="tv-line"></div></div>
+        <div class="tv-body">
+          <div class="tv-title">Visa issued — travel to U.S. within 6 months</div>
+          <div class="tv-time">⏱ Visa valid for 6 months</div>
+          <div class="tv-desc">At the U.S. port of entry, CBP processes your entry as a permanent resident. Your IR-1 green card is mailed to your U.S. address within 2–4 weeks. <strong>If your marriage is 2+ years old at this point, you receive an IR-1. If not, you receive a CR-1.</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="strategy">
+      <h2>CR-1 to IR-1: The 2-Year Strategy</h2>
+      <p>Here's a practical planning question many couples face: <em>should we file I-130 now or wait until we hit 2 years of marriage?</em></p>
+      <p>The answer depends on your marriage date and current processing times:</p>
+      <ul>
+        <li>If your marriage is already 2+ years old → file now, you'll receive an IR-1</li>
+        <li>If your marriage is 18+ months old → likely IR-1 by the time visa is approved (14–24 month process)</li>
+        <li>If your marriage is under 12 months old → you'll likely receive a CR-1 and need to file I-751 later</li>
+        <li>If your marriage is 12–18 months old → borderline. Calculate: months married + 14–24 months processing. If total ≥ 24, you get IR-1.</li>
+      </ul>
+      <div class="callout">
+        <p><strong>Don't stress about CR-1 vs IR-1:</strong> The I-751 process to remove CR-1 conditions is straightforward for genuine couples — it costs $750 and requires joint filing. It's an inconvenience, not an obstacle. Don't delay your spouse's visa by months just to avoid I-751.</p>
+      </div>
+    </section>
+
+    <section class="section" id="citizenship">
+      <h2>Path to U.S. Citizenship After IR-1</h2>
+      <div class="citizenship-path">
+        <h3>🗺️ From visa application to U.S. citizen</h3>
+        <div class="cp-steps">
+          <div class="cp-step">
+            <div class="cp-icon">📋</div>
+            <div class="cp-label">File I-130 petition</div>
+            <div class="cp-time">Day 0</div>
+          </div>
+          <div class="cp-step">
+            <div class="cp-icon">✅</div>
+            <div class="cp-label">Visa approved, enter U.S.</div>
+            <div class="cp-time">~18 months</div>
+          </div>
+          <div class="cp-step">
+            <div class="cp-icon">🟢</div>
+            <div class="cp-label">Permanent resident (IR-1 green card)</div>
+            <div class="cp-time">Day of entry</div>
+          </div>
+          <div class="cp-step">
+            <div class="cp-icon">📝</div>
+            <div class="cp-label">File N-400 for citizenship</div>
+            <div class="cp-time">3 years after entry</div>
+          </div>
+          <div class="cp-step">
+            <div class="cp-icon">🇺🇸</div>
+            <div class="cp-label">U.S. citizen</div>
+            <div class="cp-time">~3.5–4 years total</div>
+          </div>
+        </div>
+      </div>
+      <p>To qualify for the accelerated 3-year naturalization path, you must:</p>
+      <ul>
+        <li>Have been a lawful permanent resident for at least 3 years</li>
+        <li>Have been married to and living with the same U.S. citizen for those 3 years</li>
+        <li>Have been physically present in the U.S. for at least 18 months of those 3 years</li>
+        <li>Have good moral character (no disqualifying criminal history)</li>
+        <li>Be able to read, write, and speak basic English</li>
+        <li>Pass the civics test (100 questions — you're asked 10, must answer 6 correctly)</li>
+      </ul>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">What is the IR-1 visa?</div>
+        <div class="faq-a">The IR-1 (Immediate Relative) visa is for foreign spouses of U.S. citizens whose marriage is 2+ years old at the time of visa approval. It grants a 10-year permanent green card on entry — no conditional period, no I-751 required.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How is the IR-1 different from the CR-1?</div>
+        <div class="faq-a">Same process, different outcome. Both use I-130 → NVC → consular interview. If the marriage is under 2 years at approval, you get a CR-1 (2-year conditional card). If 2+ years, you get an IR-1 (10-year permanent card). The IR-1 saves you from filing I-751 later.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Can I apply for the IR-1 if I'm already in the U.S.?</div>
+        <div class="faq-a">If you're already in the U.S., you would typically apply for adjustment of status (Form I-485) rather than consular processing. Both paths lead to a permanent green card. Adjustment of status is processed domestically; the IR-1 is processed at a U.S. embassy abroad.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does the IR-1 visa take?</div>
+        <div class="faq-a">The same as CR-1: typically 14–24 months total. USCIS I-130 approval takes 8–14 months, NVC processing takes 2–4 months, and the consular appointment adds 1–3 more months.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Do IR-1 holders need to remove conditions?</div>
+        <div class="faq-a">No. The IR-1 is a 10-year permanent green card with no conditions attached. There is no Form I-751 to file. The card simply renews every 10 years as long as you maintain permanent resident status.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">When can an IR-1 holder apply for U.S. citizenship?</div>
+        <div class="faq-a">After 3 years of continuous permanent residence, provided you are still married to and living with the same U.S. citizen spouse, meet the physical presence and language requirements, and pass the civics test. This is faster than the standard 5-year path for other green card holders.</div>
+      </div>
+    </section>
+
+    <section class="section" id="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <SmartLink href="/cr1-visa" class="related-card">
+          <div class="related-cat">CR-1</div>
+          <div class="related-title">CR-1 Spousal Visa: Complete 2026 Guide</div>
+        </SmartLink>
+        <SmartLink href="/k1-vs-cr1" class="related-card">
+          <div class="related-cat">Compare</div>
+          <div class="related-title">K-1 vs CR-1: Cost, Timeline &amp; Which is Faster</div>
+        </SmartLink>
+        <SmartLink href="/affidavit-of-support" class="related-card">
+          <div class="related-cat">I-864</div>
+          <div class="related-title">Affidavit of Support Income Requirements 2026</div>
+        </SmartLink>
+        <SmartLink href="/adjustment-of-status" class="related-card">
+          <div class="related-cat">Green Card</div>
+          <div class="related-title">Adjustment of Status: I-485 Guide</div>
+        </SmartLink>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="highlight-box">
+      <h4>✅ IR-1 Advantage</h4>
+      <p>10-year green card. No I-751. No conditions. Save ~$750 and skip an entire USCIS application.</p>
+    </div>
+
+    <div class="cta-box">
+      <h4>CR-1 vs IR-1 — Confused?</h4>
+      <p>Full side-by-side comparison with costs, timelines, and which is better for your situation.</p>
+      <SmartLink href="/cr1-visa" class="btn">CR-1 Full Guide →</SmartLink>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#what-is" class="sidebar-link">What is the IR-1? <span>↓</span></a></li>
+        <li><a href="#ir1-vs-cr1" class="sidebar-link">IR-1 vs CR-1 table <span>↓</span></a></li>
+        <li><a href="#benefits" class="sidebar-link">Benefits <span>↓</span></a></li>
+        <li><a href="#process" class="sidebar-link">Full process <span>↓</span></a></li>
+        <li><a href="#strategy" class="sidebar-link">2-year strategy <span>↓</span></a></li>
+        <li><a href="#citizenship" class="sidebar-link">Path to citizenship <span>↓</span></a></li>
+        <li><a href="#faq" class="sidebar-link">FAQ <span>↓</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Key Pages</h4>
+      <ul>
+        <li><SmartLink href="/cr1-visa">CR-1 Spousal Visa Guide</SmartLink></li>
+        <li><SmartLink href="/k1-vs-cr1">K-1 vs CR-1 Comparison</SmartLink></li>
+        <li><SmartLink href="/affidavit-of-support">Affidavit of Support</SmartLink></li>
+        <li><SmartLink href="/bona-fide-marriage">Bona Fide Marriage Evidence</SmartLink></li>
+        <li><SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

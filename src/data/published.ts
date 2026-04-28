@@ -8,4 +8,7 @@ export const PUBLISHED: Set<string> = new Set([
   '/k1-visa-interview',
   '/bona-fide-marriage',
   '/adjustment-of-status',
+  '/cr1-visa',
+  '/i-129f',
+  '/ir1-visa',
 ]);

@@ -425,7 +425,13 @@ img { display: block; max-width: 100%; }
   margin-bottom: 14px;
 }
 .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-.footer-col a { font-size: 0.875rem; color: var(--color-muted); transition: color 0.15s; }
+/* Both <a> and SmartLink-rendered <span> get the same footer link style */
+.footer-col a,
+.footer-col span[data-pending] {
+  font-size: 0.875rem;
+  color: var(--color-muted);
+  transition: color 0.15s;
+}
 .footer-col a:hover { color: var(--color-accent); }
 .footer-bottom {
   border-top: 1px solid var(--color-border);
@@ -449,6 +455,36 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 480px) {
   .footer-grid { grid-template-columns: 1fr; }
+}
+
+/* Related guides cards — global so SmartLink-rendered elements receive styles */
+.related-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.related-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 12px rgba(37,99,235,0.08);
+}
+.related-cat {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+}
+.related-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-heading);
+  line-height: 1.4;
 }
 
 /* Sidebar link — global so SmartLink-rendered <a>/<span> elements receive styles */

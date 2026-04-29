@@ -1,0 +1,632 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "NVC Processing Time 2026: How Long Does NVC Take?",
+    "description": "Current NVC processing times for 2026 — how long each stage takes after USCIS approval, what speeds it up or slows it down, and how to check your case status.",
+    "url": "https://ldrvisa.org/nvc-processing-time",
+    "dateModified": "2026-04-29",
+    "datePublished": "2026-04-29",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/nvc-processing-time" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "NVC Processing Time", "item": "https://ldrvisa.org/nvc-processing-time" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does NVC processing take in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NVC processing typically takes 3–6 months in 2026 for CR-1 spousal visas. This covers the time from when NVC receives your approved I-130 from USCIS to when they schedule your immigrant visa interview at the embassy. The main stages are: fee invoice generation (2–6 weeks), fee payment and document submission (2–4 weeks), NVC document review (4–12 weeks), and interview scheduling (2–6 weeks after case completion)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the NVC and what do they do?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The National Visa Center (NVC) is a processing center run by the U.S. Department of State. After USCIS approves your immigrant visa petition, NVC receives the case and manages the transition from USCIS to the U.S. embassy or consulate in your country. They collect visa fees, review supporting documents, run preliminary eligibility checks, and schedule the immigrant visa interview."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I check my NVC case status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can check your NVC case status at ceac.state.gov using your NVC case number (format: XXX2024000000). You can also log into the Consular Electronic Application Center (CEAC) portal to see your document checklist status and whether NVC has completed your case. NVC also contacts you by email when your case moves to a new stage."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What can delay NVC processing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common NVC delays include: missing or incomplete documents (NVC sends an RFE and waits for your response), civil documents requiring official translation, financial documents not meeting the poverty guideline threshold, police certificates that have expired (must be less than 12 months old for most countries), and NVC processing backlogs. Administrative processing (221(g)) after the interview can add weeks or months."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does NVC processing time differ for K-1 vs CR-1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The K-1 fiancé visa does not go through NVC — after USCIS approves the I-129F petition, the case goes directly to the U.S. embassy abroad. Only immigrant visas (CR-1, IR-1, F-2A family preference) go through NVC. K-1 petitions skip the NVC stage entirely, which is one reason K-1 total processing can sometimes be faster."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is 'Case Initiated' at NVC?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "\"Case Initiated\" is the first CEAC status after USCIS transfers your approved I-130 to NVC. It means NVC has received the case and created your file. Within 2–6 weeks of this status, NVC will generate your fee invoice and send instructions to pay the immigrant visa application fee ($325) and, for CR-1 cases, the Affidavit of Support fee ($120)."
+        }
+      }
+    ]
+  }
+]);
+---
+
+<Base
+  title="NVC Processing Time 2026: How Long Does NVC Take?"
+  description="Current NVC processing times for 2026 — stage-by-stage breakdown, what causes delays, how to check your case status, and tips to move faster."
+  schema={schema}
+>
+
+<style>
+  .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a5f 100%); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin: 0 0 .75rem; line-height: 1.2; }
+  .hero p { font-size: 1.05rem; opacity: .88; max-width: 600px; margin: 0 auto 1.5rem; }
+  .hero-badge { display: inline-block; background: #22c55e; color: #fff; font-size: .75rem; font-weight: 700; padding: .25rem .75rem; border-radius: 999px; margin-bottom: 1rem; letter-spacing: .05em; text-transform: uppercase; }
+
+  .timeline-bar { display: flex; flex-wrap: wrap; gap: 0; background: rgba(255,255,255,.08); border-radius: 12px; overflow: hidden; max-width: 680px; margin: 0 auto; }
+  .tbar-step { flex: 1; min-width: 120px; padding: 1rem .75rem; text-align: center; border-right: 1px solid rgba(255,255,255,.12); }
+  .tbar-step:last-child { border-right: none; }
+  .tbar-label { font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; opacity: .65; margin-bottom: .35rem; }
+  .tbar-time { font-size: 1.1rem; font-weight: 800; color: #60a5fa; }
+  .tbar-name { font-size: .8rem; opacity: .8; margin-top: .2rem; }
+
+  .content-wrap { max-width: 1080px; margin: 0 auto; padding: 2.5rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+  @media (max-width: 768px) { .content-wrap { grid-template-columns: 1fr; } }
+
+  .main-col h2 { font-size: 1.45rem; font-weight: 800; color: #0f172a; margin: 2.5rem 0 1rem; padding-bottom: .5rem; border-bottom: 2px solid #dbeafe; }
+  .main-col h2:first-child { margin-top: 0; }
+  .main-col h3 { font-size: 1.1rem; font-weight: 700; color: #1e40af; margin: 1.75rem 0 .6rem; }
+  .main-col p { color: #374151; line-height: 1.75; margin: 0 0 1rem; }
+  .main-col ul { color: #374151; line-height: 1.75; margin: 0 0 1rem; padding-left: 1.5rem; }
+  .main-col li { margin-bottom: .4rem; }
+
+  /* Stage cards */
+  .stage-grid { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0 1.5rem; }
+  .stage-card { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; }
+  .stage-header { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: #f8fafc; }
+  .stage-num { width: 36px; height: 36px; border-radius: 50%; background: #1d4ed8; color: #fff; font-weight: 800; font-size: .9rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .stage-title { font-weight: 700; color: #0f172a; font-size: 1rem; }
+  .stage-time-pill { margin-left: auto; background: #dbeafe; color: #1e40af; font-size: .75rem; font-weight: 700; padding: .25rem .75rem; border-radius: 999px; white-space: nowrap; }
+  .stage-body { padding: 1rem 1.25rem; }
+  .stage-body p { margin: 0 0 .5rem; font-size: .92rem; color: #374151; }
+  .stage-body ul { margin: 0; padding-left: 1.25rem; }
+  .stage-body li { font-size: .9rem; color: #374151; margin-bottom: .3rem; }
+
+  .stage-card.active .stage-num { background: #16a34a; }
+  .stage-card.active .stage-time-pill { background: #dcfce7; color: #15803d; }
+
+  /* Status tracker */
+  .status-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .75rem; margin: 1rem 0 1.5rem; }
+  .status-card { border: 1px solid #e2e8f0; border-radius: 10px; padding: .9rem 1rem; }
+  .status-name { font-weight: 700; font-size: .88rem; color: #0f172a; margin-bottom: .35rem; }
+  .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: .4rem; vertical-align: middle; }
+  .dot-gray { background: #94a3b8; }
+  .dot-yellow { background: #eab308; }
+  .dot-blue { background: #3b82f6; }
+  .dot-green { background: #22c55e; }
+  .dot-red { background: #ef4444; }
+  .status-desc { font-size: .8rem; color: #6b7280; line-height: 1.5; }
+
+  /* Delay table */
+  .delay-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .88rem; }
+  .delay-table th { background: #1d4ed8; color: #fff; padding: .6rem .9rem; text-align: left; font-weight: 700; font-size: .8rem; }
+  .delay-table td { padding: .65rem .9rem; border-bottom: 1px solid #e2e8f0; color: #374151; vertical-align: top; }
+  .delay-table tr:nth-child(even) td { background: #f8fafc; }
+  .impact-high { color: #dc2626; font-weight: 700; }
+  .impact-med { color: #d97706; font-weight: 700; }
+  .impact-low { color: #16a34a; font-weight: 700; }
+
+  /* Tips grid */
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .85rem; margin: 1rem 0 1.5rem; }
+  .tip-card { border: 1px solid #bfdbfe; border-radius: 10px; padding: 1rem; background: #eff6ff; }
+  .tip-num { font-size: .75rem; font-weight: 800; color: #2563eb; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .35rem; }
+  .tip-title { font-weight: 700; font-size: .92rem; color: #0f172a; margin-bottom: .3rem; }
+  .tip-desc { font-size: .82rem; color: #374151; line-height: 1.5; }
+
+  /* K-1 vs CR-1 NVC comparison */
+  .compare-box { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 1rem 0 1.5rem; }
+  .compare-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; }
+  .compare-row.header { background: #0f172a; color: #fff; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+  .compare-row:not(.header) { border-top: 1px solid #e2e8f0; }
+  .compare-row:not(.header):nth-child(even) { background: #f8fafc; }
+  .compare-cell { padding: .7rem .9rem; font-size: .88rem; color: #374151; }
+  .compare-row.header .compare-cell { color: #fff; }
+  .compare-cell.label { font-weight: 600; color: #0f172a; }
+  .badge-skip { display: inline-block; background: #dcfce7; color: #15803d; font-size: .72rem; font-weight: 700; padding: .15rem .5rem; border-radius: 999px; }
+  .badge-required { display: inline-block; background: #dbeafe; color: #1e40af; font-size: .72rem; font-weight: 700; padding: .15rem .5rem; border-radius: 999px; }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: .75rem; margin: 1rem 0; }
+  .faq-item { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+  .faq-q { font-weight: 700; font-size: .95rem; color: #0f172a; padding: 1rem 1.1rem; background: #f8fafc; margin: 0; }
+  .faq-a { padding: .9rem 1.1rem; color: #374151; font-size: .9rem; line-height: 1.7; border-top: 1px solid #e2e8f0; }
+  .faq-a p { margin: 0; }
+
+  /* CTA blocks */
+  .cta-mid { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 14px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+  .cta-mid h3 { font-size: 1.1rem; font-weight: 800; color: #1e40af; margin: 0 0 .5rem; }
+  .cta-mid p { font-size: .9rem; color: #374151; margin: 0 0 1rem; }
+  .cta-btn-blue { display: inline-block; background: #1d4ed8; color: #fff; font-weight: 700; font-size: .9rem; padding: .7rem 1.6rem; border-radius: 8px; text-decoration: none; margin: .25rem; }
+  .cta-btn-outline { display: inline-block; border: 2px solid #1d4ed8; color: #1d4ed8; font-weight: 700; font-size: .9rem; padding: .65rem 1.5rem; border-radius: 8px; text-decoration: none; margin: .25rem; background: transparent; }
+
+  .cta-dark { background: #0f172a; border-radius: 16px; padding: 2rem; margin: 2.5rem 0 1rem; text-align: center; color: #fff; }
+  .cta-dark h2 { font-size: 1.4rem; font-weight: 800; margin: 0 0 .6rem; }
+  .cta-dark p { opacity: .82; font-size: .95rem; margin: 0 0 1.25rem; }
+  .cta-btn-white { display: inline-block; background: #fff; color: #1e40af; font-weight: 800; font-size: .95rem; padding: .8rem 2rem; border-radius: 8px; text-decoration: none; margin: .3rem; }
+  .cta-btn-ghost { display: inline-block; border: 2px solid rgba(255,255,255,.35); color: #fff; font-weight: 700; font-size: .9rem; padding: .75rem 1.75rem; border-radius: 8px; text-decoration: none; margin: .3rem; }
+
+  /* Sidebar */
+  .sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1rem; }
+  .sidebar-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; }
+  .sidebar-box h3 { font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: #64748b; margin: 0 0 .9rem; }
+  .sidebar-link { display: block; font-size: .88rem; color: #374151; text-decoration: none; padding: .35rem 0; border-bottom: 1px solid #f1f5f9; line-height: 1.4; }
+  .sidebar-link:last-child { border-bottom: none; }
+  .sidebar-link:hover { color: #1d4ed8; }
+
+  .summary-box { background: linear-gradient(135deg, #1e3a5f, #1d4ed8); color: #fff; border-radius: 12px; padding: 1.25rem; }
+  .summary-box h3 { font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.7); margin: 0 0 .9rem; }
+  .summary-row { display: flex; justify-content: space-between; align-items: center; padding: .45rem 0; border-bottom: 1px solid rgba(255,255,255,.15); font-size: .85rem; }
+  .summary-row:last-child { border-bottom: none; }
+  .summary-label { opacity: .8; }
+  .summary-val { font-weight: 700; color: #60a5fa; }
+  .summary-total { margin-top: .75rem; padding-top: .75rem; border-top: 2px solid rgba(255,255,255,.3); display: flex; justify-content: space-between; font-weight: 800; font-size: .95rem; }
+  .summary-total-val { color: #34d399; }
+</style>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Updated April 2026</div>
+  <h1>NVC Processing Time 2026:<br>How Long Does Each Stage Take?</h1>
+  <p>After USCIS approves your immigrant visa petition, your case lands at the National Visa Center. Here's exactly what happens — and how long each step takes in 2026.</p>
+
+  <div class="timeline-bar">
+    <div class="tbar-step">
+      <div class="tbar-label">USCIS → NVC Transfer</div>
+      <div class="tbar-time">2–6 wks</div>
+      <div class="tbar-name">Case initiated</div>
+    </div>
+    <div class="tbar-step">
+      <div class="tbar-label">Fee Invoice</div>
+      <div class="tbar-time">2–6 wks</div>
+      <div class="tbar-name">Pay fees</div>
+    </div>
+    <div class="tbar-step">
+      <div class="tbar-label">Document Review</div>
+      <div class="tbar-time">4–12 wks</div>
+      <div class="tbar-name">Submit docs</div>
+    </div>
+    <div class="tbar-step">
+      <div class="tbar-label">Interview Scheduled</div>
+      <div class="tbar-time">2–6 wks</div>
+      <div class="tbar-name">Case complete</div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="main-col">
+
+    <h2 id="what-is-nvc">What Is the NVC and What Does It Do?</h2>
+    <p>The <strong>National Visa Center (NVC)</strong> is a U.S. Department of State processing facility in Portsmouth, New Hampshire. It acts as the bridge between USCIS (which approves petitions) and U.S. embassies abroad (which issue visas).</p>
+    <p>The NVC's job is to:</p>
+    <ul>
+      <li>Receive your approved I-130 or I-129F from USCIS</li>
+      <li>Collect visa fees from both the petitioner and beneficiary</li>
+      <li>Review all supporting documents for completeness</li>
+      <li>Run a preliminary eligibility check before the embassy interview</li>
+      <li>Schedule the immigrant visa interview at the appropriate U.S. embassy or consulate</li>
+    </ul>
+    <p>Only <strong>immigrant visas</strong> (CR-1, IR-1, family preference) go through NVC. The K-1 fiancé visa skips NVC entirely — it goes directly from USCIS to the embassy.</p>
+
+    <h2 id="stages">Stage-by-Stage NVC Timeline (2026)</h2>
+
+    <div class="stage-grid">
+      <div class="stage-card">
+        <div class="stage-header">
+          <div class="stage-num">1</div>
+          <div>
+            <div class="stage-title">USCIS Transfers Case to NVC</div>
+          </div>
+          <div class="stage-time-pill">2–6 weeks</div>
+        </div>
+        <div class="stage-body">
+          <p>After USCIS approves your I-130, they physically mail (or electronically transfer) the file to NVC. USCIS will mail you an approval notice (I-797). Watch your CEAC portal at <strong>ceac.state.gov</strong> for the status to change from blank to "Case Initiated."</p>
+          <ul>
+            <li>You receive: I-797 Notice of Action (approval)</li>
+            <li>NVC assigns: a case number (format: XXX2024000000) and invoice ID</li>
+            <li>Action required: none yet — just monitor CEAC</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-header">
+          <div class="stage-num">2</div>
+          <div>
+            <div class="stage-title">Fee Invoice Generation & Payment</div>
+          </div>
+          <div class="stage-time-pill">2–6 weeks</div>
+        </div>
+        <div class="stage-body">
+          <p>NVC generates fee invoices in the CEAC portal. You must pay both fees before you can submit any documents.</p>
+          <ul>
+            <li><strong>Immigrant Visa Application (DS-260) fee:</strong> $325 per applicant</li>
+            <li><strong>Affidavit of Support (I-864) fee:</strong> $120 (CR-1 cases only)</li>
+            <li>Payments accepted online via credit card or ACH bank transfer</li>
+            <li>Status changes to "Paid" within 1–3 business days of payment</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-header">
+          <div class="stage-num">3</div>
+          <div>
+            <div class="stage-title">Document Submission (DS-260 + Civil Docs)</div>
+          </div>
+          <div class="stage-time-pill">2–6 weeks (your part)</div>
+        </div>
+        <div class="stage-body">
+          <p>After fees are paid, you complete Form DS-260 online in CEAC and upload all required civil documents. This is the stage where most couples experience delays — completeness matters enormously.</p>
+          <ul>
+            <li>Beneficiary: DS-260 (immigrant visa application), passport, photos, civil docs</li>
+            <li>Petitioner: I-864 Affidavit of Support + supporting financial evidence</li>
+            <li>Documents must be uploaded through CEAC as PDF or JPEG scans</li>
+            <li>Translations required for any document not in English</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-header">
+          <div class="stage-num">4</div>
+          <div>
+            <div class="stage-title">NVC Document Review</div>
+          </div>
+          <div class="stage-time-pill">4–12 weeks</div>
+        </div>
+        <div class="stage-body">
+          <p>After you submit, NVC caseworkers review your package. This is NVC's internal processing time — you are waiting on them. The CEAC status stays "Documents Submitted" until they complete review.</p>
+          <ul>
+            <li>If complete: status moves to "Case Completed" → interview scheduling begins</li>
+            <li>If incomplete: NVC sends a checklist (RFE) — you resubmit, then wait again</li>
+            <li>Each RFE cycle can add 4–8 additional weeks</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stage-card active">
+        <div class="stage-header">
+          <div class="stage-num">5</div>
+          <div>
+            <div class="stage-title">Case Completed → Interview Scheduled</div>
+          </div>
+          <div class="stage-time-pill">2–6 weeks</div>
+        </div>
+        <div class="stage-body">
+          <p>Once NVC marks your case "Complete," they transfer it to the U.S. embassy or consulate in the beneficiary's country. The embassy then schedules the immigrant visa interview. You receive an interview appointment letter by email from the embassy — not from NVC.</p>
+          <ul>
+            <li>Wait time depends heavily on the embassy's interview availability</li>
+            <li>High-demand embassies (Manila, Mumbai, Mexico City) can add weeks to scheduling</li>
+            <li>After interview: visa printed and mailed within 1–5 business days if approved</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="ceac-status">CEAC Status Codes Explained</h2>
+    <p>You can track your case at <strong>ceac.state.gov</strong>. Here's what each status means:</p>
+
+    <div class="status-grid">
+      <div class="status-card">
+        <div class="status-name"><span class="status-dot dot-gray"></span>Case Initiated</div>
+        <div class="status-desc">NVC received your approved petition from USCIS. Fee invoices not yet generated.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-name"><span class="status-dot dot-yellow"></span>Fees Invoiced</div>
+        <div class="status-desc">NVC generated your fee invoices. Log in to CEAC and pay both fees to proceed.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-name"><span class="status-dot dot-yellow"></span>Fees Paid / Pending Review</div>
+        <div class="status-desc">Payment confirmed. CEAC document upload portal is now open.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-name"><span class="status-dot dot-blue"></span>Documents Submitted</div>
+        <div class="status-desc">You submitted your package. NVC caseworkers are reviewing. Typical wait: 4–12 weeks.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-name"><span class="status-dot dot-yellow"></span>Checklist Returned</div>
+        <div class="status-desc">NVC found missing or incomplete items. Check your email for specific instructions and resubmit.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-name"><span class="status-dot dot-green"></span>Case Completed</div>
+        <div class="status-desc">NVC accepted your package. Case transferred to embassy. Interview scheduling is next.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-name"><span class="status-dot dot-green"></span>Ready / In Transit</div>
+        <div class="status-desc">Case en route to the embassy. You should receive an interview appointment notice soon.</div>
+      </div>
+      <div class="status-card">
+        <div class="status-name"><span class="status-dot dot-red"></span>Administrative Processing</div>
+        <div class="status-desc">After the interview, additional review required. Timeline unpredictable — can take weeks to months.</div>
+      </div>
+    </div>
+
+    <div class="cta-mid">
+      <h3>Not sure what to submit at NVC?</h3>
+      <p>The CR-1 visa checklist covers every document NVC requires — civil docs, financial evidence, police certificates, and translations.</p>
+      <a href="/cr1-visa-checklist" class="cta-btn-blue">View CR-1 Document Checklist →</a>
+      <a href="/affidavit-of-support" class="cta-btn-outline">Affidavit of Support Guide</a>
+    </div>
+
+    <h2 id="delays">What Causes NVC Delays — and How Bad Are They?</h2>
+
+    <table class="delay-table">
+      <thead>
+        <tr>
+          <th>Delay Cause</th>
+          <th>Added Wait</th>
+          <th>Impact</th>
+          <th>How to Avoid</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Missing or expired civil document</td>
+          <td>4–8 weeks per RFE</td>
+          <td class="impact-high">High</td>
+          <td>Use the full checklist before submitting</td>
+        </tr>
+        <tr>
+          <td>Untranslated foreign-language documents</td>
+          <td>4–6 weeks</td>
+          <td class="impact-high">High</td>
+          <td>Get certified translations before uploading</td>
+        </tr>
+        <tr>
+          <td>I-864 income below poverty guidelines</td>
+          <td>4–12 weeks</td>
+          <td class="impact-high">High</td>
+          <td>Add a joint sponsor if income is insufficient</td>
+        </tr>
+        <tr>
+          <td>Police certificate expired (most countries: 12 months)</td>
+          <td>3–6 weeks</td>
+          <td class="impact-high">High</td>
+          <td>Time your police cert request to stay valid</td>
+        </tr>
+        <tr>
+          <td>DS-260 submitted with blank or "N/A" answers</td>
+          <td>2–4 weeks</td>
+          <td class="impact-med">Medium</td>
+          <td>Complete every section thoroughly and accurately</td>
+        </tr>
+        <tr>
+          <td>Low-quality document scans (unreadable)</td>
+          <td>2–4 weeks</td>
+          <td class="impact-med">Medium</td>
+          <td>Scan at 300 DPI minimum, check readability before uploading</td>
+        </tr>
+        <tr>
+          <td>NVC processing backlog (seasonal)</td>
+          <td>2–6 weeks</td>
+          <td class="impact-low">Low</td>
+          <td>Nothing you can do — monitor CEAC, be patient</td>
+        </tr>
+        <tr>
+          <td>Payment processing failure</td>
+          <td>1–2 weeks</td>
+          <td class="impact-low">Low</td>
+          <td>Verify bank account / card before paying</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="k1-vs-cr1-nvc">K-1 vs CR-1: Does K-1 Skip NVC?</h2>
+    <p>Yes — the K-1 fiancé visa does not go through NVC at all. After USCIS approves the I-129F, the case goes directly to the U.S. embassy abroad, skipping the NVC stage entirely. This is one of the key structural differences between the two paths.</p>
+
+    <div class="compare-box">
+      <div class="compare-row header">
+        <div class="compare-cell">Stage</div>
+        <div class="compare-cell">K-1 Fiancé Visa</div>
+        <div class="compare-cell">CR-1 Spousal Visa</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">USCIS petition approval</div>
+        <div class="compare-cell">I-129F: 10–16 months</div>
+        <div class="compare-cell">I-130: 12–18 months</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">NVC processing</div>
+        <div class="compare-cell"><span class="badge-skip">Skipped ✓</span></div>
+        <div class="compare-cell"><span class="badge-required">3–6 months</span></div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Embassy interview</div>
+        <div class="compare-cell">1–3 months</div>
+        <div class="compare-cell">1–3 months</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Entry status</div>
+        <div class="compare-cell">90-day K-1 visa (must marry + file AOS)</div>
+        <div class="compare-cell">Enters as permanent resident</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Total estimated time</div>
+        <div class="compare-cell">12–20 months</div>
+        <div class="compare-cell">18–30 months</div>
+      </div>
+    </div>
+
+    <p>The NVC stage adds 3–6 months to the CR-1 path — but after entry, there's no Adjustment of Status required (unlike K-1). For couples who are already married, the CR-1 often makes more sense despite the longer timeline.</p>
+
+    <h2 id="speed-up">6 Ways to Move Through NVC Faster</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">Tip 01</div>
+        <div class="tip-title">Submit a complete package the first time</div>
+        <div class="tip-desc">Every checklist (RFE) adds 4–8 weeks. Use the official document checklist and triple-check before uploading. One missing police cert restarts the review clock.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 02</div>
+        <div class="tip-num">Tip 02</div>
+        <div class="tip-title">Get certified translations ready in advance</div>
+        <div class="tip-desc">Professional translation takes 1–3 weeks. Don't wait until NVC opens the portal. Start translating civil documents as soon as USCIS approves your petition.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 03</div>
+        <div class="tip-title">Pay fees the same day NVC invoices them</div>
+        <div class="tip-desc">NVC can't open the document portal until fees are paid and confirmed (1–3 business days). Paying fast doesn't skip the queue, but it removes one controllable delay.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 04</div>
+        <div class="tip-title">Time police certificates carefully</div>
+        <div class="tip-desc">Police certificates are valid for 12 months in most countries (6 months for some). Request them close to your expected NVC submission date so they stay valid through the interview.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 05</div>
+        <div class="tip-title">Use a joint sponsor if income is borderline</div>
+        <div class="tip-desc">If your I-864 income is at or barely above the 125% poverty guideline, include a joint sponsor pre-emptively. A financial checklist RFE adds months — better to over-document upfront.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 06</div>
+        <div class="tip-title">Monitor CEAC weekly — don't wait for emails</div>
+        <div class="tip-desc">NVC emails can go to spam or arrive late. Check ceac.state.gov weekly. If your status hasn't changed in 12+ weeks after document submission, consider sending a polite inquiry to NVC.</div>
+      </div>
+    </div>
+
+    <h2 id="contact-nvc">How to Contact NVC</h2>
+    <p>NVC's primary contact methods:</p>
+    <ul>
+      <li><strong>Online inquiry:</strong> travel.state.gov → NVC Contact Form (preferred method)</li>
+      <li><strong>Phone:</strong> 1-603-334-0700 (Monday–Friday, 7am–12am ET)</li>
+      <li><strong>Email:</strong> NVCInquiry@state.gov (response time: 1–4 weeks)</li>
+      <li><strong>CEAC portal:</strong> ceac.state.gov — check status 24/7</li>
+    </ul>
+    <p>NVC recommends waiting <strong>at least 90 days after document submission</strong> before inquiring about review status. Inquiries before that generally receive a form response with no new information.</p>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">How long does NVC processing take in 2026?</p>
+        <div class="faq-a"><p>NVC processing typically takes <strong>3–6 months</strong> from when NVC receives your approved petition to when they schedule your embassy interview. The exact time depends on how quickly you pay fees, how complete your documents are, and how busy NVC is at the time.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Does the K-1 visa go through NVC?</p>
+        <div class="faq-a"><p>No — the K-1 fiancé visa skips NVC entirely. After USCIS approves the I-129F petition, the case goes directly to the U.S. embassy in the beneficiary's country. Only immigrant visas (CR-1, IR-1, and family preference categories) go through NVC.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What is "Case Completed" at NVC?</p>
+        <div class="faq-a"><p>"Case Completed" means NVC has reviewed and accepted your entire document package and is transferring your case to the U.S. embassy for interview scheduling. This is one of the most important milestones — it means NVC's work is done and the embassy takes over.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How long after "Case Completed" is the interview scheduled?</p>
+        <div class="faq-a"><p>After NVC marks your case completed, interview scheduling at the embassy typically takes <strong>2–6 weeks</strong>. High-demand embassies (Manila, Mumbai, Mexico City, Lagos) can take longer — up to 2–3 months — due to high appointment demand.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What happens if NVC sends a checklist (RFE)?</p>
+        <div class="faq-a"><p>A checklist (sometimes called a "documentarily incomplete" notice) means NVC found missing, expired, or incorrect items. NVC will send you specific instructions by email. You correct the issue, re-upload through CEAC, and NVC restarts the review — adding 4–8 weeks per round. Submit complete documents the first time to avoid this.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can I check NVC processing times on a government website?</p>
+        <div class="faq-a"><p>NVC does not publish real-time processing time estimates like USCIS does. You can check your individual case status at ceac.state.gov. Community forums like <em>VisaJourney.com</em> crowd-source actual timelines from real applicants — useful for understanding current real-world waits by country and visa type.</p></div>
+      </div>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="cta-dark">
+      <h2>Need help navigating NVC?</h2>
+      <p>A licensed immigration attorney can review your document package before you submit — catching problems that cause RFEs and delays before they happen.</p>
+      <a href="#" class="cta-btn-white" data-affiliate="attorney-consult">Talk to an Immigration Attorney →</a>
+      <a href="/cr1-visa-checklist" class="cta-btn-ghost">View NVC Document Checklist</a>
+    </div>
+
+  </div><!-- /main-col -->
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="summary-box">
+      <h3>NVC Timeline Summary</h3>
+      <div class="summary-row">
+        <span class="summary-label">USCIS → NVC transfer</span>
+        <span class="summary-val">2–6 wks</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Fee invoices + payment</span>
+        <span class="summary-val">2–6 wks</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Document submission (you)</span>
+        <span class="summary-val">2–4 wks</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">NVC document review</span>
+        <span class="summary-val">4–12 wks</span>
+      </div>
+      <div class="summary-row">
+        <span class="summary-label">Interview scheduling</span>
+        <span class="summary-val">2–6 wks</span>
+      </div>
+      <div class="summary-total">
+        <span>Total NVC stage</span>
+        <span class="summary-total-val">3–6 months</span>
+      </div>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>On This Page</h3>
+      <a href="#what-is-nvc" class="sidebar-link">What is the NVC?</a>
+      <a href="#stages" class="sidebar-link">Stage-by-Stage Timeline</a>
+      <a href="#ceac-status" class="sidebar-link">CEAC Status Codes</a>
+      <a href="#delays" class="sidebar-link">What Causes Delays</a>
+      <a href="#k1-vs-cr1-nvc" class="sidebar-link">K-1 vs CR-1 at NVC</a>
+      <a href="#speed-up" class="sidebar-link">How to Move Faster</a>
+      <a href="#contact-nvc" class="sidebar-link">How to Contact NVC</a>
+      <a href="#faq" class="sidebar-link">FAQ</a>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>Related Guides</h3>
+      <SmartLink href="/cr1-visa" class="sidebar-link">CR-1 Spouse Visa Overview</SmartLink>
+      <SmartLink href="/cr1-visa-checklist" class="sidebar-link">CR-1 Document Checklist</SmartLink>
+      <SmartLink href="/cr1-visa-processing-time" class="sidebar-link">CR-1 Full Processing Time</SmartLink>
+      <SmartLink href="/affidavit-of-support" class="sidebar-link">Affidavit of Support (I-864)</SmartLink>
+      <SmartLink href="/affidavit-of-support-income-requirements" class="sidebar-link">Income Requirements</SmartLink>
+      <SmartLink href="/k1-vs-cr1" class="sidebar-link">K-1 vs CR-1 Comparison</SmartLink>
+    </div>
+  </aside>
+</div>
+
+</Base>

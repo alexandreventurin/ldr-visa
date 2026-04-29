@@ -25,4 +25,5 @@ export const PUBLISHED: Set<string> = new Set([
   '/green-card-through-marriage',
   '/k1-visa-cost',
   '/cr1-visa-cost',
+  '/nvc-processing-time',
 ]);

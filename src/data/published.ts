@@ -20,4 +20,6 @@ export const PUBLISHED: Set<string> = new Set([
   '/k1-visa-interview-questions',
   '/adjustment-of-status-after-marriage',
   '/i-751-petition-remove-conditions',
+  '/k1-visa-checklist',
+  '/cr1-visa-checklist',
 ]);

@@ -22,4 +22,5 @@ export const PUBLISHED: Set<string> = new Set([
   '/i-751-petition-remove-conditions',
   '/k1-visa-checklist',
   '/cr1-visa-checklist',
+  '/green-card-through-marriage',
 ]);

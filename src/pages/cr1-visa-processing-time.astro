@@ -1,0 +1,734 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "CR-1 Visa Processing Time 2026: Complete Timeline by Stage",
+    "description": "Current CR-1 spousal visa processing times for 2026 — USCIS I-130, NVC processing, embassy interview wait times, and total timeline.",
+    "url": "https://ldrvisa.org/cr1-visa-processing-time",
+    "dateModified": "2026-04-28",
+    "datePublished": "2026-04-28",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/cr1-visa-processing-time" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "CR-1 Visa", "item": "https://ldrvisa.org/cr1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "Processing Time", "item": "https://ldrvisa.org/cr1-visa-processing-time" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does the CR-1 visa take in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The total CR-1 spousal visa process takes approximately 18–24 months in 2026. USCIS takes 12–18 months to approve the I-130 petition, NVC processing adds 3–6 months for fee payment and document submission, and the embassy interview and visa issuance adds 1–3 months depending on the country."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does USCIS take to process Form I-130 for a CR-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS is currently processing Form I-130 for spouses of U.S. citizens in approximately 12–18 months as of April 2026. Times vary by filing location — the Chicago Lockbox and Dallas Lockbox route cases to different service centers. Always verify current times at egov.uscis.gov/processing-times."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does NVC processing take for a CR-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NVC processing for a CR-1 visa typically takes 3–6 months. This includes the time to pay the immigrant visa fee and Affidavit of Support fee (1–4 weeks), upload and submit all required documents (2–6 weeks), NVC review of the package (4–12 weeks), and interview scheduling after case completion (2–6 weeks)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which countries have the fastest CR-1 interview scheduling?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Countries with lower visa volume and well-staffed embassies schedule interviews fastest. Canada, Australia, Germany, South Korea, and the United Kingdom typically schedule within 1–2 months of NVC completion. High-volume countries like Mexico, the Philippines, India, and Brazil have longer embassy queues of 2–4 months or more."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes CR-1 visa delays?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common causes of CR-1 delays include: a Request for Evidence (RFE) from USCIS adding 3–6 months, missing or incomplete documents in the NVC package, name check and security clearance holds, embassy appointment backlogs at high-volume posts, country-based visa quotas (Immediate Relatives are exempt but backlogs at NVC can still vary), and incomplete or inconsistent NVC submissions requiring resubmission."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I speed up my CR-1 visa processing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no premium processing for I-130. To minimize delays: file a complete and well-documented I-130 from day one, respond promptly to any USCIS RFE, submit all NVC documents correctly and completely in one package, and monitor your case at my.uscis.gov and ceac.state.gov. If outside the published processing time, contact your U.S. Congressional representative for a formal inquiry."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="CR-1 Visa Processing Time 2026: Complete Timeline by Stage"
+  description="Current CR-1 spousal visa processing times for 2026 — USCIS I-130, NVC processing, embassy interview wait times, and total timeline."
+  canonical="https://ldrvisa.org/cr1-visa-processing-time"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  /* Hero — green accent for CR-1 */
+  .page-hero { background: linear-gradient(135deg, #052e16 0%, #14532d 60%, #166534 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  /* CR-1 accent color — green */
+  :root { --cr1-accent: #16a34a; --cr1-accent-dark: #15803d; }
+
+  /* Timeline banner */
+  .timeline-banner { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 0; overflow: hidden; }
+  .tl-stages { display: flex; }
+  .tl-stage { flex: 1; padding: 1.25rem 1rem; text-align: center; border-right: 1px solid var(--color-border); position: relative; }
+  .tl-stage:last-child { border-right: none; }
+  .tl-stage::after { content: "›"; position: absolute; right: -0.6rem; top: 50%; transform: translateY(-50%); color: var(--color-muted); font-size: 1.2rem; z-index: 1; }
+  .tl-stage:last-child::after { display: none; }
+  .tl-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin-bottom: 0.3rem; }
+  .tl-time { font-size: 1.1rem; font-weight: 800; color: var(--cr1-accent); }
+  .tl-sublabel { font-size: 0.75rem; color: var(--color-muted); margin-top: 0.2rem; }
+  .tl-stage.tl-total { background: #f0fdf4; }
+  .tl-stage.tl-total .tl-time { color: var(--cr1-accent-dark); }
+  @media(max-width: 600px){ .tl-stages { flex-direction: column; } .tl-stage::after { display: none; } }
+
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 860px){ .content-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--cr1-accent); }
+  .section h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+  .section ul { margin: 0.75rem 0 0.75rem 1.5rem; color: var(--color-text); line-height: 1.9; }
+
+  /* Stage cards */
+  .stage-card { border: 1px solid var(--color-border); border-radius: 12px; margin-bottom: 1.5rem; overflow: hidden; }
+  .stage-head { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+  .stage-num { width: 2rem; height: 2rem; border-radius: 50%; background: var(--cr1-accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.9rem; flex-shrink: 0; }
+  .stage-head-info { flex: 1; }
+  .stage-head-title { font-weight: 700; font-size: 1rem; }
+  .stage-head-sub { font-size: 0.8rem; color: var(--color-muted); }
+  .stage-time-badge { background: var(--cr1-accent); color: #fff; font-size: 0.8rem; font-weight: 700; padding: 0.3rem 0.75rem; border-radius: 999px; white-space: nowrap; }
+  .stage-body { padding: 1.25rem; }
+  .stage-body p { font-size: 0.9rem; color: var(--color-text); margin: 0 0 0.75rem; line-height: 1.7; }
+  .stage-body p:last-child { margin-bottom: 0; }
+  .stage-body ul { margin: 0.5rem 0 0.5rem 1.25rem; font-size: 0.9rem; color: var(--color-text); line-height: 1.8; }
+
+  /* Tables */
+  .sc-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .sc-table th { background: var(--cr1-accent); color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .sc-table td { padding: 0.7rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .sc-table tr:hover td { background: var(--color-surface); }
+  .sc-table .fast { color: #16a34a; font-weight: 700; }
+  .sc-table .slow { color: #dc2626; font-weight: 700; }
+  .sc-table .mid { color: #d97706; font-weight: 700; }
+  .sc-table tfoot td { font-weight: 700; background: var(--color-surface); }
+
+  /* NVC timeline table */
+  .nvc-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1rem 0; }
+  .nvc-table th { background: #052e16; color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .nvc-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .nvc-table tr:hover td { background: var(--color-surface); }
+
+  /* Country table */
+  .country-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; margin: 1rem 0; }
+  .country-table th { background: #052e16; color: #fff; padding: 0.6rem 1rem; text-align: left; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .country-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .country-table tr:hover td { background: var(--color-surface); }
+  .country-flag { margin-right: 0.4rem; }
+  .vol-badge { display: inline-block; font-size: 0.68rem; font-weight: 700; padding: 0.1rem 0.4rem; border-radius: 999px; }
+  .vol-high { background: #fee2e2; color: #991b1b; }
+  .vol-mid { background: #fef3c7; color: #92400e; }
+  .vol-low { background: #dcfce7; color: #166534; }
+
+  /* CR-1 vs K-1 comparison */
+  .compare-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin: 1.25rem 0; }
+  @media(max-width: 560px){ .compare-grid { grid-template-columns: 1fr; } }
+  .compare-card { border-radius: 12px; border: 2px solid var(--color-border); padding: 1.25rem; }
+  .compare-card.cr1 { border-color: var(--cr1-accent); }
+  .compare-card.k1 { border-color: var(--color-accent); }
+  .compare-card-head { font-size: 1rem; font-weight: 800; margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 1px solid var(--color-border); }
+  .compare-card.cr1 .compare-card-head { color: var(--cr1-accent); }
+  .compare-card.k1 .compare-card-head { color: var(--color-accent); }
+  .compare-card .time { font-size: 1.3rem; font-weight: 800; margin: 0 0 0.75rem; }
+  .compare-card ul { list-style: none; padding: 0; margin: 0; font-size: 0.875rem; line-height: 1.75; }
+  .compare-card ul li::before { margin-right: 0.4rem; }
+  .compare-card.cr1 ul li.pro::before { content: "+"; color: var(--cr1-accent); font-weight: 700; }
+  .compare-card.k1 ul li.pro::before { content: "+"; color: var(--color-accent); font-weight: 700; }
+  .compare-card ul li.con::before { content: "−"; color: #dc2626; font-weight: 700; }
+
+  /* Factors grid */
+  .factors-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+  .factor-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1.25rem; }
+  .factor-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .factor-card h4 { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.35rem; }
+  .factor-card p { font-size: 0.85rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* How to check */
+  .check-steps { list-style: none; padding: 0; margin: 1rem 0; }
+  .check-step { display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid var(--color-border); align-items: flex-start; }
+  .check-step:last-child { border-bottom: none; }
+  .check-step-num { width: 1.8rem; height: 1.8rem; border-radius: 50%; background: var(--cr1-accent); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.85rem; flex-shrink: 0; }
+  .check-step-body h4 { font-size: 0.95rem; font-weight: 700; margin: 0 0 0.2rem; }
+  .check-step-body p { font-size: 0.875rem; color: var(--color-muted); margin: 0; line-height: 1.6; }
+  .check-step-body a { color: var(--cr1-accent); }
+
+  /* Callouts */
+  .callout { background: #f0fdf4; border-left: 4px solid var(--cr1-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #14532d; line-height: 1.6; }
+  .warning { background: #fff7ed; border-left: 4px solid #f97316; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .warning p { margin: 0; font-size: 0.9rem; color: #9a3412; line-height: 1.6; }
+  .tip { background: #f0fdf4; border-left: 4px solid #22c55e; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .tip p { margin: 0; font-size: 0.9rem; color: #166534; line-height: 1.6; }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.75; font-size: 0.95rem; }
+
+  /* Related */
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--cr1-accent); box-shadow: 0 2px 12px rgba(22,163,74,0.1); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--cr1-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+
+  /* Sidebar */
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--cr1-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #052e16, #166534); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--cr1-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: var(--cr1-accent-dark); }
+  .snapshot-box { background: var(--color-surface); border: 2px solid var(--cr1-accent); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .snapshot-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .snap-row { display: flex; justify-content: space-between; align-items: center; padding: 0.4rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.875rem; }
+  .snap-row:last-child { border-bottom: none; font-weight: 700; }
+  .snap-time { font-weight: 700; color: var(--cr1-accent); }
+  .updated-note { font-size: 0.75rem; color: var(--color-muted); margin-top: 0.5rem; text-align: center; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › <a href="/cr1-visa">CR-1 Visa</a> › Processing Time
+    </div>
+    <h1>CR-1 Visa Processing Time 2026:<br/>Complete Timeline by Stage</h1>
+    <p class="hero-desc">A stage-by-stage breakdown of where your case spends its time — current USCIS I-130 wait times, NVC processing, embassy interview scheduling, and the realistic total timeline from filing to immigrant visa in hand.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated April 2026</span>
+      <span class="hero-meta-item">⏱ 9 min read</span>
+      <span class="hero-meta-item">📊 USCIS data + NVC + State Dept.</span>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline Banner -->
+<div class="timeline-banner">
+  <div class="container" style="padding: 0;">
+    <div class="tl-stages">
+      <div class="tl-stage">
+        <div class="tl-label">Stage 1 — USCIS</div>
+        <div class="tl-time">12–18 months</div>
+        <div class="tl-sublabel">I-130 approval</div>
+      </div>
+      <div class="tl-stage">
+        <div class="tl-label">Stage 2 — NVC</div>
+        <div class="tl-time">3–6 months</div>
+        <div class="tl-sublabel">Fees + documents</div>
+      </div>
+      <div class="tl-stage">
+        <div class="tl-label">Stage 3 — Embassy</div>
+        <div class="tl-time">1–3 months</div>
+        <div class="tl-sublabel">Interview + visa</div>
+      </div>
+      <div class="tl-stage tl-total">
+        <div class="tl-label">Total</div>
+        <div class="tl-time">~24 months</div>
+        <div class="tl-sublabel">Filing to immigrant visa</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <section class="section" id="overview">
+      <h2>CR-1 Timeline Overview (2026)</h2>
+      <p>The CR-1 spousal immigrant visa follows a four-stage pipeline: USCIS adjudicates the I-130 petition, then the National Visa Center (NVC) collects fees and documents, then a U.S. embassy conducts the interview and issues the visa, and finally your spouse enters the U.S. and receives their green card. Each stage has its own queue.</p>
+      <p>In 2026, the dominant bottleneck is <strong>USCIS I-130 adjudication</strong>, which accounts for roughly 60–70% of total wait time. NVC processing is the second-longest stage — unlike the K-1, the CR-1 requires full document submission through NVC before the interview can be scheduled. Embassy wait times vary significantly by country.</p>
+      <p>The key advantage of the CR-1 over the K-1: your spouse enters the U.S. as a <strong>lawful permanent resident</strong> (green card holder) on day one, skipping the separate Adjustment of Status process. For the total path to a green card, the CR-1 is often comparable or faster than the K-1 + AOS route.</p>
+      <div class="callout">
+        <p><strong>Always verify at the official source:</strong> Processing times change monthly. Check current I-130 times at <strong>egov.uscis.gov/processing-times</strong> and NVC case status at <strong>ceac.state.gov</strong>. The times on this page reflect April 2026 data.</p>
+      </div>
+    </section>
+
+    <section class="section" id="stage1">
+      <h2>Stage 1 — USCIS I-130 Processing (12–18 months)</h2>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <div class="stage-num">1</div>
+          <div class="stage-head-info">
+            <div class="stage-head-title">USCIS Adjudication of Form I-130</div>
+            <div class="stage-head-sub">From filing to approval notice</div>
+          </div>
+          <span class="stage-time-badge">12–18 months</span>
+        </div>
+        <div class="stage-body">
+          <p>After filing Form I-130 (Petition for Alien Relative), USCIS issues a receipt notice (Form I-797C) within 2–6 weeks. The case then enters the adjudication queue. USCIS reviews your evidence, verifies the bona fide marriage, and either approves, issues an RFE (Request for Evidence), or denies.</p>
+          <p>The I-130 goes through several internal steps:</p>
+          <ul>
+            <li><strong>Receipt notice</strong> — issued within 2–6 weeks of filing; contains your case number</li>
+            <li><strong>Biometrics appointment</strong> — if required (typically for certain filing scenarios; not always required for immediate relative petitions)</li>
+            <li><strong>Adjudication</strong> — an officer reviews the file; may issue an RFE</li>
+            <li><strong>Approval notice</strong> — Form I-797 approval; case transfers to NVC</li>
+          </ul>
+          <p>For spouses of U.S. citizens (IR-1/CR-1 category), there is no visa number backlog — you are an Immediate Relative, and visas are always available. The only wait is USCIS adjudication and subsequent processing.</p>
+        </div>
+      </div>
+
+      <h3>USCIS processing times by filing location (April 2026)</h3>
+      <p>Where you mail your I-130 (Chicago Lockbox vs. Dallas Lockbox) determines which service center handles your case. USCIS assigns cases internally based on workload.</p>
+      <table class="sc-table">
+        <thead>
+          <tr><th>Service Center / Office</th><th>Current Processing Time</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>California Service Center (CSC)</td>
+            <td class="slow">14–18 months</td>
+            <td>Slower than average</td>
+          </tr>
+          <tr>
+            <td>Vermont Service Center (VSC)</td>
+            <td class="mid">12–16 months</td>
+            <td>Near average</td>
+          </tr>
+          <tr>
+            <td>Texas Service Center (TSC)</td>
+            <td class="mid">13–17 months</td>
+            <td>Near average</td>
+          </tr>
+          <tr>
+            <td>National Benefits Center (NBC)</td>
+            <td class="fast">10–14 months</td>
+            <td>Faster than average</td>
+          </tr>
+          <tr>
+            <td>Chicago Lockbox → routed to service center</td>
+            <td class="mid">12–18 months</td>
+            <td>Depends on assignment</td>
+          </tr>
+          <tr>
+            <td>Dallas Lockbox → routed to service center</td>
+            <td class="mid">12–18 months</td>
+            <td>Depends on assignment</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.8rem; color: var(--color-muted);">* Times are approximate and change monthly. Verify at egov.uscis.gov/processing-times — select "I-130, Petition for Alien Relative" and "Immediate Relative."</p>
+
+      <div class="warning">
+        <p><strong>Outside the published processing time?</strong> If your I-130 has been pending longer than USCIS's posted time for your service center, submit a case inquiry (service request) at my.uscis.gov. For cases significantly outside normal time, contact your U.S. Congressional representative — their immigration caseworkers can submit a formal inquiry that often moves stuck cases.</p>
+      </div>
+    </section>
+
+    <section class="section" id="stage2">
+      <h2>Stage 2 — NVC Processing (3–6 months)</h2>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <div class="stage-num">2</div>
+          <div class="stage-head-info">
+            <div class="stage-head-title">National Visa Center — Fees, Documents &amp; Interview Scheduling</div>
+            <div class="stage-head-sub">From USCIS approval to embassy interview scheduled</div>
+          </div>
+          <span class="stage-time-badge">3–6 months</span>
+        </div>
+        <div class="stage-body">
+          <p>After USCIS approves the I-130, the case transfers to the NVC in Portsmouth, NH. Unlike the K-1 process, the CR-1 NVC stage is substantive — you must pay fees and submit a complete document package before NVC will schedule your spouse's interview.</p>
+          <p>NVC communicates through the CEAC portal at ceac.state.gov. Both the petitioner (U.S. citizen) and the beneficiary (the spouse abroad) have tasks to complete.</p>
+        </div>
+      </div>
+
+      <h3>NVC timeline table</h3>
+      <table class="nvc-table">
+        <thead>
+          <tr><th>NVC Step</th><th>What Happens</th><th>Typical Wait</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Case number assigned</strong></td>
+            <td>NVC assigns a case number and invoice ID; sends welcome email to petitioner</td>
+            <td>2–6 weeks after USCIS approval</td>
+          </tr>
+          <tr>
+            <td><strong>Fee payment</strong></td>
+            <td>Pay the IV fee ($325) and Affidavit of Support fee ($120) through CEAC</td>
+            <td>1–4 weeks after welcome email</td>
+          </tr>
+          <tr>
+            <td><strong>Document submission</strong></td>
+            <td>Upload I-864 (Affidavit of Support), DS-260 (immigrant visa application), civil documents (birth cert, marriage cert, police certs, etc.)</td>
+            <td>2–6 weeks to compile and upload</td>
+          </tr>
+          <tr>
+            <td><strong>NVC review</strong></td>
+            <td>NVC officer reviews entire package for completeness and correctness; may request additional documents (a "checklist")</td>
+            <td>4–12 weeks</td>
+          </tr>
+          <tr>
+            <td><strong>Case complete</strong></td>
+            <td>NVC marks the case "documentarily qualified" and transfers to the embassy for interview scheduling</td>
+            <td>After review is passed</td>
+          </tr>
+          <tr>
+            <td><strong>Interview scheduled</strong></td>
+            <td>Embassy contacts beneficiary with interview date; medical exam should be completed before interview</td>
+            <td>2–6 weeks after case complete</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="tip">
+        <p><strong>Submit everything at once.</strong> NVC reviews your package as a whole. If anything is missing, they send a "checklist" and your case goes back to the review queue — adding weeks or months. Prepare all documents before submitting anything.</p>
+      </div>
+    </section>
+
+    <section class="section" id="stage3">
+      <h2>Stage 3 — Embassy / Consulate (2–4 months)</h2>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <div class="stage-num">3</div>
+          <div class="stage-head-info">
+            <div class="stage-head-title">Embassy Interview, Medical Exam &amp; Visa Issuance</div>
+            <div class="stage-head-sub">From NVC case complete to visa in hand</div>
+          </div>
+          <span class="stage-time-badge">2–4 months</span>
+        </div>
+        <div class="stage-body">
+          <p>Once the embassy receives the case from NVC, they schedule the immigrant visa interview. The interview itself is typically 10–30 minutes. If approved, the visa is stamped into the passport and returned within 1–5 business days via courier.</p>
+          <ul>
+            <li><strong>Medical exam</strong> — must be completed with a USCIS-designated physician (panel physician) before the interview; results are typically valid for 2 years</li>
+            <li><strong>Interview scheduling</strong> — wait varies by country and embassy workload</li>
+            <li><strong>Interview</strong> — officer verifies the bona fide marriage and admissibility</li>
+            <li><strong>Visa issuance</strong> — CR-1 visa stamped; typically valid for 6 months for travel to the U.S.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3>Top embassy wait times by country (April 2026)</h3>
+      <table class="country-table">
+        <thead>
+          <tr><th>Country / Post</th><th>Avg. Interview Wait</th><th>CR-1 Volume</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="country-flag">🇲🇽</span>Mexico (Ciudad Juárez)</td><td>3–5 months</td><td><span class="vol-badge vol-high">Very High</span></td></tr>
+          <tr><td><span class="country-flag">🇵🇭</span>Philippines (Manila)</td><td>3–5 months</td><td><span class="vol-badge vol-high">Very High</span></td></tr>
+          <tr><td><span class="country-flag">🇮🇳</span>India (Mumbai, Chennai, Delhi)</td><td>3–5 months</td><td><span class="vol-badge vol-high">Very High</span></td></tr>
+          <tr><td><span class="country-flag">🇧🇷</span>Brazil (São Paulo)</td><td>2–4 months</td><td><span class="vol-badge vol-high">High</span></td></tr>
+          <tr><td><span class="country-flag">🇨🇳</span>China (Guangzhou)</td><td>3–5 months</td><td><span class="vol-badge vol-high">High</span></td></tr>
+          <tr><td><span class="country-flag">🇬🇧</span>United Kingdom (London)</td><td>1–2 months</td><td><span class="vol-badge vol-mid">Medium</span></td></tr>
+          <tr><td><span class="country-flag">🇦🇺</span>Australia (Sydney)</td><td>1–2 months</td><td><span class="vol-badge vol-low">Lower</span></td></tr>
+          <tr><td><span class="country-flag">🇩🇪</span>Germany (Frankfurt)</td><td>1–2 months</td><td><span class="vol-badge vol-low">Lower</span></td></tr>
+          <tr><td><span class="country-flag">🇨🇦</span>Canada (Ottawa, Toronto)</td><td>1–2 months</td><td><span class="vol-badge vol-low">Lower</span></td></tr>
+          <tr><td><span class="country-flag">🇰🇷</span>South Korea (Seoul)</td><td>1–2 months</td><td><span class="vol-badge vol-low">Lower</span></td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:0.8rem; color: var(--color-muted);">* Embassy interview wait times fluctuate. Check Visa Appointment Wait Times at travel.state.gov for the most current data for your specific post.</p>
+    </section>
+
+    <section class="section" id="stage4">
+      <h2>Stage 4 — Entry &amp; Green Card (1–2 months)</h2>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <div class="stage-num">4</div>
+          <div class="stage-head-info">
+            <div class="stage-head-title">U.S. Entry, CBP Inspection &amp; Green Card by Mail</div>
+            <div class="stage-head-sub">From visa in hand to green card delivered</div>
+          </div>
+          <span class="stage-time-badge">1–2 months</span>
+        </div>
+        <div class="stage-body">
+          <p>Your spouse enters the U.S. on the CR-1 immigrant visa. At the port of entry, a CBP officer inspects the sealed visa packet and admits your spouse as a lawful permanent resident (LPR). The CR-1 visa itself is not the green card — the physical green card (Form I-551) is mailed separately.</p>
+          <ul>
+            <li><strong>CBP inspection</strong> — at the port of entry; typically 15–60 minutes; the sealed visa packet from the embassy is opened and reviewed</li>
+            <li><strong>I-551 stamp</strong> — CBP may stamp the passport as temporary evidence of LPR status while the card is produced</li>
+            <li><strong>Green card by mail</strong> — USCIS produces and mails the physical I-551 green card within 4–8 weeks; it will go to the U.S. address on file</li>
+            <li><strong>CR-1 vs. IR-1</strong> — if married less than 2 years at time of entry, the card is a 2-year conditional green card (CR-1); married 2+ years, it's a 10-year permanent card (IR-1). CR-1 holders must file Form I-751 to remove conditions before the 2-year card expires.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="uscis-table">
+      <h2>Full CR-1 Timeline Summary Table</h2>
+      <table class="sc-table">
+        <thead>
+          <tr><th>Phase</th><th>Timeline</th><th>Key Form / Action</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>I-130 filing to USCIS receipt</td><td>2–6 weeks</td><td>I-130 receipt notice</td></tr>
+          <tr><td>USCIS adjudication</td><td class="slow">12–18 months</td><td>I-130 approval</td></tr>
+          <tr><td>NVC case number &amp; fee payment</td><td>1–6 weeks</td><td>CEAC portal</td></tr>
+          <tr><td>NVC document submission &amp; review</td><td>2–4 months</td><td>I-864, DS-260, civil docs</td></tr>
+          <tr><td>Interview scheduling after case complete</td><td>2–6 weeks</td><td>Embassy notification</td></tr>
+          <tr><td>Medical exam</td><td>1–2 weeks</td><td>Panel physician</td></tr>
+          <tr><td>Embassy interview &amp; visa issuance</td><td>1–3 months</td><td>CR-1 visa stamp</td></tr>
+          <tr><td>Entry &amp; green card by mail</td><td>4–8 weeks</td><td>I-551 card</td></tr>
+        </tbody>
+        <tfoot>
+          <tr><td><strong>Total: Filing to green card in hand</strong></td><td class="slow"><strong>18–28 months</strong></td><td></td></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="section" id="cr1-vs-k1">
+      <h2>CR-1 vs. K-1 Processing Time Comparison</h2>
+      <p>The CR-1 takes longer to get your spouse into the U.S., but the K-1 requires an additional 12–24 month Adjustment of Status process after arrival. For the total path to a green card, the CR-1 is often comparable or faster overall.</p>
+
+      <div class="compare-grid">
+        <div class="compare-card cr1">
+          <div class="compare-card-head">CR-1 Spousal Visa</div>
+          <div class="time">~18–24 months to entry</div>
+          <ul>
+            <li class="pro">Spouse enters as lawful permanent resident (green card on day 1)</li>
+            <li class="pro">No Adjustment of Status process after arrival (saves 12–24 months + ~$1,440)</li>
+            <li class="pro">No 90-day marriage deadline after entry</li>
+            <li class="pro">Work authorization and travel rights immediately upon entry</li>
+            <li class="con">Longer wait before spouse can enter the U.S.</li>
+            <li class="con">NVC document stage adds 3–6 months vs. K-1's 3–6 weeks at NVC</li>
+            <li class="con">CR-1 (married &lt; 2 years) requires I-751 to remove conditions</li>
+          </ul>
+        </div>
+        <div class="compare-card k1">
+          <div class="compare-card-head">K-1 Fiancé Visa</div>
+          <div class="time">~12–18 months to entry</div>
+          <ul>
+            <li class="pro">Faster to get partner physically in the U.S.</li>
+            <li class="pro">NVC stage is much shorter (3–6 weeks vs. 3–6 months)</li>
+            <li class="pro">Allows time to plan the wedding after arrival</li>
+            <li class="con">Enters as a nonimmigrant — must apply for green card separately (AOS)</li>
+            <li class="con">AOS adds 12–24 months and ~$1,440 in fees after arrival</li>
+            <li class="con">Must marry within 90 days of entry or depart</li>
+            <li class="con">Work authorization may take 3–5 months to arrive after filing AOS</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout">
+        <p><strong>Bottom line:</strong> If getting your spouse to the U.S. faster is the top priority and you are already married, the CR-1 is the right path — they arrive as a green card holder. If you are not yet married and need to be together sooner, the K-1 gets them here faster but requires an additional AOS process. See the <SmartLink href="/k1-vs-cr1">K-1 vs. CR-1 full comparison</SmartLink> for more detail.</p>
+      </div>
+    </section>
+
+    <section class="section" id="check-status">
+      <h2>How to Check Your CR-1 Case Status</h2>
+      <ul class="check-steps">
+        <li class="check-step">
+          <div class="check-step-num">1</div>
+          <div class="check-step-body">
+            <h4>USCIS stage — my.uscis.gov</h4>
+            <p>Use your I-130 receipt number (starts with EAC, WAC, LIN, MSC, or IOE) to check your case status at <a href="https://my.uscis.gov" target="_blank" rel="noopener">my.uscis.gov</a>. Statuses include "Case Received," "Case Is Being Actively Reviewed," "Request for Evidence Sent," and "Case Was Approved." Sign up for email and SMS notifications so you hear instantly when status changes.</p>
+          </div>
+        </li>
+        <li class="check-step">
+          <div class="check-step-num">2</div>
+          <div class="check-step-body">
+            <h4>NVC stage — ceac.state.gov</h4>
+            <p>Once NVC has your case, log in to <a href="https://ceac.state.gov" target="_blank" rel="noopener">ceac.state.gov</a> using your NVC case number and beneficiary's date of birth. You can track fee payment status, document submission status, review status, and whether the case is marked "Documentarily Qualified" (ready for interview scheduling).</p>
+          </div>
+        </li>
+        <li class="check-step">
+          <div class="check-step-num">3</div>
+          <div class="check-step-body">
+            <h4>Embassy stage — contact the post directly</h4>
+            <p>After NVC marks the case complete and transfers it to the embassy, contact that embassy directly for interview scheduling information. Most U.S. embassies have dedicated immigrant visa inquiry email addresses and/or online inquiry systems listed on their official website at <a href="https://www.usembassy.gov" target="_blank" rel="noopener">usembassy.gov</a>.</p>
+          </div>
+        </li>
+        <li class="check-step">
+          <div class="check-step-num">4</div>
+          <div class="check-step-body">
+            <h4>If stuck — Congressional inquiry</h4>
+            <p>Contact your U.S. Representative or Senator's office (use the petitioner's Congressional district). Most have dedicated immigration caseworkers who can submit a formal congressional inquiry to USCIS or the State Department. This is free, legal, and often effective for cases that are significantly outside normal processing times.</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" id="delays">
+      <h2>What Causes CR-1 Delays?</h2>
+      <div class="factors-grid">
+        <div class="factor-card">
+          <div class="factor-icon">📋</div>
+          <h4>Request for Evidence (RFE)</h4>
+          <p>USCIS issues an RFE when the initial I-130 filing lacks sufficient evidence of a bona fide marriage. Responding takes time and the case clock pauses — an RFE can add 3–6 months.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">📁</div>
+          <h4>Missing or incomplete NVC documents</h4>
+          <p>NVC sends a "checklist" if your package is incomplete. This returns the case to the review queue, often adding 4–12 weeks. Submit everything correctly the first time.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">🔍</div>
+          <h4>Name checks &amp; security clearance</h4>
+          <p>Cases are run through national security databases. Name matches — even if innocent — can hold a case for weeks or months while additional review is completed.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">🏛️</div>
+          <h4>Embassy backlogs</h4>
+          <p>High-volume embassies like Ciudad Juárez (Mexico), Manila (Philippines), and Guangzhou (China) have consistently long interview queues. Staffing and local conditions can make this worse.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">🌐</div>
+          <h4>Country quotas (visa backlogs)</h4>
+          <p>Immediate Relatives of U.S. citizens (IR-1/CR-1) are not subject to annual visa number caps, so there is no visa backlog. However, country-specific processing factors and embassy capacity still affect timelines.</p>
+        </div>
+        <div class="factor-card">
+          <div class="factor-icon">📄</div>
+          <h4>Incomplete NVC package</h4>
+          <p>Submitting documents piecemeal, using wrong translations, or missing a required civil document (police cert, military records, prior divorce decree) triggers checklists and delays case completion by months.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">How long does the CR-1 visa take in 2026?</div>
+        <div class="faq-a">The total CR-1 process takes approximately 18–24 months from filing to visa in hand: 12–18 months for USCIS to approve I-130, 3–6 months for NVC processing (fees + documents + review), and 1–3 months for embassy interview and visa issuance. Unlike the K-1, your spouse arrives already holding permanent resident status — no separate Adjustment of Status process is needed.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does USCIS take to process the I-130 for a CR-1 in 2026?</div>
+        <div class="faq-a">USCIS is processing Form I-130 for spouses of U.S. citizens (Immediate Relatives) in approximately 12–18 months as of April 2026. Times vary by service center — the National Benefits Center tends to run faster (10–14 months) while the California Service Center tends to run slower (14–18 months). Always verify at egov.uscis.gov/processing-times.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How long does NVC processing take for a CR-1?</div>
+        <div class="faq-a">NVC processing for a CR-1 typically takes 3–6 months total: 1–6 weeks to receive a case number and pay fees, 2–6 weeks to compile and upload all documents, 4–12 weeks for NVC review (longer if a checklist is issued), and 2–6 weeks for the embassy to schedule the interview after NVC marks the case complete. Submitting a complete, error-free package is the best way to minimize NVC processing time.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Which countries have the fastest CR-1 interview scheduling?</div>
+        <div class="faq-a">Lower-volume embassies with efficient operations typically schedule interviews fastest. Canada, Australia, Germany, South Korea, and the United Kingdom often schedule within 1–2 months of NVC completion. High-volume posts — Mexico (Ciudad Juárez), Philippines (Manila), India, and China (Guangzhou) — typically have interview wait times of 3–5 months. Check current wait times at travel.state.gov.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What causes the most CR-1 visa delays?</div>
+        <div class="faq-a">The most common causes of significant CR-1 delays are: (1) an RFE from USCIS requiring additional marriage evidence — adds 3–6 months; (2) an NVC checklist from an incomplete or incorrect document submission — adds 4–12 weeks; (3) name-check or security clearance holds at USCIS; and (4) embassy interview backlogs at high-volume posts. A well-prepared initial filing and complete NVC package are the best protections against avoidable delays.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How can I speed up my CR-1 visa processing?</div>
+        <div class="faq-a">There is no premium processing or expedite option for I-130. The best approach is: file a thorough, well-documented I-130 from the start; respond to any USCIS RFE completely and promptly; compile all NVC documents before submitting (to avoid a checklist); and monitor your case at my.uscis.gov and ceac.state.gov. If your case has exceeded the published USCIS processing time, submit a service request at my.uscis.gov or contact your Congressional representative's office for a formal inquiry.</div>
+      </div>
+    </section>
+
+    <section class="section" id="related">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <SmartLink href="/cr1-visa" class="related-card">
+          <div class="related-cat">CR-1 Visa</div>
+          <div class="related-title">CR-1 Spousal Visa: Complete 2026 Guide</div>
+        </SmartLink>
+        <SmartLink href="/k1-vs-cr1" class="related-card">
+          <div class="related-cat">Compare</div>
+          <div class="related-title">K-1 vs CR-1: Which is Faster in 2026?</div>
+        </SmartLink>
+        <SmartLink href="/affidavit-of-support" class="related-card">
+          <div class="related-cat">NVC</div>
+          <div class="related-title">Affidavit of Support (I-864): Complete Guide</div>
+        </SmartLink>
+        <SmartLink href="/k1-visa-processing-time" class="related-card">
+          <div class="related-cat">K-1 Visa</div>
+          <div class="related-title">K-1 Visa Processing Time: 2026 Breakdown</div>
+        </SmartLink>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="snapshot-box">
+      <h4>2026 Timeline Snapshot</h4>
+      <div class="snap-row"><span>USCIS I-130</span><span class="snap-time">12–18 mo</span></div>
+      <div class="snap-row"><span>NVC processing</span><span class="snap-time">3–6 mo</span></div>
+      <div class="snap-row"><span>Embassy interview</span><span class="snap-time">1–3 mo</span></div>
+      <div class="snap-row"><span>Entry + green card</span><span class="snap-time">1–2 mo</span></div>
+      <div class="snap-row"><span><strong>Total to green card</strong></span><span class="snap-time">~24 mo</span></div>
+      <p class="updated-note">Updated April 2026 · Verify at egov.uscis.gov</p>
+    </div>
+
+    <div class="cta-box">
+      <h4>Comparing CR-1 vs. K-1?</h4>
+      <p>See the full side-by-side breakdown of timelines, costs, and who each path is right for.</p>
+      <SmartLink href="/k1-vs-cr1" class="btn">K-1 vs CR-1 Guide →</SmartLink>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>On This Page</h4>
+      <ul>
+        <li><a href="#overview" class="sidebar-link">Timeline overview <span>↓</span></a></li>
+        <li><a href="#stage1" class="sidebar-link">Stage 1 — USCIS I-130 <span>↓</span></a></li>
+        <li><a href="#stage2" class="sidebar-link">Stage 2 — NVC <span>↓</span></a></li>
+        <li><a href="#stage3" class="sidebar-link">Stage 3 — Embassy <span>↓</span></a></li>
+        <li><a href="#stage4" class="sidebar-link">Stage 4 — Entry &amp; green card <span>↓</span></a></li>
+        <li><a href="#uscis-table" class="sidebar-link">Full timeline table <span>↓</span></a></li>
+        <li><a href="#cr1-vs-k1" class="sidebar-link">CR-1 vs K-1 comparison <span>↓</span></a></li>
+        <li><a href="#check-status" class="sidebar-link">How to check status <span>↓</span></a></li>
+        <li><a href="#delays" class="sidebar-link">What causes delays <span>↓</span></a></li>
+        <li><a href="#faq" class="sidebar-link">FAQ <span>↓</span></a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Key Pages</h4>
+      <ul>
+        <li><SmartLink href="/cr1-visa">CR-1 Spousal Visa Guide</SmartLink></li>
+        <li><SmartLink href="/k1-vs-cr1">K-1 vs CR-1 Comparison</SmartLink></li>
+        <li><SmartLink href="/affidavit-of-support">Affidavit of Support (I-864)</SmartLink></li>
+        <li><SmartLink href="/k1-visa-processing-time">K-1 Processing Time</SmartLink></li>
+        <li><SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink></li>
+        <li><SmartLink href="/k1-visa">K-1 Fiancé Visa Guide</SmartLink></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

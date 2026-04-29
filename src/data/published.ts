@@ -14,4 +14,9 @@ export const PUBLISHED: Set<string> = new Set([
   '/k1-visa-processing-time',
   '/k1-visa-denial-reasons',
   '/affidavit-of-support-income-requirements',
+  '/cr1-visa-processing-time',
+  '/bona-fide-marriage-letter',
+  '/4-pillars-of-evidence-partner-visa',
+  '/k1-visa-interview-questions',
+  '/adjustment-of-status-after-marriage',
 ]);

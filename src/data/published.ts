@@ -29,4 +29,6 @@ export const PUBLISHED: Set<string> = new Set([
   '/k1-visa-extension',
   '/conditional-green-card',
   '/k1-visa-medical-exam',
+  '/marriage-green-card-interview-questions',
+  '/sponsor-requirements-k1-visa',
 ]);

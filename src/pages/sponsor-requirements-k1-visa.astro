@@ -1,0 +1,1320 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "K-1 Visa Sponsor Requirements 2026: Complete Petitioner Eligibility Guide",
+    "description": "Everything the U.S. citizen petitioner must qualify for to sponsor a K-1 fiancé visa — citizenship, in-person meeting rule, financial requirements, criminal bars, and the I-129F filing.",
+    "url": "https://ldrvisa.org/sponsor-requirements-k1-visa",
+    "dateModified": "2026-04-30",
+    "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/sponsor-requirements-k1-visa" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "K-1 Fiancé Visa", "item": "https://ldrvisa.org/k1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "Sponsor Requirements", "item": "https://ldrvisa.org/sponsor-requirements-k1-visa" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can a green card holder sponsor a K-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Only U.S. citizens can petition for a K-1 fiancé visa. Lawful permanent residents (green card holders) cannot file a K-1 petition regardless of how long they have held their green card. LPRs who want to bring a foreign spouse to the U.S. must use the CR-1 spousal visa or F-2A immigrant visa category, both of which take longer."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I don't meet the income requirement for the K-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If your income falls below 100% of the federal poverty guideline for your household size, you have several options: (1) Use a joint sponsor — a U.S. citizen or LPR who independently meets the income requirement and files a separate I-134 on your behalf; (2) Supplement with assets — liquid assets such as bank savings, stocks, or retirement funds can offset insufficient income; (3) Include household member income — if someone living with you has income, they may be able to co-sign. The consular officer makes the final determination on financial ability at the K-1 interview."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the 2-year in-person meeting rule for the K-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "U.S. law requires that the petitioner and beneficiary have physically met each other in person within the two years immediately preceding the filing of the I-129F petition. A video call, phone call, or online meeting does not satisfy this requirement — physical presence in the same location is mandatory. Waivers are available only on the grounds of extreme hardship to the petitioner or if meeting in person would violate strict and long-established customs of the beneficiary's culture or religion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many K-1 petitions can I file in my lifetime?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no absolute numerical cap, but USCIS tracks all prior K-1 petitions you have filed. If you have had two or more prior K-1 petitions approved, USCIS will scrutinize your new petition heavily and may request extensive evidence that your current relationship is genuine. Additionally, under IMBRA, if you met your fiancé(e) through an international marriage broker, USCIS limits you to two K-1 approvals in your lifetime without a waiver."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Adam Walsh Act and how does it affect K-1 sponsorship?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Adam Walsh Child Protection and Safety Act permanently bars anyone convicted of a 'specified offense against a minor' from petitioning for a K-1 visa. Specified offenses include sexual abuse, exploitation, kidnapping, and other crimes against minors. This bar applies even if the conviction was expunged, the sentence was suspended, or significant time has passed. Unlike some other immigration bars, there is no waiver available for this bar in the K-1 context — it is an absolute prohibition."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a lawyer to file the I-129F petition?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You are not legally required to hire an attorney to file Form I-129F. Many couples successfully self-file the K-1 petition. However, an immigration attorney is strongly recommended if: you have a criminal history of any kind, you have filed prior K-1 petitions, your income is borderline or you need a joint sponsor, there are any prior immigration violations, or your situation involves cultural/religious hardship waiver for the in-person meeting requirement. Attorney fees typically range from $1,500 to $3,500 for the I-129F filing. USCIS's filing fee for I-129F is $675."
+        }
+      }
+    ]
+  }
+]);
+---
+
+<Base
+  title="K-1 Visa Sponsor Requirements 2026 — Complete Petitioner Eligibility Guide"
+  description="Are you eligible to sponsor a K-1 fiancé visa? Citizenship, in-person meeting rule, income requirements, criminal bars, and the I-129F — everything the petitioner must qualify for."
+  schema={schema}
+>
+
+<style>
+  /* Breadcrumb */
+  .breadcrumb-bar { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 10px 0; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; list-style: none; font-size: 0.8125rem; color: var(--color-muted); flex-wrap: wrap; }
+  .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: 8px; }
+  .breadcrumb a { color: var(--color-accent); }
+
+  /* Hero */
+  .page-hero {
+    padding: 56px 0 48px;
+    text-align: center;
+    background: linear-gradient(180deg, #dbeafe 0%, #fff 100%);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .hero-badge {
+    display: inline-block;
+    background: #1e40af;
+    color: #fff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 18px;
+  }
+  .page-hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.875rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    color: #1e3a8a;
+  }
+  .page-hero h1 span { color: #1e40af; }
+  .hero-sub {
+    font-size: 1.0625rem;
+    color: var(--color-muted);
+    max-width: 620px;
+    margin: 0 auto 32px;
+    line-height: 1.7;
+  }
+
+  /* Eligibility quick-check bar */
+  .eligibility-bar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    max-width: 760px;
+    margin: 0 auto;
+    border: 2px solid #1e40af;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #fff;
+  }
+  .elig-item {
+    flex: 1;
+    min-width: 160px;
+    padding: 16px 18px;
+    text-align: center;
+    border-right: 1px solid #bfdbfe;
+    background: #fff;
+  }
+  .elig-item:last-child { border-right: none; }
+  .elig-check {
+    display: block;
+    font-size: 1.25rem;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+  .elig-label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    line-height: 1.3;
+  }
+
+  /* Layout */
+  .content-wrap { display: grid; grid-template-columns: 1fr 300px; gap: 48px; padding: 48px 0 80px; align-items: start; }
+  .main-col {}
+  .content-section { margin-bottom: 3rem; }
+  .content-section h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #dbeafe;
+    color: #1e3a8a;
+  }
+  .content-section h3 { font-size: 1.1rem; font-weight: 700; margin: 1.25rem 0 0.5rem; color: var(--color-text); }
+  .content-section p { color: var(--color-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+
+  /* Core requirement cards */
+  .req-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 1.25rem; }
+  .req-card {
+    border-radius: 12px;
+    padding: 1.375rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .req-card-citizenship { background: #eff6ff; border: 2px solid #1e40af; }
+  .req-card-met       { background: #f0fdf4; border: 2px solid #16a34a; }
+  .req-card-free      { background: #fffbeb; border: 2px solid #d97706; }
+  .req-card-intent    { background: #fdf4ff; border: 2px solid #9333ea; }
+  .req-card-num {
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+  }
+  .req-card-citizenship .req-card-num { color: #1e40af; }
+  .req-card-met .req-card-num       { color: #16a34a; }
+  .req-card-free .req-card-num      { color: #d97706; }
+  .req-card-intent .req-card-num    { color: #9333ea; }
+  .req-card h3 { font-size: 1rem; font-weight: 800; margin: 0; color: var(--color-text); }
+  .req-card p { font-size: 0.8375rem; color: var(--color-muted); margin: 0; line-height: 1.6; }
+  .req-card-icon { font-size: 1.5rem; line-height: 1; }
+
+  /* Alert boxes */
+  .alert-box { display: flex; gap: 12px; border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
+  .alert-warning { background: #fffbeb; border: 1px solid #fde68a; }
+  .alert-info    { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .alert-danger  { background: #fef2f2; border: 1px solid #fecaca; }
+  .alert-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
+  .alert-box strong { display: block; font-weight: 700; margin-bottom: 4px; font-size: 0.9375rem; color: var(--color-text); }
+  .alert-box p { font-size: 0.875rem; color: var(--color-muted); margin: 0; line-height: 1.6; }
+
+  /* Income table */
+  .income-table-wrap { border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; margin-top: 1.25rem; }
+  .income-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  .income-table th { background: #1e40af; color: #fff; padding: 11px 14px; text-align: left; font-weight: 700; }
+  .income-table .th-sub { font-size: 0.7rem; font-weight: 400; opacity: 0.8; display: block; }
+  .income-table td { padding: 10px 14px; border-bottom: 1px solid var(--color-border); color: var(--color-muted); vertical-align: middle; }
+  .income-table tr:last-child td { border-bottom: none; }
+  .income-table tr:nth-child(even) td { background: #f8fafc; }
+  .col-highlight { background: #dbeafe !important; color: #1e3a8a !important; font-weight: 700; }
+  .hh-note { font-size: 0.7rem; font-weight: 400; color: var(--color-muted); }
+  .add-row td { font-size: 0.78rem; color: var(--color-muted); background: var(--color-surface) !important; padding: 7px 14px; }
+
+  /* Income sources */
+  .income-sources-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 1rem; }
+  .income-col { border-radius: 10px; padding: 1.25rem; }
+  .income-yes { background: #f0fdf4; border: 1px solid #86efac; }
+  .income-no  { background: #fef2f2; border: 1px solid #fecaca; }
+  .income-col h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: 0.75rem; }
+  .income-col ul { list-style: none; display: flex; flex-direction: column; gap: 5px; }
+  .income-col li { font-size: 0.8375rem; color: var(--color-muted); padding-left: 1.1rem; position: relative; line-height: 1.45; }
+  .income-yes li::before { content: '✓'; position: absolute; left: 0; color: #16a34a; font-weight: 700; font-size: 0.75rem; }
+  .income-no  li::before { content: '✗'; position: absolute; left: 0; color: #dc2626; font-weight: 700; font-size: 0.75rem; }
+
+  /* Mid-page CTA */
+  .mid-cta {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 14px;
+    padding: 1.75rem 2rem;
+    margin: 2.5rem 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .mid-cta-icon { font-size: 2.5rem; flex-shrink: 0; }
+  .mid-cta h3 { font-size: 1.125rem; font-weight: 800; color: #1e3a8a; margin-bottom: 6px; }
+  .mid-cta p { font-size: 0.9rem; color: var(--color-muted); margin-bottom: 14px; line-height: 1.6; }
+  .mid-cta-btns { display: flex; gap: 10px; flex-wrap: wrap; }
+  .btn-primary {
+    display: inline-block;
+    background: #1e40af;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.15s;
+  }
+  .btn-primary:hover { background: #1e3a8a; }
+  .btn-outline {
+    display: inline-block;
+    background: transparent;
+    color: #1e40af;
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 9px 20px;
+    border-radius: 8px;
+    border: 2px solid #1e40af;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .btn-outline:hover { background: #1e40af; color: #fff; }
+
+  /* Document list */
+  .doc-checklist { display: flex; flex-direction: column; gap: 18px; margin-top: 1rem; }
+  .doc-cat { border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
+  .doc-cat-header { display: flex; align-items: center; gap: 10px; padding: 0.875rem 1.25rem; background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+  .doc-cat-icon { font-size: 1.125rem; }
+  .doc-cat-header h3 { font-size: 0.9375rem; font-weight: 700; margin: 0; }
+  .doc-items { padding: 0.25rem 0; }
+  .doc-item { display: flex; align-items: flex-start; gap: 12px; padding: 0.8rem 1.25rem; border-bottom: 1px solid var(--color-border); }
+  .doc-item:last-child { border-bottom: none; }
+  .doc-check {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    background: #dbeafe;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    color: #1e40af;
+    font-weight: 700;
+    margin-top: 1px;
+  }
+  .doc-item strong { font-size: 0.875rem; display: block; margin-bottom: 2px; }
+  .doc-item p { font-size: 0.8rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* Criminal bars */
+  .bar-cards { display: flex; flex-direction: column; gap: 16px; margin-top: 1.25rem; }
+  .bar-card {
+    border-radius: 10px;
+    border-left: 4px solid #dc2626;
+    background: #fef2f2;
+    padding: 1.125rem 1.375rem;
+  }
+  .bar-card h3 { font-size: 0.9375rem; font-weight: 800; color: #991b1b; margin-bottom: 6px; }
+  .bar-card p { font-size: 0.875rem; color: var(--color-muted); margin: 0; line-height: 1.6; }
+
+  /* I-129F steps */
+  .process-steps { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; margin-top: 1.25rem; }
+  .process-step { display: flex; align-items: flex-start; gap: 16px; padding: 1.125rem 1.375rem; border-bottom: 1px solid var(--color-border); background: #fff; }
+  .process-step:last-child { border-bottom: none; }
+  .step-num {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    background: #1e40af;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 0.875rem;
+    margin-top: 1px;
+  }
+  .process-step strong { font-size: 0.9375rem; display: block; margin-bottom: 4px; }
+  .process-step p { font-size: 0.8375rem; color: var(--color-muted); margin: 0; line-height: 1.55; }
+
+  /* Split table (petitioner vs beneficiary) */
+  .split-table-wrap { border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; margin-top: 1.25rem; }
+  .split-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
+  .split-table th { padding: 12px 16px; text-align: left; font-weight: 800; font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .split-table th:first-child { background: #1e40af; color: #fff; width: 50%; }
+  .split-table th:last-child  { background: #16a34a; color: #fff; }
+  .split-table td { padding: 10px 16px; border-top: 1px solid var(--color-border); vertical-align: top; font-size: 0.8375rem; color: var(--color-muted); }
+  .split-table td:first-child { border-right: 1px solid var(--color-border); background: #eff6ff; }
+  .split-table td:last-child { background: #f0fdf4; }
+  .split-table td strong { color: var(--color-text); }
+
+  /* Disqualifier checklist */
+  .disq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid #fecaca; border-radius: 10px; overflow: hidden; margin-top: 1.25rem; }
+  .disq-item { display: flex; align-items: flex-start; gap: 14px; padding: 1rem 1.25rem; border-bottom: 1px solid #fecaca; background: #fff; }
+  .disq-item:last-child { border-bottom: none; }
+  .disq-icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: #fee2e2;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #dc2626;
+    margin-top: 1px;
+  }
+  .disq-item strong { font-size: 0.9rem; display: block; margin-bottom: 2px; }
+  .disq-item p { font-size: 0.8125rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; }
+  .faq-item { border-bottom: 1px solid var(--color-border); }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-item summary {
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color-text);
+  }
+  .faq-item summary::after { content: '+'; color: #1e40af; font-size: 1.25rem; font-weight: 300; flex-shrink: 0; }
+  .faq-item[open] summary::after { content: '−'; }
+  .faq-item p { padding: 0 1.25rem 1rem; color: var(--color-muted); font-size: 0.9rem; line-height: 1.7; margin: 0; }
+
+  /* LPR callout */
+  .lpr-callout {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-radius: 14px;
+    padding: 1.75rem 2rem;
+    color: #fff;
+    margin: 2rem 0;
+    display: flex;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+  .lpr-callout-icon { font-size: 2rem; flex-shrink: 0; margin-top: 2px; }
+  .lpr-callout h3 { font-size: 1.125rem; font-weight: 800; margin-bottom: 8px; }
+  .lpr-callout p { font-size: 0.9rem; opacity: 0.9; margin-bottom: 12px; line-height: 1.6; }
+  .lpr-callout a { color: #93c5fd; font-weight: 700; text-decoration: underline; }
+
+  /* Bottom CTA */
+  .bottom-cta {
+    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    border-radius: 16px;
+    padding: 2.5rem 2rem;
+    color: #fff;
+    text-align: center;
+    margin: 2.5rem 0 1rem;
+  }
+  .bottom-cta h2 { font-size: 1.5rem; font-weight: 800; margin-bottom: 10px; color: #fff; border: none; padding: 0; }
+  .bottom-cta p { font-size: 1rem; opacity: 0.9; max-width: 520px; margin: 0 auto 1.5rem; line-height: 1.6; }
+  .bottom-cta-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+  .btn-white {
+    display: inline-block;
+    background: #fff;
+    color: #1e40af;
+    font-weight: 800;
+    font-size: 0.9375rem;
+    padding: 13px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .btn-white:hover { background: #dbeafe; }
+  .btn-ghost-white {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    padding: 11px 28px;
+    border-radius: 10px;
+    border: 2px solid rgba(255,255,255,0.6);
+    text-decoration: none;
+    transition: all 0.15s;
+  }
+  .btn-ghost-white:hover { background: rgba(255,255,255,0.12); }
+
+  /* Related guides */
+  .related-guides { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+  .related-guides h2 { font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; }
+  .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  /* Sidebar */
+  .sidebar { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 80px; }
+  .sidebar-card { background: #fff; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; }
+  .sidebar-card-title {
+    padding: 12px 18px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-muted);
+    border-bottom: 1px solid var(--color-border);
+    background: var(--color-surface);
+  }
+  .sidebar-card.sidebar-blue { border-color: #93c5fd; }
+  .sidebar-card.sidebar-blue .sidebar-card-title { background: #dbeafe; color: #1e3a8a; border-color: #93c5fd; }
+
+  .sidebar-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 18px;
+    font-size: 0.875rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+    transition: background 0.1s;
+  }
+  .sidebar-link:last-child { border-bottom: none; }
+  .sidebar-link:hover { background: #eff6ff; color: #1e40af; }
+  .sidebar-link span { color: var(--color-muted); font-size: 0.75rem; }
+
+  /* Eligibility summary in sidebar */
+  .elig-summary { display: flex; flex-direction: column; }
+  .elig-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 9px 18px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 0.8375rem;
+  }
+  .elig-row:last-child { border-bottom: none; }
+  .elig-dot { width: 8px; height: 8px; border-radius: 50%; background: #1e40af; flex-shrink: 0; }
+  .elig-row span { color: var(--color-muted); line-height: 1.4; }
+
+  /* Prior petitions box */
+  .prior-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 1rem; }
+  .prior-item { border-radius: 10px; padding: 1rem; text-align: center; }
+  .prior-ok   { background: #f0fdf4; border: 1px solid #86efac; }
+  .prior-warn { background: #fffbeb; border: 1px solid #fde68a; }
+  .prior-bad  { background: #fef2f2; border: 1px solid #fecaca; }
+  .prior-num  { font-size: 1.75rem; font-weight: 800; display: block; line-height: 1; margin-bottom: 6px; }
+  .prior-ok   .prior-num { color: #16a34a; }
+  .prior-warn .prior-num { color: #d97706; }
+  .prior-bad  .prior-num { color: #dc2626; }
+  .prior-label { font-size: 0.75rem; color: var(--color-muted); line-height: 1.4; }
+
+  /* Responsive */
+  @media (max-width: 960px) {
+    .content-wrap { grid-template-columns: 1fr; }
+    .sidebar { position: static; }
+    .req-cards { grid-template-columns: 1fr; }
+    .income-sources-grid { grid-template-columns: 1fr; }
+    .prior-grid { grid-template-columns: 1fr; }
+    .mid-cta { flex-direction: column; gap: 1rem; }
+    .lpr-callout { flex-direction: column; gap: 0.75rem; }
+  }
+  @media (max-width: 640px) {
+    .eligibility-bar { max-width: 100%; }
+    .elig-item { min-width: 50%; border-bottom: 1px solid #bfdbfe; }
+    .related-grid { grid-template-columns: 1fr; }
+    .bottom-cta-btns { flex-direction: column; align-items: center; }
+    .split-table { display: block; overflow-x: auto; }
+  }
+</style>
+
+<!-- Breadcrumb -->
+<nav class="breadcrumb-bar" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="/">Home</a></li>
+      <li><SmartLink href="/k1-visa">K-1 Fiancé Visa</SmartLink></li>
+      <li aria-current="page">Sponsor Requirements</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="page-hero">
+  <div class="container">
+    <div class="hero-badge">Petitioner Eligibility Guide</div>
+    <h1>Are You Eligible to<br/><span>Sponsor a K-1 Visa?</span></h1>
+    <p class="hero-sub">The K-1 fiancé visa requires the U.S. petitioner to meet specific legal requirements before USCIS will even look at the relationship. Here's exactly what you must qualify for.</p>
+
+    <div class="eligibility-bar" role="list" aria-label="Eligibility quick-check">
+      <div class="elig-item" role="listitem">
+        <span class="elig-check">🇺🇸</span>
+        <span class="elig-label">U.S. Citizen<br/>Required</span>
+      </div>
+      <div class="elig-item" role="listitem">
+        <span class="elig-check">🤝</span>
+        <span class="elig-label">Met in Person<br/>Within 2 Years</span>
+      </div>
+      <div class="elig-item" role="listitem">
+        <span class="elig-check">⚖️</span>
+        <span class="elig-label">Both Legally<br/>Free to Marry</span>
+      </div>
+      <div class="elig-item" role="listitem">
+        <span class="elig-check">💍</span>
+        <span class="elig-label">Intent to Marry<br/>Within 90 Days</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main content -->
+<div class="container">
+  <div class="content-wrap">
+
+    <!-- MAIN COLUMN -->
+    <main class="main-col">
+
+      <!-- 4 Core Requirements -->
+      <section id="core-requirements" class="content-section">
+        <h2>The 4 Core Requirements for K-1 Petitioners</h2>
+        <p>Every I-129F petition is evaluated against these four statutory requirements under INA § 101(a)(15)(K). If any one of them is not met, USCIS will deny the petition — no exceptions.</p>
+
+        <div class="req-cards">
+          <div class="req-card req-card-citizenship">
+            <div class="req-card-icon">🇺🇸</div>
+            <div class="req-card-num">Requirement 1</div>
+            <h3>Must Be a U.S. Citizen</h3>
+            <p>Only U.S. citizens — whether born or naturalized — can petition for a K-1 visa. Lawful Permanent Residents (green card holders) are explicitly barred from filing a K-1 petition, regardless of how long they have held their green card. If you are an LPR, you must use the CR-1 or F-2A process instead.</p>
+          </div>
+          <div class="req-card req-card-met">
+            <div class="req-card-icon">🤝</div>
+            <div class="req-card-num">Requirement 2</div>
+            <h3>In-Person Meeting Within 2 Years</h3>
+            <p>You and your fiancé(e) must have physically met in person within the two years before filing the I-129F. Video calls, phone calls, or online communication do not count. Waivers exist for extreme hardship or documented religious/cultural customs that prohibit pre-marital meetings.</p>
+          </div>
+          <div class="req-card req-card-free">
+            <div class="req-card-icon">⚖️</div>
+            <div class="req-card-num">Requirement 3</div>
+            <h3>Both Legally Free to Marry</h3>
+            <p>Both you and your fiancé(e) must be legally free to marry under U.S. law. If either party has been married before, all prior marriages must be legally terminated. Provide divorce decrees for each ended marriage, or a death certificate if a prior spouse is deceased. Current marriages — even in separation — are an automatic bar.</p>
+          </div>
+          <div class="req-card req-card-intent">
+            <div class="req-card-icon">💍</div>
+            <div class="req-card-num">Requirement 4</div>
+            <h3>Bona Fide Intent to Marry Within 90 Days</h3>
+            <p>Both parties must have a genuine, mutual intent to marry within 90 days of the beneficiary's admission to the U.S. on the K-1 visa. This is not a soft requirement — if the marriage does not occur within 90 days, the beneficiary must depart. USCIS also reviews whether the intent is genuine (not fraudulent).</p>
+          </div>
+        </div>
+
+        <div class="alert-box alert-info" style="margin-top: 1.5rem;">
+          <div class="alert-icon">💡</div>
+          <div>
+            <strong>On the In-Person Meeting — What Does "Met" Mean?</strong>
+            <p>USCIS interprets "met" to mean physical presence in the same location, with awareness of each other's presence. A brief encounter at a group event counts; simply passing through the same city does not. The meeting must be real and verifiable — consular officers will ask for photos, chat logs, flight records, and hotel receipts documenting your trips.</p>
+          </div>
+        </div>
+
+        <div class="alert-box alert-warning" style="margin-top: 1rem;">
+          <div class="alert-icon">⚠️</div>
+          <div>
+            <strong>Cultural/Religious Hardship Waiver for the In-Person Requirement</strong>
+            <p>If meeting in person would violate strict and long-established customs of your fiancé(e)'s religion or culture, or if meeting would cause extreme hardship to the petitioner, you may request a waiver. Waivers are rare and require substantial documentation. Contact an immigration attorney before assuming you qualify.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- LPR Callout -->
+      <div class="lpr-callout">
+        <div class="lpr-callout-icon">🚫</div>
+        <div>
+          <h3>Green Card Holders Cannot Sponsor a K-1 Visa</h3>
+          <p>This is the most common misconception about the K-1 visa. If you are a lawful permanent resident — even if you have had your green card for 20 years — you cannot file a K-1 petition. The law explicitly restricts this visa to U.S. citizens only.</p>
+          <p>As an LPR, your options are the <SmartLink href="/cr1-visa">CR-1 spousal visa</SmartLink> (you must be married first) or the F-2A immigrant visa category. Both take longer than the K-1 path for citizens. If your priority is speed, naturalizing first — then filing K-1 — may be worth considering.</p>
+        </div>
+      </div>
+
+      <!-- Financial Requirements -->
+      <section id="financial-requirements" class="content-section">
+        <h2>Financial Requirements — the I-134 Affidavit of Support</h2>
+        <p>At the K-1 visa stage, the petitioner must demonstrate financial ability to support the beneficiary. This is done through <strong>Form I-134, Declaration of Financial Support</strong> — a different (and less strict) form than the I-864 used for spousal visas.</p>
+
+        <div class="alert-box alert-info">
+          <div class="alert-icon">📋</div>
+          <div>
+            <strong>I-134 vs. I-864 — Key Difference</strong>
+            <p>The I-134 for K-1 requires you to meet only <strong>100% of the federal poverty guideline</strong> — not the 125% required by the I-864 for CR-1/AOS. The I-134 is also not an enforceable contract (unlike the I-864). However, consular officers have broad discretion, and borderline finances will draw scrutiny. Once you adjust status after marriage, you will file an I-864 at the 125% threshold.</p>
+          </div>
+        </div>
+
+        <h3>2026 Federal Poverty Guideline — 100% (I-134 K-1 Threshold)</h3>
+        <p>Your household size includes you (the petitioner) plus all dependents and the beneficiary. Use the table below to find the minimum income level you should document.</p>
+
+        <div class="income-table-wrap">
+          <table class="income-table">
+            <thead>
+              <tr>
+                <th>Household Size</th>
+                <th class="col-highlight">100% Poverty Guideline<br/><span class="th-sub">I-134 K-1 minimum</span></th>
+                <th>125% Guideline<br/><span class="th-sub">I-864 AOS (later)</span></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>2 people</strong> <span class="hh-note">(you + fiancé)</span></td>
+                <td class="col-highlight"><strong>$20,440</strong></td>
+                <td>$25,550</td>
+              </tr>
+              <tr>
+                <td><strong>3 people</strong></td>
+                <td class="col-highlight"><strong>$25,820</strong></td>
+                <td>$32,275</td>
+              </tr>
+              <tr>
+                <td><strong>4 people</strong></td>
+                <td class="col-highlight"><strong>$31,200</strong></td>
+                <td>$39,000</td>
+              </tr>
+              <tr>
+                <td><strong>5 people</strong></td>
+                <td class="col-highlight"><strong>$36,580</strong></td>
+                <td>$45,725</td>
+              </tr>
+              <tr>
+                <td><strong>6 people</strong></td>
+                <td class="col-highlight"><strong>$41,960</strong></td>
+                <td>$52,450</td>
+              </tr>
+              <tr>
+                <td><strong>7 people</strong></td>
+                <td class="col-highlight"><strong>$47,340</strong></td>
+                <td>$59,175</td>
+              </tr>
+              <tr>
+                <td><strong>8 people</strong></td>
+                <td class="col-highlight"><strong>$52,720</strong></td>
+                <td>$65,900</td>
+              </tr>
+              <tr class="add-row">
+                <td colspan="3">Each additional person above 8: add $5,380 (100%) / $6,725 (125%) — Alaska and Hawaii have higher thresholds</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3>What Income Counts for the I-134?</h3>
+
+        <div class="income-sources-grid">
+          <div class="income-col income-yes">
+            <h3>Countable Income</h3>
+            <ul>
+              <li>Wages and salary (W-2 employment)</li>
+              <li>Self-employment income (net profit)</li>
+              <li>Social Security / SSDI benefits</li>
+              <li>Pension and retirement distributions</li>
+              <li>Rental income (net after expenses)</li>
+              <li>Dividend and investment income</li>
+              <li>Military allowances (BAH, BAS)</li>
+              <li>Liquid assets (bank, stocks, retirement)</li>
+            </ul>
+          </div>
+          <div class="income-col income-no">
+            <h3>Not Reliably Countable</h3>
+            <ul>
+              <li>Public benefits (SNAP, Medicaid, SSI)</li>
+              <li>Unemployment benefits</li>
+              <li>Income not reflected on tax returns</li>
+              <li>Anticipated future income (not yet started)</li>
+              <li>Personal property value (cars, jewelry)</li>
+              <li>Another household member's income (unless joint sponsor)</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 1.5rem;">What if My Income Is Too Low?</h3>
+        <p>If you do not meet the 100% poverty guideline, you have options:</p>
+        <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0.75rem 0 1rem;">
+          <li style="display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--color-muted); line-height: 1.6;">
+            <span style="color: #1e40af; font-weight: 700; flex-shrink: 0;">Joint Sponsor</span>
+            <span>A separate U.S. citizen or LPR who independently meets the income requirement can submit their own I-134 to supplement yours. They take on financial responsibility alongside you.</span>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--color-muted); line-height: 1.6;">
+            <span style="color: #1e40af; font-weight: 700; flex-shrink: 0;">Assets</span>
+            <span>Liquid assets — savings accounts, stocks, retirement funds — can supplement insufficient income. Document them with 12 months of statements. Consular officers apply discretion on how much weight to give assets at the K-1 stage.</span>
+          </li>
+          <li style="display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; color: var(--color-muted); line-height: 1.6;">
+            <span style="color: #1e40af; font-weight: 700; flex-shrink: 0;">Job Offer Letter</span>
+            <span>If you recently started a new higher-paying job, include your offer letter and first pay stubs even if your last tax return doesn't reflect your current income.</span>
+          </li>
+        </ul>
+
+        <h3>Documents to Submit with Your I-134</h3>
+        <div class="doc-checklist">
+          <div class="doc-cat">
+            <div class="doc-cat-header">
+              <div class="doc-cat-icon">📋</div>
+              <h3>Tax Documents</h3>
+            </div>
+            <div class="doc-items">
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>Most recent federal tax return (Form 1040) — full copy</strong>
+                  <p>Include all pages and schedules. Download from IRS.gov if you cannot locate your copy.</p>
+                </div>
+              </div>
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>W-2s and 1099s for the most recent tax year</strong>
+                  <p>All income statements showing wages, contract income, or investment income.</p>
+                </div>
+              </div>
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>Tax returns for the 2 prior years (recommended)</strong>
+                  <p>Demonstrates income stability over time. Consular officers may request these even if not initially required.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="doc-cat">
+            <div class="doc-cat-header">
+              <div class="doc-cat-icon">💼</div>
+              <h3>Employment Documents</h3>
+            </div>
+            <div class="doc-items">
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>Recent pay stubs — last 3 to 6 months</strong>
+                  <p>Shows your current income level, especially important if your tax return is outdated or low.</p>
+                </div>
+              </div>
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>Employer letter on company letterhead</strong>
+                  <p>Must include your name, job title, start date, employment status (full-time or part-time), and annual salary or hourly rate. Must be signed by HR or a manager.</p>
+                </div>
+              </div>
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>Self-employment: Schedule C from tax return + business bank statements</strong>
+                  <p>If self-employed, attach Schedule C showing net profit, 12 months of business bank statements, and any business license.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="doc-cat">
+            <div class="doc-cat-header">
+              <div class="doc-cat-icon">🏦</div>
+              <h3>Asset Documents (If Supplementing Income)</h3>
+            </div>
+            <div class="doc-items">
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>Bank statements — 12 months of all accounts</strong>
+                  <p>Complete statements, all pages. Avoid gaps. Large deposits should be explainable.</p>
+                </div>
+              </div>
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>Brokerage / investment account statements</strong>
+                  <p>Most recent statement showing current market value of all holdings.</p>
+                </div>
+              </div>
+              <div class="doc-item">
+                <div class="doc-check">✓</div>
+                <div>
+                  <strong>Retirement account statements (IRA, 401k)</strong>
+                  <p>Current balance statements. Note that early withdrawal penalties may reduce the effective value officers will consider.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mid-page CTA -->
+      <div class="mid-cta">
+        <div class="mid-cta-icon">💰</div>
+        <div>
+          <h3>Need Help With the Financial Requirements?</h3>
+          <p>The income threshold for K-1 is lower than CR-1, but borderline finances still derail petitions at the consular interview. Read our complete Affidavit of Support guide — or speak with an attorney if you're close to the line.</p>
+          <div class="mid-cta-btns">
+            <SmartLink href="/affidavit-of-support" class="btn-primary">Affidavit of Support Guide</SmartLink>
+            <a href="#" class="btn-outline" data-affiliate="attorney-consult">Get Attorney Consultation</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Criminal Background -->
+      <section id="criminal-bars" class="content-section">
+        <h2>Criminal Background — Bars to Sponsoring</h2>
+        <p>Certain criminal convictions permanently or temporarily bar a U.S. citizen from sponsoring a K-1 visa. These are not discretionary — they are statutory bars that USCIS must enforce.</p>
+
+        <div class="bar-cards">
+          <div class="bar-card">
+            <h3>Adam Walsh Act — Permanent Bar for Crimes Against Minors</h3>
+            <p>The Adam Walsh Child Protection and Safety Act permanently bars any U.S. citizen convicted of a "specified offense against a minor" from sponsoring a K-1 petition. Specified offenses include: sexual abuse of a minor, sexual exploitation of minors (including production/possession of child pornography), kidnapping of a minor, and other crimes against children.</p>
+            <p>This bar is <strong>absolute</strong>. There is no waiver. It applies even if the conviction was expunged, the sentence was suspended, the person completed probation, or the offense occurred decades ago. USCIS conducts background checks on all petitioners and will discover these convictions.</p>
+          </div>
+          <div class="bar-card">
+            <h3>IMBRA — International Marriage Broker Regulation Act</h3>
+            <p>If you met your fiancé(e) through an international marriage broker or matchmaking service, IMBRA requires additional disclosures. You must disclose: all previous K-1 petitions you have filed, all prior marriages, and any criminal convictions including domestic violence, sexual assault, or stalking.</p>
+            <p>IMBRA also limits multiple K-1 petitions. If you have had two or more K-1 visas approved through an international marriage broker, USCIS may deny a third without a waiver, even if the prior relationships were legitimate. You must also consent to sharing this information with your fiancé(e).</p>
+          </div>
+          <div class="bar-card" style="border-color: #d97706; background: #fffbeb;">
+            <h3 style="color: #92400e;">Prior Domestic Violence or Crimes Against Persons</h3>
+            <p>While not an automatic permanent bar like the Adam Walsh Act, USCIS discretionarily denies K-1 petitions from sponsors with convictions for domestic violence, stalking, harassment, or similar offenses against persons. Officers weigh the nature of the offense, time elapsed, rehabilitation, and risk to the beneficiary. Disclosure is required, and non-disclosure is considered fraud.</p>
+          </div>
+        </div>
+
+        <div class="alert-box alert-danger" style="margin-top: 1.25rem;">
+          <div class="alert-icon">🚨</div>
+          <div>
+            <strong>Do Not Omit Criminal History on the I-129F</strong>
+            <p>The I-129F asks about all criminal convictions, including arrests, expunged convictions, deferred adjudications, and convictions in foreign countries. Lying or omitting information on a federal immigration form is a federal crime (18 U.S.C. § 1001) and will result in a permanent bar. If you have any criminal history, consult an immigration attorney before filing.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- The I-129F -->
+      <section id="i-129f" class="content-section">
+        <h2>The I-129F Petition — What the Petitioner Files</h2>
+        <p>The <SmartLink href="/i-129f">I-129F, Petition for Alien Fiancé(e)</SmartLink>, is the form the U.S. citizen petitioner files with USCIS to initiate the K-1 visa process. This is the petitioner's primary filing responsibility.</p>
+
+        <div class="alert-box alert-info">
+          <div class="alert-icon">📌</div>
+          <div>
+            <strong>I-129F at a Glance (2026)</strong>
+            <p>Filing fee: <strong>$675</strong> | Filed by: U.S. citizen petitioner | Processing time: 10–16 months | Where: USCIS lockbox (address depends on state) | After approval: USCIS → NVC → U.S. Embassy → beneficiary's interview</p>
+          </div>
+        </div>
+
+        <h3>What the Petitioner Submits with the I-129F</h3>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-num">1</div>
+            <div>
+              <strong>Completed Form I-129F</strong>
+              <p>Available free at USCIS.gov. Must be signed and dated. File the most current edition — filing an outdated version will result in rejection.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">2</div>
+            <div>
+              <strong>$675 filing fee (check or money order)</strong>
+              <p>Payable to "U.S. Department of Homeland Security." Personal checks are accepted. No fee waivers are available for I-129F.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">3</div>
+            <div>
+              <strong>Proof of U.S. citizenship</strong>
+              <p>Copy of your U.S. passport (biographical page), U.S. birth certificate, naturalization certificate (N-560/N-565), or Certificate of Citizenship (N-560/N-561).</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">4</div>
+            <div>
+              <strong>Proof of legal status to marry (if previously married)</strong>
+              <p>Divorce decree(s) or death certificate(s) for all prior marriages — yours and your fiancé(e)'s. Must be official certified copies. Foreign documents need certified English translations.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">5</div>
+            <div>
+              <strong>Evidence of in-person meeting within the last 2 years</strong>
+              <p>Photos together (dated), flight itineraries and boarding passes, hotel records, travel passport stamps, or dated photographs from your meeting(s). The more, the better.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">6</div>
+            <div>
+              <strong>Evidence of bona fide relationship</strong>
+              <p>Communication logs (messaging apps, emails), call records, video chat screenshots, evidence of ongoing contact, and any prior visits beyond the initial meeting.</p>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="step-num">7</div>
+            <div>
+              <strong>Two passport-style photos of each party (recommended)</strong>
+              <p>Some USCIS offices request photos; including them avoids an RFE. Must meet U.S. passport photo specifications.</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 1.5rem;">After I-129F Approval: What Happens Next</h3>
+        <p>After USCIS approves the I-129F (typically 10–16 months), the petition is forwarded to the National Visa Center (NVC), which routes it to the U.S. Embassy or Consulate in your fiancé(e)'s country. Your fiancé(e) then completes the consular process — medical exam, DS-160 application, and the K-1 interview. If approved, they receive the K-1 visa and have up to 6 months to use it to enter the U.S. Once in the U.S., you must marry within 90 days.</p>
+
+        <div class="alert-box alert-warning">
+          <div class="alert-icon">⏱️</div>
+          <div>
+            <strong>Processing Time: 10–16 Months</strong>
+            <p>As of 2026, I-129F processing at USCIS takes approximately 10 to 16 months, not counting the embassy stage. Check the <SmartLink href="/k1-visa-processing-time">K-1 processing time guide</SmartLink> for current data and how to monitor your case.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Prior Marriages / Multiple K-1 Petitions -->
+      <section id="prior-petitions" class="content-section">
+        <h2>Prior Marriages and Multiple K-1 Petitions</h2>
+        <p>USCIS tracks every K-1 petition you have ever filed and scrutinizes petitioners who have filed multiple times. This is not a disqualifier in itself, but it significantly raises the bar for evidence of a genuine relationship.</p>
+
+        <div class="prior-grid">
+          <div class="prior-item prior-ok">
+            <span class="prior-num">1</span>
+            <span class="prior-label">First K-1 petition — standard scrutiny, normal processing</span>
+          </div>
+          <div class="prior-item prior-warn">
+            <span class="prior-num">2</span>
+            <span class="prior-label">Second K-1 petition — heightened scrutiny, expect detailed relationship evidence requests</span>
+          </div>
+          <div class="prior-item prior-bad">
+            <span class="prior-num">3+</span>
+            <span class="prior-label">Third+ petition — very high scrutiny; IMBRA waiver may be required if met via marriage broker</span>
+          </div>
+        </div>
+
+        <div class="alert-box alert-warning" style="margin-top: 1.25rem;">
+          <div class="alert-icon">📝</div>
+          <div>
+            <strong>Divorce Decrees Are Mandatory for Every Prior Marriage</strong>
+            <p>The I-129F requires you to disclose all prior marriages and submit proof that each one ended legally. This applies to both you and your fiancé(e). Missing divorce decrees are one of the most common reasons for Requests for Evidence (RFEs) on I-129F petitions. Gather certified copies of all decrees before filing — foreign documents need certified English translations.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Age Requirements -->
+      <section id="age-requirements" class="content-section">
+        <h2>Age Requirements</h2>
+        <p>Both the petitioner and the beneficiary must be at least 18 years old at the time of filing the I-129F petition, or they must satisfy any applicable state marriage age requirement in the state where they intend to marry. There is no upper age limit for either party.</p>
+
+        <div class="alert-box alert-info">
+          <div class="alert-icon">📋</div>
+          <div>
+            <strong>State Law Controls Minimum Marriage Age</strong>
+            <p>U.S. state laws vary on minimum marriage age, and some states have eliminated provisions for underage marriage entirely. USCIS requires that the marriage be legal under the laws of the state where it will occur. Research your state's requirements before the beneficiary enters the U.S.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Can LPR sponsor K-1 -->
+      <section id="lpr-cannot-sponsor" class="content-section">
+        <h2>Can a Green Card Holder Sponsor a K-1 Visa? No.</h2>
+        <p>This is the single most common question we receive about K-1 eligibility, and the answer is unambiguous: <strong>no lawful permanent resident can file a K-1 petition, under any circumstances.</strong></p>
+
+        <div class="split-table-wrap" style="margin-top: 1.25rem;">
+          <table class="split-table">
+            <thead>
+              <tr>
+                <th>Petitioner Status</th>
+                <th>K-1 Eligible?</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>U.S. citizen (born in U.S.)</strong></td>
+                <td>Yes — can file I-129F</td>
+              </tr>
+              <tr>
+                <td><strong>U.S. citizen (naturalized)</strong></td>
+                <td>Yes — can file I-129F</td>
+              </tr>
+              <tr>
+                <td><strong>U.S. citizen by acquisition (born abroad to citizen parent)</strong></td>
+                <td>Yes — can file I-129F</td>
+              </tr>
+              <tr>
+                <td><strong>Lawful Permanent Resident (LPR / green card holder)</strong></td>
+                <td>No — must use CR-1 / F-2A instead</td>
+              </tr>
+              <tr>
+                <td><strong>LPR with 30+ years of residency</strong></td>
+                <td>No — length of LPR status does not matter</td>
+              </tr>
+              <tr>
+                <td><strong>Visa holder (H-1B, F-1, L-1, etc.)</strong></td>
+                <td>No — must be a citizen</td>
+              </tr>
+              <tr>
+                <td><strong>Undocumented person</strong></td>
+                <td>No — cannot file any immigrant petition</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top: 1.25rem;">If you are an LPR and want to bring your foreign partner to the U.S., your primary options are the <SmartLink href="/cr1-visa">CR-1 spousal visa</SmartLink> (marry first, then file) or the F-2A preference category. Both paths are typically slower than the K-1 path for U.S. citizens. If your partner can wait, you may consider naturalizing — which makes you eligible to file K-1 and may actually produce a faster overall timeline depending on your circumstances.</p>
+      </section>
+
+      <!-- Petitioner vs Beneficiary -->
+      <section id="who-does-what" class="content-section">
+        <h2>Petitioner vs. Beneficiary — Who Does What</h2>
+        <p>The K-1 process splits responsibilities clearly between the U.S. petitioner and the foreign beneficiary. Understanding who handles what prevents confusion and missed deadlines.</p>
+
+        <div class="split-table-wrap">
+          <table class="split-table">
+            <thead>
+              <tr>
+                <th>U.S. Petitioner's Responsibilities</th>
+                <th>Foreign Beneficiary's Responsibilities</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>File Form I-129F with USCIS and pay $675 fee</td>
+                <td>Complete DS-160 nonimmigrant visa application online</td>
+              </tr>
+              <tr>
+                <td>Gather and submit all petitioner-side evidence</td>
+                <td>Schedule and attend K-1 visa interview at U.S. Embassy</td>
+              </tr>
+              <tr>
+                <td>Submit Form I-134 (financial support declaration)</td>
+                <td>Attend K-1 medical examination by approved physician</td>
+              </tr>
+              <tr>
+                <td>Provide proof of U.S. citizenship</td>
+                <td>Gather and bring all beneficiary documents to interview</td>
+              </tr>
+              <tr>
+                <td>Provide proof of in-person meeting</td>
+                <td>Obtain police clearances from every country of residence</td>
+              </tr>
+              <tr>
+                <td>Provide divorce decrees for all prior marriages (petitioner's)</td>
+                <td>Provide divorce decrees for all prior marriages (beneficiary's)</td>
+              </tr>
+              <tr>
+                <td>Track USCIS case status (IOE/EAC receipt number)</td>
+                <td>Pay visa issuance fee at embassy (if applicable)</td>
+              </tr>
+              <tr>
+                <td>Marry the beneficiary within 90 days of U.S. entry</td>
+                <td>Enter U.S. on K-1 visa and adjust status after marriage</td>
+              </tr>
+              <tr>
+                <td>File I-485 (Adjustment of Status) jointly after marriage</td>
+                <td>Attend AOS interview and biometrics</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Common Disqualifiers -->
+      <section id="disqualifiers" class="content-section">
+        <h2>Common Disqualifiers — 8 Reasons a K-1 Petition Gets Denied</h2>
+        <p>Being aware of these red flags before you file can save you months of delay or a permanent bar.</p>
+
+        <div class="disq-list">
+          <div class="disq-item">
+            <div class="disq-icon">1</div>
+            <div>
+              <strong>Petitioner is not a U.S. citizen</strong>
+              <p>Green card holders, visa holders, and undocumented persons cannot file. There is no workaround for this requirement.</p>
+            </div>
+          </div>
+          <div class="disq-item">
+            <div class="disq-icon">2</div>
+            <div>
+              <strong>Never met in person (or meeting was more than 2 years ago)</strong>
+              <p>Online-only relationships do not qualify. If more than 2 years have passed since your last in-person meeting, you may need to plan another visit before filing, or apply for a waiver.</p>
+            </div>
+          </div>
+          <div class="disq-item">
+            <div class="disq-icon">3</div>
+            <div>
+              <strong>Either party is still legally married</strong>
+              <p>A pending divorce, separated (but not divorced) spouse, or any undissolved marriage from any country makes both parties ineligible until the prior marriage is legally terminated.</p>
+            </div>
+          </div>
+          <div class="disq-item">
+            <div class="disq-icon">4</div>
+            <div>
+              <strong>Adam Walsh Act conviction on record</strong>
+              <p>Any conviction for a specified offense against a minor is a permanent, non-waivable bar to K-1 sponsorship. USCIS background checks will surface this.</p>
+            </div>
+          </div>
+          <div class="disq-item">
+            <div class="disq-icon">5</div>
+            <div>
+              <strong>Income below the poverty threshold with no joint sponsor or assets</strong>
+              <p>If the consular officer determines you cannot financially support the beneficiary and you have no joint sponsor or documented assets, the visa may be denied under INA § 212(a)(4) as a public charge.</p>
+            </div>
+          </div>
+          <div class="disq-item">
+            <div class="disq-icon">6</div>
+            <div>
+              <strong>Missing divorce decrees for prior marriages</strong>
+              <p>One of the top RFE triggers. Every prior marriage for both parties must be documented with a certified divorce decree or death certificate. Foreign documents must be translated.</p>
+            </div>
+          </div>
+          <div class="disq-item">
+            <div class="disq-icon">7</div>
+            <div>
+              <strong>Insufficient evidence of a genuine relationship</strong>
+              <p>USCIS officers adjudicating the I-129F look for evidence of ongoing, authentic contact. Sparse communication records, inability to describe the fiancé's background, or evidence suggesting the relationship is primarily for immigration benefit will result in denial.</p>
+            </div>
+          </div>
+          <div class="disq-item">
+            <div class="disq-icon">8</div>
+            <div>
+              <strong>Misrepresentation or fraud on the petition</strong>
+              <p>Any false statement — even a minor omission — on the I-129F or at any point in the K-1 process can result in permanent inadmissibility for the beneficiary and federal charges for the petitioner. When in doubt, disclose and consult an attorney.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="content-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Can a green card holder sponsor a K-1 visa?</summary>
+            <p>No. Only U.S. citizens can petition for a K-1 fiancé visa. Lawful permanent residents (green card holders) cannot file a K-1 petition regardless of how long they have held their green card. LPRs who want to bring a foreign spouse to the U.S. must use the CR-1 spousal visa or F-2A immigrant visa category. If speed is a priority, an LPR may consider naturalizing first — then filing K-1 as a citizen — as this can sometimes produce a faster overall outcome.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What if I don't meet the income requirement for the K-1 visa?</summary>
+            <p>If your income falls below 100% of the federal poverty guideline for your household size, you have several options: (1) Use a joint sponsor — a U.S. citizen or LPR who independently meets the income requirement and files a separate I-134 on your behalf; (2) Supplement with assets — liquid assets such as bank savings, stocks, or retirement funds can offset insufficient income; (3) Include a recent pay raise not yet on your taxes — use recent pay stubs and an employer letter to document your current income. The consular officer makes the final determination on financial ability at the K-1 interview stage.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is the 2-year in-person meeting rule for the K-1 visa?</summary>
+            <p>U.S. law requires that the petitioner and beneficiary have physically met each other in person within the two years immediately preceding the filing of the I-129F petition. A video call, phone call, or online meeting does not satisfy this requirement — physical presence in the same location is mandatory. Waivers are available only on the grounds of extreme hardship to the petitioner or if meeting in person would violate strict and long-established customs of the beneficiary's culture or religion. Waivers are rarely granted and require substantial documentation.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How many K-1 petitions can I file in my lifetime?</summary>
+            <p>There is no absolute numerical cap, but USCIS tracks all prior K-1 petitions you have filed. If you have had two or more prior K-1 petitions approved, USCIS will scrutinize your new petition heavily and may request extensive evidence that your current relationship is genuine. Additionally, under IMBRA, if you met your fiancé(e) through an international marriage broker, you are limited to two K-1 approvals in your lifetime without a waiver. A history of multiple K-1 petitions — particularly to beneficiaries from the same country — is a red flag that USCIS takes seriously.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What is the Adam Walsh Act and how does it affect K-1 sponsorship?</summary>
+            <p>The Adam Walsh Child Protection and Safety Act permanently bars anyone convicted of a "specified offense against a minor" from petitioning for a K-1 visa. Specified offenses include sexual abuse, sexual exploitation of minors, kidnapping of a minor, and other crimes against children. This bar is absolute — there is no waiver available in the K-1 context. It applies even if the conviction was expunged, the sentence was suspended, or significant time has passed. USCIS conducts background checks on all petitioners and will discover these convictions through FBI records.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need a lawyer to file the I-129F?</summary>
+            <p>You are not legally required to hire an attorney to file Form I-129F. Many couples successfully self-file the K-1 petition with straightforward circumstances. However, an immigration attorney is strongly recommended if: you have any criminal history, you have filed prior K-1 petitions, your income is borderline, there are prior immigration violations by either party, or your situation involves a cultural/religious hardship waiver for the in-person meeting requirement. Attorney fees typically range from $1,500 to $3,500 for I-129F representation. The USCIS filing fee is $675 regardless of whether you use an attorney.</p>
+          </details>
+        </div>
+      </section>
+
+      <!-- Related guides -->
+      <section class="related-guides">
+        <h2>Related Guides</h2>
+        <div class="related-grid">
+          <SmartLink href="/k1-visa" class="related-card">
+            <div class="related-cat">Complete Guide</div>
+            <div class="related-title">K-1 Fiancé Visa — Full Process</div>
+          </SmartLink>
+          <SmartLink href="/i-129f" class="related-card">
+            <div class="related-cat">USCIS Form</div>
+            <div class="related-title">Form I-129F — Petition Guide</div>
+          </SmartLink>
+          <SmartLink href="/affidavit-of-support" class="related-card">
+            <div class="related-cat">Financial</div>
+            <div class="related-title">Affidavit of Support — Complete Guide</div>
+          </SmartLink>
+          <SmartLink href="/k1-visa-denial-reasons" class="related-card">
+            <div class="related-cat">Denial</div>
+            <div class="related-title">K-1 Denial Reasons and Fixes</div>
+          </SmartLink>
+        </div>
+      </section>
+
+      <!-- Bottom CTA -->
+      <div class="bottom-cta">
+        <h2>Ready to File Your I-129F?</h2>
+        <p>Whether you self-file or work with an attorney, having the right guidance makes the difference between a smooth approval and a costly RFE. Choose your path below.</p>
+        <div class="bottom-cta-btns">
+          <a href="#" class="btn-white" data-affiliate="attorney-consult">Get Attorney Consultation</a>
+          <a href="#" class="btn-ghost-white" data-affiliate="self-filing">Self-Filing Resources</a>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- Eligibility Quick Check -->
+      <div class="sidebar-card sidebar-blue">
+        <div class="sidebar-card-title">Eligibility Quick Check</div>
+        <div class="elig-summary">
+          <div class="elig-row">
+            <div class="elig-dot"></div>
+            <span>U.S. citizen (not LPR)</span>
+          </div>
+          <div class="elig-row">
+            <div class="elig-dot"></div>
+            <span>Met fiancé in person within 2 years</span>
+          </div>
+          <div class="elig-row">
+            <div class="elig-dot"></div>
+            <span>Both legally free to marry</span>
+          </div>
+          <div class="elig-row">
+            <div class="elig-dot"></div>
+            <span>Intent to marry within 90 days</span>
+          </div>
+          <div class="elig-row">
+            <div class="elig-dot"></div>
+            <span>Income meets 100% poverty line</span>
+          </div>
+          <div class="elig-row">
+            <div class="elig-dot"></div>
+            <span>No Adam Walsh Act convictions</span>
+          </div>
+          <div class="elig-row" style="border-bottom: none;">
+            <div class="elig-dot"></div>
+            <span>All prior marriages documented</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TOC -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">On This Page</div>
+        <nav>
+          <a href="#core-requirements" class="sidebar-link">4 Core Requirements <span>↓</span></a>
+          <a href="#financial-requirements" class="sidebar-link">Income & I-134 <span>↓</span></a>
+          <a href="#criminal-bars" class="sidebar-link">Criminal Background Bars <span>↓</span></a>
+          <a href="#i-129f" class="sidebar-link">The I-129F Petition <span>↓</span></a>
+          <a href="#prior-petitions" class="sidebar-link">Prior Petitions & Marriages <span>↓</span></a>
+          <a href="#age-requirements" class="sidebar-link">Age Requirements <span>↓</span></a>
+          <a href="#lpr-cannot-sponsor" class="sidebar-link">Can LPR Sponsor K-1? <span>↓</span></a>
+          <a href="#who-does-what" class="sidebar-link">Petitioner vs. Beneficiary <span>↓</span></a>
+          <a href="#disqualifiers" class="sidebar-link">Common Disqualifiers <span>↓</span></a>
+          <a href="#faq" class="sidebar-link">FAQ <span>↓</span></a>
+        </nav>
+      </div>
+
+      <!-- Related Guides -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-title">Related Guides</div>
+        <nav>
+          <SmartLink href="/k1-visa" class="sidebar-link">K-1 Fiancé Visa Guide <span>→</span></SmartLink>
+          <SmartLink href="/k1-visa-checklist" class="sidebar-link">K-1 Visa Checklist <span>→</span></SmartLink>
+          <SmartLink href="/affidavit-of-support-income-requirements" class="sidebar-link">Income Requirements <span>→</span></SmartLink>
+          <SmartLink href="/k1-visa-processing-time" class="sidebar-link">K-1 Processing Time <span>→</span></SmartLink>
+          <SmartLink href="/k1-visa-interview-questions" class="sidebar-link">K-1 Interview Questions <span>→</span></SmartLink>
+          <SmartLink href="/k1-visa-denial-reasons" class="sidebar-link">K-1 Denial Reasons <span>→</span></SmartLink>
+          <SmartLink href="/cr1-visa" class="sidebar-link">CR-1 Spousal Visa (LPRs) <span>→</span></SmartLink>
+          <SmartLink href="/adjustment-of-status" class="sidebar-link">Adjustment of Status <span>→</span></SmartLink>
+          <SmartLink href="/bona-fide-marriage" class="sidebar-link">Bona Fide Marriage Evidence <span>→</span></SmartLink>
+        </nav>
+      </div>
+
+    </aside>
+
+  </div>
+</div>
+
+</Base>

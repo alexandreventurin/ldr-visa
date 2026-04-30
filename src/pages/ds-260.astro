@@ -1,0 +1,234 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Form DS-260: Immigrant Visa Application — Complete Guide 2026",
+    "description": "How to complete Form DS-260 online at the NVC stage — what it asks, common mistakes, and how to submit through CEAC.",
+    "url": "https://ldrvisa.org/ds-260",
+    "dateModified": "2026-04-30", "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/ds-260" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",      "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "CR-1 Visa", "item": "https://ldrvisa.org/cr1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "Form DS-260","item": "https://ldrvisa.org/ds-260" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Form DS-260?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Form DS-260 is the Online Immigrant Visa Application completed by the foreign beneficiary during the NVC stage of the CR-1 spousal visa process. It collects personal, biographical, travel, and security history information and is submitted electronically through the CEAC portal at ceac.state.gov." }
+      },
+      {
+        "@type": "Question",
+        "name": "When do I complete Form DS-260?",
+        "acceptedAnswer": { "@type": "Answer", "text": "You complete Form DS-260 after USCIS approves your I-130 petition and NVC opens your case. NVC will send instructions to pay the immigrant visa fee ($325), after which you can access and submit DS-260 through the CEAC portal. You cannot submit DS-260 before the fee is paid." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does DS-260 take to fill out?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Form DS-260 typically takes 1–3 hours to complete, depending on the complexity of your travel and work history. It asks about the past 5–10 years of employment, addresses, and travel. The form auto-saves, so you can complete it in multiple sessions." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I edit DS-260 after submitting?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Once submitted, DS-260 is locked and cannot be edited through the CEAC portal. If you need to correct a significant error, you must contact NVC directly. Minor discrepancies (such as an address or date) can be explained to the consular officer at your interview — bring documentation to support any corrections." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after I submit DS-260?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After submitting DS-260 and all supporting civil documents, NVC reviews your complete package. If everything is in order, NVC marks your case 'Documentarily Complete' and schedules your immigrant visa interview at the U.S. embassy or consulate. This review typically takes 4–12 weeks." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is DS-260 the same as DS-160?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. DS-160 is for nonimmigrant visas (tourist, student, B-1/B-2). DS-260 is for immigrant visas (CR-1, IR-1). They are different forms for different visa categories. If you are applying for a CR-1 spousal visa, you fill out DS-260, not DS-160." }
+      }
+    ]
+  }
+]);
+---
+
+<ArticleLayout
+  title="Form DS-260: Immigrant Visa Application — Complete Guide 2026"
+  description="How to complete Form DS-260 at the NVC stage — what sections it covers, common mistakes to avoid, and how to submit through the CEAC portal."
+  schema={schema}
+  heroTitle="Form DS-260: The Immigrant Visa Application Explained"
+  heroParagraph="DS-260 is the online form the foreign spouse completes at the NVC stage — before the embassy interview. Here's every section, common mistakes, and what happens after you submit."
+  theme="#0891b2"
+  themeLight="#cffafe"
+  themeDark="#164e63"
+  summaryTitle="DS-260 at a Glance"
+  summaryRows={[
+    { label: 'Who completes it',  value: 'Foreign beneficiary' },
+    { label: 'Where',             value: 'ceac.state.gov' },
+    { label: 'When',              value: 'After NVC fee payment' },
+    { label: 'Time to complete',  value: '1–3 hours' },
+    { label: 'Can edit after?',   value: 'No — locked on submit' },
+    { label: 'Fee',               value: 'Included in $325 IV fee' },
+  ]}
+  tocLinks={[
+    { id: 'what-is',    label: 'What Is DS-260?' },
+    { id: 'when',       label: 'When to Complete It' },
+    { id: 'sections',   label: 'What DS-260 Asks' },
+    { id: 'mistakes',   label: 'Common Mistakes' },
+    { id: 'submit',     label: 'How to Submit' },
+    { id: 'after',      label: 'After You Submit' },
+    { id: 'faq',        label: 'FAQ' },
+  ]}
+  relatedLinks={[
+    { href: '/cr1-visa',              label: 'CR-1 Spousal Visa Overview' },
+    { href: '/nvc-processing-time',   label: 'NVC Processing Time' },
+    { href: '/cr1-visa-checklist',    label: 'CR-1 Document Checklist' },
+    { href: '/affidavit-of-support',  label: 'Affidavit of Support (I-864)' },
+    { href: '/i-130',                 label: 'Form I-130 Guide' },
+    { href: '/marriage-green-card-interview-questions', label: 'Interview Questions' },
+  ]}
+>
+
+<h2 id="what-is">What Is Form DS-260?</h2>
+<p>Form DS-260 is the <strong>Online Immigrant Visa Application</strong> completed by the foreign beneficiary (the spouse seeking the visa) during the NVC stage of the CR-1 spousal visa process. It is submitted electronically through the Consular Electronic Application Center (CEAC) at <strong>ceac.state.gov</strong>.</p>
+<p>DS-260 is the State Department's primary tool for collecting biographical, employment, travel, and security history from immigrant visa applicants before their embassy interview. Consular officers review it as part of the interview preparation.</p>
+
+<div class="art-info">
+  <strong>DS-260 vs. DS-160</strong>
+  <p>DS-160 is for nonimmigrant visas (tourist, student, B-2). DS-260 is for immigrant visas only (CR-1, IR-1, family preference). If you're on the CR-1 path, you fill out DS-260 — never DS-160.</p>
+</div>
+
+<h2 id="when">When Do You Complete DS-260?</h2>
+<p>DS-260 becomes available after:</p>
+<ol>
+  <li>USCIS approves your I-130 and transfers the case to NVC</li>
+  <li>NVC generates the immigrant visa fee invoice ($325)</li>
+  <li>You pay the fee — the CEAC portal unlocks within 1–3 business days</li>
+</ol>
+<p>You can then log into CEAC with your NVC case number and invoice ID to access and complete DS-260. The form auto-saves, so you can complete it across multiple sessions before submitting.</p>
+
+<h2 id="sections">What DS-260 Asks — Section by Section</h2>
+
+<table class="art-table">
+  <thead><tr><th>Section</th><th>What It Covers</th><th>Years of History</th></tr></thead>
+  <tbody>
+    <tr><td>Personal information</td><td>Full name, date of birth, place of birth, nationality, marital status</td><td>Current</td></tr>
+    <tr><td>Address history</td><td>All addresses lived at</td><td>5 years</td></tr>
+    <tr><td>Employment history</td><td>Jobs, employers, positions, locations</td><td>5 years</td></tr>
+    <tr><td>Education</td><td>Schools attended, degrees, fields of study</td><td>All</td></tr>
+    <tr><td>Travel history</td><td>Countries visited, dates of travel</td><td>5 years</td></tr>
+    <tr><td>Family information</td><td>Parents, siblings, spouse, children — names, DOB, nationalities</td><td>Current</td></tr>
+    <tr><td>U.S. immigration history</td><td>Prior visas, entries, overstays, removals, prior petitions</td><td>All</td></tr>
+    <tr><td>Security / eligibility questions</td><td>Criminal history, terrorism, human trafficking, public charge, health</td><td>All</td></tr>
+    <tr><td>Contact information</td><td>Email, phone, emergency contact</td><td>Current</td></tr>
+  </tbody>
+</table>
+
+<div class="art-warn">
+  <strong>Be thorough on the security questions</strong>
+  <p>DS-260's eligibility questions ask about arrests, criminal charges, terrorist ties, and other sensitive topics. Answer truthfully — even if you were arrested but not convicted, or charges were dropped. Misrepresentation is a separate, more serious ground of inadmissibility than most underlying issues.</p>
+</div>
+
+<h2 id="mistakes">5 Common DS-260 Mistakes</h2>
+<div class="art-tips">
+  <div class="art-tip">
+    <div class="art-tip-num">Mistake 01</div>
+    <div class="art-tip-title">Leaving fields blank or writing "N/A" everywhere</div>
+    <div class="art-tip-desc">NVC may flag incomplete sections and send a checklist (RFE), adding weeks to your timeline. If a question genuinely doesn't apply, use the form's built-in "Does not apply" option rather than leaving it empty.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Mistake 02</div>
+    <div class="art-tip-title">Inconsistent dates across documents</div>
+    <div class="art-tip-desc">If your marriage certificate says April 5 but you enter April 15 in DS-260, the discrepancy flags at NVC review or at the interview. Double-check every date against your source documents.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Mistake 03</div>
+    <div class="art-tip-title">Not listing all prior addresses and jobs</div>
+    <div class="art-tip-desc">DS-260 asks for 5 years of address and employment history. Gaps in the timeline raise questions. Include every address and job — even short-term ones or periods of unemployment (list as "unemployed").</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Mistake 04</div>
+    <div class="art-tip-title">Submitting before double-checking</div>
+    <div class="art-tip-desc">DS-260 locks permanently on submission. Once submitted, you cannot edit it through CEAC. Review every section carefully — especially names, dates, and the eligibility questions — before hitting submit.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Mistake 05</div>
+    <div class="art-tip-title">Using a name that doesn't match your passport exactly</div>
+    <div class="art-tip-desc">Enter your full legal name exactly as it appears in your passport — including middle names, suffixes, and accent-free romanization. Name mismatches cause delays and sometimes require corrected documents.</div>
+  </div>
+</div>
+
+<h2 id="submit">How to Submit DS-260</h2>
+<ol>
+  <li>Log into CEAC at <strong>ceac.state.gov</strong> with your NVC case number and invoice ID</li>
+  <li>Select "Complete Visa Application" and choose DS-260</li>
+  <li>Complete all sections — the form auto-saves as you go</li>
+  <li>Review every page before submitting — use the "Review" screen</li>
+  <li>Click "Sign and Submit" — the form locks immediately</li>
+  <li>Print or save the confirmation page with your application ID</li>
+</ol>
+<p>After submission, DS-260 status in CEAC changes to "Submitted." NVC will review it as part of your overall document package once you've also uploaded all required civil documents and the petitioner's I-864.</p>
+
+<div class="art-cta-mid">
+  <h3>Not sure if your documents are complete?</h3>
+  <p>The CR-1 checklist covers every document NVC needs alongside DS-260 — civil records, I-864, police certificates, and translations.</p>
+  <a href="/cr1-visa-checklist" class="art-btn">View the CR-1 Document Checklist →</a>
+  <a href="#" class="art-btn-outline" data-affiliate="attorney-consult">Get Attorney Review</a>
+</div>
+
+<h2 id="after">After You Submit DS-260</h2>
+<p>Once DS-260 is submitted alongside all other required documents, NVC reviews your complete package. The typical sequence:</p>
+<ul>
+  <li><strong>Documents Submitted</strong> → NVC review begins (4–12 weeks)</li>
+  <li><strong>Case Completed</strong> → NVC transfers the case to the embassy for interview scheduling</li>
+  <li><strong>Checklist received</strong> → NVC found a problem; you must correct and resubmit (adds 4–8 weeks)</li>
+</ul>
+<p>At your embassy interview, the consular officer will have your DS-260 on file. They may ask you to confirm or clarify answers you provided. If you made a minor error, bring supporting documentation and explain it calmly — discrepancies don't automatically disqualify you.</p>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="art-faq">
+  <div class="art-faq-item">
+    <p class="art-faq-q">What is Form DS-260?</p>
+    <div class="art-faq-a"><p>The Online Immigrant Visa Application completed by the foreign spouse during the NVC stage of the CR-1 process. It's submitted electronically through CEAC and covers personal history, employment, travel, family, and security eligibility.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">When do I complete Form DS-260?</p>
+    <div class="art-faq-a"><p>After USCIS approves the I-130 and NVC generates the fee invoice. Pay the $325 immigrant visa fee first — CEAC unlocks the DS-260 within 1–3 business days of confirmed payment.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does DS-260 take to fill out?</p>
+    <div class="art-faq-a"><p>Typically 1–3 hours depending on how much address, employment, and travel history you have to enter. The form auto-saves so you can complete it across multiple sessions.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I edit DS-260 after submitting?</p>
+    <div class="art-faq-a"><p>No — the form locks permanently on submission. Contact NVC directly if you need to correct a significant error. Minor discrepancies can be explained to the consular officer at your interview.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What happens after I submit DS-260?</p>
+    <div class="art-faq-a"><p>NVC reviews your full document package (DS-260 + civil documents + I-864). If complete, they mark the case "Documentarily Complete" and schedule the embassy interview — typically 4–12 weeks after submission.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Is DS-260 the same as DS-160?</p>
+    <div class="art-faq-a"><p>No. DS-160 is for nonimmigrant visas (tourist, B-2, student). DS-260 is for immigrant visas (CR-1, IR-1). CR-1 applicants complete DS-260 only.</p></div>
+  </div>
+</div>
+
+<div class="art-cta-dark">
+  <h2>Next step: the embassy interview</h2>
+  <p>After NVC completes your case, the embassy schedules your immigrant visa interview. Know exactly what to expect.</p>
+  <a href="/marriage-green-card-interview-questions" class="art-btn-white">Interview Questions Guide →</a>
+  <a href="#" class="art-btn-ghost" data-affiliate="attorney-consult">Get Attorney Help</a>
+</div>
+
+</ArticleLayout>

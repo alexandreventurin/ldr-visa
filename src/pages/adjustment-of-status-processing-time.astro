@@ -1,0 +1,244 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Adjustment of Status Processing Time 2026: How Long Does AOS Take?",
+    "description": "Current Adjustment of Status processing times for 2026 — how long I-485, EAD, and Advance Parole take, what causes delays, and how to check your case status.",
+    "url": "https://ldrvisa.org/adjustment-of-status-processing-time",
+    "dateModified": "2026-04-30", "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/adjustment-of-status-processing-time" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Adjustment of Status", "item": "https://ldrvisa.org/adjustment-of-status" },
+      { "@type": "ListItem", "position": 3, "name": "Processing Time", "item": "https://ldrvisa.org/adjustment-of-status-processing-time" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does Adjustment of Status take in 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Adjustment of Status (I-485) for spouses of U.S. citizens currently takes 12–24 months from filing to green card approval in 2026. Processing times vary significantly by USCIS field office — some offices process in 12–15 months, while others take 20–24 months. Check egov.uscis.gov/processing-times for current times at your specific field office." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to get an EAD work permit during AOS?",
+        "acceptedAnswer": { "@type": "Answer", "text": "USCIS is currently processing Employment Authorization Documents (EAD/Form I-765) in approximately 3–6 months when filed concurrently with I-485. As of 2022, USCIS also issues automatic 180-day EAD extensions when you file a renewal, so you won't lose work authorization while waiting. USCIS has a 90-day processing target for initial EADs." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I travel outside the U.S. while AOS is pending?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Generally no, not without Advance Parole (Form I-131). Leaving the U.S. while your I-485 is pending — without an approved Advance Parole document — is typically considered an abandonment of your AOS application. File I-131 concurrently with your I-485 and wait for approval before traveling internationally. Emergencies may be handled at a USCIS field office or U.S. embassy abroad." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the AOS interview and how long after filing does it happen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After filing I-485, USCIS schedules an in-person interview at the local field office that serves your address. The interview typically happens 10–18 months after filing, depending on the field office. At the interview, a USCIS officer reviews your relationship and eligibility. Many spousal AOS cases are approved at the interview or shortly after." }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I check my AOS case status?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Check your I-485 case status online at my.uscis.gov using your receipt number (format: IOE/EAC/WAC/MSC followed by digits). You can also sign up for case status email/text notifications. If your case is outside normal processing times, you can submit a case inquiry through the USCIS online portal after the published processing time has passed." }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes AOS delays?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Common AOS delays include: USCIS field office backlogs (varies widely by location), background check delays (name checks, FBI clearance), medical exam issues or expired I-693, Request for Evidence (RFE) for missing documents, interview scheduling backlogs, and name or document discrepancies that require manual review. Moving to a new address without updating USCIS can also delay your case." }
+      }
+    ]
+  }
+]);
+---
+
+<ArticleLayout
+  title="Adjustment of Status Processing Time 2026: How Long Does AOS Take?"
+  description="Current AOS processing times for 2026 — how long I-485, EAD, and Advance Parole take by field office, what causes delays, and how to check your status."
+  schema={schema}
+  heroTitle="Adjustment of Status Processing Time 2026"
+  heroParagraph="After filing your AOS package, here's what the timeline looks like — from biometrics to EAD card to green card interview and approval."
+  theme="#7c3aed"
+  themeLight="#ede9fe"
+  themeDark="#4c1d95"
+  summaryTitle="AOS Timeline (2026)"
+  summaryRows={[
+    { label: 'Biometrics notice',   value: '2–6 weeks after filing' },
+    { label: 'EAD / Combo card',    value: '3–6 months' },
+    { label: 'Advance Parole',      value: '3–6 months' },
+    { label: 'Interview scheduled', value: '10–18 months' },
+    { label: 'Green card approved', value: '12–24 months total' },
+    { label: 'Conditional vs. perm',value: 'Married < 2 yrs = conditional' },
+  ]}
+  tocLinks={[
+    { id: 'overview',    label: 'AOS Timeline Overview' },
+    { id: 'by-stage',    label: 'Stage-by-Stage Breakdown' },
+    { id: 'by-office',   label: 'Times by Field Office' },
+    { id: 'ead',         label: 'EAD & Advance Parole' },
+    { id: 'delays',      label: 'What Causes Delays' },
+    { id: 'check',       label: 'How to Check Status' },
+    { id: 'faq',         label: 'FAQ' },
+  ]}
+  relatedLinks={[
+    { href: '/adjustment-of-status',         label: 'AOS Complete Guide' },
+    { href: '/adjustment-of-status-after-marriage', label: 'AOS After K-1 Marriage' },
+    { href: '/conditional-green-card',       label: 'Conditional Green Card' },
+    { href: '/i-751-petition-remove-conditions', label: 'Remove Conditions (I-751)' },
+    { href: '/k1-visa-cost',                 label: 'K-1 Visa Total Cost' },
+    { href: '/green-card-through-marriage',  label: 'Green Card Through Marriage' },
+  ]}
+>
+
+<h2 id="overview">AOS Timeline Overview</h2>
+<p>Adjustment of Status (AOS) is the process of obtaining a U.S. green card from inside the United States — used by K-1 visa holders after marriage, and by anyone on a valid nonimmigrant status who married a U.S. citizen. The core form is <strong>I-485 (Application to Register Permanent Residence)</strong>.</p>
+<p>Total AOS processing in 2026 takes <strong>12–24 months</strong> from the date USCIS receives your package to green card approval. The exact time depends heavily on which USCIS field office handles your case — some offices run significantly faster or slower than average.</p>
+
+<div class="art-info">
+  <strong>K-1 holders: file AOS within 90 days of entry</strong>
+  <p>If you entered on a K-1 fiancé visa, you must marry your petitioner within 90 days and file for AOS promptly. There's no strict deadline after marriage, but your K-1 status expires 90 days after entry — filing AOS is what maintains your lawful presence.</p>
+</div>
+
+<h2 id="by-stage">Stage-by-Stage Breakdown</h2>
+
+<table class="art-table">
+  <thead><tr><th>Stage</th><th>Timeline</th><th>What Happens</th></tr></thead>
+  <tbody>
+    <tr><td>USCIS receives package</td><td>Day 1</td><td>I-485 + I-765 + I-131 + I-693 + fee payment accepted</td></tr>
+    <tr><td>Receipt notices mailed</td><td>2–4 weeks</td><td>One receipt per form — save these, they have your case numbers</td></tr>
+    <tr><td>Biometrics appointment</td><td>4–8 weeks</td><td>Fingerprints + photo at Application Support Center (ASC)</td></tr>
+    <tr><td>EAD / Advance Parole issued</td><td>3–6 months</td><td>Combo card allows work + travel while I-485 pending</td></tr>
+    <tr><td>Background checks complete</td><td>Ongoing</td><td>FBI name check, IBIS check — usually invisible to applicant</td></tr>
+    <tr><td>Interview notice mailed</td><td>8–16 months</td><td>Local USCIS field office schedules your in-person interview</td></tr>
+    <tr><td>AOS interview</td><td>10–18 months</td><td>Officer reviews relationship and eligibility; decision often same day</td></tr>
+    <tr><td>Green card mailed</td><td>2–4 weeks post-interview</td><td>Conditional (2-year) or permanent (10-year) card sent by mail</td></tr>
+  </tbody>
+</table>
+
+<h2 id="by-office">Processing Times by Field Office (2026)</h2>
+<p>AOS processing times vary dramatically by USCIS field office. Officers at high-volume offices like Los Angeles and New York have heavier caseloads than smaller offices. The table below shows approximate current ranges — always verify at <strong>egov.uscis.gov/processing-times</strong>.</p>
+
+<table class="art-table">
+  <thead><tr><th>Field Office City</th><th>Approx. I-485 Processing Time</th></tr></thead>
+  <tbody>
+    <tr><td>Atlanta, GA</td><td>14–20 months</td></tr>
+    <tr><td>Chicago, IL</td><td>16–22 months</td></tr>
+    <tr><td>Dallas, TX</td><td>12–18 months</td></tr>
+    <tr><td>Denver, CO</td><td>12–16 months</td></tr>
+    <tr><td>Houston, TX</td><td>14–20 months</td></tr>
+    <tr><td>Los Angeles, CA</td><td>18–24 months</td></tr>
+    <tr><td>Miami, FL</td><td>14–20 months</td></tr>
+    <tr><td>New York, NY</td><td>18–24 months</td></tr>
+    <tr><td>Philadelphia, PA</td><td>14–18 months</td></tr>
+    <tr><td>Phoenix, AZ</td><td>12–16 months</td></tr>
+    <tr><td>Seattle, WA</td><td>14–20 months</td></tr>
+  </tbody>
+</table>
+
+<div class="art-warn">
+  <strong>These are estimates, not guarantees</strong>
+  <p>USCIS processing times fluctuate with staffing, policy changes, and application volumes. Always check the official tool at egov.uscis.gov/processing-times for current data — published times are updated monthly.</p>
+</div>
+
+<h2 id="ead">EAD Work Permit & Advance Parole Timeline</h2>
+<p>When you file I-485, you can file two additional forms concurrently at no extra fee:</p>
+<ul>
+  <li><strong>Form I-765 (EAD)</strong> — Employment Authorization Document; allows you to work legally in the U.S. while your green card is pending</li>
+  <li><strong>Form I-131 (Advance Parole)</strong> — travel document allowing you to leave and re-enter the U.S. without abandoning your AOS</li>
+</ul>
+<p>USCIS typically issues a <strong>combo card</strong> that serves as both EAD and Advance Parole in one. Current processing time: <strong>3–6 months</strong>. USCIS has a 90-day processing target for initial EADs filed with I-485.</p>
+
+<div class="art-info">
+  <strong>Do NOT travel without Advance Parole</strong>
+  <p>Leaving the U.S. while your I-485 is pending — without an approved Advance Parole — is generally considered an abandonment of your AOS application. Wait for your combo card before any international travel.</p>
+</div>
+
+<h2 id="delays">What Causes AOS Delays</h2>
+<div class="art-tips">
+  <div class="art-tip">
+    <div class="art-tip-num">Cause 01</div>
+    <div class="art-tip-title">Field office backlog</div>
+    <div class="art-tip-desc">High-volume offices (LA, NYC) simply have more cases than lower-volume ones. You can't change which office handles your case — it's determined by your home address.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Cause 02</div>
+    <div class="art-tip-title">Request for Evidence (RFE)</div>
+    <div class="art-tip-desc">USCIS sends an RFE if your package is missing documents or evidence is insufficient. Each RFE cycle pauses your case and typically adds 3–6 months.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Cause 03</div>
+    <div class="art-tip-title">Background check delays</div>
+    <div class="art-tip-desc">FBI name checks and IBIS background screenings can take longer for common names or complex travel/employment histories. Typically invisible — you just wait.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Cause 04</div>
+    <div class="art-tip-title">Expired or incomplete I-693 medical exam</div>
+    <div class="art-tip-desc">The I-693 medical exam must be performed by a USCIS-designated civil surgeon and sealed. If it expires before USCIS adjudicates, you'll need to redo it — adding months and cost.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Cause 05</div>
+    <div class="art-tip-title">Address change not reported</div>
+    <div class="art-tip-desc">If you move and don't update USCIS (via AR-11 within 10 days of moving), notices go to the wrong address. This can cause a missed interview or RFE response deadline.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Cause 06</div>
+    <div class="art-tip-title">Complex or sensitive case factors</div>
+    <div class="art-tip-desc">Prior immigration violations, criminal history (even minor), prior visa denials, or large age gaps may trigger additional review or a second interview, adding months.</div>
+  </div>
+</div>
+
+<h2 id="check">How to Check Your AOS Case Status</h2>
+<ul>
+  <li><strong>Online:</strong> my.uscis.gov → Case Status — enter your I-485 receipt number (starts with IOE, EAC, WAC, or MSC)</li>
+  <li><strong>Email/text alerts:</strong> Sign up for case status notifications at my.uscis.gov</li>
+  <li><strong>USCIS Contact Center:</strong> 1-800-375-5283 — have your receipt number ready</li>
+  <li><strong>Case inquiry:</strong> If your case is outside published processing times, submit an online inquiry through my.uscis.gov — eligible after the published time has passed</li>
+  <li><strong>InfoPass / in-person appointment:</strong> For urgent situations, you can request an in-person appointment at your local field office through the USCIS Contact Center</li>
+</ul>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="art-faq">
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does Adjustment of Status take in 2026?</p>
+    <div class="art-faq-a"><p>Most spousal AOS cases take <strong>12–24 months</strong> from filing to green card approval. High-volume offices like Los Angeles and New York run closer to 20–24 months; smaller offices can process in 12–16 months.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does it take to get an EAD work permit during AOS?</p>
+    <div class="art-faq-a"><p>Currently <strong>3–6 months</strong> when filed concurrently with I-485. USCIS has a 90-day processing goal for initial EADs. You'll receive a combo card (EAD + Advance Parole) in most cases.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I travel outside the U.S. while AOS is pending?</p>
+    <div class="art-faq-a"><p>Only with an approved Advance Parole document (Form I-131, typically issued as part of the combo card). Leaving without it is generally treated as abandonment of your I-485 application.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What is the AOS interview and when does it happen?</p>
+    <div class="art-faq-a"><p>An in-person interview at your local USCIS field office, typically <strong>10–18 months</strong> after filing. The officer reviews your relationship evidence and confirms your eligibility. Many cases are approved same day or within weeks of the interview.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How do I check my AOS case status?</p>
+    <div class="art-faq-a"><p>Log in to my.uscis.gov and enter your I-485 receipt number. You can also sign up for automatic case status alerts by email or text.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What causes AOS delays?</p>
+    <div class="art-faq-a"><p>The most common causes: field office backlog, RFEs for missing or insufficient documents, background check delays, expired I-693 medical exam, unreported address changes, and complex case factors like prior immigration issues.</p></div>
+  </div>
+</div>
+
+<div class="art-cta-dark">
+  <h2>Waiting on your AOS? Know your rights.</h2>
+  <p>An immigration attorney can submit a case inquiry, respond to RFEs, and help you understand your options if your case is unusually delayed.</p>
+  <a href="/adjustment-of-status" class="art-btn-white">Full AOS Guide →</a>
+  <a href="#" class="art-btn-ghost" data-affiliate="attorney-consult">Talk to an Attorney</a>
+</div>
+
+</ArticleLayout>

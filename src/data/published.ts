@@ -34,4 +34,6 @@ export const PUBLISHED: Set<string> = new Set([
   '/privacy',
   '/disclaimer',
   '/i-130',
+  '/ds-260',
+  '/adjustment-of-status-processing-time',
 ]);

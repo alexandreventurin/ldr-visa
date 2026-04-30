@@ -1,0 +1,78 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Page Not Found — LDR Visa"
+  description="The page you're looking for doesn't exist. Browse our guides on K-1 fiancé visas, CR-1 spousal visas, and the green card process."
+  noindex={true}
+>
+<style>
+  .not-found {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+    text-align: center;
+  }
+  .not-found h1 {
+    font-size: 6rem;
+    font-weight: 900;
+    color: #e2e8f0;
+    line-height: 1;
+    margin-bottom: .5rem;
+  }
+  .not-found h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: .75rem;
+  }
+  .not-found p {
+    color: #64748b;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .links-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .75rem;
+    text-align: left;
+    margin-bottom: 2rem;
+  }
+  .link-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: .9rem 1rem;
+    text-decoration: none;
+    color: #0f172a;
+    font-size: .9rem;
+    font-weight: 600;
+    transition: border-color .15s;
+  }
+  .link-card:hover { border-color: #2563eb; color: #2563eb; }
+  .home-btn {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff;
+    font-weight: 700;
+    padding: .8rem 2rem;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+</style>
+<div class="not-found">
+  <h1>404</h1>
+  <h2>Page not found</h2>
+  <p>This page doesn't exist or may have moved. Start from one of our most popular guides below.</p>
+  <div class="links-grid">
+    <a href="/k1-visa" class="link-card">K-1 Fiancé Visa →</a>
+    <a href="/cr1-visa" class="link-card">CR-1 Spousal Visa →</a>
+    <a href="/k1-vs-cr1" class="link-card">K-1 vs CR-1 →</a>
+    <a href="/adjustment-of-status" class="link-card">Adjustment of Status →</a>
+    <a href="/k1-visa-cost" class="link-card">K-1 Visa Cost →</a>
+    <a href="/green-card-through-marriage" class="link-card">Green Card Guide →</a>
+  </div>
+  <a href="/" class="home-btn">Back to Home</a>
+</div>
+</Base>

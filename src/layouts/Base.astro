@@ -45,6 +45,12 @@ const ogImage = `${site}/og-default.png`;
   <!-- JSON-LD schema -->
   {schema && <Fragment set:html={`<script type="application/ld+json">${schema}</script>`} />}
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" href="/favicon.png" />
+  <meta name="theme-color" content="#2563eb" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -55,8 +61,12 @@ const ogImage = `${site}/og-default.png`;
 <body>
   <nav class="nav">
     <div class="container">
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true" />
       <div class="nav-inner">
         <a href="/" class="nav-logo">LDR Visa</a>
+        <label for="nav-toggle" class="nav-hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </label>
         <ul class="nav-links">
           <li><SmartLink href="/k1-visa">K-1 Fiancé Visa</SmartLink></li>
           <li><SmartLink href="/cr1-visa">CR-1 Spousal Visa</SmartLink></li>

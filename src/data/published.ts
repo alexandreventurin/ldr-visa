@@ -36,4 +36,6 @@ export const PUBLISHED: Set<string> = new Set([
   '/i-130',
   '/ds-260',
   '/adjustment-of-status-processing-time',
+  '/biometrics-appointment',
+  '/advance-parole',
 ]);

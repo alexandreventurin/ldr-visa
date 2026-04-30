@@ -1,0 +1,223 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "USCIS Biometrics Appointment: What to Expect in 2026",
+    "description": "Everything about the USCIS biometrics appointment — what it is, what to bring, how long it takes, and what happens next after your fingerprints are taken.",
+    "url": "https://ldrvisa.org/biometrics-appointment",
+    "dateModified": "2026-04-30", "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/biometrics-appointment" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Adjustment of Status", "item": "https://ldrvisa.org/adjustment-of-status" },
+      { "@type": "ListItem", "position": 3, "name": "Biometrics Appointment", "item": "https://ldrvisa.org/biometrics-appointment" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What happens at a USCIS biometrics appointment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "At a USCIS biometrics appointment, staff at an Application Support Center (ASC) collect your fingerprints (all 10 fingers), photograph, and signature. The entire process usually takes 15–30 minutes. This information is used for FBI background checks and identity verification throughout your immigration case." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long after filing I-485 is the biometrics appointment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "USCIS typically schedules biometrics appointments 4–8 weeks after receiving your I-485 Adjustment of Status application. You will receive an appointment notice (Form I-797C) by mail at the address on your application. The notice includes the date, time, and location of your nearest Application Support Center." }
+      },
+      {
+        "@type": "Question",
+        "name": "What do I bring to my USCIS biometrics appointment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Bring your biometrics appointment notice (Form I-797C) and a valid government-issued photo ID — your passport is the best option. If you don't have a passport, a driver's license or state ID is acceptable. Do not bring children or guests unless they also have appointments. Arrive on time or a few minutes early." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I reschedule a USCIS biometrics appointment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Call the USCIS Contact Center at 1-800-375-5283 to reschedule. You can also walk into any ASC without an appointment to complete biometrics, but this is at the ASC's discretion and may not always be accommodated. Rescheduling through USCIS is the recommended approach and will not negatively affect your case." }
+      },
+      {
+        "@type": "Question",
+        "name": "What if I miss my biometrics appointment?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Missing your biometrics appointment without rescheduling can delay your case or, in some situations, lead to a denial. If you missed it, contact USCIS immediately at 1-800-375-5283 to reschedule. USCIS generally allows one reschedule without penalty, but repeated missed appointments can have consequences for your application." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do both spouses need biometrics for Adjustment of Status?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Only the immigrant applicant (the foreign spouse filing I-485) is required to attend a biometrics appointment. The U.S. citizen petitioner does not need to go to the ASC. However, both spouses typically attend the AOS interview together at the USCIS field office, which is a separate appointment that happens later." }
+      }
+    ]
+  }
+]);
+---
+
+<ArticleLayout
+  title="USCIS Biometrics Appointment: What to Expect in 2026"
+  description="What happens at a USCIS biometrics appointment — what to bring, how long it takes, how to reschedule, and what comes next in your Adjustment of Status process."
+  schema={schema}
+  heroTitle="USCIS Biometrics Appointment: What to Expect"
+  heroParagraph="A biometrics appointment is one of the first steps after filing for Adjustment of Status. It takes about 15–30 minutes and is straightforward — here's exactly what happens."
+  theme="#0f766e"
+  themeLight="#ccfbf1"
+  themeDark="#134e4a"
+  summaryTitle="Biometrics at a Glance"
+  summaryRows={[
+    { label: 'When scheduled',    value: '4–8 weeks after I-485' },
+    { label: 'Duration',          value: '15–30 minutes' },
+    { label: 'Location',          value: 'USCIS Application Support Center' },
+    { label: 'Who attends',       value: 'Applicant only (not petitioner)' },
+    { label: 'What they collect', value: 'Fingerprints, photo, signature' },
+    { label: 'Can reschedule?',   value: 'Yes — call 1-800-375-5283' },
+  ]}
+  tocLinks={[
+    { id: 'what-is',     label: 'What Is a Biometrics Appointment?' },
+    { id: 'when',        label: 'When You Get the Notice' },
+    { id: 'bring',       label: 'What to Bring' },
+    { id: 'process',     label: 'What Happens At the ASC' },
+    { id: 'reschedule',  label: 'Rescheduling & Missing It' },
+    { id: 'after',       label: 'What Comes Next' },
+    { id: 'faq',         label: 'FAQ' },
+  ]}
+  relatedLinks={[
+    { href: '/adjustment-of-status',               label: 'Adjustment of Status Guide' },
+    { href: '/adjustment-of-status-processing-time', label: 'AOS Processing Timeline' },
+    { href: '/adjustment-of-status-after-marriage', label: 'AOS After K-1 Marriage' },
+    { href: '/advance-parole',                     label: 'Advance Parole (Travel During AOS)' },
+    { href: '/marriage-green-card-interview-questions', label: 'AOS Interview Questions' },
+    { href: '/conditional-green-card',             label: 'Conditional Green Card' },
+  ]}
+>
+
+<h2 id="what-is">What Is a USCIS Biometrics Appointment?</h2>
+<p>A biometrics appointment is a brief visit to a <strong>USCIS Application Support Center (ASC)</strong> where staff collect your fingerprints, photograph, and digital signature. This is a standard part of most USCIS benefit applications, including <SmartLink href="/adjustment-of-status">Adjustment of Status (I-485)</SmartLink>, <SmartLink href="/i-751-petition-remove-conditions">I-751 to remove conditions</SmartLink>, and employment authorization.</p>
+<p>USCIS uses this biometric data to:</p>
+<ul>
+  <li>Run an <strong>FBI background check</strong> on your criminal history</li>
+  <li>Verify your identity against existing government databases</li>
+  <li>Create a biometric record linked to your immigration file</li>
+  <li>Produce identity documents (like your green card) with your photo and fingerprints</li>
+</ul>
+<p>The appointment is not an interview. There are no immigration questions. It is purely a data collection step.</p>
+
+<h2 id="when">When You Receive Your Biometrics Notice</h2>
+<p>After USCIS receives and receipts your I-485 package, they mail a biometrics appointment notice (<strong>Form I-797C</strong>) to the address on your application. This typically arrives <strong>4–8 weeks</strong> after filing.</p>
+<p>The notice shows:</p>
+<ul>
+  <li>Your name and receipt number</li>
+  <li>The date, time, and address of your assigned ASC</li>
+  <li>Instructions on what to bring</li>
+</ul>
+
+<div class="art-info">
+  <strong>Keep your address updated</strong>
+  <p>If you move after filing, update your address with USCIS within 10 days using Form AR-11 (free, online at uscis.gov). A biometrics notice sent to the wrong address can delay your entire case — and USCIS may treat a missed appointment as an abandonment if you don't respond.</p>
+</div>
+
+<h2 id="bring">What to Bring</h2>
+<p>You only need two things:</p>
+<ul>
+  <li><strong>Your biometrics appointment notice (Form I-797C)</strong> — printed or on your phone</li>
+  <li><strong>A valid government-issued photo ID</strong> — passport is strongly preferred; driver's license or state ID also accepted</li>
+</ul>
+
+<div class="art-warn">
+  <strong>Don't bring guests or children</strong>
+  <p>ASC waiting rooms are small and staff-only areas require individual appointments. Unless a family member also has their own appointment at the same time, leave them at home. Children and guests are generally not permitted past the waiting room.</p>
+</div>
+
+<h2 id="process">What Happens at the ASC</h2>
+<p>The appointment is quick and low-stress. Here's the typical sequence:</p>
+
+<table class="art-table">
+  <thead><tr><th>Step</th><th>What Happens</th><th>Time</th></tr></thead>
+  <tbody>
+    <tr><td>Check in</td><td>Show your notice and ID at the front desk; staff verify your appointment</td><td>2–5 min</td></tr>
+    <tr><td>Wait</td><td>Brief wait in the waiting area until a technician is free</td><td>5–20 min</td></tr>
+    <tr><td>Fingerprinting</td><td>All 10 fingers scanned digitally — no ink involved</td><td>5 min</td></tr>
+    <tr><td>Photo</td><td>Digital photo taken by the technician</td><td>1–2 min</td></tr>
+    <tr><td>Signature</td><td>Sign on a digital pad for your record</td><td>1 min</td></tr>
+    <tr><td>Done</td><td>You're finished — no paperwork, no questions, no interview</td><td>—</td></tr>
+  </tbody>
+</table>
+
+<p>Total time in the building: typically <strong>15–30 minutes</strong>, including waiting. Some applicants are in and out in under 10 minutes at quieter locations.</p>
+
+<div class="art-info">
+  <strong>Can I go early?</strong>
+  <p>Yes — most ASCs accept walk-ins for scheduled appointments if they arrive early. Showing up 10–15 minutes before your appointment time is fine. You can also sometimes walk in on a different day, though this is at the ASC's discretion.</p>
+</div>
+
+<h2 id="reschedule">Rescheduling — and What Happens If You Miss It</h2>
+<p>Life happens. Here's how to handle scheduling issues:</p>
+
+<h3>To reschedule</h3>
+<p>Call the USCIS Contact Center at <strong>1-800-375-5283</strong> before your appointment date. Online rescheduling is not currently available for biometrics. Rescheduling does not negatively affect your case — it's common and expected.</p>
+
+<h3>If you missed your appointment</h3>
+<p>Contact USCIS immediately. In most cases, USCIS will schedule a new appointment. However, repeated missed appointments or a long delay in responding can result in a Request for Evidence (RFE) or, in extreme cases, a denial for abandonment. Don't wait — call the same day if possible.</p>
+
+<div class="art-cta-mid">
+  <h3>Next: the AOS Interview</h3>
+  <p>Biometrics is just one early step. The bigger milestone is the in-person AOS interview — where both spouses appear and the officer reviews your relationship. Know what questions to expect.</p>
+  <a href="/marriage-green-card-interview-questions" class="art-btn">AOS Interview Question Guide →</a>
+  <a href="/adjustment-of-status-processing-time" class="art-btn-outline">See Full AOS Timeline</a>
+</div>
+
+<h2 id="after">What Comes After Biometrics</h2>
+<p>After your biometrics appointment, USCIS processes the results in the background. You won't receive a notice confirming completion — it just happens. Meanwhile, your case continues:</p>
+<ul>
+  <li><strong>EAD / Advance Parole combo card</strong> — typically issued 3–6 months after filing; allows you to work and travel while I-485 is pending. See the <SmartLink href="/advance-parole">Advance Parole guide</SmartLink> for travel rules.</li>
+  <li><strong>Background check processing</strong> — FBI name check and biographic screening run in parallel with other case processing</li>
+  <li><strong>Interview notice</strong> — typically mailed 8–16 months after filing, scheduling your in-person appointment at the local USCIS field office</li>
+  <li><strong>AOS interview</strong> — both spouses attend; officer reviews your <SmartLink href="/bona-fide-marriage">bona fide marriage</SmartLink> evidence and eligibility</li>
+  <li><strong>Green card mailed</strong> — usually 2–4 weeks after a successful interview; either a <SmartLink href="/conditional-green-card">conditional (2-year) card</SmartLink> or a permanent (10-year) card depending on how long you've been married</li>
+</ul>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="art-faq">
+  <div class="art-faq-item">
+    <p class="art-faq-q">What happens at a USCIS biometrics appointment?</p>
+    <div class="art-faq-a"><p>Staff collect your fingerprints (all 10), a digital photo, and signature. The process takes 15–30 minutes. There are no immigration questions — it's purely data collection for background checks and identity verification.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long after filing I-485 is the biometrics appointment?</p>
+    <div class="art-faq-a"><p>Typically <strong>4–8 weeks</strong> after USCIS receives your application. You'll get the appointment notice (Form I-797C) by mail.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What do I bring to my USCIS biometrics appointment?</p>
+    <div class="art-faq-a"><p>Your appointment notice (Form I-797C) and a valid government-issued photo ID — your passport is best. That's it.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I reschedule a USCIS biometrics appointment?</p>
+    <div class="art-faq-a"><p>Yes. Call USCIS at 1-800-375-5283 to reschedule. Rescheduling has no negative effect on your case. Online rescheduling is not currently available.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What if I miss my biometrics appointment?</p>
+    <div class="art-faq-a"><p>Contact USCIS immediately to reschedule. Repeated missed appointments can delay your case or lead to a denial for abandonment. Don't wait — call the same day if possible.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Do both spouses need biometrics for Adjustment of Status?</p>
+    <div class="art-faq-a"><p>Only the immigrant applicant (the person filing I-485). The U.S. citizen petitioner does not attend biometrics. Both spouses do attend the AOS interview together, which is a separate, later appointment.</p></div>
+  </div>
+</div>
+
+<div class="art-cta-dark">
+  <h2>Preparing for the full AOS process?</h2>
+  <p>Biometrics is one of the easiest steps. The <SmartLink href="/adjustment-of-status">complete AOS guide</SmartLink> walks through every stage from filing to green card in hand.</p>
+  <a href="/adjustment-of-status" class="art-btn-white">Full Adjustment of Status Guide →</a>
+  <a href="#" class="art-btn-ghost" data-affiliate="attorney-consult">Talk to an Attorney</a>
+</div>
+
+</ArticleLayout>

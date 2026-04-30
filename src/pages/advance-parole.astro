@@ -1,0 +1,257 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Advance Parole: Travel While Adjustment of Status Is Pending (2026)",
+    "description": "What Advance Parole is, how to get it, how long it takes, and the rules for traveling outside the U.S. while your green card application is pending.",
+    "url": "https://ldrvisa.org/advance-parole",
+    "dateModified": "2026-04-30", "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/advance-parole" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Adjustment of Status", "item": "https://ldrvisa.org/adjustment-of-status" },
+      { "@type": "ListItem", "position": 3, "name": "Advance Parole", "item": "https://ldrvisa.org/advance-parole" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Advance Parole?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Advance Parole is a travel document issued by USCIS that allows a person with a pending Adjustment of Status (I-485) application to travel outside the United States and return without abandoning their green card application. Without Advance Parole, leaving the U.S. while your I-485 is pending is generally treated as an abandonment of the application." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does Advance Parole take to get?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When filed concurrently with Form I-485, Advance Parole (Form I-131) typically takes 3–6 months to be approved and issued in 2026. USCIS usually issues it as a combo card that combines Employment Authorization (EAD) and Advance Parole on a single card. Do not travel internationally until you have the physical combo card in hand." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I leave the U.S. without Advance Parole while my I-485 is pending?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Leaving the U.S. without Advance Parole while your I-485 is pending is generally considered an abandonment of your green card application. USCIS may deny your I-485 upon your return. K-1 visa holders who traveled without AP before marriage also trigger bars related to unlawful presence. There are very limited emergency exceptions — consult an attorney before traveling." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I travel before my Advance Parole is approved?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. You must have the Advance Parole document physically in hand before leaving the U.S. A pending I-131 application does not authorize travel. If you have an emergency that requires international travel before AP is approved, contact USCIS immediately and consult an immigration attorney — there may be expedite request options." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Advance Parole affect my visa status when I return to the U.S.?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When you return to the U.S. on Advance Parole, you enter as a parolee — not on your original visa status. This is normal and expected for AOS applicants. Your I-485 continues to be processed. However, if your I-485 is denied while you are abroad, you would not be able to return on Advance Parole. This is why it's important to understand your case status before traveling." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is Advance Parole valid?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Advance Parole issued with an I-485 filing is typically valid for 2 years from the date of issuance. The validity period is shown on your combo card. If your I-485 is still pending when your Advance Parole expires, you can file a renewal I-131 — USCIS also issues automatic 180-day extensions in many cases when a timely renewal is filed." }
+      }
+    ]
+  }
+]);
+---
+
+<ArticleLayout
+  title="Advance Parole: Travel While Adjustment of Status Is Pending (2026)"
+  description="What Advance Parole is, how to get it with Form I-131, how long it takes, and the critical rules for traveling abroad while your I-485 green card application is pending."
+  schema={schema}
+  heroTitle="Advance Parole: How to Travel While Your Green Card Is Pending"
+  heroParagraph="If your Adjustment of Status is pending and you need to travel outside the U.S., Advance Parole is the document that keeps your green card application alive. Here's how it works."
+  theme="#b45309"
+  themeLight="#fef3c7"
+  themeDark="#78350f"
+  summaryTitle="Advance Parole Facts"
+  summaryRows={[
+    { label: 'Form',           value: 'I-131 (filed with I-485)' },
+    { label: 'Processing time', value: '3–6 months' },
+    { label: 'Issued as',      value: 'Combo card (EAD + AP)' },
+    { label: 'Validity',       value: 'Typically 2 years' },
+    { label: 'Travel before AP?', value: 'Never — I-485 abandoned' },
+    { label: 'Fee',            value: '$0 when filed with I-485' },
+  ]}
+  tocLinks={[
+    { id: 'what-is',      label: 'What Is Advance Parole?' },
+    { id: 'who-needs',    label: 'Who Needs It' },
+    { id: 'how-to-get',   label: 'How to Get It (I-131)' },
+    { id: 'combo-card',   label: 'The Combo Card (EAD + AP)' },
+    { id: 'rules',        label: 'Travel Rules' },
+    { id: 'emergency',    label: 'Emergency Travel' },
+    { id: 'return',       label: 'Returning to the U.S.' },
+    { id: 'faq',          label: 'FAQ' },
+  ]}
+  relatedLinks={[
+    { href: '/adjustment-of-status',               label: 'Adjustment of Status Guide' },
+    { href: '/adjustment-of-status-processing-time', label: 'AOS Processing Timeline' },
+    { href: '/adjustment-of-status-after-marriage', label: 'AOS After K-1 Marriage' },
+    { href: '/biometrics-appointment',             label: 'Biometrics Appointment' },
+    { href: '/conditional-green-card',             label: 'Conditional Green Card' },
+    { href: '/i-751-petition-remove-conditions',   label: 'Remove Conditions (I-751)' },
+  ]}
+>
+
+<h2 id="what-is">What Is Advance Parole?</h2>
+<p><strong>Advance Parole</strong> is a travel authorization issued by USCIS that allows a person with a pending <SmartLink href="/adjustment-of-status">Adjustment of Status (I-485)</SmartLink> application to leave the United States and return without abandoning their green card application.</p>
+<p>Without Advance Parole, leaving the U.S. while your I-485 is pending is generally treated as <strong>voluntarily withdrawing your application</strong>. When you return, USCIS may find your I-485 abandoned and deny it — meaning you'd have to start the entire green card process over.</p>
+
+<div class="art-warn">
+  <strong>The single most important rule</strong>
+  <p>Do not leave the U.S. while your I-485 is pending until you have your Advance Parole document physically in hand. A pending I-131 application does NOT authorize travel — only the approved, issued document does.</p>
+</div>
+
+<h2 id="who-needs">Who Needs Advance Parole</h2>
+<p>You need Advance Parole if <strong>all three</strong> of these apply:</p>
+<ul>
+  <li>You are in the United States</li>
+  <li>You have a pending I-485 Adjustment of Status application</li>
+  <li>You want to travel outside the U.S. and return</li>
+</ul>
+<p>This commonly applies to:</p>
+<ul>
+  <li><strong>K-1 fiancé visa holders</strong> who married and filed for AOS — see the <SmartLink href="/adjustment-of-status-after-marriage">AOS after marriage guide</SmartLink></li>
+  <li>Spouses who entered the U.S. on another visa and filed AOS while inside the country</li>
+  <li>Anyone else with a pending I-485 who needs to travel internationally</li>
+</ul>
+<p>Note: If you hold a valid <strong>H-1B, L-1, or O-1</strong> visa alongside your pending I-485, you may be able to travel on that visa without Advance Parole. Consult an attorney if you're in this situation — the rules are nuanced.</p>
+
+<h2 id="how-to-get">How to Get Advance Parole — Form I-131</h2>
+<p>Advance Parole is requested on <strong>Form I-131</strong> (Application for Travel Document). The best approach is to file I-131 <em>concurrently</em> with your I-485 package:</p>
+
+<table class="art-table">
+  <thead><tr><th>Detail</th><th>Info</th></tr></thead>
+  <tbody>
+    <tr><td>Form number</td><td>I-131 (Application for Travel Document)</td></tr>
+    <tr><td>Filing fee</td><td>$0 when filed at the same time as I-485</td></tr>
+    <tr><td>Where to file</td><td>Same package as I-485 (lockbox or online)</td></tr>
+    <tr><td>Processing time</td><td>3–6 months (2026 estimate)</td></tr>
+    <tr><td>What you receive</td><td>Combo card — EAD + Advance Parole on one card</td></tr>
+    <tr><td>Validity</td><td>Typically 2 years from issuance date</td></tr>
+  </tbody>
+</table>
+
+<div class="art-info">
+  <strong>File I-131 with your I-485 — never separately later</strong>
+  <p>Filing I-131 concurrently with I-485 is free. If you file it separately after already submitting I-485, the fee is $630. Always include it in your initial filing package to save money and avoid delays in receiving travel authorization.</p>
+</div>
+
+<h2 id="combo-card">The Combo Card: EAD + Advance Parole</h2>
+<p>USCIS currently issues a single <strong>combo card</strong> that serves as both your Employment Authorization Document (EAD) and Advance Parole document. This one card lets you:</p>
+<ul>
+  <li>Work legally in the United States (EAD function)</li>
+  <li>Travel internationally and re-enter the U.S. (Advance Parole function)</li>
+</ul>
+<p>The combo card looks like a green card but says "Employment Authorization" on it. It includes your photo, fingerprint, and validity dates. Show it to your employer for I-9 verification and to CBP officers when returning from abroad.</p>
+<p>Check your <SmartLink href="/adjustment-of-status-processing-time">AOS processing timeline</SmartLink> to understand where the EAD/combo card fits in the overall sequence — it's typically one of the first benefits you receive while your I-485 is still being processed.</p>
+
+<h2 id="rules">Travel Rules With Advance Parole</h2>
+<div class="art-tips">
+  <div class="art-tip">
+    <div class="art-tip-num">Rule 01</div>
+    <div class="art-tip-title">Have the physical card before you leave</div>
+    <div class="art-tip-desc">The approved, physical combo card must be in your possession before departure. A USCIS approval notice alone is not sufficient — airlines and CBP require the actual card.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Rule 02</div>
+    <div class="art-tip-title">Check the expiration date before every trip</div>
+    <div class="art-tip-desc">Your combo card has an expiration date. You must return to the U.S. before the card expires. If it expires while you're abroad, re-entry becomes complicated — plan trips with a buffer.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Rule 03</div>
+    <div class="art-tip-title">Carry your full document set</div>
+    <div class="art-tip-desc">When traveling, bring your combo card, your passport, a copy of your I-485 receipt notice, and any other immigration documents. CBP officers may ask questions about your pending AOS at re-entry.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Rule 04</div>
+    <div class="art-tip-title">Don't miss your AOS interview while abroad</div>
+    <div class="art-tip-desc">If USCIS schedules your AOS interview while you're traveling, you must return in time. A missed interview can delay or deny your case. Check case status at my.uscis.gov before any trip and plan return dates conservatively.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Rule 05</div>
+    <div class="art-tip-title">Some countries require a visa despite AP</div>
+    <div class="art-tip-desc">Advance Parole is a U.S. document — it doesn't replace visas required by other countries. You still need to meet entry requirements of wherever you're traveling. Check visa requirements for your destination with your own passport.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">Rule 06</div>
+    <div class="art-tip-title">Renew before it expires if I-485 is still pending</div>
+    <div class="art-tip-desc">If your I-485 is still pending when your combo card is about to expire, file a renewal I-131 at least 6 months before expiration. USCIS issues automatic 180-day extensions when a timely renewal is filed.</div>
+  </div>
+</div>
+
+<h2 id="emergency">Emergency Travel Before Advance Parole Is Approved</h2>
+<p>If you have a genuine emergency (death of an immediate family member, serious illness abroad) and your Advance Parole hasn't been issued yet, you have limited options:</p>
+<ul>
+  <li><strong>USCIS expedite request</strong> — call 1-800-375-5283 and request an expedite of your I-131 based on humanitarian need; bring documentation of the emergency</li>
+  <li><strong>USCIS InfoPass / in-person appointment</strong> — request an emergency appointment at your local USCIS field office</li>
+  <li><strong>U.S. embassy or consulate abroad</strong> — in extreme cases, officers can assist with re-entry on humanitarian grounds, though this is not guaranteed</li>
+</ul>
+
+<div class="art-warn">
+  <strong>Consult an attorney before emergency travel</strong>
+  <p>The risk of your I-485 being considered abandoned is real. An immigration attorney can advise you on your specific situation, help document the emergency, and potentially expedite the I-131 before you leave.</p>
+</div>
+
+<div class="art-cta-mid">
+  <h3>Not sure if your situation requires Advance Parole?</h3>
+  <p>H-1B holders, those with dual status, and K-1 holders have different rules. An attorney can tell you exactly what applies to your case.</p>
+  <a href="#" class="art-btn" data-affiliate="attorney-consult">Get an Attorney Review →</a>
+  <a href="/adjustment-of-status" class="art-btn-outline">Full AOS Guide</a>
+</div>
+
+<h2 id="return">Returning to the U.S. on Advance Parole</h2>
+<p>When you return to the U.S. using your Advance Parole combo card, you re-enter as a <strong>parolee</strong> rather than on your original visa status. This is completely normal and expected — it doesn't harm your I-485 or immigration record.</p>
+<p>At the border or airport:</p>
+<ul>
+  <li>Present your combo card and passport to the CBP officer</li>
+  <li>You may be asked about your pending I-485 and the purpose of your trip</li>
+  <li>The officer will admit you in "paroled" status — your I-485 continues processing</li>
+  <li>Your I-94 will be updated to reflect your parole status</li>
+</ul>
+<p>After your green card is approved (either <SmartLink href="/conditional-green-card">conditional</SmartLink> or permanent), you no longer need Advance Parole — green card holders can travel freely and re-enter as lawful permanent residents.</p>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="art-faq">
+  <div class="art-faq-item">
+    <p class="art-faq-q">What is Advance Parole?</p>
+    <div class="art-faq-a"><p>A USCIS travel document that lets you leave and re-enter the U.S. while your I-485 Adjustment of Status is pending — without abandoning your green card application.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does Advance Parole take to get?</p>
+    <div class="art-faq-a"><p>Filed concurrently with I-485, typically <strong>3–6 months</strong> in 2026. It's issued as a combo card combining EAD + Advance Parole. Do not travel until the physical card arrives.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What happens if I leave the U.S. without Advance Parole?</p>
+    <div class="art-faq-a"><p>Your I-485 is generally considered abandoned. USCIS may deny it when you return, requiring you to restart the green card process. Do not travel internationally without your approved Advance Parole card.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I travel before my Advance Parole is approved?</p>
+    <div class="art-faq-a"><p>No. A pending I-131 application does not authorize travel — only the issued combo card does. For emergencies, contact USCIS about an expedite request and consult an attorney before leaving.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long is Advance Parole valid?</p>
+    <div class="art-faq-a"><p>Typically <strong>2 years</strong> from issuance. If your I-485 is still pending when it expires, file a renewal I-131. USCIS issues automatic 180-day extensions when a timely renewal is filed.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Does Advance Parole affect my status when I return?</p>
+    <div class="art-faq-a"><p>You re-enter as a "parolee" rather than on your original visa. This is normal and expected — your I-485 continues processing without issue. Once your green card is approved, you enter as a lawful permanent resident.</p></div>
+  </div>
+</div>
+
+<div class="art-cta-dark">
+  <h2>One step closer to your green card</h2>
+  <p>Advance Parole is part of the broader Adjustment of Status process. See how every stage connects — from <SmartLink href="/biometrics-appointment">biometrics</SmartLink> to interview to green card.</p>
+  <a href="/adjustment-of-status-processing-time" class="art-btn-white">Full AOS Timeline →</a>
+  <a href="#" class="art-btn-ghost" data-affiliate="attorney-consult">Get Attorney Help</a>
+</div>
+
+</ArticleLayout>

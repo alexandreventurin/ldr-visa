@@ -38,4 +38,6 @@ export const PUBLISHED: Set<string> = new Set([
   '/adjustment-of-status-processing-time',
   '/biometrics-appointment',
   '/advance-parole',
+  '/employment-authorization',
+  '/naturalization-requirements',
 ]);

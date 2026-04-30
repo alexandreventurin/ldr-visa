@@ -1,0 +1,250 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "U.S. Naturalization Requirements for Spouses: Path to Citizenship (2026)",
+    "description": "Naturalization requirements for spouses of U.S. citizens — the 3-year rule, continuous residence, physical presence, English test, civics test, and how to apply.",
+    "url": "https://ldrvisa.org/naturalization-requirements",
+    "dateModified": "2026-04-30", "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/naturalization-requirements" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Green Card Through Marriage", "item": "https://ldrvisa.org/green-card-through-marriage" },
+      { "@type": "ListItem", "position": 3, "name": "Naturalization Requirements", "item": "https://ldrvisa.org/naturalization-requirements" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does a spouse of a U.S. citizen have to wait before applying for citizenship?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Spouses of U.S. citizens have a shorter path to naturalization than other green card holders. You can apply for citizenship after just 3 years as a lawful permanent resident, provided you have been married to and living with the same U.S. citizen spouse for those 3 years. The standard naturalization waiting period for non-spouses is 5 years." }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the requirements for naturalization as a spouse of a U.S. citizen?",
+        "acceptedAnswer": { "@type": "Answer", "text": "To naturalize as a spouse of a U.S. citizen, you must: (1) be a lawful permanent resident for at least 3 years, (2) have been married to and living with the same U.S. citizen for all 3 years, (3) have continuous residence in the U.S. for 3 years (no single trip abroad longer than 6 months), (4) have physical presence in the U.S. for at least 18 months of the 3-year period, (5) be a person of good moral character, (6) pass an English language test, and (7) pass a U.S. civics test." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between the 3-year and 5-year naturalization rule?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The 3-year rule applies specifically to spouses of U.S. citizens who obtained their green card through marriage and have been continuously married to and living with the same U.S. citizen throughout the 3-year period. All other green card holders — including those who obtained their green card through employment, diversity lottery, or as unmarried children — must wait 5 years before applying for naturalization." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I apply for naturalization with a conditional green card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, but only after your conditions have been removed. You must first file Form I-751 to remove the conditions on your 2-year green card, receive your permanent (10-year) green card, and then meet the 3-year continuous residence requirement as a lawful permanent resident. The time spent as a conditional resident does count toward the 3-year requirement." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the English test for naturalization?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The naturalization English test has three components: reading (read one of three sentences correctly), writing (write one of three sentences correctly), and speaking (demonstrated through the interview itself — the officer evaluates your ability to understand and respond in English). Exemptions exist for applicants who are 50+ years old with 20 years as a permanent resident, or 55+ with 15 years as a permanent resident." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the naturalization process take after filing N-400?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After filing Form N-400, the naturalization process typically takes 8–18 months in 2026. This includes biometrics collection, background checks, an interview at your local USCIS field office, and the oath ceremony. Processing times vary significantly by field office — check egov.uscis.gov/processing-times for current estimates." }
+      }
+    ]
+  }
+]);
+---
+
+<ArticleLayout
+  title="U.S. Naturalization Requirements for Spouses: Path to Citizenship (2026)"
+  description="How spouses of U.S. citizens can become citizens — the 3-year rule, continuous residence, physical presence, English test, civics test, and how to file Form N-400."
+  schema={schema}
+  heroTitle="Naturalization for Spouses of U.S. Citizens: The 3-Year Path to Citizenship"
+  heroParagraph="Once you receive your green card through marriage, U.S. citizenship is closer than you think. Spouses of U.S. citizens qualify after just 3 years — not the standard 5."
+  theme="#7c3aed"
+  themeLight="#ede9fe"
+  themeDark="#4c1d95"
+  summaryTitle="Naturalization at a Glance"
+  summaryRows={[
+    { label: 'Wait time (spouse)',    value: '3 years as LPR' },
+    { label: 'Wait time (others)',    value: '5 years as LPR' },
+    { label: 'Physical presence',    value: '18 of 36 months' },
+    { label: 'Max single trip',      value: '6 months abroad' },
+    { label: 'Form',                 value: 'N-400' },
+    { label: 'N-400 processing',     value: '8–18 months' },
+  ]}
+  tocLinks={[
+    { id: 'overview',       label: 'The 3-Year Rule Explained' },
+    { id: 'requirements',   label: 'Full Requirements Checklist' },
+    { id: 'residence',      label: 'Continuous Residence Rules' },
+    { id: 'tests',          label: 'English & Civics Tests' },
+    { id: 'n-400',          label: 'Filing Form N-400' },
+    { id: 'process',        label: 'The Naturalization Process' },
+    { id: 'timeline',       label: 'Full Path Timeline' },
+    { id: 'faq',            label: 'FAQ' },
+  ]}
+  relatedLinks={[
+    { href: '/green-card-through-marriage',      label: 'Green Card Through Marriage' },
+    { href: '/conditional-green-card',           label: 'Conditional Green Card (2-Year)' },
+    { href: '/i-751-petition-remove-conditions', label: 'Remove Conditions (I-751)' },
+    { href: '/adjustment-of-status',             label: 'Adjustment of Status' },
+    { href: '/cr1-visa',                         label: 'CR-1 Spousal Visa' },
+    { href: '/k1-visa',                          label: 'K-1 Fiancé Visa' },
+  ]}
+>
+
+<h2 id="overview">The 3-Year Rule: A Faster Path for Spouses</h2>
+<p>Most <SmartLink href="/green-card-through-marriage">green card holders</SmartLink> must wait 5 years before applying for U.S. citizenship. But spouses of U.S. citizens get a significant advantage: you can apply after just <strong>3 years as a lawful permanent resident</strong>, provided you've been continuously married to and living with the same U.S. citizen throughout those 3 years.</p>
+<p>This 3-year rule applies whether your green card came through a <SmartLink href="/k1-visa">K-1 fiancé visa</SmartLink> followed by <SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink>, or directly through a <SmartLink href="/cr1-visa">CR-1 spousal visa</SmartLink>. The clock starts from the date you became a lawful permanent resident — not from your wedding date or your entry date.</p>
+
+<div class="art-info">
+  <strong>Conditional green card holders: the clock still counts</strong>
+  <p>Time spent as a <SmartLink href="/conditional-green-card">conditional permanent resident</SmartLink> (on a 2-year green card) does count toward the 3-year requirement. You don't need to wait until after your <SmartLink href="/i-751-petition-remove-conditions">I-751 conditions are removed</SmartLink> — you just can't file N-400 until conditions are actually removed and you hold a permanent green card.</p>
+</div>
+
+<h2 id="requirements">Full Requirements Checklist</h2>
+<p>To naturalize as a spouse of a U.S. citizen under the 3-year rule, you must meet <strong>all</strong> of the following:</p>
+
+<table class="art-table">
+  <thead><tr><th>Requirement</th><th>Specifics</th></tr></thead>
+  <tbody>
+    <tr><td>Lawful permanent resident for 3 years</td><td>Green card date must be at least 3 years before N-400 filing</td></tr>
+    <tr><td>Married to U.S. citizen for all 3 years</td><td>Same spouse who petitioned for your green card; still legally married at time of naturalization</td></tr>
+    <tr><td>Living with U.S. citizen spouse for 3 years</td><td>Living together in a shared residence; separation or divorce disqualifies the 3-year track</td></tr>
+    <tr><td>Continuous residence</td><td>No single trip outside the U.S. longer than 6 months; no extended absences that break continuity</td></tr>
+    <tr><td>Physical presence</td><td>Present in the U.S. for at least 18 of the 36 months before filing</td></tr>
+    <tr><td>Good moral character</td><td>No disqualifying criminal convictions, tax issues, or fraud during the 3-year period</td></tr>
+    <tr><td>English language ability</td><td>Pass reading, writing, and speaking portions (with limited exemptions)</td></tr>
+    <tr><td>U.S. civics knowledge</td><td>Pass 10-question oral civics interview (answer 6 of 10 correctly)</td></tr>
+    <tr><td>Attachment to the Constitution</td><td>Swear the Oath of Allegiance at a naturalization ceremony</td></tr>
+  </tbody>
+</table>
+
+<h2 id="residence">Continuous Residence and Physical Presence Rules</h2>
+<p>Two related but different requirements trip up many applicants:</p>
+
+<h3>Continuous Residence</h3>
+<p>You must have <strong>continuously resided</strong> in the U.S. for 3 years. A single trip abroad of <strong>more than 6 months</strong> (180+ days) is presumed to break continuous residence — meaning the clock may restart from when you returned. Trips shorter than 6 months are generally fine but add up.</p>
+<p>Trips of 6–12 months create a rebuttable presumption of broken continuity — you can provide evidence (job in U.S., family ties, mortgage, taxes) that you maintained your U.S. domicile. Trips over 12 months almost always reset the clock.</p>
+
+<h3>Physical Presence</h3>
+<p>Separately, you must have been <strong>physically present</strong> in the U.S. for at least <strong>18 of the 36 months</strong> before filing N-400. This is a counting exercise — add up the days you were inside the U.S. during the 3-year window and ensure they total at least 548 days (18 months).</p>
+
+<div class="art-warn">
+  <strong>Track your travel history</strong>
+  <p>USCIS will ask you to list every international trip in your N-400 application. Keep a record of every departure and return date starting from when you get your green card. Passport stamps, boarding passes, and calendar records all help.</p>
+</div>
+
+<h2 id="tests">The English and Civics Tests</h2>
+
+<h3>English Test</h3>
+<p>The English test has three parts, evaluated during your naturalization interview:</p>
+<ul>
+  <li><strong>Reading:</strong> Read aloud one of three short sentences correctly</li>
+  <li><strong>Writing:</strong> Write one of three dictated sentences correctly</li>
+  <li><strong>Speaking:</strong> Demonstrated throughout the interview — the officer evaluates your ability to understand questions and respond in English</li>
+</ul>
+<p><strong>Exemptions:</strong> Applicants who are 50+ years old with 20 years as a permanent resident, or 55+ with 15 years, are exempt from the English test (but still take the civics test in their native language).</p>
+
+<h3>Civics Test</h3>
+<p>The officer asks up to 10 questions from the official 100-question USCIS civics study list. You need to answer <strong>6 of 10 correctly</strong>. Topics include U.S. history, government structure, rights, and the Constitution. USCIS publishes the full 100-question list for free at uscis.gov — study it in advance.</p>
+<p><strong>Exemptions:</strong> Applicants who are 65+ with 20+ years as a permanent resident take a shorter 20-question version and only need to answer 6 correctly from that reduced set.</p>
+
+<div class="art-cta-mid">
+  <h3>Not sure if you qualify for the 3-year track?</h3>
+  <p>If your marriage situation has changed — separation, divorce, or a spouse's death — your eligibility path may be different. An attorney can confirm which naturalization track applies to you.</p>
+  <a href="#" class="art-btn" data-affiliate="attorney-consult">Get an Attorney Review →</a>
+  <a href="/green-card-through-marriage" class="art-btn-outline">Green Card Through Marriage Guide</a>
+</div>
+
+<h2 id="n-400">Filing Form N-400</h2>
+<p>Naturalization is requested on <strong>Form N-400</strong> (Application for Naturalization). Key details:</p>
+
+<table class="art-table">
+  <thead><tr><th>Detail</th><th>Info</th></tr></thead>
+  <tbody>
+    <tr><td>Filing fee</td><td>$760 (includes biometrics); $640 online filing discount available</td></tr>
+    <tr><td>Where to file</td><td>Online at my.uscis.gov or by mail to the USCIS lockbox</td></tr>
+    <tr><td>When you can file</td><td>Up to 90 days before your 3-year anniversary as an LPR</td></tr>
+    <tr><td>Documents to include</td><td>Green card copy, marriage certificate, joint tax returns, evidence of living together, travel history, any prior criminal records</td></tr>
+    <tr><td>Processing time</td><td>8–18 months (varies by field office)</td></tr>
+  </tbody>
+</table>
+
+<div class="art-info">
+  <strong>File up to 90 days early</strong>
+  <p>You can submit N-400 up to 90 days before your 3-year anniversary as a permanent resident — USCIS calls this the "early filing window." Filing early means your interview may be scheduled right around your eligibility date, reducing the total wait.</p>
+</div>
+
+<h2 id="process">The Naturalization Process After Filing</h2>
+<p>After USCIS receives your N-400:</p>
+<ol>
+  <li><strong>Biometrics appointment</strong> (4–8 weeks) — fingerprints and photo at an ASC, similar to the <SmartLink href="/biometrics-appointment">AOS biometrics appointment</SmartLink></li>
+  <li><strong>Background check</strong> — FBI name check runs in parallel with processing</li>
+  <li><strong>Interview notice</strong> (6–14 months) — scheduled at your local USCIS field office</li>
+  <li><strong>Naturalization interview</strong> — officer reviews N-400, administers English and civics tests, asks about eligibility</li>
+  <li><strong>Decision</strong> — approved at interview, continued (more evidence needed), or denied</li>
+  <li><strong>Oath ceremony</strong> — final step; you swear the Oath of Allegiance and receive your Certificate of Naturalization</li>
+</ol>
+
+<h2 id="timeline">Full Path Timeline: K-1/CR-1 to U.S. Citizenship</h2>
+
+<table class="art-table">
+  <thead><tr><th>Milestone</th><th>Timeline From Start</th></tr></thead>
+  <tbody>
+    <tr><td>File I-129F (K-1) or I-130 (CR-1)</td><td>Month 0</td></tr>
+    <tr><td>Visa approval and entry / CR-1 entry as LPR</td><td>Month 12–30</td></tr>
+    <tr><td>K-1: marry + file AOS → conditional green card</td><td>Month 14–36</td></tr>
+    <tr><td>Begin 3-year LPR clock</td><td>Green card approval date</td></tr>
+    <tr><td>File I-751 to remove conditions (if conditional GC)</td><td>Month 21–24 of green card</td></tr>
+    <tr><td>Permanent green card issued after I-751</td><td>+12–36 months after I-751 filing</td></tr>
+    <tr><td>Eligible to file N-400 (3-year rule)</td><td>3 years after LPR date</td></tr>
+    <tr><td>Naturalization interview + oath</td><td>+8–18 months after N-400</td></tr>
+    <tr><td><strong>U.S. Citizenship</strong></td><td><strong>~5–8 years from K-1 filing</strong></td></tr>
+  </tbody>
+</table>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="art-faq">
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does a spouse of a U.S. citizen wait before applying for citizenship?</p>
+    <div class="art-faq-a"><p><strong>3 years</strong> as a lawful permanent resident — provided you've been continuously married to and living with the same U.S. citizen for those 3 years. The standard wait for non-spouses is 5 years.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What are the main requirements for naturalization?</p>
+    <div class="art-faq-a"><p>3 years as an LPR, continuously married and living with your U.S. citizen spouse, continuous U.S. residence (no trip over 6 months), physical presence for 18 of 36 months, good moral character, passing the English test, and passing the civics test.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I apply for naturalization with a conditional green card?</p>
+    <div class="art-faq-a"><p>Not until after your <SmartLink href="/i-751-petition-remove-conditions">I-751 conditions are removed</SmartLink> and you hold a permanent green card. However, time spent as a conditional resident does count toward the 3-year requirement.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What is the English test for naturalization?</p>
+    <div class="art-faq-a"><p>Three parts: read one sentence aloud, write one dictated sentence, and demonstrate conversational English during the interview. Exemptions apply for older long-term residents (50+/20 years or 55+/15 years as an LPR).</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does naturalization take after filing N-400?</p>
+    <div class="art-faq-a"><p>Typically <strong>8–18 months</strong> in 2026, depending on your USCIS field office. Check current times at egov.uscis.gov/processing-times using form N-400 and your location.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What is the difference between the 3-year and 5-year rule?</p>
+    <div class="art-faq-a"><p>The 3-year rule applies only to spouses who obtained their green card through marriage to a U.S. citizen and remain married and living together. Everyone else — employment-based, diversity lottery, unmarried children — must wait 5 years.</p></div>
+  </div>
+</div>
+
+<div class="art-cta-dark">
+  <h2>The journey from visa to citizenship starts with a single petition.</h2>
+  <p>Whether you're beginning with a <SmartLink href="/k1-visa">K-1 fiancé visa</SmartLink> or a <SmartLink href="/cr1-visa">CR-1 spousal visa</SmartLink>, the path to U.S. citizenship is the same destination — just different starting points.</p>
+  <a href="/green-card-through-marriage" class="art-btn-white">Green Card Through Marriage Guide →</a>
+  <a href="#" class="art-btn-ghost" data-affiliate="attorney-consult">Talk to an Attorney</a>
+</div>
+
+</ArticleLayout>

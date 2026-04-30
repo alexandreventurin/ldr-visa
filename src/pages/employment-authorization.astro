@@ -1,0 +1,229 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Employment Authorization (EAD): Work Permit After K-1 or AOS (2026)",
+    "description": "How to get an Employment Authorization Document (EAD) after a K-1 visa or Adjustment of Status — Form I-765, processing time, and what you can do with it.",
+    "url": "https://ldrvisa.org/employment-authorization",
+    "dateModified": "2026-04-30", "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/employment-authorization" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Adjustment of Status", "item": "https://ldrvisa.org/adjustment-of-status" },
+      { "@type": "ListItem", "position": 3, "name": "Employment Authorization", "item": "https://ldrvisa.org/employment-authorization" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I work in the U.S. while waiting for my green card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Once you file Form I-485 (Adjustment of Status), you can simultaneously file Form I-765 to request an Employment Authorization Document (EAD). When approved, the EAD — typically issued as a combo card with Advance Parole — allows you to work legally for any employer in the U.S. while your green card application is pending." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to get an EAD in 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When filed concurrently with Form I-485, the EAD (Form I-765) currently takes approximately 3–6 months to be approved and issued in 2026. USCIS has a 90-day processing goal for initial EADs filed with I-485. If USCIS misses that target, you may be able to request an expedite." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a combo card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "A combo card is a single physical card that combines Employment Authorization (EAD) and Advance Parole on one document. USCIS began issuing combo cards for I-485 filers to simplify the process. The card allows you to work for any U.S. employer and travel internationally while your Adjustment of Status is pending." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I work on a K-1 visa before filing for Adjustment of Status?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The K-1 fiancé visa does not include work authorization. You cannot work in the U.S. on a K-1 visa itself. Work authorization only comes after you marry and file Form I-485, then receive your EAD. The time between entering on K-1 and receiving your EAD — typically 3–6 months after the AOS filing — is a gap where you legally cannot work." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to my EAD when my green card is approved?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Once your green card (I-551) is approved and issued, your EAD is no longer needed for work authorization. As a lawful permanent resident, your green card itself serves as proof of work authorization. You present your green card to employers for I-9 verification instead of the EAD." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I change jobs or employers while on an EAD?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Unlike H-1B or L-1 work visas, the EAD is employer-agnostic — it authorizes you to work for any U.S. employer in any job. You can change jobs, work part-time or full-time, work for multiple employers simultaneously, or be self-employed. You do not need to notify USCIS of job changes while on an EAD." }
+      }
+    ]
+  }
+]);
+---
+
+<ArticleLayout
+  title="Employment Authorization (EAD): Work Permit After K-1 or AOS (2026)"
+  description="How to get your EAD work permit after a K-1 visa or Adjustment of Status filing — Form I-765, the combo card, processing times, and what the EAD lets you do."
+  schema={schema}
+  heroTitle="Employment Authorization (EAD): How to Work While Your Green Card Is Pending"
+  heroParagraph="After marrying on a K-1 visa and filing for Adjustment of Status, you don't have to wait for your green card to work. The EAD lets you start working in as little as 3 months."
+  theme="#0369a1"
+  themeLight="#e0f2fe"
+  themeDark="#0c4a6e"
+  summaryTitle="EAD Quick Facts"
+  summaryRows={[
+    { label: 'Form',             value: 'I-765' },
+    { label: 'Fee (with I-485)', value: '$0' },
+    { label: 'Processing time',  value: '3–6 months' },
+    { label: 'Issued as',        value: 'Combo card (EAD + AP)' },
+    { label: 'Work for',         value: 'Any U.S. employer' },
+    { label: 'Validity',         value: 'Typically 2 years' },
+  ]}
+  tocLinks={[
+    { id: 'what-is',     label: 'What Is an EAD?' },
+    { id: 'k1-gap',      label: 'K-1 Work Authorization Gap' },
+    { id: 'how-to-get',  label: 'How to Get It (I-765)' },
+    { id: 'combo-card',  label: 'The Combo Card' },
+    { id: 'what-it-allows', label: 'What the EAD Allows' },
+    { id: 'renewal',     label: 'Renewing Your EAD' },
+    { id: 'after-gc',    label: 'After Green Card Approval' },
+    { id: 'faq',         label: 'FAQ' },
+  ]}
+  relatedLinks={[
+    { href: '/adjustment-of-status',               label: 'Adjustment of Status Guide' },
+    { href: '/adjustment-of-status-after-marriage', label: 'AOS After K-1 Marriage' },
+    { href: '/adjustment-of-status-processing-time', label: 'AOS Processing Timeline' },
+    { href: '/advance-parole',                     label: 'Advance Parole (Travel)' },
+    { href: '/biometrics-appointment',             label: 'Biometrics Appointment' },
+    { href: '/conditional-green-card',             label: 'Conditional Green Card' },
+  ]}
+>
+
+<h2 id="what-is">What Is an Employment Authorization Document (EAD)?</h2>
+<p>An <strong>Employment Authorization Document (EAD)</strong> — also called a work permit — is a card issued by USCIS that proves you are legally authorized to work in the United States. For people going through the <SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink> process, it's the document that bridges the gap between arriving in the U.S. and receiving your green card.</p>
+<p>The EAD is not tied to any specific employer or job — it gives you open-market work authorization, meaning you can work for any employer, in any industry, full-time or part-time, or even be self-employed.</p>
+
+<h2 id="k1-gap">The K-1 Work Authorization Gap</h2>
+<p>If you entered the U.S. on a <SmartLink href="/k1-visa">K-1 fiancé visa</SmartLink>, there is an important gap to understand:</p>
+<ul>
+  <li><strong>K-1 visa itself:</strong> No work authorization — you cannot work in the U.S. while on a K-1 visa</li>
+  <li><strong>After marriage + I-485 filed:</strong> You can work once your EAD is approved (3–6 months after filing)</li>
+  <li><strong>After green card approved:</strong> Your green card serves as permanent work authorization</li>
+</ul>
+
+<div class="art-warn">
+  <strong>Do not work without authorization</strong>
+  <p>Working in the U.S. without authorization is a violation of immigration law that can affect your green card application and future visa eligibility. Wait until your EAD combo card physically arrives before starting any job.</p>
+</div>
+
+<p>The gap between entering on a K-1 and receiving your EAD is typically 5–9 months (up to 3 months to get married + file AOS, then 3–6 months for EAD processing). Plan financially for this period, or explore whether your spouse's income meets the <SmartLink href="/affidavit-of-support-income-requirements">Affidavit of Support income requirements</SmartLink>.</p>
+
+<h2 id="how-to-get">How to Get Your EAD — Form I-765</h2>
+<p>Employment authorization during AOS is requested on <strong>Form I-765</strong> (Application for Employment Authorization). The key is to file it <em>concurrently</em> with your I-485:</p>
+
+<table class="art-table">
+  <thead><tr><th>Detail</th><th>Info</th></tr></thead>
+  <tbody>
+    <tr><td>Form</td><td>I-765 (Application for Employment Authorization)</td></tr>
+    <tr><td>Eligibility category</td><td>(c)(9) — pending AOS applicant</td></tr>
+    <tr><td>Fee when filed with I-485</td><td>$0 (included)</td></tr>
+    <tr><td>Fee if filed separately</td><td>$520</td></tr>
+    <tr><td>Where to file</td><td>Same package as I-485, or online at my.uscis.gov</td></tr>
+    <tr><td>Processing time</td><td>3–6 months (90-day USCIS target)</td></tr>
+    <tr><td>USCIS 90-day rule</td><td>If not issued within 90 days, you may request interim EAD</td></tr>
+  </tbody>
+</table>
+
+<div class="art-info">
+  <strong>Always file I-765 with your initial I-485 package</strong>
+  <p>Filing I-765 separately after submitting I-485 costs $520 and causes delays. Include it in your initial AOS package — it's free and starts processing at the same time as your green card application.</p>
+</div>
+
+<h2 id="combo-card">The Combo Card: EAD + Advance Parole</h2>
+<p>USCIS issues a single <strong>combo card</strong> that combines your EAD and <SmartLink href="/advance-parole">Advance Parole</SmartLink> travel authorization in one physical card. This means one card lets you:</p>
+<ul>
+  <li>Work for any U.S. employer (EAD function)</li>
+  <li>Travel internationally and re-enter the U.S. without abandoning your I-485 (Advance Parole function)</li>
+</ul>
+<p>The combo card is valid for the period shown on the card — typically 2 years. It looks similar to a green card but is labeled "Employment Authorization." Use it for I-9 employment verification with employers.</p>
+
+<h2 id="what-it-allows">What the EAD Allows You to Do</h2>
+<div class="art-tips">
+  <div class="art-tip">
+    <div class="art-tip-num">✓ Allowed</div>
+    <div class="art-tip-title">Work for any employer</div>
+    <div class="art-tip-desc">Any U.S. employer in any industry — no restrictions by job type, company size, or field. Present the EAD card for I-9 verification.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">✓ Allowed</div>
+    <div class="art-tip-title">Change jobs freely</div>
+    <div class="art-tip-desc">Unlike H-1B, you can switch employers, get a new job, or take a second job at any time without notifying USCIS. The EAD is not tied to any employer.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">✓ Allowed</div>
+    <div class="art-tip-title">Be self-employed or freelance</div>
+    <div class="art-tip-desc">You can start your own business, freelance, or work as an independent contractor on an EAD — no employer sponsor needed.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">✓ Allowed</div>
+    <div class="art-tip-title">Work part-time or multiple jobs</div>
+    <div class="art-tip-desc">There's no restriction on hours or number of employers. Work part-time, full-time, or for multiple employers simultaneously.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">✓ Allowed</div>
+    <div class="art-tip-title">Open a U.S. bank account</div>
+    <div class="art-tip-desc">Many banks accept the EAD as valid ID for opening accounts. Combined with an ITIN or SSN, it opens access to most U.S. financial services.</div>
+  </div>
+  <div class="art-tip">
+    <div class="art-tip-num">✓ Allowed</div>
+    <div class="art-tip-title">Apply for a Social Security Number</div>
+    <div class="art-tip-desc">With an approved EAD, you can apply for a Social Security Number at any SSA office — required for payroll, taxes, and many financial accounts.</div>
+  </div>
+</div>
+
+<h2 id="renewal">Renewing Your EAD If I-485 Is Still Pending</h2>
+<p>If your <SmartLink href="/adjustment-of-status-processing-time">AOS is still pending</SmartLink> when your EAD is about to expire, file a renewal I-765 at least <strong>6 months before expiration</strong>. USCIS issues an <strong>automatic 180-day extension</strong> of your existing EAD when a timely renewal is filed — so your work authorization continues uninterrupted even if the renewal takes time to process.</p>
+<p>Track expiration dates carefully. Employers may ask to re-verify your work authorization at renewal — show them the receipt notice for your renewal I-765 to confirm the automatic extension.</p>
+
+<h2 id="after-gc">After Your Green Card Is Approved</h2>
+<p>Once your <SmartLink href="/conditional-green-card">green card</SmartLink> (Form I-551) is issued, your EAD is no longer necessary for work authorization. Your green card itself is a List A document for I-9 purposes — it proves both identity and work authorization indefinitely (or for 2 years if conditional).</p>
+<p>If you received a <SmartLink href="/conditional-green-card">conditional green card</SmartLink> (because you were married less than 2 years at approval), you'll need to file <SmartLink href="/i-751-petition-remove-conditions">Form I-751</SmartLink> to remove conditions before the card expires. After I-751 approval, you receive a permanent 10-year green card.</p>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="art-faq">
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I work in the U.S. while waiting for my green card?</p>
+    <div class="art-faq-a"><p>Yes — once you file I-485 and receive your EAD (Form I-765), you can work for any U.S. employer. The EAD typically arrives 3–6 months after your AOS filing.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does it take to get an EAD in 2026?</p>
+    <div class="art-faq-a"><p>Approximately <strong>3–6 months</strong> when filed with I-485. USCIS has a 90-day processing target. If 90 days pass without issuance, you can contact USCIS about an interim EAD.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What is a combo card?</p>
+    <div class="art-faq-a"><p>A single card combining Employment Authorization (EAD) and Advance Parole — allowing you to both work in the U.S. and travel internationally while your I-485 is pending.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I work on a K-1 visa before filing for AOS?</p>
+    <div class="art-faq-a"><p>No. The K-1 visa does not include work authorization. You must marry, file I-485 + I-765, and wait for the EAD to arrive before legally working in the U.S.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I change jobs while on an EAD?</p>
+    <div class="art-faq-a"><p>Yes, freely. The EAD is not employer-specific — you can switch jobs, work for multiple employers, or be self-employed without notifying USCIS.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What happens to my EAD when my green card is approved?</p>
+    <div class="art-faq-a"><p>Your green card replaces the EAD as proof of work authorization. Once your green card is issued, you present it to employers for I-9 verification instead of the EAD.</p></div>
+  </div>
+</div>
+
+<div class="art-cta-dark">
+  <h2>Filing AOS soon? Don't forget your EAD.</h2>
+  <p>Include Form I-765 in your initial I-485 package — it's free and starts your work authorization clock on day one.</p>
+  <a href="/adjustment-of-status" class="art-btn-white">Full AOS Filing Guide →</a>
+  <a href="#" class="art-btn-ghost" data-affiliate="self-filing">Start Filing Online</a>
+</div>
+
+</ArticleLayout>

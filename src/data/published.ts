@@ -40,4 +40,5 @@ export const PUBLISHED: Set<string> = new Set([
   '/advance-parole',
   '/employment-authorization',
   '/naturalization-requirements',
+  '/i-485',
 ]);

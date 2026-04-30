@@ -1,0 +1,241 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Form I-485: Application to Register Permanent Residence — Complete Guide 2026",
+    "description": "How to file Form I-485 for a marriage-based green card — eligibility, filing fee, required documents, concurrent filing (I-765/I-131), and what happens after you submit.",
+    "url": "https://ldrvisa.org/i-485",
+    "dateModified": "2026-04-30", "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/i-485" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Adjustment of Status", "item": "https://ldrvisa.org/adjustment-of-status" },
+      { "@type": "ListItem", "position": 3, "name": "Form I-485", "item": "https://ldrvisa.org/i-485" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Form I-485?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Form I-485, Application to Register Permanent Residence or Adjust Status, is the form filed by a foreign national already inside the United States to apply for a green card without leaving the country. For couples, it is the core form in the Adjustment of Status process — used by K-1 fiancé visa holders after marriage, and by anyone on a valid nonimmigrant status who married a U.S. citizen." }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost to file Form I-485?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The filing fee for Form I-485 in 2026 is $1,440 for applicants age 14–78, which includes the biometrics fee. Applicants under 14 pay $950 if filed with a parent's I-485, or $1,440 if filed alone. Applicants 79 and older pay $950 (no biometrics required). These fees are non-refundable." }
+      },
+      {
+        "@type": "Question",
+        "name": "What forms do I file with I-485?",
+        "acceptedAnswer": { "@type": "Answer", "text": "When filing I-485 for a marriage-based green card, you should concurrently file: Form I-765 (Employment Authorization/EAD) at no extra fee, Form I-131 (Advance Parole travel document) at no extra fee, and Form I-864 Affidavit of Support completed by the U.S. citizen petitioner. Filing I-765 and I-131 with I-485 is free — filing them separately later costs $520 and $630 respectively." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does I-485 processing take for a marriage-based green card?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Form I-485 for marriage-based green cards currently takes 12–24 months to process in 2026, depending on the USCIS field office handling your case. High-volume offices like Los Angeles and New York run closer to 20–24 months; smaller offices may process in 12–16 months. Check egov.uscis.gov/processing-times for current estimates at your specific office." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I work while my I-485 is pending?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, once you receive your Employment Authorization Document (EAD). File Form I-765 concurrently with your I-485 at no extra cost. The EAD is typically issued as a combo card (with Advance Parole) within 3–6 months of filing. You cannot work legally until the physical EAD card arrives — not from the date of filing." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between I-485 and consular processing?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Form I-485 (Adjustment of Status) is filed inside the United States by someone already present here. Consular processing is used by applicants outside the U.S. — they receive an immigrant visa (CR-1) at a U.S. embassy abroad and enter as a permanent resident. K-1 visa holders must use I-485 after entering and marrying. Those going through the CR-1 path use consular processing and do not file I-485." }
+      }
+    ]
+  }
+]);
+---
+
+<ArticleLayout
+  title="Form I-485: Application to Register Permanent Residence — Complete Guide 2026"
+  description="How to file Form I-485 for a marriage-based green card in 2026 — eligibility, filing fee, documents, concurrent forms (I-765, I-131), and what happens after you submit."
+  schema={schema}
+  heroTitle="Form I-485: The Green Card Application You File in the U.S."
+  heroParagraph="If you entered on a K-1 fiancé visa and got married — or you're already in the U.S. on another visa — Form I-485 is how you get your green card without leaving the country."
+  theme="#1d4ed8"
+  themeLight="#dbeafe"
+  themeDark="#1e3a8a"
+  summaryTitle="I-485 at a Glance"
+  summaryRows={[
+    { label: 'Filing fee (age 14–78)', value: '$1,440' },
+    { label: 'Concurrent forms',       value: 'I-765 + I-131 (free)' },
+    { label: 'Medical exam',           value: 'I-693 (civil surgeon)' },
+    { label: 'Processing time',        value: '12–24 months' },
+    { label: 'Result',                 value: 'Conditional or permanent GC' },
+    { label: 'Interview required?',    value: 'Yes — local USCIS office' },
+  ]}
+  tocLinks={[
+    { id: 'what-is',      label: 'What Is Form I-485?' },
+    { id: 'who-files',    label: 'Who Files I-485' },
+    { id: 'package',      label: 'What to File With I-485' },
+    { id: 'documents',    label: 'Required Documents' },
+    { id: 'fee',          label: 'Filing Fees' },
+    { id: 'after',        label: 'After You File' },
+    { id: 'result',       label: 'Conditional vs. Permanent GC' },
+    { id: 'faq',          label: 'FAQ' },
+  ]}
+  relatedLinks={[
+    { href: '/adjustment-of-status',                label: 'Adjustment of Status Guide' },
+    { href: '/adjustment-of-status-after-marriage', label: 'AOS After K-1 Marriage' },
+    { href: '/adjustment-of-status-processing-time', label: 'AOS Processing Timeline' },
+    { href: '/employment-authorization',            label: 'EAD Work Permit Guide' },
+    { href: '/advance-parole',                      label: 'Advance Parole (Travel)' },
+    { href: '/conditional-green-card',              label: 'Conditional Green Card' },
+  ]}
+>
+
+<h2 id="what-is">What Is Form I-485?</h2>
+<p>Form I-485, <em>Application to Register Permanent Residence or Adjust Status</em>, is the form that turns a temporary immigration status into a U.S. green card — all without leaving the country. It is the heart of the <SmartLink href="/adjustment-of-status">Adjustment of Status (AOS) process</SmartLink>.</p>
+<p>For couples, I-485 is typically filed in one of two situations:</p>
+<ul>
+  <li>By a <SmartLink href="/k1-visa">K-1 fiancé visa</SmartLink> holder who entered the U.S., married their U.S. citizen sponsor within 90 days, and now wants to become a permanent resident — see the full <SmartLink href="/adjustment-of-status-after-marriage">AOS after marriage guide</SmartLink></li>
+  <li>By someone already in the U.S. on a different valid nonimmigrant visa (tourist, student, work) who married a U.S. citizen and is eligible to adjust status from inside the country</li>
+</ul>
+<p>Couples going through the <SmartLink href="/cr1-visa">CR-1 spousal visa</SmartLink> route do <strong>not</strong> file I-485 — they complete consular processing abroad and enter the U.S. already as a permanent resident. I-485 is only for people physically inside the United States.</p>
+
+<h2 id="who-files">Who Can File I-485 for a Marriage-Based Green Card</h2>
+<p>To be eligible to file I-485 based on marriage, you must:</p>
+<ul>
+  <li>Be <strong>physically present</strong> in the United States at the time of filing</li>
+  <li>Have been <strong>inspected and admitted</strong> or paroled by a CBP officer at a U.S. port of entry (entered legally — not crossed the border without authorization)</li>
+  <li>Be the beneficiary of an <strong>approved I-130 petition</strong> or have entered on a K-1 visa (which functions as an approved petition once you marry)</li>
+  <li>Be <strong>admissible</strong> to the United States — no outstanding bars such as prior removal orders, certain criminal convictions, or immigration fraud</li>
+</ul>
+
+<div class="art-warn">
+  <strong>K-1 holders: you must marry first</strong>
+  <p>You cannot file I-485 on a K-1 visa before you are legally married to your U.S. citizen petitioner. The marriage must take place within 90 days of your K-1 entry. Only after the wedding can you file the I-485 package.</p>
+</div>
+
+<h2 id="package">What to File With I-485 — The Full Package</h2>
+<p>Filing I-485 alone is a mistake. Three additional forms should be filed in the same package on day one — two of them are free when submitted concurrently:</p>
+
+<table class="art-table">
+  <thead><tr><th>Form</th><th>Purpose</th><th>Fee if filed with I-485</th><th>Fee if filed later</th></tr></thead>
+  <tbody>
+    <tr><td><strong>I-485</strong></td><td>Green card application (the main form)</td><td>$1,440</td><td>—</td></tr>
+    <tr><td><strong>I-765</strong></td><td><SmartLink href="/employment-authorization">Employment Authorization (EAD)</SmartLink> — lets you work while pending</td><td>$0</td><td>$520</td></tr>
+    <tr><td><strong>I-131</strong></td><td><SmartLink href="/advance-parole">Advance Parole</SmartLink> — lets you travel internationally without abandoning I-485</td><td>$0</td><td>$630</td></tr>
+    <tr><td><strong>I-864</strong></td><td><SmartLink href="/affidavit-of-support">Affidavit of Support</SmartLink> — completed by the U.S. citizen petitioner, proving financial ability to support the immigrant</td><td>$0</td><td>$0</td></tr>
+  </tbody>
+</table>
+
+<p>Filing I-765 and I-131 concurrently saves you $1,150 in fees. More importantly, it starts the clock on your <SmartLink href="/employment-authorization">EAD</SmartLink> and <SmartLink href="/advance-parole">Advance Parole</SmartLink> processing on day one.</p>
+
+<h2 id="documents">Required Documents</h2>
+<p>Along with the completed forms, USCIS requires supporting evidence. Here's what the I-485 package typically includes for a marriage-based case:</p>
+
+<table class="art-table">
+  <thead><tr><th>Document</th><th>Notes</th></tr></thead>
+  <tbody>
+    <tr><td>Form I-485 (completed)</td><td>Beneficiary fills this out; sign and date on the final page</td></tr>
+    <tr><td>Form I-765 + I-131</td><td>Completed by beneficiary; filed in the same envelope</td></tr>
+    <tr><td>Form I-864 (Affidavit of Support)</td><td>Completed by the U.S. citizen petitioner; see <SmartLink href="/affidavit-of-support-income-requirements">income requirements</SmartLink></td></tr>
+    <tr><td>Form I-693 (Medical Exam)</td><td>Completed by a USCIS-designated civil surgeon; sealed envelope submitted with I-485</td></tr>
+    <tr><td>Copy of green card or visa (if applicable)</td><td>Copy of K-1 visa page in passport, or other current/prior U.S. visa</td></tr>
+    <tr><td>I-94 Arrival/Departure Record</td><td>Print from i94.cbp.dhs.gov — proves lawful admission</td></tr>
+    <tr><td>Passport biographical page</td><td>Copy of the page with your photo and personal info</td></tr>
+    <tr><td>Two passport-style photos</td><td>Per USCIS photo specifications</td></tr>
+    <tr><td>Marriage certificate</td><td>Government-issued; translated if not in English</td></tr>
+    <tr><td>Proof all prior marriages ended</td><td>Divorce decrees or death certificates for every prior marriage of either spouse</td></tr>
+    <tr><td>Birth certificate</td><td>Beneficiary's birth certificate; translated if necessary</td></tr>
+    <tr><td>Police certificates (if required)</td><td>Required for applicants who lived outside the U.S. for 6+ months after age 16</td></tr>
+    <tr><td>Filing fee payment</td><td>$1,440 by check, money order, or credit card (online)</td></tr>
+  </tbody>
+</table>
+
+<div class="art-info">
+  <strong>The I-693 medical exam must be sealed</strong>
+  <p>Form I-693 is completed by a USCIS-designated civil surgeon — not your regular doctor. The civil surgeon seals the results in an envelope that you submit unopened with your I-485 package. An opened envelope means the exam must be redone. Find a civil surgeon at uscis.gov/civilsurgeons.</p>
+</div>
+
+<h2 id="fee">Filing Fees (2026)</h2>
+<table class="art-table">
+  <thead><tr><th>Applicant Age</th><th>I-485 Fee</th><th>Biometrics Included?</th></tr></thead>
+  <tbody>
+    <tr><td>Under 14 (with parent's I-485)</td><td>$950</td><td>No biometrics required</td></tr>
+    <tr><td>Under 14 (filing alone)</td><td>$1,440</td><td>Yes</td></tr>
+    <tr><td>Age 14–78</td><td>$1,440</td><td>Yes</td></tr>
+    <tr><td>Age 79 and older</td><td>$950</td><td>No biometrics required</td></tr>
+  </tbody>
+</table>
+<p>All fees are non-refundable, even if the application is denied. Pay by check (payable to "U.S. Department of Homeland Security"), money order, or credit card when filing online at my.uscis.gov.</p>
+
+<div class="art-cta-mid">
+  <h3>Want to make sure your package is complete before you mail it?</h3>
+  <p>A missing document or wrong form version causes a rejection notice — and you lose weeks while refiling. An attorney review catches errors before they happen.</p>
+  <a href="#" class="art-btn" data-affiliate="attorney-consult">Get an Attorney to Review Your Package →</a>
+  <a href="/adjustment-of-status" class="art-btn-outline">Full AOS Step-by-Step Guide</a>
+</div>
+
+<h2 id="after">What Happens After You File</h2>
+<p>Once USCIS receives your I-485 package, the process moves through several stages. See the full <SmartLink href="/adjustment-of-status-processing-time">AOS processing timeline</SmartLink> for a detailed breakdown — here's the summary:</p>
+<ol>
+  <li><strong>Receipt notices (2–4 weeks)</strong> — USCIS mails a separate I-797 receipt for each form (I-485, I-765, I-131). Save these — they contain your case numbers and are required for status checks.</li>
+  <li><strong>Biometrics appointment (4–8 weeks)</strong> — You receive a notice scheduling your <SmartLink href="/biometrics-appointment">biometrics appointment</SmartLink> at a local Application Support Center for fingerprints and photo.</li>
+  <li><strong>EAD / Combo card issued (3–6 months)</strong> — Your <SmartLink href="/employment-authorization">Employment Authorization Document</SmartLink> and <SmartLink href="/advance-parole">Advance Parole</SmartLink> arrive as a single combo card, allowing you to work and travel.</li>
+  <li><strong>Interview notice (8–16 months)</strong> — USCIS schedules your in-person AOS interview at the local field office. Both spouses should attend. Review the <SmartLink href="/marriage-green-card-interview-questions">AOS interview questions</SmartLink> to prepare.</li>
+  <li><strong>Decision and green card (2–4 weeks post-interview)</strong> — If approved, your green card is mailed. Whether it's conditional or permanent depends on how long you've been married.</li>
+</ol>
+
+<h2 id="result">Conditional vs. Permanent Green Card</h2>
+<p>The green card you receive after I-485 approval depends on how long you have been married at the time of approval:</p>
+<ul>
+  <li><strong>Married less than 2 years at approval:</strong> You receive a <SmartLink href="/conditional-green-card">conditional green card</SmartLink> valid for 2 years. Before it expires, you must file <SmartLink href="/i-751-petition-remove-conditions">Form I-751</SmartLink> during the 21–24 month window to remove the conditions and receive a permanent 10-year card.</li>
+  <li><strong>Married 2 or more years at approval:</strong> You receive a permanent green card valid for 10 years. No I-751 is required — you skip directly to the path toward <SmartLink href="/naturalization-requirements">U.S. citizenship</SmartLink>.</li>
+</ul>
+<p>Most K-1 visa holders — who must marry within 90 days of entry and then go through AOS — receive a conditional green card, since the total time from entry to green card approval is typically well under 2 years. Those who entered on a <SmartLink href="/cr1-visa">CR-1 visa</SmartLink> and were married 2+ years already enter as permanent residents without the conditional period.</p>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="art-faq">
+  <div class="art-faq-item">
+    <p class="art-faq-q">What is Form I-485?</p>
+    <div class="art-faq-a"><p>The application to obtain a U.S. green card from inside the United States. It is the core form in the <SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink> process, used by K-1 holders after marriage and by others already in the U.S. on a valid status.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How much does it cost to file Form I-485?</p>
+    <div class="art-faq-a"><p><strong>$1,440</strong> for applicants age 14–78 (includes biometrics). File I-765 and I-131 at the same time — both are free when submitted concurrently with I-485, saving $1,150 in fees.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What forms do I file with I-485?</p>
+    <div class="art-faq-a"><p>File I-765 (<SmartLink href="/employment-authorization">EAD work permit</SmartLink>), I-131 (<SmartLink href="/advance-parole">Advance Parole</SmartLink>), and I-864 (<SmartLink href="/affidavit-of-support">Affidavit of Support</SmartLink>) in the same package. I-765 and I-131 are free when filed concurrently.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does I-485 processing take?</p>
+    <div class="art-faq-a"><p><strong>12–24 months</strong> depending on your USCIS field office. Check the <SmartLink href="/adjustment-of-status-processing-time">AOS processing timeline</SmartLink> for a stage-by-stage breakdown and field office comparisons.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can I work while my I-485 is pending?</p>
+    <div class="art-faq-a"><p>Yes — once your <SmartLink href="/employment-authorization">EAD combo card</SmartLink> arrives (typically 3–6 months after filing). You cannot work based on a pending application alone — you need the physical card.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What is the difference between I-485 and consular processing?</p>
+    <div class="art-faq-a"><p>I-485 is filed inside the U.S. by someone already present. Consular processing (used for the <SmartLink href="/cr1-visa">CR-1 visa</SmartLink>) happens at a U.S. embassy abroad — the applicant enters the U.S. already as a permanent resident and never files I-485.</p></div>
+  </div>
+</div>
+
+<div class="art-cta-dark">
+  <h2>Ready to file your green card application?</h2>
+  <p>The <SmartLink href="/adjustment-of-status">complete AOS guide</SmartLink> walks through every step — from eligibility check through green card in hand — with the full document checklist and timeline.</p>
+  <a href="/adjustment-of-status" class="art-btn-white">Complete AOS Guide →</a>
+  <a href="#" class="art-btn-ghost" data-affiliate="self-filing">Start Filing Online</a>
+</div>
+
+</ArticleLayout>

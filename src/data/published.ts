@@ -33,4 +33,5 @@ export const PUBLISHED: Set<string> = new Set([
   '/sponsor-requirements-k1-visa',
   '/privacy',
   '/disclaimer',
+  '/i-130',
 ]);

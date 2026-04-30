@@ -508,6 +508,87 @@ img { display: block; max-width: 100%; }
   .footer-grid { grid-template-columns: 1fr; }
 }
 
+/* ============================================================
+   ARTICLE LAYOUT — shared styles for ArticleLayout.astro pages
+   Theme colors injected via CSS variables on .art-page wrapper:
+     --th       (primary color,  e.g. #1d4ed8)
+     --th-light (light tint,     e.g. #dbeafe)
+     --th-dark  (dark shade,     e.g. #1e3a8a)
+   ============================================================ */
+
+.art-page { --th: #1d4ed8; --th-light: #dbeafe; --th-dark: #1e3a8a; }
+
+/* Hero */
+.art-hero { background: linear-gradient(135deg, var(--th-dark) 0%, var(--th) 100%); color:#fff; padding:3rem 1.5rem 2.5rem; text-align:center; }
+.art-badge { display:inline-block; background:rgba(255,255,255,.18); color:#fff; font-size:.75rem; font-weight:700; padding:.25rem .75rem; border-radius:999px; margin-bottom:.85rem; letter-spacing:.05em; text-transform:uppercase; }
+.art-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); font-weight:800; margin:0 0 .75rem; line-height:1.2; }
+.art-hero > .container > p { font-size:1.05rem; opacity:.88; max-width:600px; margin:0 auto 1.25rem; }
+
+/* Two-column grid */
+.art-wrap { max-width:1080px; margin:0 auto; padding:2.5rem 1.5rem; display:grid; grid-template-columns:1fr 300px; gap:2.5rem; align-items:start; }
+@media (max-width:768px) { .art-wrap { grid-template-columns:1fr; } }
+
+/* Main column typography */
+.art-main h2 { font-size:1.4rem; font-weight:800; color:#0f172a; margin:2.5rem 0 1rem; padding-bottom:.5rem; border-bottom:2px solid var(--th-light); }
+.art-main h2:first-child { margin-top:0; }
+.art-main h3 { font-size:1.05rem; font-weight:700; color:var(--th-dark); margin:1.5rem 0 .55rem; }
+.art-main p { color:#374151; line-height:1.75; margin:0 0 1rem; }
+.art-main ul, .art-main ol { color:#374151; line-height:1.75; margin:0 0 1rem; padding-left:1.5rem; }
+.art-main li { margin-bottom:.4rem; }
+
+/* Info / warning callout boxes */
+.art-info { border-left:5px solid #059669; background:#ecfdf5; border-radius:0 10px 10px 0; padding:1rem 1.2rem; margin:1.25rem 0; }
+.art-info strong { display:block; font-size:.8rem; font-weight:800; color:#065f46; text-transform:uppercase; letter-spacing:.05em; margin-bottom:.35rem; }
+.art-info p { margin:0; font-size:.92rem; color:#374151; }
+.art-warn { border-left:5px solid #f59e0b; background:#fffbeb; border-radius:0 10px 10px 0; padding:1rem 1.2rem; margin:1.25rem 0; }
+.art-warn strong { display:block; font-size:.8rem; font-weight:800; color:#b45309; text-transform:uppercase; letter-spacing:.05em; margin-bottom:.35rem; }
+.art-warn p { margin:0; font-size:.92rem; color:#374151; }
+
+/* Generic data table */
+.art-table { width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:.88rem; }
+.art-table th { background:var(--th); color:#fff; padding:.6rem .9rem; text-align:left; font-weight:700; font-size:.8rem; }
+.art-table td { padding:.6rem .9rem; border-bottom:1px solid #e2e8f0; color:#374151; vertical-align:top; }
+.art-table tr:nth-child(even) td { background:#f8fafc; }
+
+/* Tips grid */
+.art-tips { display:grid; grid-template-columns:repeat(auto-fill,minmax(240px,1fr)); gap:.8rem; margin:1rem 0 1.5rem; }
+.art-tip { border:1px solid var(--th-light); border-radius:10px; padding:1rem; background:color-mix(in srgb,var(--th-light) 30%,#fff); }
+.art-tip-num { font-size:.72rem; font-weight:800; color:var(--th); text-transform:uppercase; letter-spacing:.05em; margin-bottom:.3rem; }
+.art-tip-title { font-weight:700; font-size:.9rem; color:#0f172a; margin-bottom:.3rem; }
+.art-tip-desc { font-size:.82rem; color:#374151; line-height:1.5; }
+
+/* FAQ */
+.art-faq { display:flex; flex-direction:column; gap:.75rem; margin:1rem 0; }
+.art-faq-item { border:1px solid #e2e8f0; border-radius:10px; overflow:hidden; }
+.art-faq-q { font-weight:700; font-size:.95rem; color:#0f172a; padding:.9rem 1.1rem; background:#f8fafc; margin:0; }
+.art-faq-a { padding:.85rem 1.1rem; color:#374151; font-size:.9rem; line-height:1.7; border-top:1px solid #e2e8f0; }
+.art-faq-a p { margin:0; }
+
+/* Mid-page CTA */
+.art-cta-mid { background:var(--th-light); border:1px solid color-mix(in srgb,var(--th) 30%,#fff); border-radius:14px; padding:1.5rem; margin:2rem 0; text-align:center; }
+.art-cta-mid h3 { font-size:1.05rem; font-weight:800; color:var(--th-dark); margin:0 0 .45rem; }
+.art-cta-mid p { font-size:.9rem; color:#374151; margin:0 0 1rem; }
+.art-btn { display:inline-block; background:var(--th); color:#fff; font-weight:700; font-size:.9rem; padding:.65rem 1.5rem; border-radius:8px; text-decoration:none; margin:.2rem; }
+.art-btn-outline { display:inline-block; border:2px solid var(--th); color:var(--th); font-weight:700; font-size:.9rem; padding:.6rem 1.4rem; border-radius:8px; text-decoration:none; margin:.2rem; background:transparent; }
+
+/* Bottom dark CTA */
+.art-cta-dark { background:#0f172a; border-radius:16px; padding:2rem; margin:2.5rem 0 1rem; text-align:center; color:#fff; }
+.art-cta-dark h2 { font-size:1.35rem; font-weight:800; margin:0 0 .5rem; border:none !important; padding:0 !important; }
+.art-cta-dark p { opacity:.82; font-size:.95rem; margin:0 0 1.2rem; }
+.art-btn-white { display:inline-block; background:#fff; color:var(--th-dark); font-weight:800; font-size:.95rem; padding:.75rem 2rem; border-radius:8px; text-decoration:none; margin:.3rem; }
+.art-btn-ghost { display:inline-block; border:2px solid rgba(255,255,255,.35); color:#fff; font-weight:700; font-size:.9rem; padding:.7rem 1.6rem; border-radius:8px; text-decoration:none; margin:.3rem; }
+
+/* Sidebar */
+.art-sidebar { position:sticky; top:80px; display:flex; flex-direction:column; gap:1rem; }
+.art-box { background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:1.25rem; }
+.art-box h3 { font-size:.8rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:#64748b; margin:0 0 .9rem; }
+.art-summary { background:linear-gradient(135deg,var(--th-dark),var(--th)); color:#fff; border-radius:12px; padding:1.25rem; }
+.art-summary h3 { font-size:.8rem; font-weight:800; text-transform:uppercase; letter-spacing:.08em; color:rgba(255,255,255,.65); margin:0 0 .9rem; }
+.art-sum-row { display:flex; justify-content:space-between; align-items:baseline; padding:.42rem 0; border-bottom:1px solid rgba(255,255,255,.15); font-size:.84rem; }
+.art-sum-row:last-child { border-bottom:none; }
+.art-sum-label { opacity:.8; }
+.art-sum-val { font-weight:700; color:#a5f3fc; }
+
 /* Related guides cards — global so SmartLink-rendered elements receive styles */
 .related-card {
   background: var(--color-surface);

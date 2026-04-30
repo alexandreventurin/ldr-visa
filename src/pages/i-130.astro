@@ -1,0 +1,233 @@
+---
+import ArticleLayout from '../layouts/ArticleLayout.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Form I-130: Petition for Alien Relative — Complete Guide 2026",
+    "description": "How to file Form I-130, the petition that starts the CR-1 spousal visa process. Filing fee, required documents, processing times, and what happens after approval.",
+    "url": "https://ldrvisa.org/i-130",
+    "dateModified": "2026-04-30",
+    "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" } },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/i-130" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home",      "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "CR-1 Visa", "item": "https://ldrvisa.org/cr1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "Form I-130","item": "https://ldrvisa.org/i-130" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does it cost to file Form I-130?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The filing fee for Form I-130 is $675 as of 2026. This is paid to USCIS at the time of filing and is non-refundable, even if the petition is denied. The fee covers only the I-130 petition; additional fees apply later for the immigrant visa application ($325) and Affidavit of Support ($120) at the NVC stage." }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does USCIS take to process Form I-130?",
+        "acceptedAnswer": { "@type": "Answer", "text": "USCIS is currently processing Form I-130 for immediate relatives (spouses of U.S. citizens) in approximately 12–18 months as of 2026. Processing times vary by the service center that receives your case. Check current times at egov.uscis.gov/processing-times using form type I-130 and your filing location." }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a green card holder (LPR) file Form I-130 for a spouse?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes, but under a different category. U.S. citizens file I-130 for spouses as 'immediate relatives' — no annual cap, faster processing. Lawful permanent residents (green card holders) can also file I-130 for spouses, but their petitions fall under the F-2A family preference category, which has annual visa limits and longer wait times. LPRs cannot sponsor a fiancé on a K-1 visa — only the CR-1/F-2A route is available to them." }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after USCIS approves Form I-130?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After USCIS approves Form I-130, the case is transferred to the National Visa Center (NVC). NVC will send instructions to pay the immigrant visa fee ($325) and Affidavit of Support fee ($120), then you submit all required documents through the CEAC portal. After NVC reviews and completes the case, they schedule the immigrant visa interview at the U.S. embassy in the beneficiary's country." }
+      },
+      {
+        "@type": "Question",
+        "name": "Where do I file Form I-130?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Most I-130 petitions are filed by mail to a USCIS lockbox facility — Chicago or Dallas depending on your state. You can also file online at my.uscis.gov. If you live abroad, you may be able to file at a USCIS international field office. Check USCIS.gov for the correct filing address based on your state of residence." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to include my spouse's documents when filing I-130?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. When filing I-130 for a spouse, you must include evidence of your marriage: a marriage certificate, proof that any prior marriages were legally ended (divorce decrees or death certificates), and proof of your U.S. citizenship (passport, birth certificate, or naturalization certificate). USCIS also requires Form I-130A (Supplemental Information) completed by the beneficiary spouse." }
+      }
+    ]
+  }
+]);
+---
+
+<ArticleLayout
+  title="Form I-130: Petition for Alien Relative — Complete Guide 2026"
+  description="How to file Form I-130 for a spouse in 2026 — filing fee, required documents, where to file, processing times, and what happens after USCIS approves."
+  schema={schema}
+  heroTitle="Form I-130: The Petition That Starts Your Spouse's Visa"
+  heroParagraph="If you're a U.S. citizen married to a foreign national, Form I-130 is your first step. Here's exactly what it is, how to file it, and what to expect."
+  theme="#0369a1"
+  themeLight="#e0f2fe"
+  themeDark="#0c4a6e"
+  summaryTitle="I-130 at a Glance"
+  summaryRows={[
+    { label: 'Filing fee',       value: '$675' },
+    { label: 'Who files',        value: 'U.S. citizen petitioner' },
+    { label: 'Where to file',    value: 'USCIS lockbox or online' },
+    { label: 'Processing time',  value: '12–18 months' },
+    { label: 'After approval',   value: 'Transfers to NVC' },
+    { label: 'Visa result',      value: 'CR-1 or IR-1 immigrant visa' },
+  ]}
+  tocLinks={[
+    { id: 'what-is',     label: 'What Is Form I-130?' },
+    { id: 'who-files',   label: 'Who Files It' },
+    { id: 'documents',   label: 'Required Documents' },
+    { id: 'how-to-file', label: 'How to File' },
+    { id: 'after',       label: 'After Approval' },
+    { id: 'processing',  label: 'Processing Times' },
+    { id: 'faq',         label: 'FAQ' },
+  ]}
+  relatedLinks={[
+    { href: '/cr1-visa',               label: 'CR-1 Spousal Visa Overview' },
+    { href: '/cr1-visa-checklist',     label: 'CR-1 Document Checklist' },
+    { href: '/cr1-visa-processing-time', label: 'CR-1 Processing Timeline' },
+    { href: '/nvc-processing-time',    label: 'NVC Processing Time' },
+    { href: '/affidavit-of-support',   label: 'Affidavit of Support (I-864)' },
+    { href: '/cr1-visa-cost',          label: 'CR-1 Visa Cost Breakdown' },
+  ]}
+>
+
+<h2 id="what-is">What Is Form I-130?</h2>
+<p>Form I-130, <em>Petition for Alien Relative</em>, is filed by a U.S. citizen or lawful permanent resident to establish a qualifying family relationship with a foreign national. For married couples, it's the foundational document that starts the immigrant visa process — specifically the <strong>CR-1 spousal visa</strong> or <strong>IR-1 visa</strong>.</p>
+<p>The I-130 doesn't grant a visa by itself. It's a petition that tells USCIS: "I am a U.S. citizen, this is my spouse, and I'm requesting that you start the process to bring them here as a permanent resident." Once approved, the case moves to the State Department (via NVC) for the visa issuance stage.</p>
+
+<div class="art-info">
+  <strong>Key distinction</strong>
+  <p>The I-130 is the petitioner's form (filed by the U.S. citizen). It's separate from the immigrant visa application (DS-260), which the foreign spouse completes later at the NVC stage.</p>
+</div>
+
+<h2 id="who-files">Who Files Form I-130 — and Who Can't</h2>
+<p>For spousal immigration, Form I-130 can be filed by:</p>
+<ul>
+  <li><strong>U.S. citizens</strong> — spouse qualifies as an <em>immediate relative</em>; no annual cap on visas, faster processing</li>
+  <li><strong>Lawful permanent residents (green card holders)</strong> — spouse falls under the F-2A preference category; subject to annual visa limits and longer waits</li>
+</ul>
+
+<div class="art-warn">
+  <strong>LPRs cannot file K-1</strong>
+  <p>Only U.S. citizens can petition for a K-1 fiancé visa. If you have a green card (not citizenship), your only option to bring a spouse is the I-130 → CR-1/F-2A route.</p>
+</div>
+
+<p>For U.S. citizens, there is no annual cap on immigrant visas for spouses — they are processed as immediate relatives, which is why USCIS prioritizes them faster than most family-preference categories.</p>
+
+<h2 id="documents">Required Documents</h2>
+<p>When filing I-130 for a spouse, you must submit:</p>
+
+<table class="art-table">
+  <thead>
+    <tr><th>Document</th><th>Who Provides It</th><th>Notes</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Form I-130 (completed and signed)</td><td>Petitioner (U.S. citizen)</td><td>Available free at uscis.gov</td></tr>
+    <tr><td>Form I-130A (Supplemental Information)</td><td>Beneficiary (foreign spouse)</td><td>Required for spousal petitions</td></tr>
+    <tr><td>Proof of U.S. citizenship</td><td>Petitioner</td><td>U.S. passport, birth cert, or naturalization cert</td></tr>
+    <tr><td>Marriage certificate</td><td>Both</td><td>Must be government-issued; translate if not in English</td></tr>
+    <tr><td>Proof prior marriages ended</td><td>Whoever was previously married</td><td>Divorce decrees or death certificates for ALL prior marriages</td></tr>
+    <tr><td>Passport-style photos (x2)</td><td>Each applicant</td><td>Per USCIS photo requirements</td></tr>
+    <tr><td>Filing fee — $675</td><td>Petitioner pays</td><td>Check, money order, or pay online</td></tr>
+  </tbody>
+</table>
+
+<div class="art-info">
+  <strong>Foreign-language documents</strong>
+  <p>Any document not in English must include a certified English translation. The translator must certify that they are competent to translate and that the translation is accurate.</p>
+</div>
+
+<h2 id="how-to-file">How to File Form I-130</h2>
+<p>You have two options:</p>
+
+<h3>Option A — File online (recommended)</h3>
+<p>Go to <strong>my.uscis.gov</strong>, create a free account, and file I-130 online. You can upload documents digitally, pay by credit card, and track your case in real time. Online filing also allows USCIS to communicate with you electronically, which is often faster.</p>
+
+<h3>Option B — File by mail</h3>
+<p>Print, complete, and mail Form I-130 (with I-130A and all supporting documents) to the USCIS lockbox that serves your state. Check uscis.gov for the current mailing address — the Chicago and Dallas lockboxes route cases to different service centers depending on where you live.</p>
+
+<div class="art-warn">
+  <strong>Use the current form version</strong>
+  <p>USCIS periodically revises forms. Always download Form I-130 directly from uscis.gov immediately before filing. Using an outdated version will result in rejection.</p>
+</div>
+
+<div class="art-cta-mid">
+  <h3>Overwhelmed by the paperwork?</h3>
+  <p>An immigration attorney can review your I-130 package before you file — catching errors that cause delays or rejections before they happen.</p>
+  <a href="#" class="art-btn" data-affiliate="attorney-consult">Talk to an Immigration Attorney →</a>
+  <a href="/cr1-visa-checklist" class="art-btn-outline">See the Full CR-1 Checklist</a>
+</div>
+
+<h2 id="after">What Happens After I-130 Approval</h2>
+<p>When USCIS approves your I-130, they mail you a Notice of Action (Form I-797). Then:</p>
+<ol>
+  <li><strong>USCIS transfers the case to NVC</strong> — takes 2–6 weeks after approval</li>
+  <li><strong>NVC generates fee invoices</strong> — you pay the $325 immigrant visa fee and $120 I-864 fee</li>
+  <li><strong>Document submission</strong> — you upload civil documents and the I-864 Affidavit of Support through CEAC</li>
+  <li><strong>NVC review</strong> — takes 4–12 weeks if your package is complete</li>
+  <li><strong>Interview scheduled</strong> — at the U.S. embassy or consulate in your spouse's country</li>
+  <li><strong>Visa issued</strong> — your spouse enters the U.S. as a conditional or permanent resident</li>
+</ol>
+<p>See the full <SmartLink href="/nvc-processing-time">NVC processing time guide</SmartLink> and <SmartLink href="/cr1-visa-processing-time">CR-1 processing timeline</SmartLink> for stage-by-stage details.</p>
+
+<h2 id="processing">Current Processing Times (2026)</h2>
+<p>USCIS processing times for I-130 spousal petitions vary by service center. As of April 2026:</p>
+
+<table class="art-table">
+  <thead>
+    <tr><th>Petitioner Status</th><th>Visa Category</th><th>Estimated Wait</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>U.S. citizen (spouse)</td><td>Immediate Relative (IR/CR-1)</td><td>12–18 months</td></tr>
+    <tr><td>Lawful permanent resident (spouse)</td><td>F-2A preference</td><td>24–36 months</td></tr>
+  </tbody>
+</table>
+
+<p>Always check the official USCIS processing times tool at <strong>egov.uscis.gov/processing-times</strong> — select Form I-130 and your filing location for a current estimate specific to your case.</p>
+
+<h2 id="faq">Frequently Asked Questions</h2>
+<div class="art-faq">
+  <div class="art-faq-item">
+    <p class="art-faq-q">How much does it cost to file Form I-130?</p>
+    <div class="art-faq-a"><p>The I-130 filing fee is <strong>$675</strong> as of 2026, paid to USCIS. This is non-refundable. Additional fees apply later: $325 for the immigrant visa application and $120 for the Affidavit of Support review at the NVC stage.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">How long does USCIS take to process Form I-130?</p>
+    <div class="art-faq-a"><p>For U.S. citizen petitioners sponsoring a spouse, USCIS is currently taking <strong>12–18 months</strong>. Check egov.uscis.gov/processing-times for the latest estimate at your specific service center.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Can a green card holder file Form I-130 for a spouse?</p>
+    <div class="art-faq-a"><p>Yes, but under the F-2A family preference category — which has annual visa limits and longer wait times than the immediate relative category available to U.S. citizens. LPRs also cannot file a K-1 petition; only the I-130 route is available to them.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">What happens after USCIS approves Form I-130?</p>
+    <div class="art-faq-a"><p>The approved case transfers to the National Visa Center (NVC), which collects fees and documents, then schedules the immigrant visa interview at the U.S. embassy in your spouse's country. Total NVC processing adds roughly 3–6 months to the timeline.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Where do I file Form I-130?</p>
+    <div class="art-faq-a"><p>Online at my.uscis.gov (recommended), or by mail to the USCIS lockbox for your state (Chicago or Dallas). If you live abroad, check for international filing options at your nearest USCIS field office.</p></div>
+  </div>
+  <div class="art-faq-item">
+    <p class="art-faq-q">Do I need to include my spouse's documents when filing I-130?</p>
+    <div class="art-faq-a"><p>Yes. Required attachments include your marriage certificate, proof that any prior marriages ended (divorce decrees or death certificates), your proof of U.S. citizenship, and Form I-130A completed by your spouse. Translate all non-English documents.</p></div>
+  </div>
+</div>
+
+<div class="art-cta-dark">
+  <h2>Ready to start your spouse's visa?</h2>
+  <p>The I-130 is just the first step. See the complete CR-1 process from petition to green card.</p>
+  <a href="/cr1-visa" class="art-btn-white">CR-1 Visa Complete Guide →</a>
+  <a href="#" class="art-btn-ghost" data-affiliate="attorney-consult">Get Attorney Help</a>
+</div>
+
+</ArticleLayout>

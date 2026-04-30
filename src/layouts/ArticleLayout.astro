@@ -1,0 +1,141 @@
+---
+/**
+ * ArticleLayout — lean two-column layout for support pages.
+ *
+ * Usage:
+ *   <ArticleLayout
+ *     title="Page Title"
+ *     description="Meta description"
+ *     schema={schema}
+ *     badge="Updated April 2026"
+ *     heroTitle="H1 text"
+ *     heroParagraph="Subtitle shown under H1"
+ *     theme="#1d4ed8"
+ *     themeLight="#dbeafe"
+ *     themeDark="#1e3a8a"
+ *     summaryTitle="Quick Facts"
+ *     summaryRows={[{ label: 'Fee', value: '$675' }]}
+ *     tocLinks={[{ id: 'overview', label: 'Overview' }]}
+ *     relatedLinks={[{ href: '/cr1-visa', label: 'CR-1 Visa Overview' }]}
+ *   >
+ *     <!-- main content goes in default slot -->
+ *     <Fragment slot="hero-extra">optional bar below hero subtitle</Fragment>
+ *   </ArticleLayout>
+ *
+ * Available CSS classes (all themed via CSS vars set on .art-page):
+ *   Typography : .art-main h2 / h3 / p / ul
+ *   Callouts   : .art-info  .art-warn
+ *   Table      : .art-table
+ *   Tips grid  : .art-tips > .art-tip (.art-tip-num / .art-tip-title / .art-tip-desc)
+ *   FAQ        : .art-faq > .art-faq-item (.art-faq-q / .art-faq-a)
+ *   CTAs       : .art-cta-mid  .art-cta-dark
+ *   Buttons    : .art-btn  .art-btn-outline  .art-btn-white  .art-btn-ghost
+ */
+
+import Base from './Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  schema?: string;
+  badge?: string;
+  heroTitle: string;
+  heroParagraph?: string;
+  /** Primary theme color, e.g. '#1d4ed8' */
+  theme?: string;
+  /** Light tint of theme, e.g. '#dbeafe' */
+  themeLight?: string;
+  /** Dark shade of theme, e.g. '#1e3a8a' */
+  themeDark?: string;
+  /** Sidebar summary box title */
+  summaryTitle?: string;
+  /** Rows shown in the themed summary box */
+  summaryRows?: { label: string; value: string }[];
+  /** Anchor links for the TOC box */
+  tocLinks: { id: string; label: string }[];
+  /** Related guide links rendered via SmartLink */
+  relatedLinks?: { href: string; label: string }[];
+}
+
+const {
+  title, description, schema,
+  badge = 'Updated April 2026',
+  heroTitle, heroParagraph,
+  theme     = '#1d4ed8',
+  themeLight = '#dbeafe',
+  themeDark  = '#1e3a8a',
+  summaryTitle = 'Quick Summary',
+  summaryRows  = [],
+  tocLinks,
+  relatedLinks = [],
+} = Astro.props;
+
+const cssVars = `--th:${theme};--th-light:${themeLight};--th-dark:${themeDark}`;
+---
+
+<Base title={title} description={description} schema={schema}>
+
+  <div class="art-page" style={cssVars}>
+
+    <!-- HERO -->
+    <div class="art-hero">
+      <div class="container">
+        <div class="art-badge">{badge}</div>
+        <h1>{heroTitle}</h1>
+        {heroParagraph && <p>{heroParagraph}</p>}
+        <slot name="hero-extra" />
+      </div>
+    </div>
+
+    <!-- BODY GRID -->
+    <div class="art-wrap">
+
+      <!-- MAIN CONTENT -->
+      <article class="art-main">
+        <slot />
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="art-sidebar">
+
+        <!-- Summary box (themed) -->
+        {summaryRows.length > 0 && (
+          <div class="art-summary">
+            <h3>{summaryTitle}</h3>
+            {summaryRows.map(r => (
+              <div class="art-sum-row">
+                <span class="art-sum-label">{r.label}</span>
+                <span class="art-sum-val">{r.value}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        <!-- Optional extra sidebar content -->
+        <slot name="sidebar-extra" />
+
+        <!-- TOC -->
+        <div class="art-box">
+          <h3>On This Page</h3>
+          {tocLinks.map(l => (
+            <a href={`#${l.id}`} class="sidebar-link">{l.label}</a>
+          ))}
+        </div>
+
+        <!-- Related guides -->
+        {relatedLinks.length > 0 && (
+          <div class="art-box">
+            <h3>Related Guides</h3>
+            {relatedLinks.map(l => (
+              <SmartLink href={l.href} class="sidebar-link">{l.label}</SmartLink>
+            ))}
+          </div>
+        )}
+
+      </aside>
+    </div>
+
+  </div><!-- /.art-page -->
+
+</Base>

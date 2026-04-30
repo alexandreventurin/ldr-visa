@@ -1,0 +1,590 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "K-1 Visa Extension: Can You Extend the 90-Day Period?",
+    "description": "The hard truth about K-1 visa extensions in 2026 — why USCIS doesn't grant them, what your real options are if the 90 days runs out, and how to protect your status.",
+    "url": "https://ldrvisa.org/k1-visa-extension",
+    "dateModified": "2026-04-30",
+    "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/k1-visa-extension" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "K-1 Visa", "item": "https://ldrvisa.org/k1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "K-1 Visa Extension", "item": "https://ldrvisa.org/k1-visa-extension" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can you extend a K-1 fiancé visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The K-1 visa cannot be extended. USCIS does not grant extensions of the 90-day authorized stay period. Once you enter the U.S. on a K-1 visa, you must either marry your petitioner within 90 days and file for Adjustment of Status, or depart the U.S. before day 90. There is no legal mechanism to extend the K-1 period."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if you don't marry within 90 days on a K-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you don't marry within 90 days, your K-1 visa status expires and you are required to leave the U.S. immediately. Staying beyond day 90 without marrying accrues unlawful presence, which can trigger a 3-year or 10-year bar on re-entering the U.S. You cannot file for Adjustment of Status after the 90 days without first marrying."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you change status from K-1 to a tourist visa or B-2?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Generally, no. USCIS considers K-1 visa holders to have entered with 'preconceived intent' to marry and remain in the U.S. Changing status to B-2 tourist visa is typically denied because USCIS views it as an attempt to circumvent the K-1 marriage requirement. Filing for Adjustment of Status after the 90 days (but without marrying) is also not permitted."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if you marry after day 90 but before leaving the U.S.?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you marry after the 90-day K-1 period expires but while still in the U.S., you may be ineligible to file for Adjustment of Status because your authorized stay has ended. You would likely need to leave the U.S. and apply for a CR-1 or IR-1 immigrant visa from abroad. Consult an immigration attorney immediately in this situation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you leave the U.S. and re-enter on a K-1 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The K-1 visa is a single-entry visa. Once you enter the U.S., the K-1 visa is used. If you leave the U.S. before marrying, your K-1 visa is no longer valid and you cannot re-enter on it. You would need to apply for a new K-1 visa or an immigrant visa if you are married."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between K-1 visa validity and the 90-day period?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "These are two separate things. The K-1 visa stamp has a validity period (usually 6 months) during which you can use it to enter the U.S. The 90-day authorized stay period begins when you enter the U.S. — this is the period within which you must marry. Even if your visa stamp still shows as 'valid,' once you've entered, the clock is the 90-day stay period, not the visa stamp validity."
+        }
+      }
+    ]
+  }
+]);
+---
+
+<Base
+  title="K-1 Visa Extension: Can You Extend the 90-Day Period?"
+  description="The hard truth about K-1 visa extensions — why they don't exist, what happens if you miss the deadline, and all your real options if 90 days isn't enough."
+  schema={schema}
+>
+
+<style>
+  /* HERO */
+  .hero { background: linear-gradient(135deg, #451a03 0%, #92400e 100%); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin: 0 0 .75rem; line-height: 1.2; }
+  .hero p { font-size: 1.05rem; opacity: .88; max-width: 600px; margin: 0 auto 1.5rem; }
+  .hero-verdict { display: inline-flex; align-items: center; gap: .6rem; background: #dc2626; color: #fff; font-size: 1rem; font-weight: 800; padding: .65rem 1.5rem; border-radius: 10px; margin-bottom: 1rem; }
+  .verdict-icon { font-size: 1.2rem; }
+
+  .clock-bar { display: flex; flex-wrap: wrap; gap: 0; background: rgba(0,0,0,.25); border-radius: 12px; overflow: hidden; max-width: 620px; margin: 1.5rem auto 0; }
+  .clock-step { flex: 1; min-width: 100px; padding: .9rem .75rem; text-align: center; border-right: 1px solid rgba(255,255,255,.12); }
+  .clock-step:last-child { border-right: none; }
+  .clock-day { font-size: 1.5rem; font-weight: 900; color: #fbbf24; }
+  .clock-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; opacity: .7; margin-top: .2rem; }
+
+  /* LAYOUT */
+  .content-wrap { max-width: 1080px; margin: 0 auto; padding: 2.5rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+  @media (max-width: 768px) { .content-wrap { grid-template-columns: 1fr; } }
+
+  .main-col h2 { font-size: 1.45rem; font-weight: 800; color: #0f172a; margin: 2.5rem 0 1rem; padding-bottom: .5rem; border-bottom: 2px solid #fed7aa; }
+  .main-col h2:first-child { margin-top: 0; }
+  .main-col h3 { font-size: 1.1rem; font-weight: 700; color: #92400e; margin: 1.75rem 0 .6rem; }
+  .main-col p { color: #374151; line-height: 1.75; margin: 0 0 1rem; }
+  .main-col ul { color: #374151; line-height: 1.75; margin: 0 0 1rem; padding-left: 1.5rem; }
+  .main-col li { margin-bottom: .4rem; }
+
+  /* ALERT BOX */
+  .alert-box { border-left: 5px solid #dc2626; background: #fef2f2; border-radius: 0 10px 10px 0; padding: 1.1rem 1.25rem; margin: 1.25rem 0; }
+  .alert-box strong { color: #dc2626; }
+  .alert-box p { margin: 0; font-size: .93rem; color: #374151; }
+  .alert-title { font-weight: 800; font-size: .88rem; color: #dc2626; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+
+  .info-box { border-left: 5px solid #d97706; background: #fffbeb; border-radius: 0 10px 10px 0; padding: 1.1rem 1.25rem; margin: 1.25rem 0; }
+  .info-box p { margin: 0; font-size: .93rem; color: #374151; }
+  .info-title { font-weight: 800; font-size: .88rem; color: #b45309; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+
+  .good-box { border-left: 5px solid #16a34a; background: #f0fdf4; border-radius: 0 10px 10px 0; padding: 1.1rem 1.25rem; margin: 1.25rem 0; }
+  .good-box p { margin: 0; font-size: .93rem; color: #374151; }
+  .good-title { font-weight: 800; font-size: .88rem; color: #15803d; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+
+  /* TIMELINE VISUAL */
+  .timeline-visual { position: relative; padding-left: 2rem; margin: 1.5rem 0; }
+  .timeline-visual::before { content: ''; position: absolute; left: .45rem; top: 0; bottom: 0; width: 2px; background: #e2e8f0; }
+  .tl-item { position: relative; margin-bottom: 1.25rem; }
+  .tl-dot { position: absolute; left: -1.85rem; top: .2rem; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 0 2px currentColor; }
+  .tl-dot.green { color: #16a34a; background: #16a34a; }
+  .tl-dot.yellow { color: #eab308; background: #eab308; }
+  .tl-dot.orange { color: #f97316; background: #f97316; }
+  .tl-dot.red { color: #dc2626; background: #dc2626; }
+  .tl-day { font-size: .78rem; font-weight: 700; color: #64748b; margin-bottom: .2rem; text-transform: uppercase; letter-spacing: .05em; }
+  .tl-title { font-weight: 700; color: #0f172a; font-size: .95rem; margin-bottom: .2rem; }
+  .tl-desc { font-size: .87rem; color: #374151; line-height: 1.5; }
+
+  /* OPTIONS CARDS */
+  .options-grid { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0 1.5rem; }
+  .option-card { border-radius: 12px; overflow: hidden; border: 1px solid #e2e8f0; }
+  .option-header { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.25rem; }
+  .option-num { width: 32px; height: 32px; border-radius: 8px; font-weight: 800; font-size: .9rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .option-title { font-weight: 700; font-size: 1rem; }
+  .option-badge { margin-left: auto; font-size: .72rem; font-weight: 700; padding: .2rem .65rem; border-radius: 999px; white-space: nowrap; }
+  .option-body { padding: 1rem 1.25rem; border-top: 1px solid #e2e8f0; }
+  .option-body p { margin: 0 0 .5rem; font-size: .91rem; color: #374151; }
+  .option-body ul { margin: 0; padding-left: 1.25rem; }
+  .option-body li { font-size: .88rem; color: #374151; margin-bottom: .35rem; }
+
+  .opt-primary { background: #f0fdf4; }
+  .opt-primary .option-header { background: #dcfce7; }
+  .opt-primary .option-num { background: #16a34a; color: #fff; }
+  .opt-primary .option-title { color: #14532d; }
+  .opt-primary .option-badge { background: #16a34a; color: #fff; }
+
+  .opt-secondary { background: #fffbeb; }
+  .opt-secondary .option-header { background: #fef9c3; }
+  .opt-secondary .option-num { background: #ca8a04; color: #fff; }
+  .opt-secondary .option-title { color: #713f12; }
+  .opt-secondary .option-badge { background: #ca8a04; color: #fff; }
+
+  .opt-danger { background: #fef2f2; }
+  .opt-danger .option-header { background: #fee2e2; }
+  .opt-danger .option-num { background: #dc2626; color: #fff; }
+  .opt-danger .option-title { color: #7f1d1d; }
+  .opt-danger .option-badge { background: #dc2626; color: #fff; }
+
+  /* CONSEQUENCES TABLE */
+  .consequence-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .88rem; }
+  .consequence-table th { background: #451a03; color: #fff; padding: .6rem .9rem; text-align: left; font-weight: 700; font-size: .8rem; }
+  .consequence-table td { padding: .65rem .9rem; border-bottom: 1px solid #e2e8f0; color: #374151; vertical-align: top; }
+  .consequence-table tr:nth-child(even) td { background: #fafafa; }
+  .sev-critical { color: #dc2626; font-weight: 700; }
+  .sev-high { color: #f97316; font-weight: 700; }
+  .sev-med { color: #ca8a04; font-weight: 700; }
+
+  /* VISA vs STAY callout */
+  .two-col-explain { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0 1.5rem; }
+  @media (max-width: 480px) { .two-col-explain { grid-template-columns: 1fr; } }
+  .explain-card { border-radius: 10px; padding: 1.1rem; }
+  .explain-card.orange { background: #fff7ed; border: 1px solid #fed7aa; }
+  .explain-card.blue { background: #eff6ff; border: 1px solid #bfdbfe; }
+  .explain-card-label { font-size: .75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; margin-bottom: .5rem; }
+  .explain-card.orange .explain-card-label { color: #c2410c; }
+  .explain-card.blue .explain-card-label { color: #1e40af; }
+  .explain-card-title { font-weight: 800; font-size: 1rem; color: #0f172a; margin-bottom: .4rem; }
+  .explain-card p { font-size: .85rem; color: #374151; line-height: 1.55; margin: 0; }
+
+  /* CHECKLIST */
+  .checklist { display: flex; flex-direction: column; gap: .6rem; margin: 1rem 0 1.5rem; }
+  .check-item { display: flex; gap: .75rem; align-items: flex-start; padding: .75rem 1rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; }
+  .check-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: .05rem; }
+  .check-text { font-size: .9rem; color: #374151; line-height: 1.5; }
+  .check-text strong { color: #0f172a; }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: .75rem; margin: 1rem 0; }
+  .faq-item { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+  .faq-q { font-weight: 700; font-size: .95rem; color: #0f172a; padding: 1rem 1.1rem; background: #fafafa; margin: 0; }
+  .faq-a { padding: .9rem 1.1rem; color: #374151; font-size: .9rem; line-height: 1.7; border-top: 1px solid #e2e8f0; }
+  .faq-a p { margin: 0; }
+
+  /* CTA */
+  .cta-mid { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 14px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+  .cta-mid h3 { font-size: 1.1rem; font-weight: 800; color: #92400e; margin: 0 0 .5rem; }
+  .cta-mid p { font-size: .9rem; color: #374151; margin: 0 0 1rem; }
+  .cta-btn-amber { display: inline-block; background: #d97706; color: #fff; font-weight: 700; font-size: .9rem; padding: .7rem 1.6rem; border-radius: 8px; text-decoration: none; margin: .25rem; }
+  .cta-btn-outline { display: inline-block; border: 2px solid #92400e; color: #92400e; font-weight: 700; font-size: .9rem; padding: .65rem 1.5rem; border-radius: 8px; text-decoration: none; margin: .25rem; background: transparent; }
+
+  .cta-dark { background: #0f172a; border-radius: 16px; padding: 2rem; margin: 2.5rem 0 1rem; text-align: center; color: #fff; }
+  .cta-dark h2 { font-size: 1.4rem; font-weight: 800; margin: 0 0 .6rem; }
+  .cta-dark p { opacity: .82; font-size: .95rem; margin: 0 0 1.25rem; }
+  .cta-btn-white { display: inline-block; background: #fff; color: #92400e; font-weight: 800; font-size: .95rem; padding: .8rem 2rem; border-radius: 8px; text-decoration: none; margin: .3rem; }
+  .cta-btn-ghost { display: inline-block; border: 2px solid rgba(255,255,255,.35); color: #fff; font-weight: 700; font-size: .9rem; padding: .75rem 1.75rem; border-radius: 8px; text-decoration: none; margin: .3rem; }
+
+  /* SIDEBAR */
+  .sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1rem; }
+  .sidebar-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; }
+  .sidebar-box h3 { font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: #64748b; margin: 0 0 .9rem; }
+  .sidebar-link { display: block; font-size: .88rem; color: #374151; text-decoration: none; padding: .35rem 0; border-bottom: 1px solid #f1f5f9; line-height: 1.4; }
+  .sidebar-link:last-child { border-bottom: none; }
+  .sidebar-link:hover { color: #92400e; }
+
+  .verdict-sidebar { background: #fef2f2; border: 1px solid #fecaca; border-radius: 12px; padding: 1.25rem; }
+  .verdict-sidebar h3 { font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: #dc2626; margin: 0 0 .9rem; }
+  .verdict-row { display: flex; justify-content: space-between; align-items: center; padding: .5rem 0; border-bottom: 1px solid #fecaca; font-size: .85rem; }
+  .verdict-row:last-child { border-bottom: none; }
+  .verdict-label { color: #374151; }
+  .verdict-val { font-weight: 700; }
+  .verdict-val.no { color: #dc2626; }
+  .verdict-val.yes { color: #16a34a; }
+  .verdict-val.warn { color: #d97706; }
+</style>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-verdict">
+    <span class="verdict-icon">✗</span>
+    K-1 Extensions Do Not Exist
+  </div>
+  <h1>K-1 Visa Extension:<br>What Really Happens After 90 Days</h1>
+  <p>There is no way to extend the K-1 fiancé visa's 90-day period. But there are options — and the clock is already running from the day you entered.</p>
+
+  <div class="clock-bar">
+    <div class="clock-step">
+      <div class="clock-day">Day 1</div>
+      <div class="clock-label">Entry — clock starts</div>
+    </div>
+    <div class="clock-step">
+      <div class="clock-day">Day 90</div>
+      <div class="clock-label">Hard deadline — marry or leave</div>
+    </div>
+    <div class="clock-step">
+      <div class="clock-day">Day 91+</div>
+      <div class="clock-label">Unlawful presence accrues</div>
+    </div>
+    <div class="clock-step">
+      <div class="clock-day">180 days</div>
+      <div class="clock-label">3-year bar triggered</div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="main-col">
+
+    <h2 id="short-answer">The Short Answer: No Extensions Exist</h2>
+
+    <div class="alert-box">
+      <div class="alert-title">⚠ No Extension Available</div>
+      <p>USCIS does not grant extensions of the K-1 visa's 90-day authorized stay period. There is no form to file, no fee to pay, and no exception for illness, travel delays, or family emergencies. The 90-day deadline is set by law (INA § 214(d)) and is not discretionary.</p>
+    </div>
+
+    <p>When your partner enters the U.S. on a K-1 fiancé visa, U.S. Customs and Border Protection (CBP) stamps their passport. The stamp shows their "Admit Until" date — exactly 90 days from the date of entry. That date is the legal deadline to either:</p>
+    <ul>
+      <li><strong>Marry the U.S. citizen petitioner</strong> and file for Adjustment of Status (Form I-485), or</li>
+      <li><strong>Depart the United States</strong> before the 90-day period expires</li>
+    </ul>
+    <p>There is no third option. This is one of the most misunderstood aspects of the K-1 visa — many couples assume that like tourist visas, an extension is possible. It is not.</p>
+
+    <h2 id="visa-vs-stay">Visa Validity vs. Authorized Stay — Two Different Things</h2>
+    <p>A common source of confusion: the K-1 visa stamp in your passport has its own validity period (typically 6 months from issue), which is separate and unrelated to the 90-day authorized stay period that starts on entry.</p>
+
+    <div class="two-col-explain">
+      <div class="explain-card orange">
+        <div class="explain-card-label">K-1 Visa Stamp Validity</div>
+        <div class="explain-card-title">6 months from issue</div>
+        <p>The window during which you can use the visa to enter the U.S. Once you enter once, this visa is consumed. It doesn't matter if the stamp still looks "valid."</p>
+      </div>
+      <div class="explain-card blue">
+        <div class="explain-card-label">Authorized Stay Period</div>
+        <div class="explain-card-title">90 days from entry</div>
+        <p>The period after entry during which you must marry. This is what counts. Even if your visa stamp says valid for 6 months, you only have 90 days once you're inside the U.S.</p>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-title">⚡ Important</div>
+      <p>The K-1 visa is also <strong>single-entry only</strong>. If you leave the U.S. for any reason before marrying — even for a family emergency — you cannot re-enter on the same K-1 visa. You would need to apply for a new one from scratch.</p>
+    </div>
+
+    <h2 id="what-happens">What Happens If You Don't Marry by Day 90</h2>
+
+    <div class="timeline-visual">
+      <div class="tl-item">
+        <div class="tl-dot green"></div>
+        <div class="tl-day">Days 1–89</div>
+        <div class="tl-title">You are in lawful K-1 status</div>
+        <div class="tl-desc">You can work (with EAD), travel inside the U.S., and prepare for marriage and AOS filing.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot yellow"></div>
+        <div class="tl-day">Day 90 — Deadline</div>
+        <div class="tl-title">Marry and file I-485, or depart the U.S.</div>
+        <div class="tl-desc">If you marry before midnight of day 90 and file I-485, you remain in lawful status. If you depart, you are out of status but no unlawful presence has accrued yet.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot orange"></div>
+        <div class="tl-day">Day 91–179</div>
+        <div class="tl-title">Unlawful presence begins accruing</div>
+        <div class="tl-desc">Every day past day 90 without marrying or departing counts as unlawful presence. No bar is triggered yet, but this is a violation of your visa terms.</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot red"></div>
+        <div class="tl-day">Day 181+</div>
+        <div class="tl-title">3-year bar triggered on departure</div>
+        <div class="tl-desc">180+ days of unlawful presence triggers a 3-year bar from re-entering the U.S. once you leave. Over 365 days triggers a 10-year bar. These bars are serious and difficult to waive.</div>
+      </div>
+    </div>
+
+    <table class="consequence-table">
+      <thead>
+        <tr>
+          <th>Situation</th>
+          <th>Immigration Consequence</th>
+          <th>Severity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Departed before day 90, never married</td>
+          <td>K-1 status closes cleanly. No bars, but must reapply to return.</td>
+          <td class="sev-med">Manageable</td>
+        </tr>
+        <tr>
+          <td>Stayed past day 90, then departed (1–179 days overstay)</td>
+          <td>Unlawful presence on record. No automatic bar, but future visa applications will be scrutinized.</td>
+          <td class="sev-high">High Risk</td>
+        </tr>
+        <tr>
+          <td>Stayed 180+ days past day 90, then departed</td>
+          <td>3-year bar from re-entering the U.S.</td>
+          <td class="sev-critical">Critical</td>
+        </tr>
+        <tr>
+          <td>Stayed 365+ days past day 90, then departed</td>
+          <td>10-year bar from re-entering the U.S.</td>
+          <td class="sev-critical">Critical</td>
+        </tr>
+        <tr>
+          <td>Married on day 89 or earlier, filed I-485</td>
+          <td>In lawful status as I-485 pending. Can remain in the U.S.</td>
+          <td style="color:#16a34a; font-weight:700;">Safe</td>
+        </tr>
+        <tr>
+          <td>Married after day 90 while still in the U.S.</td>
+          <td>Cannot file I-485 (already out of status). Must consult attorney immediately.</td>
+          <td class="sev-critical">Critical</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="your-options">Your Real Options If 90 Days Isn't Enough</h2>
+    <div class="options-grid">
+      <div class="option-card opt-primary">
+        <div class="option-header">
+          <div class="option-num">A</div>
+          <div class="option-title">Marry before day 90 — even a civil ceremony</div>
+          <div class="option-badge">✓ Recommended</div>
+        </div>
+        <div class="option-body">
+          <p>You do not need a large wedding. A civil marriage at a courthouse or city hall is legally valid for immigration purposes. The I-485 Adjustment of Status filing requires a valid marriage certificate — not a wedding reception.</p>
+          <ul>
+            <li>Civil marriages are processed in 1–3 business days in most U.S. counties</li>
+            <li>You can have a celebration later — immigration only cares about the legal ceremony</li>
+            <li>File I-485 as soon as you have the marriage certificate</li>
+            <li>Filing I-485 gives you work authorization (I-765) and advance parole (I-131)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="option-card opt-secondary">
+        <div class="option-header">
+          <div class="option-num">B</div>
+          <div class="option-title">Depart the U.S. and apply for a CR-1 visa abroad</div>
+          <div class="option-badge">If not ready to marry</div>
+        </div>
+        <div class="option-body">
+          <p>If you genuinely cannot marry within 90 days, the cleanest path is to depart before the deadline. Once outside the U.S., if you later marry, you can apply for a CR-1/IR-1 spousal immigrant visa from abroad.</p>
+          <ul>
+            <li>Departing before day 90 means no unlawful presence — no bars triggered</li>
+            <li>You can reapply for a K-1 if you're still engaged (though USCIS scrutinizes second K-1 petitions)</li>
+            <li>CR-1 process takes 18–24 months from marriage, but you enter as a permanent resident</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="option-card opt-danger">
+        <div class="option-header">
+          <div class="option-num">C</div>
+          <div class="option-title">Do NOT try to extend or change status</div>
+          <div class="option-badge">⚠ Avoid</div>
+        </div>
+        <div class="option-body">
+          <p>Some couples try to file for a change of status to B-2 tourist visa to buy more time. USCIS almost always denies this because you entered the U.S. with a stated intent to marry — changing to a nonimmigrant category while still unmarried is viewed as immigration fraud.</p>
+          <ul>
+            <li>Change of status from K-1 to B-2 is routinely denied</li>
+            <li>Filing a frivolous change-of-status can trigger a finding of misrepresentation</li>
+            <li>No other nonimmigrant category can be used as a workaround</li>
+            <li>If you are in this situation, consult a licensed immigration attorney immediately</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-mid">
+      <h3>Approaching the deadline or already past it?</h3>
+      <p>This is exactly the situation where an immigration attorney can protect you. An attorney can assess your specific situation and advise on your best path forward before you accrue bars.</p>
+      <a href="#" class="cta-btn-amber" data-affiliate="attorney-consult">Speak with an Immigration Attorney →</a>
+      <a href="/adjustment-of-status" class="cta-btn-outline">Learn About Adjustment of Status</a>
+    </div>
+
+    <h2 id="file-aos-on-time">Filing Adjustment of Status: What You Need by Day 90</h2>
+    <p>If you marry before day 90, your priority is to file the I-485 (Adjustment of Status) package as quickly as possible. There is no strict deadline on when to file I-485 after marriage — but filing promptly is strongly recommended.</p>
+
+    <div class="good-box">
+      <div class="good-title">✓ You DO NOT need to file I-485 before day 90</div>
+      <p>The requirement is that you <strong>marry</strong> before day 90, not that you file I-485 before day 90. As long as you are legally married before the deadline, you can take additional weeks to gather and file your I-485 package — while remaining in the U.S. in lawful status as the spouse of a U.S. citizen.</p>
+    </div>
+
+    <p>The I-485 Adjustment of Status package typically includes:</p>
+    <div class="checklist">
+      <div class="check-item">
+        <span class="check-icon">📋</span>
+        <span class="check-text"><strong>Form I-485</strong> — Application to Register Permanent Residence</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">📋</span>
+        <span class="check-text"><strong>Form I-130 + I-130A</strong> — Petition for Alien Relative (filed concurrently with I-485 for immediate relatives)</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">📋</span>
+        <span class="check-text"><strong>Form I-864</strong> — Affidavit of Support from the U.S. citizen spouse</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">📋</span>
+        <span class="check-text"><strong>Form I-765</strong> — Employment Authorization Document (recommended to file concurrently)</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">📋</span>
+        <span class="check-text"><strong>Form I-131</strong> — Advance Parole (allows travel outside U.S. while AOS is pending)</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">📄</span>
+        <span class="check-text"><strong>Marriage certificate</strong> — official document from the issuing authority</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">📄</span>
+        <span class="check-text"><strong>Medical exam results</strong> — Form I-693 from a USCIS-designated civil surgeon</span>
+      </div>
+      <div class="check-item">
+        <span class="check-icon">📄</span>
+        <span class="check-text"><strong>Evidence of bona fide marriage</strong> — photos, joint accounts, communication history</span>
+      </div>
+    </div>
+
+    <h2 id="after-aos">After You File I-485: What Happens Next</h2>
+    <p>Once you file the I-485 package, USCIS sends a receipt notice (I-797C) within 2–4 weeks. From this point, your partner is in <strong>Adjustment of Status pending</strong> status — they can legally remain in the U.S. and, once the I-765 is approved (~5–7 months), work legally.</p>
+    <ul>
+      <li><strong>Biometrics appointment:</strong> USCIS schedules this within 2–6 months of filing</li>
+      <li><strong>I-765 (EAD) approval:</strong> typically 5–7 months after filing (or faster with premium processing)</li>
+      <li><strong>Interview:</strong> most AOS cases for spouses require an in-person interview at a local USCIS office</li>
+      <li><strong>Green card approval:</strong> 12–24 months total from filing to green card in hand</li>
+      <li><strong>Conditional green card:</strong> if married less than 2 years at the time of approval, the green card is valid for 2 years — you'll need to file I-751 to remove conditions</li>
+    </ul>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Can you extend a K-1 fiancé visa?</p>
+        <div class="faq-a"><p>No. The K-1 visa has a fixed 90-day authorized stay period that cannot be extended by USCIS, Congress, or any immigration court. If you need more time, the only lawful option is to depart the U.S. before day 90 expires and pursue a different visa pathway.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What if we can't get married in time because of a medical emergency?</p>
+        <div class="faq-a"><p>There is no medical emergency exception to the 90-day K-1 deadline. If a genuine emergency prevents you from marrying, the safest course is to depart before day 90 if at all possible. Once you recover, you may be able to reapply for a K-1 or pursue a CR-1. In extreme circumstances, an immigration attorney may advise other relief — but USCIS does not have a formal extension process.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can I stay in the U.S. past 90 days if I already filed I-485?</p>
+        <div class="faq-a"><p>Yes — but only if you are legally married before day 90 and have already filed I-485. The I-485 filing is what keeps you in lawful status. If you are not yet married when day 90 arrives, filing I-485 alone does not cure the status violation — you must be married first.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What is the difference between the K-1 visa's 6-month validity and the 90-day period?</p>
+        <div class="faq-a"><p>The 6-month visa validity is the window in which you can use the visa to enter the U.S. The 90-day period starts on the day you actually enter. Even if the visa stamp shows 6 months, the 90-day clock begins the moment you clear customs — not the visa issue date.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">If we marry on day 89, is that okay?</p>
+        <div class="faq-a"><p>Yes — marrying on day 89 is legally valid. The requirement is that the marriage happens within the 90-day period, not that it happens early. Day 89 marriage + immediate I-485 filing keeps your partner in lawful status. Cut it close and you'll have very little margin for error — a civil ceremony is the practical choice in this situation.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can we get a second K-1 visa if the first one expired unused?</p>
+        <div class="faq-a"><p>If the K-1 visa was issued but expired unused (the 6-month entry window passed without entry), the petitioner would need to file a new I-129F petition. USCIS scrutinizes repeat K-1 petitions — you must demonstrate the relationship is genuine and ongoing. There is no simple renewal process.</p></div>
+      </div>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="cta-dark">
+      <h2>K-1 deadline approaching?</h2>
+      <p>Don't wait. The 90-day clock is unforgiving. An immigration attorney can help you file correctly, on time, and avoid status violations that create long-term problems.</p>
+      <a href="#" class="cta-btn-white" data-affiliate="attorney-consult">Get Attorney Help Now →</a>
+      <a href="/adjustment-of-status-after-marriage" class="cta-btn-ghost">Adjustment of Status Guide</a>
+    </div>
+
+  </div><!-- /main-col -->
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="verdict-sidebar">
+      <h3>K-1 Extension: Quick Facts</h3>
+      <div class="verdict-row">
+        <span class="verdict-label">Can you extend?</span>
+        <span class="verdict-val no">No — never</span>
+      </div>
+      <div class="verdict-row">
+        <span class="verdict-label">Authorized stay</span>
+        <span class="verdict-val warn">90 days</span>
+      </div>
+      <div class="verdict-row">
+        <span class="verdict-label">Single entry?</span>
+        <span class="verdict-val no">Yes — single entry</span>
+      </div>
+      <div class="verdict-row">
+        <span class="verdict-label">Must marry by</span>
+        <span class="verdict-val warn">Day 90 (hard)</span>
+      </div>
+      <div class="verdict-row">
+        <span class="verdict-label">Change to B-2?</span>
+        <span class="verdict-val no">Almost never works</span>
+      </div>
+      <div class="verdict-row">
+        <span class="verdict-label">Civil ceremony valid?</span>
+        <span class="verdict-val yes">Yes ✓</span>
+      </div>
+      <div class="verdict-row">
+        <span class="verdict-label">I-485 deadline?</span>
+        <span class="verdict-val yes">After marriage ✓</span>
+      </div>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>On This Page</h3>
+      <a href="#short-answer" class="sidebar-link">Short Answer: No Extensions</a>
+      <a href="#visa-vs-stay" class="sidebar-link">Visa Validity vs. 90-Day Stay</a>
+      <a href="#what-happens" class="sidebar-link">What Happens After Day 90</a>
+      <a href="#your-options" class="sidebar-link">Your Real Options</a>
+      <a href="#file-aos-on-time" class="sidebar-link">Filing AOS on Time</a>
+      <a href="#after-aos" class="sidebar-link">After You File I-485</a>
+      <a href="#faq" class="sidebar-link">FAQ</a>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>Related Guides</h3>
+      <SmartLink href="/k1-visa" class="sidebar-link">K-1 Fiancé Visa Overview</SmartLink>
+      <SmartLink href="/adjustment-of-status" class="sidebar-link">Adjustment of Status (I-485)</SmartLink>
+      <SmartLink href="/adjustment-of-status-after-marriage" class="sidebar-link">AOS After Marriage</SmartLink>
+      <SmartLink href="/k1-visa-checklist" class="sidebar-link">K-1 Visa Checklist</SmartLink>
+      <SmartLink href="/k1-visa-cost" class="sidebar-link">K-1 Visa Costs</SmartLink>
+      <SmartLink href="/i-751-petition-remove-conditions" class="sidebar-link">I-751: Remove Green Card Conditions</SmartLink>
+      <SmartLink href="/k1-vs-cr1" class="sidebar-link">K-1 vs CR-1 Comparison</SmartLink>
+    </div>
+  </aside>
+</div>
+
+</Base>

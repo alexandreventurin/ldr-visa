@@ -1,0 +1,778 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "K-1 Visa Medical Exam: What to Expect, Cost & How to Prepare",
+    "description": "Everything about the K-1 fiancé visa medical exam in 2026 — what's tested, which doctor to use, how much it costs by country, and how to prepare so you pass the first time.",
+    "url": "https://ldrvisa.org/k1-visa-medical-exam",
+    "dateModified": "2026-04-30",
+    "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/k1-visa-medical-exam" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "K-1 Visa", "item": "https://ldrvisa.org/k1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "Medical Exam", "item": "https://ldrvisa.org/k1-visa-medical-exam" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who performs the K-1 visa medical exam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Only a physician designated by the U.S. embassy or consulate in your country — called a panel physician — is authorized to perform the K-1 visa medical exam. You cannot use your personal doctor or a random clinic. Find the official list of panel physicians at travel.state.gov or on your specific embassy's website."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does the K-1 visa medical exam cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The K-1 visa medical exam cost varies by country and panel physician. Typical ranges: Philippines $200–$350, Mexico $150–$250, United Kingdom $300–$450, Brazil $250–$400, India $100–$200, Australia $300–$500. These costs are paid directly to the panel physician clinic and are not included in the USCIS or embassy visa fees."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What vaccinations are required for the K-1 visa medical exam?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Required vaccinations for the K-1 visa medical exam include: MMR (measles, mumps, rubella), varicella (chickenpox), hepatitis A, hepatitis B, meningococcal, pneumococcal, influenza, polio, tetanus/diphtheria/pertussis (Td/Tdap), and COVID-19. If you have documentation of prior vaccination or immunity through blood titer test, you may not need to repeat them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the K-1 visa medical exam valid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The K-1 visa medical exam results are valid for 6 months from the date of the examination. Your embassy interview must occur within this window, or you may need to redo part or all of the exam. Schedule your exam close to your expected interview date to avoid expiration."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a medical condition cause a K-1 visa denial?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, certain medical conditions are grounds for inadmissibility under U.S. immigration law. These include: communicable diseases of public health significance (active tuberculosis, syphilis, gonorrhea, Hansen's disease), lack of required vaccinations, certain physical or mental disorders associated with harmful behavior, and drug addiction. Many conditions that once caused bars no longer do — including HIV since 2010. Having a condition doesn't automatically mean denial; waivers are available for many situations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a medical exam again for Adjustment of Status after the K-1?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. After marrying on a K-1 visa, you must file for Adjustment of Status (Form I-485). The AOS process requires a separate medical exam using Form I-693, performed by a USCIS-designated civil surgeon in the United States — not the panel physician abroad. This is a different exam from the one done for the K-1 visa. However, some vaccination records from the K-1 exam may be accepted, reducing the cost of the AOS exam."
+        }
+      }
+    ]
+  }
+]);
+---
+
+<Base
+  title="K-1 Visa Medical Exam: What to Expect, Cost & How to Prepare"
+  description="Complete guide to the K-1 fiancé visa medical exam — panel physicians, what's tested, required vaccinations, costs by country, and how to pass the first time."
+  schema={schema}
+>
+
+<style>
+  .hero { background: linear-gradient(135deg, #064e3b 0%, #065f46 100%); color: #fff; padding: 3rem 1.5rem 2.5rem; text-align: center; }
+  .hero h1 { font-size: clamp(1.6rem, 4vw, 2.4rem); font-weight: 800; margin: 0 0 .75rem; line-height: 1.2; }
+  .hero p { font-size: 1.05rem; opacity: .88; max-width: 600px; margin: 0 auto 1.5rem; }
+  .hero-badge { display: inline-block; background: #10b981; color: #fff; font-size: .75rem; font-weight: 700; padding: .25rem .75rem; border-radius: 999px; margin-bottom: 1rem; letter-spacing: .05em; text-transform: uppercase; }
+
+  .step-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: .5rem; margin-top: 1.5rem; }
+  .step-pill { background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); color: #fff; font-size: .82rem; font-weight: 600; padding: .45rem 1rem; border-radius: 999px; }
+  .step-pill.highlight { background: #10b981; border-color: #10b981; }
+
+  .content-wrap { max-width: 1080px; margin: 0 auto; padding: 2.5rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 2.5rem; align-items: start; }
+  @media (max-width: 768px) { .content-wrap { grid-template-columns: 1fr; } }
+
+  .main-col h2 { font-size: 1.45rem; font-weight: 800; color: #0f172a; margin: 2.5rem 0 1rem; padding-bottom: .5rem; border-bottom: 2px solid #d1fae5; }
+  .main-col h2:first-child { margin-top: 0; }
+  .main-col h3 { font-size: 1.1rem; font-weight: 700; color: #065f46; margin: 1.75rem 0 .6rem; }
+  .main-col p { color: #374151; line-height: 1.75; margin: 0 0 1rem; }
+  .main-col ul { color: #374151; line-height: 1.75; margin: 0 0 1rem; padding-left: 1.5rem; }
+  .main-col li { margin-bottom: .4rem; }
+
+  /* Step cards */
+  .steps-grid { display: flex; flex-direction: column; gap: 1rem; margin: 1rem 0 1.5rem; }
+  .step-card { display: flex; gap: 1.25rem; padding: 1.1rem 1.25rem; border: 1px solid #d1fae5; border-radius: 12px; background: #f0fdf4; align-items: flex-start; }
+  .step-num { width: 36px; height: 36px; border-radius: 50%; background: #059669; color: #fff; font-weight: 800; font-size: .9rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: .05rem; }
+  .step-content { flex: 1; }
+  .step-title { font-weight: 700; color: #064e3b; font-size: .97rem; margin-bottom: .3rem; }
+  .step-desc { font-size: .88rem; color: #374151; line-height: 1.55; margin: 0; }
+
+  /* What's tested */
+  .tested-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: .85rem; margin: 1rem 0 1.5rem; }
+  .tested-card { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+  .tested-header { padding: .75rem 1rem; font-weight: 700; font-size: .88rem; display: flex; align-items: center; gap: .5rem; }
+  .tested-header.physical { background: #ecfdf5; color: #065f46; }
+  .tested-header.blood { background: #fef3c7; color: #92400e; }
+  .tested-header.chest { background: #eff6ff; color: #1e40af; }
+  .tested-header.mental { background: #fdf4ff; color: #7e22ce; }
+  .tested-header.vaxx { background: #fef2f2; color: #991b1b; }
+  .tested-body { padding: .75rem 1rem; }
+  .tested-body ul { margin: 0; padding-left: 1.1rem; }
+  .tested-body li { font-size: .83rem; color: #374151; margin-bottom: .25rem; }
+
+  /* Vaccine table */
+  .vaxx-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .87rem; }
+  .vaxx-table th { background: #065f46; color: #fff; padding: .6rem .9rem; text-align: left; font-weight: 700; font-size: .8rem; }
+  .vaxx-table td { padding: .6rem .9rem; border-bottom: 1px solid #e2e8f0; color: #374151; vertical-align: top; }
+  .vaxx-table tr:nth-child(even) td { background: #f8fafc; }
+  .req-badge { display: inline-block; background: #dc2626; color: #fff; font-size: .68rem; font-weight: 700; padding: .15rem .5rem; border-radius: 999px; }
+  .cond-badge { display: inline-block; background: #d97706; color: #fff; font-size: .68rem; font-weight: 700; padding: .15rem .5rem; border-radius: 999px; }
+  .age-badge { display: inline-block; background: #2563eb; color: #fff; font-size: .68rem; font-weight: 700; padding: .15rem .5rem; border-radius: 999px; }
+
+  /* Cost table */
+  .cost-table { width: 100%; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: .88rem; }
+  .cost-table th { background: #064e3b; color: #fff; padding: .6rem .9rem; text-align: left; font-weight: 700; font-size: .8rem; }
+  .cost-table td { padding: .65rem .9rem; border-bottom: 1px solid #e2e8f0; color: #374151; }
+  .cost-table tr:nth-child(even) td { background: #f8fafc; }
+  .cost-range { font-weight: 700; color: #065f46; }
+
+  /* Info / alert boxes */
+  .info-box { border-left: 5px solid #059669; background: #ecfdf5; border-radius: 0 10px 10px 0; padding: 1.1rem 1.25rem; margin: 1.25rem 0; }
+  .info-box p { margin: 0; font-size: .93rem; color: #374151; }
+  .info-title { font-weight: 800; font-size: .88rem; color: #065f46; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+  .warn-box { border-left: 5px solid #f59e0b; background: #fffbeb; border-radius: 0 10px 10px 0; padding: 1.1rem 1.25rem; margin: 1.25rem 0; }
+  .warn-box p { margin: 0; font-size: .93rem; color: #374151; }
+  .warn-title { font-weight: 800; font-size: .88rem; color: #b45309; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+
+  /* Bring list */
+  .bring-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: .7rem; margin: 1rem 0 1.5rem; }
+  .bring-item { display: flex; gap: .65rem; align-items: flex-start; padding: .75rem .9rem; border: 1px solid #d1fae5; border-radius: 8px; background: #f0fdf4; }
+  .bring-icon { font-size: 1rem; flex-shrink: 0; margin-top: .05rem; }
+  .bring-text { font-size: .85rem; color: #374151; line-height: 1.45; }
+  .bring-text strong { color: #064e3b; }
+
+  /* Inadmissibility */
+  .inadmiss-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .8rem; margin: 1rem 0 1.5rem; }
+  .inadmiss-card { border-radius: 10px; padding: 1rem; border: 1px solid; }
+  .inadmiss-card.red { background: #fef2f2; border-color: #fecaca; }
+  .inadmiss-card.orange { background: #fff7ed; border-color: #fed7aa; }
+  .inadmiss-card.green { background: #f0fdf4; border-color: #bbf7d0; }
+  .inadmiss-label { font-size: .72rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .4rem; }
+  .inadmiss-card.red .inadmiss-label { color: #dc2626; }
+  .inadmiss-card.orange .inadmiss-label { color: #c2410c; }
+  .inadmiss-card.green .inadmiss-label { color: #16a34a; }
+  .inadmiss-title { font-weight: 700; font-size: .9rem; color: #0f172a; margin-bottom: .35rem; }
+  .inadmiss-desc { font-size: .82rem; color: #374151; line-height: 1.5; }
+
+  /* K-1 vs AOS exam compare */
+  .compare-box { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; margin: 1rem 0 1.5rem; }
+  .compare-row { display: grid; grid-template-columns: 1.4fr 1fr 1fr; }
+  .compare-row.header { background: #064e3b; color: #fff; font-size: .78rem; font-weight: 700; text-transform: uppercase; letter-spacing: .05em; }
+  .compare-row:not(.header) { border-top: 1px solid #e2e8f0; }
+  .compare-row:not(.header):nth-child(even) { background: #f8fafc; }
+  .compare-cell { padding: .65rem .9rem; font-size: .87rem; color: #374151; }
+  .compare-row.header .compare-cell { color: #fff; }
+  .compare-cell.label { font-weight: 600; color: #0f172a; }
+
+  /* Tips */
+  .tips-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .8rem; margin: 1rem 0 1.5rem; }
+  .tip-card { border: 1px solid #d1fae5; border-radius: 10px; padding: 1rem; background: #f0fdf4; }
+  .tip-num { font-size: .72rem; font-weight: 800; color: #059669; text-transform: uppercase; letter-spacing: .05em; margin-bottom: .3rem; }
+  .tip-title { font-weight: 700; font-size: .9rem; color: #064e3b; margin-bottom: .3rem; }
+  .tip-desc { font-size: .82rem; color: #374151; line-height: 1.5; }
+
+  /* FAQ */
+  .faq-list { display: flex; flex-direction: column; gap: .75rem; margin: 1rem 0; }
+  .faq-item { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+  .faq-q { font-weight: 700; font-size: .95rem; color: #0f172a; padding: 1rem 1.1rem; background: #f8fafc; margin: 0; }
+  .faq-a { padding: .9rem 1.1rem; color: #374151; font-size: .9rem; line-height: 1.7; border-top: 1px solid #e2e8f0; }
+  .faq-a p { margin: 0; }
+
+  /* CTAs */
+  .cta-mid { background: #ecfdf5; border: 1px solid #a7f3d0; border-radius: 14px; padding: 1.5rem; margin: 2rem 0; text-align: center; }
+  .cta-mid h3 { font-size: 1.1rem; font-weight: 800; color: #065f46; margin: 0 0 .5rem; }
+  .cta-mid p { font-size: .9rem; color: #374151; margin: 0 0 1rem; }
+  .cta-btn-green { display: inline-block; background: #059669; color: #fff; font-weight: 700; font-size: .9rem; padding: .7rem 1.6rem; border-radius: 8px; text-decoration: none; margin: .25rem; }
+  .cta-btn-outline { display: inline-block; border: 2px solid #065f46; color: #065f46; font-weight: 700; font-size: .9rem; padding: .65rem 1.5rem; border-radius: 8px; text-decoration: none; margin: .25rem; background: transparent; }
+
+  .cta-dark { background: #0f172a; border-radius: 16px; padding: 2rem; margin: 2.5rem 0 1rem; text-align: center; color: #fff; }
+  .cta-dark h2 { font-size: 1.4rem; font-weight: 800; margin: 0 0 .6rem; }
+  .cta-dark p { opacity: .82; font-size: .95rem; margin: 0 0 1.25rem; }
+  .cta-btn-white { display: inline-block; background: #fff; color: #065f46; font-weight: 800; font-size: .95rem; padding: .8rem 2rem; border-radius: 8px; text-decoration: none; margin: .3rem; }
+  .cta-btn-ghost { display: inline-block; border: 2px solid rgba(255,255,255,.35); color: #fff; font-weight: 700; font-size: .9rem; padding: .75rem 1.75rem; border-radius: 8px; text-decoration: none; margin: .3rem; }
+
+  /* Sidebar */
+  .sidebar { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 1rem; }
+  .sidebar-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.25rem; }
+  .sidebar-box h3 { font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: #64748b; margin: 0 0 .9rem; }
+  .sidebar-link { display: block; font-size: .88rem; color: #374151; text-decoration: none; padding: .35rem 0; border-bottom: 1px solid #f1f5f9; line-height: 1.4; }
+  .sidebar-link:last-child { border-bottom: none; }
+  .sidebar-link:hover { color: #059669; }
+
+  .summary-box { background: linear-gradient(135deg, #064e3b, #065f46); color: #fff; border-radius: 12px; padding: 1.25rem; }
+  .summary-box h3 { font-size: .82rem; font-weight: 800; text-transform: uppercase; letter-spacing: .08em; color: rgba(255,255,255,.65); margin: 0 0 .9rem; }
+  .sum-row { display: flex; justify-content: space-between; align-items: center; padding: .45rem 0; border-bottom: 1px solid rgba(255,255,255,.15); font-size: .84rem; }
+  .sum-row:last-child { border-bottom: none; }
+  .sum-label { opacity: .8; }
+  .sum-val { font-weight: 700; color: #6ee7b7; }
+</style>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">Updated April 2026</div>
+  <h1>K-1 Visa Medical Exam:<br>What to Expect, Costs & How to Prepare</h1>
+  <p>The K-1 fiancé visa requires a medical exam by an embassy-approved panel physician before your interview. Here's exactly what happens — and how to pass it without surprises.</p>
+  <div class="step-pills">
+    <span class="step-pill">1. Book panel physician</span>
+    <span class="step-pill highlight">→</span>
+    <span class="step-pill">2. Physical + blood + X-ray</span>
+    <span class="step-pill highlight">→</span>
+    <span class="step-pill">3. Vaccinations</span>
+    <span class="step-pill highlight">→</span>
+    <span class="step-pill">4. Sealed envelope → embassy</span>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <div class="main-col">
+
+    <h2 id="overview">What Is the K-1 Visa Medical Exam?</h2>
+    <p>The K-1 medical exam is a mandatory health screening required by U.S. immigration law before a fiancé visa can be issued. Its purpose is to identify conditions that make an applicant inadmissible to the United States under the Immigration and Nationality Act (INA § 212(a)(1)).</p>
+    <p>The exam covers three main areas: <strong>physical health</strong>, <strong>communicable disease screening</strong>, and <strong>vaccination status</strong>. It is performed by a U.S. embassy-designated physician — called a <strong>panel physician</strong> — and the results are sent directly to the embassy in a sealed envelope. You bring that sealed envelope to your visa interview.</p>
+
+    <div class="info-box">
+      <div class="info-title">✓ Key Rule</div>
+      <p>You <strong>cannot use your own doctor</strong>. The exam must be performed by an official panel physician designated by the U.S. embassy in your country. Find the list at your embassy's website or at travel.state.gov.</p>
+    </div>
+
+    <h2 id="steps">The 4-Step Exam Process</h2>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-content">
+          <div class="step-title">Find and book an official panel physician</div>
+          <p class="step-desc">Go to your U.S. embassy's website and look for the list of approved panel physicians in your country. Book an appointment — some clinics are booked weeks in advance. Bring your passport and any vaccination records you already have.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-content">
+          <div class="step-title">Complete the physical examination</div>
+          <p class="step-desc">The physician conducts a full physical: height, weight, vision, hearing, heart, lungs, skin, abdomen. They are looking for signs of communicable diseases and any condition that could affect admissibility. Blood tests and a chest X-ray are taken at the same visit or a follow-up appointment.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-content">
+          <div class="step-title">Get required vaccinations (or document existing ones)</div>
+          <p class="step-desc">The panel physician reviews your vaccination history. Any missing required vaccines are administered at the clinic. If you have records of prior vaccination, bring them — you may avoid repeat shots and extra cost. Blood titer tests can prove immunity for some vaccines.</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-content">
+          <div class="step-title">Receive sealed medical packet — bring it to your interview</div>
+          <p class="step-desc">The panel physician places your results in a sealed envelope addressed to the U.S. embassy. <strong>Do not open this envelope.</strong> Bring it intact to your visa interview. The consular officer opens it. If the envelope is opened or tampered with, you may need to redo the exam.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="whats-tested">What the Exam Tests</h2>
+    <div class="tested-grid">
+      <div class="tested-card">
+        <div class="tested-header physical">🩺 Physical Examination</div>
+        <div class="tested-body">
+          <ul>
+            <li>General appearance and vital signs</li>
+            <li>Eyes, ears, nose, throat</li>
+            <li>Heart and lung function</li>
+            <li>Abdomen and lymph nodes</li>
+            <li>Skin examination</li>
+            <li>Neurological assessment</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tested-card">
+        <div class="tested-header blood">🩸 Blood Tests</div>
+        <div class="tested-body">
+          <ul>
+            <li>Syphilis (VDRL/RPR)</li>
+            <li>Gonorrhea (in some countries)</li>
+            <li>HIV (required for ages 15+)</li>
+            <li>Hepatitis B surface antigen</li>
+            <li>Additional STI screening per country</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tested-card">
+        <div class="tested-header chest">🫁 Chest X-Ray</div>
+        <div class="tested-body">
+          <ul>
+            <li>Required for applicants 15 years and older</li>
+            <li>Screens for active tuberculosis (TB)</li>
+            <li>If TB is suspected, additional sputum tests required</li>
+            <li>Not required for pregnant applicants — TB skin test instead</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tested-card">
+        <div class="tested-header mental">🧠 Mental Health Screening</div>
+        <div class="tested-body">
+          <ul>
+            <li>Brief mental health assessment</li>
+            <li>Screens for disorders associated with harmful behavior</li>
+            <li>History of substance abuse or addiction</li>
+            <li>Not a full psychiatric evaluation in most cases</li>
+          </ul>
+        </div>
+      </div>
+      <div class="tested-card">
+        <div class="tested-header vaxx">💉 Vaccination Review</div>
+        <div class="tested-body">
+          <ul>
+            <li>Review of all vaccination records</li>
+            <li>Administration of missing required vaccines</li>
+            <li>Documentation of immunity (titer tests if needed)</li>
+            <li>All vaccines recorded on Form DS-2053</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="vaccinations">Required Vaccinations</h2>
+    <p>The U.S. Department of State requires proof of all ACIP-recommended vaccinations. Missing vaccines are administered at the panel physician clinic — at your cost. If you already have vaccination records, bring them to potentially skip repeats.</p>
+
+    <table class="vaxx-table">
+      <thead>
+        <tr>
+          <th>Vaccine</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>MMR (Measles, Mumps, Rubella)</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>2 doses; titer test can prove immunity</td>
+        </tr>
+        <tr>
+          <td>Varicella (Chickenpox)</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>2 doses; history of disease or titer can substitute</td>
+        </tr>
+        <tr>
+          <td>Hepatitis A</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>2-dose series; some countries accept 1 dose with pending 2nd</td>
+        </tr>
+        <tr>
+          <td>Hepatitis B</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>3-dose series; titer can prove immunity</td>
+        </tr>
+        <tr>
+          <td>Tetanus / Tdap</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>Tdap (with pertussis) once; Td booster every 10 years</td>
+        </tr>
+        <tr>
+          <td>Influenza</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>Annual; must be current season's vaccine</td>
+        </tr>
+        <tr>
+          <td>Meningococcal (MenACWY)</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>2 doses if first given before age 16</td>
+        </tr>
+        <tr>
+          <td>Pneumococcal (PCV15 or PCV20)</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>Schedule varies by age; required for all adults</td>
+        </tr>
+        <tr>
+          <td>COVID-19</td>
+          <td><span class="req-badge">Required</span></td>
+          <td>FDA-authorized or WHO EUL vaccine series required</td>
+        </tr>
+        <tr>
+          <td>Polio (IPV)</td>
+          <td><span class="age-badge">Age-based</span></td>
+          <td>Required for children; adults assessed case-by-case</td>
+        </tr>
+        <tr>
+          <td>HPV</td>
+          <td><span class="age-badge">Age-based</span></td>
+          <td>Required up to age 26; recommended through age 45</td>
+        </tr>
+        <tr>
+          <td>Rotavirus</td>
+          <td><span class="age-badge">Age-based</span></td>
+          <td>Infants only (2–6 months)</td>
+        </tr>
+        <tr>
+          <td>Zoster (shingles)</td>
+          <td><span class="age-badge">Age-based</span></td>
+          <td>Required age 50+; 2-dose Shingrix series</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="warn-box">
+      <div class="warn-title">💡 Save money on vaccines</div>
+      <p>If you already received some of these vaccines, bring your vaccination booklet or immunization records from your home country. Your panel physician may accept prior documentation or order a blood titer test to confirm immunity — potentially saving you the cost of repeat vaccines.</p>
+    </div>
+
+    <h2 id="cost">Medical Exam Cost by Country</h2>
+    <p>The exam cost is paid directly to the panel physician clinic and varies by location, how many vaccines you need, and whether additional tests are required. These figures are approximate ranges for 2026.</p>
+
+    <table class="cost-table">
+      <thead>
+        <tr>
+          <th>Country</th>
+          <th>Exam Fee (approx.)</th>
+          <th>Vaccines (per shot)</th>
+          <th>Total Estimate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Philippines</td>
+          <td class="cost-range">$200–$300</td>
+          <td>$15–$40 each</td>
+          <td>$300–$600+</td>
+        </tr>
+        <tr>
+          <td>Mexico</td>
+          <td class="cost-range">$150–$250</td>
+          <td>$20–$50 each</td>
+          <td>$250–$500+</td>
+        </tr>
+        <tr>
+          <td>United Kingdom</td>
+          <td class="cost-range">$350–$500</td>
+          <td>£30–£80 each</td>
+          <td>$500–$900+</td>
+        </tr>
+        <tr>
+          <td>Brazil</td>
+          <td class="cost-range">$250–$400</td>
+          <td>R$80–$200 each</td>
+          <td>$350–$700+</td>
+        </tr>
+        <tr>
+          <td>India</td>
+          <td class="cost-range">$100–$200</td>
+          <td>₹500–₹2,000 each</td>
+          <td>$150–$400+</td>
+        </tr>
+        <tr>
+          <td>Australia</td>
+          <td class="cost-range">$350–$500</td>
+          <td>A$40–$120 each</td>
+          <td>$500–$900+</td>
+        </tr>
+        <tr>
+          <td>Nigeria</td>
+          <td class="cost-range">$150–$250</td>
+          <td>$20–$60 each</td>
+          <td>$250–$600+</td>
+        </tr>
+        <tr>
+          <td>China</td>
+          <td class="cost-range">$100–$200</td>
+          <td>¥100–¥400 each</td>
+          <td>$150–$450+</td>
+        </tr>
+        <tr>
+          <td>Canada</td>
+          <td class="cost-range">$250–$400</td>
+          <td>C$30–$80 each</td>
+          <td>$350–$700+</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Most couples spend <strong>$300–$700 total</strong> for the medical exam, including vaccines they are missing. Getting vaccinations from your local clinic before the exam appointment (if the panel physician accepts external vaccination records) can reduce your total cost significantly.</p>
+
+    <h2 id="bring">What to Bring to the Medical Exam</h2>
+    <div class="bring-grid">
+      <div class="bring-item">
+        <span class="bring-icon">🛂</span>
+        <span class="bring-text"><strong>Valid passport</strong> — must match the name on your visa application</span>
+      </div>
+      <div class="bring-item">
+        <span class="bring-icon">📸</span>
+        <span class="bring-text"><strong>Passport photos</strong> — quantity varies by clinic, usually 2–4</span>
+      </div>
+      <div class="bring-item">
+        <span class="bring-icon">💉</span>
+        <span class="bring-text"><strong>Vaccination records</strong> — any prior immunization booklet or records from childhood</span>
+      </div>
+      <div class="bring-item">
+        <span class="bring-icon">📋</span>
+        <span class="bring-text"><strong>Medical history</strong> — list of any chronic conditions, surgeries, or medications</span>
+      </div>
+      <div class="bring-item">
+        <span class="bring-icon">💊</span>
+        <span class="bring-text"><strong>Current medications</strong> — bring bottles or a list with dosages</span>
+      </div>
+      <div class="bring-item">
+        <span class="bring-icon">💵</span>
+        <span class="bring-text"><strong>Payment</strong> — check clinic's accepted methods; many are cash only</span>
+      </div>
+      <div class="bring-item">
+        <span class="bring-icon">📄</span>
+        <span class="bring-text"><strong>Prescription history</strong> — especially any psychiatric medications or substance abuse treatment</span>
+      </div>
+      <div class="bring-item">
+        <span class="bring-icon">🏥</span>
+        <span class="bring-text"><strong>Glasses or contacts</strong> — if you need them for vision correction</span>
+      </div>
+    </div>
+
+    <div class="cta-mid">
+      <h3>Worried about a specific medical condition?</h3>
+      <p>An immigration attorney can review whether a condition affects your admissibility and advise on waivers before you go to the exam — saving you from surprises at the interview.</p>
+      <a href="#" class="cta-btn-green" data-affiliate="attorney-consult">Get a Medical Admissibility Review →</a>
+      <a href="/k1-visa-checklist" class="cta-btn-outline">Full K-1 Document Checklist</a>
+    </div>
+
+    <h2 id="inadmissibility">Medical Conditions and Inadmissibility</h2>
+    <p>Most people pass the medical exam without issues. However, certain conditions under INA § 212(a)(1) can make an applicant inadmissible. Understanding these categories helps you prepare.</p>
+
+    <div class="inadmiss-grid">
+      <div class="inadmiss-card red">
+        <div class="inadmiss-label">🚫 Grounds for Inadmissibility</div>
+        <div class="inadmiss-title">Communicable diseases of public health significance</div>
+        <div class="inadmiss-desc">Active tuberculosis, syphilis (infectious stage), gonorrhea (infectious stage), and Hansen's disease (leprosy). <em>HIV is no longer on this list since 2010.</em></div>
+      </div>
+      <div class="inadmiss-card red">
+        <div class="inadmiss-label">🚫 Grounds for Inadmissibility</div>
+        <div class="inadmiss-title">Missing required vaccinations</div>
+        <div class="inadmiss-desc">Failure to complete required vaccines without a valid medical exemption or religious objection. This is fixable — vaccines can be administered at the clinic.</div>
+      </div>
+      <div class="inadmiss-card orange">
+        <div class="inadmiss-label">⚠ Case-by-Case Review</div>
+        <div class="inadmiss-title">Physical or mental disorders with harmful behavior</div>
+        <div class="inadmiss-desc">Only applies if the disorder is associated with past or current harmful behavior — not simply having a diagnosis. Mental health conditions alone are rarely grounds for denial.</div>
+      </div>
+      <div class="inadmiss-card orange">
+        <div class="inadmiss-label">⚠ Case-by-Case Review</div>
+        <div class="inadmiss-title">Drug addiction or abuse</div>
+        <div class="inadmiss-desc">Current drug addiction is inadmissible. History of drug use without current addiction is reviewed case-by-case. Be honest — waivers are available in some situations.</div>
+      </div>
+      <div class="inadmiss-card green">
+        <div class="inadmiss-label">✓ Not Grounds for Denial</div>
+        <div class="inadmiss-title">HIV status</div>
+        <div class="inadmiss-desc">HIV was removed from the communicable disease list in 2010. Being HIV-positive is not a ground of inadmissibility for immigration to the United States.</div>
+      </div>
+      <div class="inadmiss-card green">
+        <div class="inadmiss-label">✓ Not Grounds for Denial</div>
+        <div class="inadmiss-title">Chronic conditions and disabilities</div>
+        <div class="inadmiss-desc">Diabetes, cancer, heart disease, physical disabilities, and most chronic conditions are not grounds for inadmissibility. The exam is not a general health filter.</div>
+      </div>
+    </div>
+
+    <div class="info-box">
+      <div class="info-title">ℹ Waivers Are Available</div>
+      <p>If you have a condition that is technically a ground of inadmissibility (such as active TB that is being treated), a <strong>waiver of inadmissibility (Form I-601)</strong> may be available. An immigration attorney can assess whether a waiver applies to your situation. Do not assume a condition means automatic denial.</p>
+    </div>
+
+    <h2 id="k1-vs-aos-exam">K-1 Exam vs. Adjustment of Status Exam: Two Separate Exams</h2>
+    <p>Many couples are surprised to learn there are <strong>two separate medical exams</strong> in the K-1 process — one before the visa interview, and one after entering the U.S. when filing for Adjustment of Status (green card).</p>
+
+    <div class="compare-box">
+      <div class="compare-row header">
+        <div class="compare-cell">Detail</div>
+        <div class="compare-cell">K-1 Medical Exam</div>
+        <div class="compare-cell">AOS Medical Exam (I-693)</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">When performed</div>
+        <div class="compare-cell">Before the visa interview, abroad</div>
+        <div class="compare-cell">After entering U.S., before/during AOS filing</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Who performs it</div>
+        <div class="compare-cell">Embassy-designated panel physician</div>
+        <div class="compare-cell">USCIS-designated civil surgeon in the U.S.</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Form used</div>
+        <div class="compare-cell">DS-2053 (embassy-provided)</div>
+        <div class="compare-cell">Form I-693 (sealed for USCIS)</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Typical cost</div>
+        <div class="compare-cell">$200–$600+ depending on country</div>
+        <div class="compare-cell">$200–$500+ in the U.S.</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Vaccine records shared?</div>
+        <div class="compare-cell">—</div>
+        <div class="compare-cell">Civil surgeon may accept K-1 vaccine docs</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Validity</div>
+        <div class="compare-cell">6 months from exam date</div>
+        <div class="compare-cell">2 years (or until USCIS adjudicates)</div>
+      </div>
+    </div>
+
+    <h2 id="timing">When to Schedule Your Medical Exam</h2>
+    <p>Timing your medical exam correctly prevents two common problems: having results expire before your interview, or having to rush at the last minute.</p>
+    <ul>
+      <li><strong>Schedule after you receive your interview appointment date</strong> — NVC or the embassy will notify you of your interview date before you need the exam results</li>
+      <li><strong>Exam results are valid for 6 months</strong> from the date of the exam — if your interview gets postponed past that window, you may need to redo parts of the exam</li>
+      <li><strong>Book 4–6 weeks before your interview</strong> — this gives time for lab results to come back and the sealed envelope to be prepared</li>
+      <li><strong>Don't wait until the week before</strong> — some panel physician clinics are booked weeks in advance, and blood test results can take 1–2 weeks</li>
+    </ul>
+
+    <h2 id="tips">7 Tips to Pass the First Time</h2>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">Tip 01</div>
+        <div class="tip-title">Find your vaccination records before the appointment</div>
+        <div class="tip-desc">Dig up your childhood vaccination booklet. Even partial records can save you from repeat shots and extra cost at the panel physician clinic.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 02</div>
+        <div class="tip-title">Get common vaccines at your local clinic first</div>
+        <div class="tip-desc">For vaccines you know you're missing (flu shot, Tdap), getting them at your regular clinic first — and bringing the records — may be accepted, at a lower cost.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 03</div>
+        <div class="tip-title">Don't open the sealed envelope — ever</div>
+        <div class="tip-desc">The panel physician seals your results. An opened envelope means you may need to redo the entire exam. Bring it sealed to your interview; the consular officer opens it.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 04</div>
+        <div class="tip-title">Be honest about medical history</div>
+        <div class="tip-desc">The physician will ask about prior conditions, surgeries, mental health, and substance use. Honesty is essential — misrepresentation is a separate ground of inadmissibility and far more damaging than the condition itself.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 05</div>
+        <div class="tip-title">Bring documentation for any managed condition</div>
+        <div class="tip-desc">If you have a condition being actively treated (e.g., TB treatment, psychiatric medication), bring your doctor's letters and prescription records. Shows the condition is controlled, not a public health risk.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 06</div>
+        <div class="tip-title">Don't schedule the exam too early</div>
+        <div class="tip-desc">Results expire in 6 months. If your interview is 7 months away, wait. Redoing an expired exam is an avoidable cost of $200–$500+.</div>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 07</div>
+        <div class="tip-title">Confirm the clinic's payment method in advance</div>
+        <div class="tip-desc">Many panel physician clinics are cash only or have specific accepted payment methods. Call ahead so you're not stuck at the clinic with the wrong payment method.</div>
+      </div>
+    </div>
+
+    <h2 id="faq">Frequently Asked Questions</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">Who performs the K-1 visa medical exam?</p>
+        <div class="faq-a"><p>Only a <strong>panel physician</strong> officially designated by the U.S. embassy in your country. You cannot use your personal doctor. Find the approved list on your embassy's website or at travel.state.gov.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How much does the K-1 visa medical exam cost?</p>
+        <div class="faq-a"><p>Costs vary widely by country — typically <strong>$200–$600+</strong> total, including the exam fee and any required vaccines. India and China tend to be on the lower end; Australia and the UK on the higher end. Bringing vaccination records can reduce costs.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">What vaccinations are required for the K-1 medical exam?</p>
+        <div class="faq-a"><p>Required vaccines include MMR, varicella, hepatitis A, hepatitis B, Tdap, influenza, meningococcal, pneumococcal, and COVID-19. Age-based requirements apply to HPV, polio, rotavirus, and zoster. If you have prior vaccination records, the panel physician may accept them.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">How long is the K-1 visa medical exam valid?</p>
+        <div class="faq-a"><p>The results are valid for <strong>6 months</strong> from the exam date. Schedule your exam so that your embassy interview falls within this window. If your interview is delayed past 6 months, parts of the exam may need to be redone.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Can a medical condition cause a K-1 visa denial?</p>
+        <div class="faq-a"><p>Yes, but the list of disqualifying conditions is narrow: active communicable diseases (such as active TB or infectious syphilis), missing required vaccines, physical or mental disorders associated with harmful behavior, and drug addiction. HIV is <em>not</em> on the list since 2010. Waivers are available for some conditions.</p></div>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">Do I need a second medical exam for Adjustment of Status?</p>
+        <div class="faq-a"><p>Yes. After entering the U.S. and marrying, you file for Adjustment of Status (I-485), which requires a separate medical exam using <strong>Form I-693</strong> from a USCIS-designated civil surgeon in the United States. This is a different exam from the K-1 panel physician exam — though some vaccine records may transfer.</p></div>
+      </div>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div class="cta-dark">
+      <h2>Preparing for your K-1 medical exam?</h2>
+      <p>Make sure you're ready for every step of the K-1 process — from the medical exam to the interview to filing for your green card after arrival.</p>
+      <a href="/k1-visa-checklist" class="cta-btn-white">View Full K-1 Checklist →</a>
+      <a href="#" class="cta-btn-ghost" data-affiliate="attorney-consult">Get Expert Help</a>
+    </div>
+
+  </div><!-- /main-col -->
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="summary-box">
+      <h3>Exam Quick Facts</h3>
+      <div class="sum-row">
+        <span class="sum-label">Who does it</span>
+        <span class="sum-val">Panel physician only</span>
+      </div>
+      <div class="sum-row">
+        <span class="sum-label">Typical cost</span>
+        <span class="sum-val">$300–$700+</span>
+      </div>
+      <div class="sum-row">
+        <span class="sum-label">Results valid</span>
+        <span class="sum-val">6 months</span>
+      </div>
+      <div class="sum-row">
+        <span class="sum-label">Open the envelope?</span>
+        <span class="sum-val">Never ✗</span>
+      </div>
+      <div class="sum-row">
+        <span class="sum-label">HIV ground for denial?</span>
+        <span class="sum-val">No (since 2010)</span>
+      </div>
+      <div class="sum-row">
+        <span class="sum-label">Second exam needed?</span>
+        <span class="sum-val">Yes — for AOS</span>
+      </div>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>On This Page</h3>
+      <a href="#overview" class="sidebar-link">What Is the Medical Exam?</a>
+      <a href="#steps" class="sidebar-link">4-Step Exam Process</a>
+      <a href="#whats-tested" class="sidebar-link">What Gets Tested</a>
+      <a href="#vaccinations" class="sidebar-link">Required Vaccinations</a>
+      <a href="#cost" class="sidebar-link">Cost by Country</a>
+      <a href="#bring" class="sidebar-link">What to Bring</a>
+      <a href="#inadmissibility" class="sidebar-link">Medical Inadmissibility</a>
+      <a href="#k1-vs-aos-exam" class="sidebar-link">K-1 vs. AOS Exam</a>
+      <a href="#timing" class="sidebar-link">When to Schedule</a>
+      <a href="#tips" class="sidebar-link">7 Tips to Pass</a>
+      <a href="#faq" class="sidebar-link">FAQ</a>
+    </div>
+
+    <div class="sidebar-box">
+      <h3>Related Guides</h3>
+      <SmartLink href="/k1-visa" class="sidebar-link">K-1 Fiancé Visa Overview</SmartLink>
+      <SmartLink href="/k1-visa-checklist" class="sidebar-link">K-1 Visa Checklist</SmartLink>
+      <SmartLink href="/k1-visa-interview" class="sidebar-link">K-1 Visa Interview Guide</SmartLink>
+      <SmartLink href="/k1-visa-cost" class="sidebar-link">K-1 Visa Costs</SmartLink>
+      <SmartLink href="/adjustment-of-status-after-marriage" class="sidebar-link">Adjustment of Status After K-1</SmartLink>
+      <SmartLink href="/k1-visa-processing-time" class="sidebar-link">K-1 Processing Timeline</SmartLink>
+    </div>
+  </aside>
+</div>
+
+</Base>

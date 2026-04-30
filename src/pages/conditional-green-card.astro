@@ -1,0 +1,1156 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Conditional Green Card 2026: What It Is, the I-751 Window, and Everything That Comes Next",
+    "description": "Everything international couples need to know about the 2-year conditional green card — why USCIS issues it, who gets it, the I-751 filing window (months 21–24), evidence requirements, processing times, and the path to a permanent 10-year card.",
+    "url": "https://ldrvisa.org/conditional-green-card",
+    "dateModified": "2026-04-30",
+    "datePublished": "2026-04-30",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/conditional-green-card" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "Green Card Through Marriage", "item": "https://ldrvisa.org/green-card-through-marriage" },
+      { "@type": "ListItem", "position": 3, "name": "Conditional Green Card", "item": "https://ldrvisa.org/conditional-green-card" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a conditional green card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A conditional green card (also called a CR-1 card or 2-year green card) is a Lawful Permanent Resident card issued when a foreign national's marriage to a U.S. citizen was less than 2 years old at the time of approval. It grants the same rights as a permanent green card — work authorization, travel, re-entry — but expires after 2 years and requires filing Form I-751 to remove the conditions and receive a full 10-year permanent resident card."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who gets a conditional green card vs. a 10-year green card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS looks at how long the couple has been married at the time the green card is approved — not when the petition was filed. If the marriage is less than 2 years old at approval, the foreign spouse receives a conditional (2-year) green card with a CR-1 or CR-6 category code. If the marriage is 2 or more years old at approval, the foreign spouse receives a 10-year permanent green card with an IR-1 or IF-6 category code and does not need to file I-751."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "When do I file Form I-751 to remove conditions?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You must file Form I-751 during the 90-day window immediately before your conditional green card expires — that is, between the 21st and 24th month after the card was issued. You cannot file before the 21-month mark (USCIS will reject it and return your fee). Filing after the expiration date requires a late-filing explanation. Upon filing on time, you receive an automatic 24-month extension of your conditional residence while the petition is pending."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I miss the I-751 filing window?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you miss the 90-day window (months 21–24), file as soon as possible with a written explanation showing good cause for the delay — such as a serious illness, family emergency, or natural disaster. USCIS may still accept a late filing. However, if your conditional green card has expired and you have no pending I-751 or extension, you are in an undocumented status and risk removal proceedings. File immediately. An immigration attorney can help you draft the strongest possible late-filing explanation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I work and travel with a conditional green card?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. A conditional green card is a real Permanent Resident Card — it is simply time-limited. With it you can work anywhere in the U.S. without employer sponsorship, travel internationally and re-enter the U.S. as a returning resident, and live anywhere in the country. The same applies during I-751 processing — your I-797 receipt notice serves as evidence of your continued lawful status and work authorization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does it take to get a permanent 10-year green card after filing I-751?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As of 2026, USCIS is processing Form I-751 in approximately 24–36 months at most service centers. When you file, you receive an automatic 24-month extension of your conditional green card, which is enough to cover most cases given current processing times. USCIS has been issuing additional extension notices for cases that remain pending beyond the initial extension period. You can live and work legally throughout the entire processing period."
+        }
+      }
+    ]
+  }
+]);
+---
+
+<Base
+  title="Conditional Green Card 2026: What It Is, the I-751 Window & Everything Next"
+  description="Everything international couples need to know about the 2-year conditional green card — why USCIS issues it, who gets it, the I-751 filing window (months 21–24), evidence, processing times, and the path to a 10-year card."
+  schema={schema}
+>
+
+  <style>
+    /* Breadcrumb */
+    .breadcrumb-bar { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 10px 0; }
+    .breadcrumb { display: flex; align-items: center; gap: 8px; list-style: none; font-size: 0.8125rem; color: var(--color-muted); flex-wrap: wrap; }
+    .breadcrumb li:not(:last-child)::after { content: '/'; margin-left: 8px; }
+    .breadcrumb a { color: var(--color-accent); }
+
+    /* Hero */
+    .page-hero { padding: 56px 0 48px; text-align: center; background: linear-gradient(180deg, #f0fdfa 0%, #fff 100%); border-bottom: 1px solid var(--color-border); }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: #ccfbf1; color: #0f766e; font-size: 0.8125rem; font-weight: 600; padding: 6px 14px; border-radius: 999px; margin-bottom: 20px; }
+    .page-hero h1 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px; }
+    .page-hero h1 span { color: #0d9488; }
+    .hero-sub { font-size: 1.0625rem; color: var(--color-muted); max-width: 640px; margin: 0 auto 36px; line-height: 1.7; }
+
+    /* Card sequence hero visual */
+    .card-sequence { display: flex; align-items: center; justify-content: center; gap: 0; max-width: 680px; margin: 0 auto; flex-wrap: wrap; }
+    .card-visual { border-radius: 12px; padding: 20px 24px; text-align: center; min-width: 180px; border: 2px solid; position: relative; }
+    .card-visual.card-conditional { background: linear-gradient(135deg, #134e4a 0%, #0f766e 100%); border-color: #0d9488; color: #fff; }
+    .card-visual.card-permanent { background: linear-gradient(135deg, #1e3a5f 0%, #1d4ed8 100%); border-color: #3b82f6; color: #fff; }
+    .card-type-label { font-size: 0.6875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; opacity: 0.75; margin-bottom: 6px; }
+    .card-main-label { font-size: 1.25rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; margin-bottom: 4px; }
+    .card-sub-label { font-size: 0.75rem; opacity: 0.8; }
+    .card-badge { position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; padding: 3px 10px; border-radius: 4px; white-space: nowrap; }
+    .card-conditional .card-badge { background: #fef3c7; color: #b45309; }
+    .card-permanent .card-badge { background: #dbeafe; color: #1d4ed8; }
+    .card-arrow-wrap { display: flex; flex-direction: column; align-items: center; padding: 0 8px; min-width: 120px; text-align: center; }
+    .card-arrow { font-size: 1.5rem; color: #0d9488; line-height: 1; }
+    .card-arrow-label { font-size: 0.7rem; font-weight: 700; color: #0f766e; margin-top: 4px; background: #ccfbf1; border: 1px solid #99f6e4; border-radius: 6px; padding: 4px 10px; line-height: 1.4; }
+
+    /* Summary bar */
+    .summary-bar { display: flex; justify-content: center; flex-wrap: wrap; max-width: 680px; margin: 32px auto 0; border: 1px solid #99f6e4; border-radius: 12px; overflow: hidden; background: #fff; }
+    .sb-item { flex: 1; min-width: 130px; padding: 16px 20px; text-align: center; border-right: 1px solid #99f6e4; }
+    .sb-item:last-child { border-right: none; }
+    .sb-val { display: block; font-size: 1.25rem; font-weight: 800; color: #0d9488; letter-spacing: -0.02em; line-height: 1; }
+    .sb-label { display: block; font-size: 0.75rem; color: var(--color-muted); margin-top: 4px; line-height: 1.3; }
+
+    /* Layout */
+    .content-sidebar-grid { display: grid; grid-template-columns: 1fr 300px; gap: 48px; padding: 48px 0 80px; align-items: start; }
+    .content-section { margin-bottom: 3rem; }
+    .content-section h2 { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-border); }
+    .content-section h3 { font-size: 1.125rem; font-weight: 700; margin: 1.5rem 0 0.625rem; }
+    .content-section p { color: var(--color-muted); line-height: 1.7; margin-bottom: 0.75rem; }
+
+    /* Alert boxes */
+    .alert-box { display: flex; gap: 12px; border-radius: 10px; padding: 1rem 1.25rem; margin: 1rem 0; }
+    .alert-info { background: var(--color-accent-light, #eff6ff); border: 1px solid #bfdbfe; }
+    .alert-teal { background: #f0fdfa; border: 1px solid #99f6e4; }
+    .alert-warning { background: #fffbeb; border: 1px solid #fde68a; }
+    .alert-danger { background: #fef2f2; border: 1px solid #fecaca; }
+    .alert-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 2px; }
+    .alert-box strong { display: block; font-weight: 700; margin-bottom: 4px; font-size: 0.9375rem; }
+    .alert-box p { font-size: 0.875rem; color: var(--color-muted); margin: 0; line-height: 1.6; }
+
+    /* Who gets what */
+    .who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 1.25rem 0; }
+    .who-card { border-radius: 12px; padding: 1.25rem; border: 1px solid var(--color-border); }
+    .who-conditional { background: #f0fdfa; border-color: #99f6e4; }
+    .who-permanent { background: var(--color-surface); }
+    .who-icon { font-size: 1.5rem; margin-bottom: 8px; }
+    .who-card h3 { font-size: 0.9375rem; font-weight: 700; margin-bottom: 10px; }
+    .who-card ul { list-style: none; display: flex; flex-direction: column; gap: 6px; margin: 0; }
+    .who-card li { font-size: 0.8375rem; color: var(--color-muted); padding-left: 1.1rem; position: relative; line-height: 1.5; }
+    .who-card li::before { content: '·'; position: absolute; left: 0; color: #0d9488; font-weight: 700; font-size: 1rem; }
+
+    /* Paths table */
+    .paths-table-wrap { overflow-x: auto; margin: 1.25rem 0; }
+    .paths-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; min-width: 500px; }
+    .paths-table th { background: #f0fdfa; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 2px solid #99f6e4; color: #134e4a; }
+    .paths-table td { padding: 10px 14px; border-bottom: 1px solid var(--color-border); color: var(--color-muted); vertical-align: top; line-height: 1.5; }
+    .paths-table tr:last-child td { border-bottom: none; }
+    .paths-table .cell-highlight { font-weight: 700; color: #0d9488; }
+    .paths-table .cell-blue { font-weight: 700; color: #2563eb; }
+
+    /* I-751 window timeline */
+    .window-timeline { margin: 1.5rem 0; }
+    .wt-track { display: flex; align-items: stretch; border-radius: 10px; overflow: hidden; border: 1px solid var(--color-border); }
+    .wt-seg { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 16px 10px; text-align: center; font-size: 0.8125rem; }
+    .wt-seg-label { font-weight: 700; font-size: 0.8125rem; line-height: 1.2; margin-bottom: 4px; }
+    .wt-seg-sub { font-size: 0.7125rem; opacity: 0.85; line-height: 1.3; }
+    .wt-wait { background: #f9fafb; border-right: 1px solid var(--color-border); color: var(--color-muted); flex: 3; }
+    .wt-window { background: #0f766e; color: #fff; flex: 1; position: relative; }
+    .wt-window::before { content: 'FILE I-751 HERE'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); font-size: 0.6rem; font-weight: 800; letter-spacing: 0.1em; background: #fef3c7; color: #92400e; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+    .wt-expired { background: #fef2f2; border-left: 1px solid #fecaca; color: #dc2626; flex: 1; }
+    .wt-labels { display: flex; margin-top: 6px; }
+    .wt-label-item { text-align: center; font-size: 0.7rem; color: var(--color-muted); font-weight: 600; }
+    .wt-label-item:nth-child(1) { flex: 3; }
+    .wt-label-item:nth-child(2) { flex: 1; }
+    .wt-label-item:nth-child(3) { flex: 1; }
+
+    /* Filing window cards */
+    .window-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; margin: 1.25rem 0; }
+    .wc-card { border-radius: 10px; padding: 1.125rem; }
+    .wc-green { background: #f0fdf4; border: 1px solid #86efac; }
+    .wc-yellow { background: #fffbeb; border: 1px solid #fde68a; }
+    .wc-red { background: #fef2f2; border: 1px solid #fecaca; }
+    .wc-card h3 { font-size: 0.9rem; font-weight: 700; margin-bottom: 8px; }
+    .wc-card p { font-size: 0.8375rem; color: var(--color-muted); margin: 0; line-height: 1.55; }
+
+    /* Joint vs waiver */
+    .filing-type-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 1.25rem 0; }
+    .ft-card { border-radius: 12px; padding: 1.5rem; border: 1px solid var(--color-border); position: relative; }
+    .ft-joint { background: #f0fdf4; border-color: #86efac; }
+    .ft-waiver { background: var(--color-surface); }
+    .ft-badge { position: absolute; top: -10px; left: 16px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; background: #0d9488; color: #fff; padding: 3px 10px; border-radius: 4px; }
+    .ft-badge-gray { background: #6b7280; }
+    .ft-card h3 { font-size: 1.0625rem; font-weight: 700; margin-bottom: 8px; }
+    .ft-card > p { font-size: 0.875rem; color: var(--color-muted); line-height: 1.6; margin-bottom: 12px; }
+    .ft-card > ul { list-style: none; display: flex; flex-direction: column; gap: 5px; margin: 0; }
+    .ft-card li { font-size: 0.8375rem; color: var(--color-muted); padding-left: 1.1rem; position: relative; line-height: 1.5; }
+    .ft-card li::before { content: '·'; position: absolute; left: 0; color: #0d9488; font-weight: 700; font-size: 1rem; }
+
+    /* Waiver reasons */
+    .waiver-reasons { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+    .wr-item { display: flex; gap: 10px; align-items: flex-start; background: #fff; border: 1px solid var(--color-border); border-radius: 8px; padding: 10px 12px; }
+    .wr-icon { font-size: 1rem; flex-shrink: 0; margin-top: 1px; }
+    .wr-item strong { font-size: 0.875rem; display: block; margin-bottom: 2px; }
+    .wr-item p { font-size: 0.8rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+    /* Evidence categories */
+    .evidence-cats { display: flex; flex-direction: column; gap: 14px; margin: 1.25rem 0; }
+    .ev-cat { border: 1px solid var(--color-border); border-radius: 12px; overflow: hidden; }
+    .ev-cat-top { border-color: #99f6e4; }
+    .ev-cat-header { display: flex; align-items: center; gap: 10px; padding: 0.875rem 1.25rem; background: var(--color-surface); border-bottom: 1px solid var(--color-border); }
+    .ev-cat-top .ev-cat-header { background: #f0fdfa; border-color: #99f6e4; }
+    .ev-cat-icon { font-size: 1.25rem; }
+    .ev-cat-header h3 { font-size: 0.9375rem; font-weight: 700; margin: 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .ev-strength-badge { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; padding: 2px 7px; border-radius: 4px; }
+    .badge-strong { background: #dcfce7; color: #15803d; }
+    .badge-good { background: #fef3c7; color: #b45309; }
+    .badge-helpful { background: #ede9fe; color: #6d28d9; }
+    .ev-items-list { padding: 0.25rem 0; }
+    .ev-row { display: flex; align-items: flex-start; gap: 12px; padding: 0.75rem 1.25rem; border-bottom: 1px solid var(--color-border); font-size: 0.875rem; }
+    .ev-row:last-child { border-bottom: none; }
+    .ev-check { flex-shrink: 0; width: 20px; height: 20px; background: #dcfce7; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: #16a34a; font-weight: 700; margin-top: 1px; }
+    .ev-row strong { display: block; margin-bottom: 2px; color: var(--color-text); }
+    .ev-row div { color: var(--color-muted); line-height: 1.5; }
+
+    /* Processing table */
+    .info-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; margin: 1.25rem 0; }
+    .info-table th { background: #f0fdfa; padding: 10px 14px; text-align: left; font-weight: 700; border-bottom: 2px solid #99f6e4; color: #134e4a; }
+    .info-table td { padding: 10px 14px; border-bottom: 1px solid var(--color-border); color: var(--color-muted); vertical-align: top; line-height: 1.5; }
+    .info-table tr:last-child td { border-bottom: none; }
+
+    /* Rights & restrictions */
+    .rights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 1.25rem 0; }
+    .rights-card { border-radius: 10px; padding: 1.125rem; border: 1px solid var(--color-border); }
+    .rights-yes { background: #f0fdf4; border-color: #86efac; }
+    .rights-no { background: #fef2f2; border-color: #fecaca; }
+    .rights-card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+    .rights-card-icon { font-size: 1.25rem; }
+    .rights-card-title { font-weight: 700; font-size: 0.9375rem; }
+    .rights-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin: 0; }
+    .rights-list li { font-size: 0.8375rem; color: var(--color-muted); padding-left: 1.1rem; position: relative; line-height: 1.5; }
+    .rights-list.yes-list li::before { content: '✓'; position: absolute; left: 0; color: #16a34a; font-weight: 700; font-size: 0.75rem; }
+    .rights-list.no-list li::before { content: '✗'; position: absolute; left: 0; color: #dc2626; font-weight: 700; font-size: 0.75rem; }
+
+    /* CTA mid-page */
+    .cta-mid { background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%); border: 1px solid #99f6e4; border-radius: 16px; padding: 2rem; margin: 2rem 0; text-align: center; }
+    .cta-mid h3 { font-size: 1.25rem; font-weight: 800; margin-bottom: 8px; color: #134e4a; }
+    .cta-mid p { font-size: 0.9375rem; color: #0f766e; margin-bottom: 1.25rem; line-height: 1.6; }
+    .cta-btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 6px; background: #0f766e; color: #fff; font-weight: 700; font-size: 0.9375rem; padding: 12px 24px; border-radius: 8px; text-decoration: none; transition: background 0.15s; }
+    .btn-primary:hover { background: #0d9488; }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 6px; background: #fff; color: #0f766e; font-weight: 700; font-size: 0.9375rem; padding: 12px 24px; border-radius: 8px; text-decoration: none; border: 2px solid #0f766e; transition: background 0.15s; }
+    .btn-secondary:hover { background: #f0fdfa; }
+
+    /* Path to citizenship steps */
+    .path-steps { display: flex; flex-direction: column; gap: 0; margin: 1.25rem 0; }
+    .path-item { display: flex; gap: 16px; align-items: flex-start; padding: 1rem 1.25rem; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; }
+    .path-connector { width: 2px; height: 20px; background: #0d9488; margin-left: calc(1.25rem + 17px); }
+    .path-circle { flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.875rem; }
+    .path-done { background: #dcfce7; color: #15803d; }
+    .path-active { background: #0d9488; color: #fff; }
+    .path-pending { background: #f0fdfa; color: #0f766e; border: 2px solid #99f6e4; }
+    .path-future { background: var(--color-accent-light, #eff6ff); color: #1d4ed8; }
+    .path-item strong { display: block; font-size: 0.9375rem; margin-bottom: 4px; }
+    .path-item p { font-size: 0.8375rem; color: var(--color-muted); margin: 0; line-height: 1.55; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; margin: 1rem 0; }
+    .faq-item { border-bottom: 1px solid var(--color-border); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item summary { padding: 1rem 1.25rem; font-weight: 600; cursor: pointer; font-size: 0.9375rem; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+    .faq-item summary::after { content: '+'; color: var(--color-accent); font-size: 1.25rem; font-weight: 300; flex-shrink: 0; }
+    .faq-item[open] summary::after { content: '−'; }
+    .faq-item p { padding: 0 1.25rem 1rem; color: var(--color-muted); font-size: 0.9rem; line-height: 1.7; margin: 0; }
+
+    /* Dark CTA */
+    .cta-dark { background: #134e4a; border-radius: 16px; padding: 2.5rem; color: #fff; margin-top: 2rem; text-align: center; }
+    .cta-dark h2 { font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 10px; border: none; padding: 0; }
+    .cta-dark p { color: #99f6e4; font-size: 1rem; margin-bottom: 1.5rem; line-height: 1.6; }
+    .cta-dark-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn-white { display: inline-flex; align-items: center; gap: 6px; background: #fff; color: #134e4a; font-weight: 700; font-size: 0.9375rem; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: background 0.15s; }
+    .btn-white:hover { background: #ccfbf1; }
+    .btn-outline-white { display: inline-flex; align-items: center; gap: 6px; background: transparent; color: #fff; font-weight: 700; font-size: 0.9375rem; padding: 13px 28px; border-radius: 8px; text-decoration: none; border: 2px solid rgba(255,255,255,0.4); transition: border-color 0.15s; }
+    .btn-outline-white:hover { border-color: #fff; }
+
+    /* Related */
+    .related-guides { margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border); }
+    .related-guides h2 { font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; border: none; padding: 0; }
+    .related-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+    /* Sidebar */
+    .sidebar-col { display: flex; flex-direction: column; gap: 20px; position: sticky; top: 80px; }
+    .sidebar-card { background: #fff; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; }
+    .sidebar-card-title { padding: 12px 18px; font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); border-bottom: 1px solid var(--color-border); background: var(--color-surface); }
+    .sidebar-teal { border-color: #99f6e4; }
+    .sidebar-teal .sidebar-card-title { background: #ccfbf1; color: #134e4a; border-color: #99f6e4; }
+    .sidebar-link { display: flex; justify-content: space-between; align-items: center; padding: 9px 18px; border-bottom: 1px solid var(--color-border); font-size: 0.875rem; color: var(--color-text); text-decoration: none; transition: background 0.1s; }
+    .sidebar-link:last-child { border-bottom: none; }
+    .sidebar-link:hover { background: var(--color-surface); color: var(--color-accent); }
+    .sidebar-link span { color: var(--color-muted); font-size: 0.8rem; }
+
+    /* Card sequence summary in sidebar */
+    .seq-box { padding: 1rem 1.125rem; }
+    .seq-step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+    .seq-step:last-child { margin-bottom: 0; }
+    .seq-num { flex-shrink: 0; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 0.8125rem; }
+    .seq-num-teal { background: #0d9488; color: #fff; }
+    .seq-num-blue { background: #1d4ed8; color: #fff; }
+    .seq-num-gold { background: #f59e0b; color: #fff; }
+    .seq-step-content strong { display: block; font-size: 0.875rem; margin-bottom: 2px; }
+    .seq-step-content span { font-size: 0.78rem; color: var(--color-muted); }
+    .seq-connector { width: 2px; height: 12px; background: #e5e7eb; margin-left: 13px; margin-bottom: 10px; }
+
+    /* Quick facts */
+    .qf-list { display: flex; flex-direction: column; }
+    .qf-item { display: flex; justify-content: space-between; align-items: center; padding: 9px 18px; border-bottom: 1px solid #99f6e4; font-size: 0.875rem; }
+    .qf-item:last-child { border-bottom: none; }
+    .qf-label { color: var(--color-muted); }
+    .qf-val { font-weight: 700; color: #0d9488; }
+
+    /* Responsive */
+    @media (max-width: 960px) {
+      .content-sidebar-grid { grid-template-columns: 1fr; }
+      .sidebar-col { position: static; }
+      .who-grid { grid-template-columns: 1fr; }
+      .filing-type-grid { grid-template-columns: 1fr; }
+      .window-cards { grid-template-columns: 1fr; }
+      .rights-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .summary-bar { max-width: 100%; }
+      .sb-item { min-width: 50%; border-bottom: 1px solid #99f6e4; }
+      .related-grid { grid-template-columns: 1fr; }
+      .card-sequence { gap: 8px; }
+      .card-arrow-wrap { min-width: 80px; }
+    }
+  </style>
+
+  <!-- Breadcrumb -->
+  <nav class="breadcrumb-bar" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li><a href="/">Home</a></li>
+        <li><SmartLink href="/green-card-through-marriage">Green Card Through Marriage</SmartLink></li>
+        <li aria-current="page">Conditional Green Card</li>
+      </ol>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="hero-badge">&#127968; Your Green Card Journey</div>
+      <h1>The Conditional Green Card:<br /><span>What It Means &amp; What To Do Next</span></h1>
+      <p class="hero-sub">You just received a 2-year green card through marriage. Here's why it's conditional, what rights you have right now, and the exact steps to convert it into a permanent 10-year card before it expires.</p>
+
+      <!-- Card sequence visual -->
+      <div class="card-sequence">
+        <div class="card-visual card-conditional">
+          <div class="card-badge">You Are Here</div>
+          <div class="card-type-label">Conditional Permanent Resident</div>
+          <div class="card-main-label">2-Year<br />Green Card</div>
+          <div class="card-sub-label">Category: CR-1 / CR-6</div>
+        </div>
+        <div class="card-arrow-wrap">
+          <div class="card-arrow">&#8594;</div>
+          <div class="card-arrow-label">File I-751<br />Months 21–24</div>
+        </div>
+        <div class="card-visual card-permanent">
+          <div class="card-badge">The Goal</div>
+          <div class="card-type-label">Lawful Permanent Resident</div>
+          <div class="card-main-label">10-Year<br />Green Card</div>
+          <div class="card-sub-label">Category: IR-1 / IF-6</div>
+        </div>
+      </div>
+
+      <div class="summary-bar">
+        <div class="sb-item">
+          <span class="sb-val">2 years</span>
+          <span class="sb-label">Conditional card validity</span>
+        </div>
+        <div class="sb-item">
+          <span class="sb-val">Months 21–24</span>
+          <span class="sb-label">I-751 filing window</span>
+        </div>
+        <div class="sb-item">
+          <span class="sb-val">24–36 mo</span>
+          <span class="sb-label">I-751 processing time</span>
+        </div>
+        <div class="sb-item">
+          <span class="sb-val">3 years</span>
+          <span class="sb-label">Citizenship eligibility</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+    <div class="content-sidebar-grid">
+
+      <!-- MAIN COLUMN -->
+      <main class="main-col">
+
+        <!-- What is a conditional green card -->
+        <section id="what-is" class="content-section">
+          <h2>What Is a Conditional Green Card?</h2>
+          <p>A <strong>conditional green card</strong> is a Lawful Permanent Resident (LPR) card issued when a foreign national receives a green card through marriage to a U.S. citizen and the marriage was less than 2 years old at the time of approval. It looks almost identical to a standard green card and grants the same core rights — but it expires after just 2 years and carries a requirement to prove the marriage is genuine before those 2 years are up.</p>
+          <p>The formal immigration term is <em>conditional permanent residence</em>. On the card itself, you'll see the category printed as <strong>CR-1</strong> (if you entered as a spousal immigrant) or <strong>CR-6</strong> (if you were an immediate relative who adjusted status inside the U.S. after entering on a K-1 visa). Both mean the same thing: conditional, 2-year card.</p>
+
+          <div class="alert-box alert-teal">
+            <div class="alert-icon">&#128273;</div>
+            <div>
+              <strong>It is a real green card — just time-limited</strong>
+              <p>A common fear is that a conditional green card is somehow "less than" a permanent green card. It isn't. The rights are the same. The only differences are the 2-year expiry and the requirement to file <SmartLink href="/i-751-petition-remove-conditions">Form I-751</SmartLink> to remove the conditions. You can work, travel, and live in the U.S. fully during the conditional period.</p>
+            </div>
+          </div>
+
+          <h3>Why does USCIS issue a conditional card?</h3>
+          <p>Congress created conditional permanent residence in 1986 specifically to deter marriage fraud — the practice of entering a sham marriage solely to obtain immigration benefits. The logic: if USCIS approves a green card for someone who has only been married a few months, there's no track record yet to verify the marriage is genuine. The 2-year conditional period gives the couple time to build that track record, then demonstrate it when they file I-751.</p>
+          <p>By the time you file I-751, USCIS expects to see 2 years of documented shared life: joint finances, shared housing, family, photos, community ties. If the marriage was real, this evidence exists naturally. If it was fraudulent, it typically doesn't.</p>
+
+          <h3>How it fits into the two paths to a marriage-based green card</h3>
+          <p>Both major paths to a marriage-based green card can result in a conditional card — it all depends on how long the marriage is at the time of approval, not which path was taken:</p>
+
+          <div class="paths-table-wrap">
+            <table class="paths-table">
+              <thead>
+                <tr>
+                  <th>Path</th>
+                  <th>Marriage &lt; 2 years at approval</th>
+                  <th>Marriage 2+ years at approval</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><SmartLink href="/cr1-visa">CR-1 Spousal Visa</SmartLink> (abroad → U.S.)</td>
+                  <td class="cell-highlight">Conditional green card (CR-1)</td>
+                  <td class="cell-blue">Permanent green card (IR-1)</td>
+                </tr>
+                <tr>
+                  <td><SmartLink href="/k1-visa">K-1 Fiancé Visa</SmartLink> + <SmartLink href="/adjustment-of-status">Adjustment of Status</SmartLink></td>
+                  <td class="cell-highlight">Conditional green card (CR-6)</td>
+                  <td class="cell-blue">Permanent green card (IF-6)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="alert-box alert-info">
+            <div class="alert-icon">&#128161;</div>
+            <div>
+              <strong>Tip: Couples who marry early in the K-1 process often end up conditional</strong>
+              <p>Because the K-1 + Adjustment of Status process takes 18–30+ months from petition to green card, many K-1 couples who married shortly after the fiancé entered the U.S. will have been married less than 2 years when the I-485 is approved — resulting in a conditional card. This is very common and nothing to worry about.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Who gets conditional vs permanent -->
+        <section id="who-gets" class="content-section">
+          <h2>Who Gets a Conditional vs. Permanent Green Card?</h2>
+          <p>The deciding factor is simple: <strong>how long the couple has been married at the moment USCIS (or the consular officer) approves the green card</strong>. USCIS looks at the approval date — not the petition filing date, not the interview date.</p>
+
+          <div class="who-grid">
+            <div class="who-card who-conditional">
+              <div class="who-icon">&#9201;</div>
+              <h3>You receive a CONDITIONAL (2-year) card if:</h3>
+              <ul>
+                <li>Your marriage is less than 2 years old on the day USCIS or the consular officer approves your green card</li>
+                <li>Category code on the card: CR-1 (entered as immigrant spouse) or CR-6 (adjusted status after K-1)</li>
+                <li>You must file Form I-751 between months 21–24 to remove conditions</li>
+                <li>Common for K-1 + AOS couples and couples who recently married before the CR-1 was filed</li>
+              </ul>
+            </div>
+            <div class="who-card who-permanent">
+              <div class="who-icon">&#9989;</div>
+              <h3>You receive a PERMANENT (10-year) card if:</h3>
+              <ul>
+                <li>Your marriage is 2 years or older on the day of approval</li>
+                <li>Category code on the card: IR-1 (entered as immigrant spouse) or IF-6 (adjusted status)</li>
+                <li>No I-751 required — you skip the remove-conditions step entirely</li>
+                <li>Common for couples who were married for several years before beginning the process, or whose CR-1 approval happened to fall just after their 2-year anniversary</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert-box alert-warning">
+            <div class="alert-icon">&#128270;</div>
+            <div>
+              <strong>Check the category on your card right now</strong>
+              <p>Look at the front of your green card. Find the field labeled "Category." If it reads CR-1, CR-2, CR-6, or CR-7 — you have a conditional card and must file I-751. If it reads IR-1, IR-2, IF-6, or similar IR codes — you have a permanent card and no I-751 is needed. If you are unsure, consult an immigration attorney before assuming you don't need to file.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Rights and restrictions -->
+        <section id="rights" class="content-section">
+          <h2>What Can You Do With a Conditional Green Card?</h2>
+          <p>Many conditional green card holders are surprised to learn just how much the card allows. Because it is a true Lawful Permanent Resident card, almost everything a 10-year green card holder can do, a conditional green card holder can do too.</p>
+
+          <div class="rights-grid">
+            <div class="rights-card rights-yes">
+              <div class="rights-card-header">
+                <div class="rights-card-icon">&#9989;</div>
+                <div class="rights-card-title">You CAN do all of this</div>
+              </div>
+              <ul class="rights-list yes-list">
+                <li><strong>Work anywhere in the U.S.</strong> — No employer sponsorship needed. You have unrestricted work authorization.</li>
+                <li><strong>Travel internationally</strong> — You can leave and re-enter the U.S. as a returning resident. Trips of less than 6 months generally do not affect your status.</li>
+                <li><strong>Re-enter the U.S.</strong> — Your conditional green card serves as a valid travel document for re-entry.</li>
+                <li><strong>Live anywhere in the U.S.</strong> — No restrictions on where you reside within the country.</li>
+                <li><strong>Sponsor family members</strong> — You can petition for certain family members (though wait times for LPR family petitions are long).</li>
+                <li><strong>Apply for a U.S. driver's license</strong> — In virtually all states, conditional green cards are accepted for license applications.</li>
+                <li><strong>Open bank accounts, credit cards, mortgages</strong> — Full access to U.S. financial system.</li>
+                <li><strong>Apply to most government and private jobs</strong> — Jobs requiring U.S. citizenship are the exception.</li>
+              </ul>
+            </div>
+            <div class="rights-card rights-no">
+              <div class="rights-card-header">
+                <div class="rights-card-icon">&#10060;</div>
+                <div class="rights-card-title">You CANNOT do these things</div>
+              </div>
+              <ul class="rights-list no-list">
+                <li><strong>Vote in federal or state elections</strong> — Only U.S. citizens may vote. Voting as a non-citizen is a serious crime that can result in deportation and a permanent bar from citizenship.</li>
+                <li><strong>Apply for U.S. citizenship yet</strong> — You must first remove conditions and hold permanent resident status for the required period (3 years as spouse of U.S. citizen).</li>
+                <li><strong>Abandon LPR status without consequences</strong> — Extended absences (generally 6+ months) can trigger questions about whether you abandoned your U.S. residence.</li>
+                <li><strong>Take certain security-clearance jobs</strong> — Some federal positions require U.S. citizenship specifically.</li>
+                <li><strong>Let the card expire without filing I-751</strong> — Failing to file I-751 in time can result in loss of status and removal proceedings.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="alert-box alert-teal">
+            <div class="alert-icon">&#9992;</div>
+            <div>
+              <strong>Traveling while I-751 is pending</strong>
+              <p>Once you have filed I-751 and received your receipt notice (Form I-797), you can travel internationally and re-enter using your expired conditional green card plus the I-797 receipt notice together. Bring both documents every time you travel while your I-751 is pending. If you receive an updated extension notice, bring that as well.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- I-751 filing window -->
+        <section id="filing-window" class="content-section">
+          <h2>The I-751 Filing Window — The Most Critical Date in Your Conditional Period</h2>
+          <p>The single most important thing to know about your conditional green card is this: you have a <strong>90-day window</strong> to file Form I-751, and filing outside it — either too early or too late — causes serious problems.</p>
+
+          <div class="window-timeline">
+            <div class="wt-track">
+              <div class="wt-seg wt-wait">
+                <div class="wt-seg-label">Wait period</div>
+                <div class="wt-seg-sub">Do NOT file yet</div>
+              </div>
+              <div class="wt-seg wt-window">
+                <div class="wt-seg-label">Filing window</div>
+                <div class="wt-seg-sub">90-day window</div>
+              </div>
+              <div class="wt-seg wt-expired">
+                <div class="wt-seg-label">Card expired</div>
+                <div class="wt-seg-sub">Late filing risk</div>
+              </div>
+            </div>
+            <div class="wt-labels">
+              <div class="wt-label-item">Month 0 → Month 21 (21 months)</div>
+              <div class="wt-label-item">Months 21–24</div>
+              <div class="wt-label-item">Month 24+</div>
+            </div>
+          </div>
+
+          <p>The window opens exactly <strong>21 months after your conditional green card was issued</strong> — which is the same as 90 days before the card's expiration date. The window closes on the card's expiration date itself. You can calculate your exact window by looking at the expiration date printed on your card and counting back 90 days.</p>
+
+          <div class="window-cards">
+            <div class="wc-card wc-green">
+              <h3>&#9989; On-time filing (months 21–24)</h3>
+              <p>USCIS accepts your petition, sends a receipt notice (I-797), and automatically extends your conditional residence for <strong>24 months</strong> while the case is pending. You remain fully authorized to live and work in the U.S. Keep your receipt notice with your passport at all times.</p>
+            </div>
+            <div class="wc-card wc-yellow">
+              <h3>&#9888; Too early (before month 21)</h3>
+              <p>USCIS will reject the petition and return your filing fee. Nothing serious — but you've lost time and postage. Refile when the 90-day window opens. Set a calendar reminder for day 1 of month 21 (your card's expiry minus 90 days).</p>
+            </div>
+            <div class="wc-card wc-red">
+              <h3>&#128683; Too late (after month 24)</h3>
+              <p>USCIS may still accept a late filing if you include a written explanation with credible good cause (serious illness, hospitalization, natural disaster, etc.). Without a strong explanation, you risk loss of LPR status and placement in removal proceedings. File immediately — do not delay further.</p>
+            </div>
+          </div>
+
+          <div class="alert-box alert-warning">
+            <div class="alert-icon">&#128197;</div>
+            <div>
+              <strong>Example: How to calculate your window</strong>
+              <p>Your conditional green card expires on October 10, 2026. Count back 90 days: your filing window opens on July 12, 2026. You may file any time between July 12 and October 10, 2026. Do not file before July 12 — USCIS will reject it. Do not file after October 10 without a late-filing explanation.</p>
+            </div>
+          </div>
+
+          <h3>What happens immediately after you file</h3>
+          <p>Within 2–6 weeks of USCIS receiving your I-751, you'll get a <strong>Form I-797 receipt notice</strong> in the mail. This notice serves several critical functions:</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:6px; margin: 0.75rem 0 0 0; padding:0;">
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;">
+              <span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span>
+              It automatically extends your conditional permanent residence for <strong>24 months</strong> beyond your card's expiration date.
+            </li>
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;">
+              <span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span>
+              It serves as proof of your continued work authorization — you can show it to employers who need to reverify your employment eligibility.
+            </li>
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;">
+              <span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span>
+              Combined with your expired conditional green card, it serves as a re-entry document for international travel.
+            </li>
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;">
+              <span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span>
+              It is the document that proves your case is pending if anyone asks about your immigration status.
+            </li>
+          </ul>
+        </section>
+
+        <!-- Missing the window -->
+        <section id="missed-window" class="content-section">
+          <h2>What Happens If You Miss the I-751 Filing Window?</h2>
+          <p>Missing the I-751 window is serious, but it is not always the end of the road. USCIS has discretion to accept late-filed I-751 petitions when the petitioner can show good cause for the delay. Here's how to handle it:</p>
+
+          <div class="alert-box alert-danger">
+            <div class="alert-icon">&#128679;</div>
+            <div>
+              <strong>If you have missed the window: file immediately</strong>
+              <p>Do not wait any longer. Every additional day increases your risk. Once your conditional green card expires without a pending I-751, you technically have no lawful immigration status in the U.S. File as soon as possible, include a thorough written explanation, and strongly consider consulting an immigration attorney before filing.</p>
+            </div>
+          </div>
+
+          <h3>What "good cause" means for a late filing</h3>
+          <p>USCIS does not define "good cause" with a strict list, but examples that have been accepted include:</p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:6px; margin: 0.75rem 0; padding:0;">
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;"><span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span> Serious illness or hospitalization of the conditional resident or a close family member</li>
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;"><span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span> Death of an immediate family member causing extreme stress or disruption</li>
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;"><span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span> Natural disaster, fire, or other catastrophic event affecting the petitioner's ability to file</li>
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;"><span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span> Attorney error where the petitioner relied in good faith on incorrect advice and took reasonable steps to remediate</li>
+            <li style="font-size:0.875rem; color:var(--color-muted); padding-left:1.25rem; position:relative; line-height:1.6;"><span style="position:absolute; left:0; color:#0d9488; font-weight:700;">&#10003;</span> Delays caused by circumstances outside the petitioner's control with documented evidence</li>
+          </ul>
+          <p>"I forgot" or "I didn't know" are generally <em>not</em> accepted as good cause on their own, though lack of awareness combined with prompt filing and a genuine marriage can sometimes work in your favor. A written explanation must accompany every late filing — USCIS will not waive the requirement simply because you file late.</p>
+        </section>
+
+        <!-- Joint vs waiver -->
+        <section id="joint-vs-waiver" class="content-section">
+          <h2>Joint Filing vs. Waiver — Who Can File What?</h2>
+          <p>Form I-751 can be filed as a <strong>joint petition</strong> (with your spouse) or as a <strong>waiver petition</strong> (without your spouse's signature). Which applies to you depends entirely on your circumstances.</p>
+
+          <div class="filing-type-grid">
+            <div class="ft-card ft-joint">
+              <div class="ft-badge">Most Common</div>
+              <h3>&#129309; Joint Petition</h3>
+              <p>Filed together with your U.S. citizen spouse. Both spouses sign Part 5 of Form I-751. This is the standard path for couples who are still married and in a genuine marital relationship.</p>
+              <ul>
+                <li>Both spouses sign the form</li>
+                <li>Evidence of shared married life required</li>
+                <li>Interview may or may not be required</li>
+                <li>Typical denial rate is low with strong evidence</li>
+                <li>Separation during I-751 processing does not automatically invalidate — the marriage must still be legally intact when filing</li>
+              </ul>
+            </div>
+            <div class="ft-card ft-waiver">
+              <div class="ft-badge ft-badge-gray">Waiver Basis</div>
+              <h3>&#128196; Waiver — File Without Spouse</h3>
+              <p>You may file I-751 alone — without your spouse's signature — if one of the following legally recognized grounds applies:</p>
+              <div class="waiver-reasons">
+                <div class="wr-item">
+                  <div class="wr-icon">&#128148;</div>
+                  <div>
+                    <strong>Divorce or annulment</strong>
+                    <p>Marriage legally ended. Include the final decree. You may file while divorce is still pending and submit the decree when issued (include a cover letter explaining).</p>
+                  </div>
+                </div>
+                <div class="wr-item">
+                  <div class="wr-icon">&#128149;</div>
+                  <div>
+                    <strong>Death of the U.S. citizen spouse</strong>
+                    <p>Include the death certificate and evidence that the marriage was bona fide. You can still qualify for a waiver even without the joint filing partner.</p>
+                  </div>
+                </div>
+                <div class="wr-item">
+                  <div class="wr-icon">&#128737;</div>
+                  <div>
+                    <strong>Battery or extreme cruelty (VAWA)</strong>
+                    <p>You or your child were subjected to battery or extreme cruelty by the U.S. citizen spouse. Police reports, protective orders, medical records, and counselor statements are all valuable evidence.</p>
+                  </div>
+                </div>
+                <div class="wr-item">
+                  <div class="wr-icon">&#9878;</div>
+                  <div>
+                    <strong>Extreme hardship</strong>
+                    <p>Removal from the U.S. would cause extreme hardship to you or your children. This is a high evidentiary bar requiring detailed documentation of hardship factors.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-box alert-warning">
+            <div class="alert-icon">&#9878;</div>
+            <div>
+              <strong>Waiver cases are significantly more complex</strong>
+              <p>Waiver-based I-751 petitions are held to a higher evidentiary standard, are more likely to require an interview, and have higher denial rates than joint petitions. If you are filing on any waiver basis — particularly divorce or cruelty — an immigration attorney is strongly recommended. The stakes are too high to navigate alone.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Evidence -->
+        <section id="evidence" class="content-section">
+          <h2>Evidence for Form I-751 — Proving Your Marriage Is Real</h2>
+          <p>The core question USCIS is asking when it reviews your I-751 is the same question it has asked at every prior stage of the process: <em>is this a genuine marriage entered in good faith?</em> The difference now is that you have up to 2 years of married life to document. USCIS wants to see evidence that spans the entire conditional period — not just recent documents.</p>
+          <p>Organize your evidence into labeled exhibits (Exhibit A, Exhibit B, etc.) with a cover sheet listing each exhibit. Include a brief explanation of what each document shows. The goal is to make the officer's job easy — a well-organized package signals a confident, legitimate petition.</p>
+
+          <div class="evidence-cats">
+            <div class="ev-cat ev-cat-top">
+              <div class="ev-cat-header">
+                <div class="ev-cat-icon">&#127970;</div>
+                <h3>Financial Evidence <span class="ev-strength-badge badge-strong">Strongest</span></h3>
+              </div>
+              <div class="ev-items-list">
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Joint federal tax returns</strong> — Filing together as "married filing jointly" is the single most powerful document in the I-751 package. Submit the most recent 1–2 years. Include all schedules and W-2s.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Joint bank account statements</strong> — 12+ months of statements for a joint account in both names. Shared deposits and shared expenses tell a story of a financially merged household.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Joint credit card statements</strong> — Both names on the account; shared household expenses show a real joint life.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Named as life insurance beneficiary</strong> — Each spouse listed as primary beneficiary on the other's life insurance policy. This is considered strong because it shows genuine commitment.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Retirement or pension beneficiary designation</strong> — Naming each other as beneficiaries on 401(k), IRA, or pension accounts.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ev-cat ev-cat-top">
+              <div class="ev-cat-header">
+                <div class="ev-cat-icon">&#127968;</div>
+                <h3>Shared Residence <span class="ev-strength-badge badge-strong">Strongest</span></h3>
+              </div>
+              <div class="ev-items-list">
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Joint lease or mortgage</strong> — Both names on the lease agreement or mortgage statement for the same address. Include all pages and any renewals.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Utility bills</strong> — Electric, gas, water, internet — in both names or at least showing the same address for both spouses. Multiple months across the conditional period.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Driver's licenses showing same address</strong> — Both spouses' licenses listing the same home address is clean, simple proof of cohabitation.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Government correspondence at shared address</strong> — IRS notices, state tax mail, or Social Security correspondence addressed to both spouses at the same address.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ev-cat">
+              <div class="ev-cat-header">
+                <div class="ev-cat-icon">&#128203;</div>
+                <h3>Insurance &amp; Legal Records <span class="ev-strength-badge badge-good">Strong</span></h3>
+              </div>
+              <div class="ev-items-list">
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Health insurance covering both spouses</strong> — Employer health plan showing the other spouse as a dependent, or a joint health plan enrollment.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Joint auto or home insurance policy</strong> — Both spouses listed as insured on the same policy.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Joint vehicle title or registration</strong> — Vehicle registered in both names or showing the same address for both spouses.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Wills or estate planning documents</strong> — Each spouse designated as heir in the other's will. Shows genuine long-term commitment.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ev-cat">
+              <div class="ev-cat-header">
+                <div class="ev-cat-icon">&#128106;</div>
+                <h3>Children &amp; Family <span class="ev-strength-badge badge-good">Strong</span></h3>
+              </div>
+              <div class="ev-items-list">
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Birth certificate of children born during the marriage</strong> — One of the most compelling pieces of evidence possible. Include the birth certificate naming both spouses as parents.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Medical records showing pregnancy during conditional period</strong> — Prenatal records, ultrasounds, OB/GYN visit records — strong evidence of a genuine marital relationship.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Children's school or childcare records</strong> — Emergency contact forms, school enrollment forms listing both spouses as parents at the same address.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ev-cat">
+              <div class="ev-cat-header">
+                <div class="ev-cat-icon">&#128247;</div>
+                <h3>Relationship Documentation <span class="ev-strength-badge badge-helpful">Good Supporting Evidence</span></h3>
+              </div>
+              <div class="ev-items-list">
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Photographs spanning the conditional period</strong> — 20–30 photos from different dates, occasions, and settings: holidays, family events, travel, everyday life. Add captions with dates and locations. Do not submit only professional portrait photos.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Affidavit letters from people who know the couple</strong> — 2–4 letters from family members or friends who have witnessed the couple living together as a married couple. Letters should be specific, detailed, and include the writer's contact information and relationship to the couple.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Joint travel records</strong> — Flight confirmations, hotel bookings, or itineraries showing the couple traveled together during the conditional period.</div>
+                </div>
+                <div class="ev-row">
+                  <div class="ev-check">&#10003;</div>
+                  <div><strong>Social media or communication records</strong> — Screenshots of shared social media profiles, tagged photos together, or other digital evidence can supplement primary documents. Not a replacement for financial and residential evidence.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-box alert-teal">
+            <div class="alert-icon">&#128202;</div>
+            <div>
+              <strong>Evidence tip: Span the entire conditional period</strong>
+              <p>USCIS looks for documents that cover the full 2-year conditional period — not just the most recent months. A joint tax return from Year 1 + bank statements from throughout + your current lease paints a continuous picture. Only submitting very recent documents can raise questions about what was happening earlier in the conditional period.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Mid-page CTA -->
+        <div class="cta-mid">
+          <h3>Not sure your I-751 package is strong enough?</h3>
+          <p>An immigration attorney can review your evidence, identify gaps, and help you build the most persuasive possible petition before you file. A denial is far more costly than a consultation.</p>
+          <div class="cta-btn-row">
+            <a href="#" class="btn-primary" data-affiliate="attorney-consult">Get Attorney Help With I-751</a>
+            <a href="#" class="btn-secondary" data-affiliate="self-filing">Prepare It Yourself with Guided Help</a>
+          </div>
+        </div>
+
+        <!-- Processing times -->
+        <section id="processing" class="content-section">
+          <h2>I-751 Processing Times in 2026</h2>
+          <p>USCIS is currently processing Form I-751 in approximately <strong>24–36 months</strong> at most service centers as of 2026. The backlog has grown significantly since 2020 and shows no sign of rapid resolution. Here's what each stage typically looks like:</p>
+
+          <table class="info-table">
+            <thead>
+              <tr>
+                <th>Stage</th>
+                <th>Typical Wait</th>
+                <th>What You Receive / What to Do</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Receipt notice (I-797)</strong></td>
+                <td>2–6 weeks after filing</td>
+                <td>Automatic 24-month extension of conditional card. Keep this notice with your green card at all times.</td>
+              </tr>
+              <tr>
+                <td><strong>Biometrics appointment</strong></td>
+                <td>1–4 months after receipt</td>
+                <td>Scheduled at local USCIS Application Support Center (ASC). Bring I-797 and valid ID. Fingerprints, photo, signature taken.</td>
+              </tr>
+              <tr>
+                <td><strong>Request for Evidence (RFE)</strong></td>
+                <td>Varies — not all cases</td>
+                <td>If USCIS needs more documentation, you'll receive an RFE with an 87-day response window. Respond completely — partial responses weaken your case.</td>
+              </tr>
+              <tr>
+                <td><strong>Interview notice (if required)</strong></td>
+                <td>12–30 months after filing</td>
+                <td>Not all cases require an interview. Strong joint petitions are often approved without one. Waiver cases more commonly require interviews.</td>
+              </tr>
+              <tr>
+                <td><strong>Approval notice</strong></td>
+                <td>24–36 months after filing</td>
+                <td>I-751 is approved. USCIS begins producing your 10-year green card.</td>
+              </tr>
+              <tr>
+                <td><strong>10-year green card production &amp; mailing</strong></td>
+                <td>2–4 weeks after approval</td>
+                <td>New IR-1 or IF-6 green card mailed to your address on file. File Form AR-11 any time you move to keep your address current.</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="alert-box alert-teal">
+            <div class="alert-icon">&#128260;</div>
+            <div>
+              <strong>Processing time exceeds the 24-month automatic extension?</strong>
+              <p>Given the current I-751 backlog, many cases take longer than the initial 24-month automatic extension. USCIS has been issuing updated extension notices covering the additional processing time. Watch for mailings from USCIS during this period. If you believe your extension has lapsed and you haven't heard from USCIS, contact them through the online case status tool or by calling 1-800-375-5283.</p>
+            </div>
+          </div>
+
+          <h3>How to check your I-751 case status</h3>
+          <p>Use the USCIS online case status tool at uscis.gov/casestatus with the receipt number from your I-797 notice. The receipt number begins with letters (e.g., MSC, IOE, NBC) followed by 10 digits. Updates are not always timely, but major status changes (biometrics scheduled, interview scheduled, approved) do appear there.</p>
+        </section>
+
+        <!-- Path to citizenship -->
+        <section id="citizenship" class="content-section">
+          <h2>From Conditional Green Card to U.S. Citizenship</h2>
+          <p>For many international couples, the conditional green card is not the destination — it is a step on the road to U.S. citizenship. Here is the full arc, from your conditional card to naturalization:</p>
+
+          <div class="path-steps">
+            <div class="path-item">
+              <div class="path-circle path-done">&#10003;</div>
+              <div>
+                <strong>Step 1 — Conditional green card issued (CR-1 or CR-6)</strong>
+                <p>You are now a Lawful Permanent Resident with a 2-year conditional card. Full work and travel rights. The 2-year clock on your I-751 window begins from the card's issue date.</p>
+              </div>
+            </div>
+            <div class="path-connector"></div>
+            <div class="path-item">
+              <div class="path-circle path-active">2</div>
+              <div>
+                <strong>Step 2 — File Form I-751 (months 21–24)</strong>
+                <p>Gather evidence of your genuine marriage. File I-751 with your spouse (joint petition) or alone on a waiver basis. Receive I-797 receipt notice with 24-month automatic extension. Continue living and working normally while case is pending.</p>
+              </div>
+            </div>
+            <div class="path-connector"></div>
+            <div class="path-item">
+              <div class="path-circle path-pending">3</div>
+              <div>
+                <strong>Step 3 — I-751 approved → 10-year permanent green card (IR-1)</strong>
+                <p>Conditions are removed. You receive your full 10-year Permanent Resident Card with no further conditions. Renew this card every 10 years if you have not naturalized.</p>
+              </div>
+            </div>
+            <div class="path-connector"></div>
+            <div class="path-item">
+              <div class="path-circle path-future">4</div>
+              <div>
+                <strong>Step 4 — Eligible for naturalization after 3 years (if still married to U.S. citizen)</strong>
+                <p>Spouses of U.S. citizens get the accelerated 3-year naturalization path — not the standard 5 years. The 3-year clock begins from the date you were first admitted as a conditional permanent resident (not from when I-751 was approved). You must have been married to and living with your U.S. citizen spouse for all 3 years. File Form N-400 90 days before your 3-year anniversary to begin the process.</p>
+              </div>
+            </div>
+            <div class="path-connector"></div>
+            <div class="path-item">
+              <div class="path-circle path-future">&#127482;&#127480;</div>
+              <div>
+                <strong>Step 5 — Naturalization interview, civics test, and oath ceremony</strong>
+                <p>Pass the N-400 interview and English/civics test. Attend the oath ceremony. You are now a U.S. citizen. Your <SmartLink href="/affidavit-of-support">I-864 Affidavit of Support</SmartLink> obligation ends at citizenship. You can vote, hold a U.S. passport, and pass citizenship to your children.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="alert-box alert-teal">
+            <div class="alert-icon">&#128197;</div>
+            <div>
+              <strong>The 3-year clock started when you got your green card — not when I-751 is approved</strong>
+              <p>Many people assume the 3-year naturalization clock starts over when they get their 10-year card. It does not. The 3-year period counts from the date you were first admitted as a conditional permanent resident — typically the date printed on your original 2-year green card or, for AOS cases, the date USCIS approved your I-485. This means naturalization eligibility and I-751 completion often overlap closely.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="content-section">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details class="faq-item">
+              <summary>What is a conditional green card?</summary>
+              <p>A conditional green card is a 2-year Permanent Resident Card issued when a foreign national receives a marriage-based green card and the marriage is less than 2 years old at the time of approval. It grants the same rights as a regular green card — including work authorization, travel, and re-entry — but expires after 2 years and requires filing Form I-751 to remove the conditions and receive a permanent 10-year card. The card shows a category code of CR-1 or CR-6.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Who gets a conditional green card vs. a 10-year green card?</summary>
+              <p>USCIS determines which card to issue based on how long the couple has been married at the time of approval — not when the petition was filed. If the marriage is less than 2 years old at approval, the foreign spouse receives a conditional (CR-1 or CR-6) 2-year card and must file I-751. If the marriage is 2 years or older at approval, the foreign spouse receives a permanent (IR-1) 10-year card with no I-751 required. Both the CR-1 (spousal visa) and K-1+AOS paths can result in either type of card depending on the marriage duration at approval.</p>
+            </details>
+            <details class="faq-item">
+              <summary>When do I file Form I-751 to remove conditions?</summary>
+              <p>You must file Form I-751 during the 90-day window immediately before your conditional green card expires — between 21 and 24 months after the card's issue date. The easiest way to calculate: look at your card's expiration date and count back 90 days. That is the first day you can file. The card's expiration date is the last day. If you file before month 21, USCIS rejects it and returns your fee. If you file after month 24, you must include a written explanation with good cause for the late filing.</p>
+            </details>
+            <details class="faq-item">
+              <summary>What happens if I miss the I-751 filing window?</summary>
+              <p>File immediately. Do not wait longer than you already have. Include a written explanation with good cause for why you missed the window — illness, family emergency, or other circumstances outside your control. USCIS has discretion to accept late filings. However, once your conditional green card has expired without a pending I-751, you technically have no lawful immigration status in the U.S., and USCIS can initiate removal proceedings. Consulting an immigration attorney is strongly recommended if you have missed the window.</p>
+            </details>
+            <details class="faq-item">
+              <summary>Can I work and travel internationally with a conditional green card?</summary>
+              <p>Yes to both. A conditional green card is a real Permanent Resident Card — it authorizes you to work anywhere in the U.S. without employer sponsorship, and to travel internationally and re-enter the U.S. as a returning resident. After you file I-751, your I-797 receipt notice extends your status and, combined with your expired conditional green card, serves as a travel document for re-entry. Bring both documents every time you travel while I-751 is pending.</p>
+            </details>
+            <details class="faq-item">
+              <summary>How long does it take to get a permanent 10-year green card after filing I-751?</summary>
+              <p>As of 2026, USCIS processes Form I-751 in approximately 24–36 months at most service centers. Upon filing, you receive an automatic 24-month extension of your conditional green card. USCIS has been issuing additional extension notices for cases pending beyond the initial extension period. You can live, work, and travel legally throughout the entire processing period. The total time from your conditional green card being issued to receiving the 10-year card is typically 3–5 years.</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- Dark CTA -->
+        <div class="cta-dark">
+          <h2>Ready to File Your I-751?</h2>
+          <p>The I-751 is one of the most important filings in your immigration journey. A well-prepared petition with strong evidence — filed in the right window — gives you the best possible odds of a smooth approval.</p>
+          <div class="cta-dark-btns">
+            <a href="#" class="btn-white" data-affiliate="attorney-consult">Work With an Immigration Attorney</a>
+            <a href="#" class="btn-outline-white" data-affiliate="self-filing">File With Guided Self-Help</a>
+          </div>
+        </div>
+
+        <!-- Related guides -->
+        <section class="related-guides">
+          <h2>Related Guides</h2>
+          <div class="related-grid">
+            <SmartLink href="/i-751-petition-remove-conditions" class="related-card">
+              <div class="related-cat">Remove Conditions</div>
+              <div class="related-title">Form I-751 Complete Filing Guide</div>
+            </SmartLink>
+            <SmartLink href="/green-card-through-marriage" class="related-card">
+              <div class="related-cat">Overview</div>
+              <div class="related-title">Green Card Through Marriage — All Paths</div>
+            </SmartLink>
+            <SmartLink href="/adjustment-of-status" class="related-card">
+              <div class="related-cat">AOS</div>
+              <div class="related-title">Adjustment of Status (I-485) Guide</div>
+            </SmartLink>
+            <SmartLink href="/bona-fide-marriage" class="related-card">
+              <div class="related-cat">Evidence</div>
+              <div class="related-title">Bona Fide Marriage Evidence Guide</div>
+            </SmartLink>
+            <SmartLink href="/cr1-visa" class="related-card">
+              <div class="related-cat">Spousal Visa</div>
+              <div class="related-title">CR-1 Spousal Visa — Complete Process</div>
+            </SmartLink>
+            <SmartLink href="/k1-visa" class="related-card">
+              <div class="related-cat">Fiancé Visa</div>
+              <div class="related-title">K-1 Fiancé Visa — Complete Guide</div>
+            </SmartLink>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar-col">
+
+        <!-- Card sequence summary -->
+        <div class="sidebar-card sidebar-teal">
+          <div class="sidebar-card-title">Your Green Card Journey</div>
+          <div class="seq-box">
+            <div class="seq-step">
+              <div class="seq-num seq-num-teal">1</div>
+              <div class="seq-step-content">
+                <strong>Conditional Green Card (CR-1)</strong>
+                <span>2 years · File I-751 in months 21–24</span>
+              </div>
+            </div>
+            <div class="seq-connector"></div>
+            <div class="seq-step">
+              <div class="seq-num seq-num-teal">2</div>
+              <div class="seq-step-content">
+                <strong>I-751 Approved</strong>
+                <span>10-year permanent green card issued</span>
+              </div>
+            </div>
+            <div class="seq-connector"></div>
+            <div class="seq-step">
+              <div class="seq-num seq-num-gold">3</div>
+              <div class="seq-step-content">
+                <strong>Naturalization (N-400)</strong>
+                <span>3-year rule for spouse of U.S. citizen</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TOC -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">On This Page</div>
+          <nav>
+            <a href="#what-is" class="sidebar-link">What Is a Conditional Green Card <span>&#8595;</span></a>
+            <a href="#who-gets" class="sidebar-link">Who Gets Conditional vs. Permanent <span>&#8595;</span></a>
+            <a href="#rights" class="sidebar-link">Rights &amp; Restrictions <span>&#8595;</span></a>
+            <a href="#filing-window" class="sidebar-link">The I-751 Filing Window <span>&#8595;</span></a>
+            <a href="#missed-window" class="sidebar-link">Missed the Window? <span>&#8595;</span></a>
+            <a href="#joint-vs-waiver" class="sidebar-link">Joint Filing vs. Waiver <span>&#8595;</span></a>
+            <a href="#evidence" class="sidebar-link">Evidence for I-751 <span>&#8595;</span></a>
+            <a href="#processing" class="sidebar-link">Processing Times 2026 <span>&#8595;</span></a>
+            <a href="#citizenship" class="sidebar-link">Path to Citizenship <span>&#8595;</span></a>
+            <a href="#faq" class="sidebar-link">FAQ <span>&#8595;</span></a>
+          </nav>
+        </div>
+
+        <!-- Quick facts -->
+        <div class="sidebar-card sidebar-teal">
+          <div class="sidebar-card-title">Conditional Card Quick Facts</div>
+          <div class="qf-list">
+            <div class="qf-item">
+              <span class="qf-label">Card validity</span>
+              <span class="qf-val">2 years</span>
+            </div>
+            <div class="qf-item">
+              <span class="qf-label">Category code</span>
+              <span class="qf-val">CR-1 or CR-6</span>
+            </div>
+            <div class="qf-item">
+              <span class="qf-label">File I-751 during</span>
+              <span class="qf-val">Months 21–24</span>
+            </div>
+            <div class="qf-item">
+              <span class="qf-label">I-751 filing fee</span>
+              <span class="qf-val">$750 (2026)</span>
+            </div>
+            <div class="qf-item">
+              <span class="qf-label">Auto extension on filing</span>
+              <span class="qf-val">24 months</span>
+            </div>
+            <div class="qf-item">
+              <span class="qf-label">I-751 processing time</span>
+              <span class="qf-val">24–36 months</span>
+            </div>
+            <div class="qf-item">
+              <span class="qf-label">Result of I-751</span>
+              <span class="qf-val">10-yr green card</span>
+            </div>
+            <div class="qf-item">
+              <span class="qf-label">Citizenship rule</span>
+              <span class="qf-val">3 years (spouse of USC)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related guides sidebar -->
+        <div class="sidebar-card">
+          <div class="sidebar-card-title">Related Guides</div>
+          <nav>
+            <SmartLink href="/i-751-petition-remove-conditions" class="sidebar-link">I-751 Complete Filing Guide <span>&#8594;</span></SmartLink>
+            <SmartLink href="/green-card-through-marriage" class="sidebar-link">Green Card Through Marriage <span>&#8594;</span></SmartLink>
+            <SmartLink href="/adjustment-of-status" class="sidebar-link">Adjustment of Status <span>&#8594;</span></SmartLink>
+            <SmartLink href="/bona-fide-marriage" class="sidebar-link">Bona Fide Marriage Evidence <span>&#8594;</span></SmartLink>
+            <SmartLink href="/cr1-visa" class="sidebar-link">CR-1 Spousal Visa Guide <span>&#8594;</span></SmartLink>
+            <SmartLink href="/affidavit-of-support" class="sidebar-link">Affidavit of Support <span>&#8594;</span></SmartLink>
+          </nav>
+        </div>
+
+      </aside>
+
+    </div>
+  </div>
+
+</Base>

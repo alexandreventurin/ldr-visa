@@ -31,6 +31,54 @@ body {
 a { color: inherit; text-decoration: none; }
 [data-pending] { cursor: default; color: var(--color-muted); text-decoration: none; }
 
+/* ── Inline contextual links — classic blue + underline ─────────────────────
+   Targets <a> tags inside body/prose areas only.
+   Buttons, nav, cards, and sidebar links keep their own styles.
+──────────────────────────────────────────────────────────────────────────── */
+.art-main p a,
+.art-main li a,
+.art-main td a,
+.art-faq-a a,
+.art-info a,
+.art-warn a,
+.art-tip-desc a,
+.main-col p a,
+.main-col li a,
+.main-col td a,
+.content-section p a,
+.content-section li a,
+.faq-a a,
+.step-body p a,
+.tv-desc a,
+.callout p a,
+.info-box p a,
+.warning p a,
+.danger p a {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+.art-main p a:hover,
+.art-main li a:hover,
+.art-main td a:hover,
+.art-faq-a a:hover,
+.art-info a:hover,
+.art-warn a:hover,
+.main-col p a:hover,
+.main-col li a:hover,
+.content-section p a:hover,
+.content-section li a:hover,
+.faq-a a:hover,
+.step-body p a:hover,
+.callout p a:hover,
+.info-box p a:hover,
+.warning p a:hover,
+.danger p a:hover {
+  color: #1d4ed8;
+  text-decoration-thickness: 2px;
+}
+
 img { display: block; max-width: 100%; }
 
 .container {

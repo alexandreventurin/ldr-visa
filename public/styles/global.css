@@ -47,12 +47,16 @@ a { color: inherit; text-decoration: none; }
 .main-col td a,
 .content-section p a,
 .content-section li a,
+.article p a,
+.article li a,
+.article td a,
 .faq-a a,
 .step-body p a,
 .tv-desc a,
 .callout p a,
 .info-box p a,
 .warning p a,
+.warning-box p a,
 .danger p a {
   color: #2563eb;
   text-decoration: underline;
@@ -69,11 +73,15 @@ a { color: inherit; text-decoration: none; }
 .main-col li a:hover,
 .content-section p a:hover,
 .content-section li a:hover,
+.article p a:hover,
+.article li a:hover,
+.article td a:hover,
 .faq-a a:hover,
 .step-body p a:hover,
 .callout p a:hover,
 .info-box p a:hover,
 .warning p a:hover,
+.warning-box p a:hover,
 .danger p a:hover {
   color: #1d4ed8;
   text-decoration-thickness: 2px;

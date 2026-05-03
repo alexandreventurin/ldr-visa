@@ -1,0 +1,528 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "K-2 Visa: Bringing Your Fiancé's Children to the U.S. (2026)",
+    "description": "The K-2 visa lets unmarried children under 21 of a K-1 beneficiary accompany or follow their parent to the U.S. Learn eligibility, process, documents, and what happens after arrival.",
+    "url": "https://ldrvisa.org/k2-visa",
+    "dateModified": "2026-05-01",
+    "datePublished": "2026-05-01",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/k2-visa" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "K-1 Fiancé Visa", "item": "https://ldrvisa.org/k1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "K-2 Visa", "item": "https://ldrvisa.org/k2-visa" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the K-2 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The K-2 visa is a derivative nonimmigrant visa that allows unmarried children under 21 of a K-1 fiancé(e) beneficiary to accompany or follow their parent to the United States. It is filed as part of the same I-129F petition as the K-1 and cannot be applied for separately."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Who qualifies for a K-2 visa?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A child qualifies for K-2 status if they are: (1) unmarried, (2) under 21 years old, (3) a biological, step, or legally adopted child of the K-1 beneficiary (not the U.S. petitioner), and (4) listed on the K-1 I-129F petition. The child does not need to be the biological child of the U.S. petitioner."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the K-2 child have to enter the U.S. at the same time as the K-1 parent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The K-2 child can accompany or follow the K-1 parent. However, the K-2 visa is only valid as long as the K-1 parent's status is valid. If the K-1 parent does not marry within 90 days and adjusts status, the K-2 child's path to a green card is also closed. K-2 children should enter while the K-1 case is still in good standing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to K-2 children after the K-1 marriage?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After the K-1 parent marries the U.S. citizen and files Form I-485 for adjustment of status, K-2 children file their own I-485 applications concurrently as derivatives. They receive green cards as stepchildren of the U.S. citizen. The child must still be unmarried and under 21 when the I-485 is filed."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can a K-2 child work or go to school in the U.S.?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "K-2 visa holders are admitted as nonimmigrants and can attend school in the U.S. They cannot work legally on K-2 status alone. To work, they must file for an Employment Authorization Document (EAD) after the I-485 adjustment of status application is filed. School enrollment is generally permitted without additional authorization."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if the child turns 21 before the green card is approved?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "This is the 'aging out' problem. The Child Status Protection Act (CSPA) provides some protection by 'freezing' the child's age for immigration purposes at the date the I-130 or I-129F was filed, minus USCIS processing time. However, CSPA protections for K-2 derivatives are limited. If aging out is a concern, consult an immigration attorney as soon as possible."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="K-2 Visa: Bringing Your Fiancé's Children to the U.S. (2026)"
+  description="The K-2 visa allows unmarried children under 21 of a K-1 beneficiary to accompany their parent to the U.S. Eligibility, process, documents, and what happens after arrival."
+  canonical="https://ldrvisa.org/k2-visa"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  .key-stats { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 2rem 0; }
+  .key-stats .container { display: flex; gap: 2rem; flex-wrap: wrap; justify-content: center; max-width: 900px; }
+  .kstat { text-align: center; min-width: 140px; }
+  .kstat-num { font-size: 2rem; font-weight: 800; color: var(--color-accent); }
+  .kstat-label { font-size: 0.85rem; color: var(--color-muted); margin-top: 0.25rem; }
+
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 860px){ .content-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .section h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+  .section ul { margin: 0.75rem 0 0.75rem 1.5rem; color: var(--color-text); line-height: 1.9; }
+  .section li { margin-bottom: 0.3rem; }
+
+  .quick-answer { background: linear-gradient(135deg, #eff6ff, #dbeafe); border: 1px solid #bfdbfe; border-radius: 12px; padding: 1.5rem 1.75rem; margin-bottom: 2rem; }
+  .qa-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #1d4ed8; margin-bottom: 0.5rem; }
+  .quick-answer h3 { font-size: 1.05rem; margin: 0 0 0.4rem; }
+  .quick-answer p { margin: 0; font-size: 0.95rem; color: #1e40af; line-height: 1.7; }
+
+  .req-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.25rem 0; }
+  .req-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1.25rem; border-top: 3px solid var(--color-accent); }
+  .req-icon { font-size: 1.4rem; margin-bottom: 0.5rem; }
+  .req-card h4 { font-size: 0.9rem; font-weight: 700; margin: 0 0 0.35rem; }
+  .req-card p { font-size: 0.85rem; color: var(--color-muted); margin: 0; line-height: 1.5; }
+
+  .process-steps { display: flex; flex-direction: column; gap: 0; margin: 1.25rem 0; }
+  .process-step { display: flex; gap: 1rem; }
+  .step-left { display: flex; flex-direction: column; align-items: center; width: 2.5rem; }
+  .step-num { width: 2rem; height: 2rem; border-radius: 50%; background: var(--color-accent); color: #fff; font-weight: 800; font-size: 0.85rem; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-line { width: 2px; background: var(--color-border); flex: 1; min-height: 1.5rem; }
+  .process-step:last-child .step-line { display: none; }
+  .step-content { padding-bottom: 1.75rem; flex: 1; }
+  .step-content h4 { font-size: 1rem; font-weight: 700; margin: 0.2rem 0 0.4rem; }
+  .step-content p { font-size: 0.9rem; color: var(--color-muted); margin: 0; line-height: 1.65; }
+
+  .doc-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .doc-table th { background: #1a1a2e; color: #fff; padding: 0.65rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .doc-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .doc-table tr:hover td { background: var(--color-surface); }
+  .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.72rem; font-weight: 700; }
+  .badge-req { background: #fee2e2; color: #991b1b; }
+  .badge-cond { background: #fef3c7; color: #92400e; }
+
+  .warning-box { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #f97316; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .warning-box p { margin: 0; font-size: 0.9rem; color: #9a3412; line-height: 1.6; }
+  .warning-box strong { color: #7c2d12; }
+
+  .callout { background: #eff6ff; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #1e40af; line-height: 1.6; }
+
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.75; font-size: 0.95rem; }
+
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--color-accent); box-shadow: 0 2px 12px rgba(37,99,235,0.08); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--color-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--color-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: #1d4ed8; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › <a href="/k1-visa">K-1 Fiancé Visa</a> › K-2 Visa
+    </div>
+    <h1>K-2 Visa: Bringing Your Fiancé's Children to the U.S. (2026)</h1>
+    <p class="hero-desc">The K-2 is a derivative visa that allows the unmarried children of a K-1 beneficiary to accompany or follow their parent to the United States — filed as part of the same I-129F petition.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated May 2026</span>
+      <span class="hero-meta-item">⏱ 8 min read</span>
+      <span class="hero-meta-item">✅ Under 21 &amp; unmarried</span>
+    </div>
+  </div>
+</section>
+
+<div class="key-stats">
+  <div class="container">
+    <div class="kstat">
+      <div class="kstat-num">&lt;21</div>
+      <div class="kstat-label">Age limit at entry</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">90</div>
+      <div class="kstat-label">Days to marry after K-1 entry</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">$0</div>
+      <div class="kstat-label">Additional USCIS petition fee</div>
+    </div>
+    <div class="kstat">
+      <div class="kstat-num">I-485</div>
+      <div class="kstat-label">Path to green card after marriage</div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <!-- What Is K-2 -->
+    <section class="section">
+      <h2>What Is the K-2 Visa?</h2>
+
+      <div class="quick-answer">
+        <div class="qa-label">Quick Answer</div>
+        <h3>K-2 = derivative K-1 for children</h3>
+        <p>The K-2 visa is not applied for separately. It flows automatically from the <SmartLink href="/k1-visa">K-1 fiancé visa</SmartLink> petition when the beneficiary lists their children on <SmartLink href="/i-129f">Form I-129F</SmartLink>. No additional USCIS filing fee is required for K-2 derivatives.</p>
+      </div>
+
+      <p>When a U.S. citizen petitions for their foreign fiancé(e) through the <SmartLink href="/k1-visa">K-1 visa</SmartLink> process, any unmarried children under 21 of the foreign fiancé(e) can be included as K-2 derivatives. They enter the U.S. on K-2 status and — after the K-1 parent marries — adjust to lawful permanent resident status alongside their parent.</p>
+
+      <p>The K-2 child's immigration journey is entirely tied to the K-1 parent's case. If the K-1 is denied, the K-2 is also denied. If the K-1 parent fails to marry within 90 days of entry, the K-2 child's path to a green card is also cut off. They rise and fall together.</p>
+
+      <div class="callout">
+        <p><strong>Important:</strong> K-2 is for children of the K-1 beneficiary — not children of the U.S. citizen petitioner. The petitioner's own children need separate immigrant visa petitions if they are foreign nationals.</p>
+      </div>
+    </section>
+
+    <!-- Eligibility -->
+    <section class="section">
+      <h2>K-2 Eligibility Requirements</h2>
+      <p>All four conditions must be met at the time the K-2 visa is issued and at the time the child enters the United States:</p>
+
+      <div class="req-grid">
+        <div class="req-card">
+          <div class="req-icon">👶</div>
+          <h4>Under 21 years old</h4>
+          <p>The child must be under 21 at the time of K-2 visa issuance and at entry into the U.S. Turning 21 before the I-485 is filed can cause complications.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">💍</div>
+          <h4>Unmarried</h4>
+          <p>The child must be unmarried. If a K-2 child marries before their own adjustment of status is complete, they lose K-2 eligibility.</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">👨‍👧</div>
+          <h4>Child of the K-1 beneficiary</h4>
+          <p>Biological, stepchildren (if the marriage creating the step-relationship occurred before age 18), or legally adopted children of the K-1 fiancé(e).</p>
+        </div>
+        <div class="req-card">
+          <div class="req-icon">📋</div>
+          <h4>Listed on the I-129F petition</h4>
+          <p>The child must be listed on the K-1 petition before USCIS approves it. Children cannot be added after the petition is approved.</p>
+        </div>
+      </div>
+
+      <div class="warning-box">
+        <p><strong>Do not omit children from the I-129F.</strong> Even if you're unsure whether the child will come to the U.S., list them on the petition. You can always choose not to use the K-2 visa. But you cannot add a child after USCIS approves the I-129F — you would need to file a new petition.</p>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section class="section">
+      <h2>The K-2 Process Step by Step</h2>
+      <p>The K-2 follows the exact same pipeline as the <SmartLink href="/k1-visa">K-1</SmartLink>, just as a derivative. Here's how it works:</p>
+
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-left">
+            <div class="step-num">1</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>List child(ren) on Form I-129F</h4>
+            <p>The U.S. citizen petitioner lists all K-2 children in Part 4 of <SmartLink href="/i-129f">Form I-129F</SmartLink>. There is no additional USCIS fee per child. USCIS approves the petition for both the K-1 and all listed K-2 derivatives simultaneously.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left">
+            <div class="step-num">2</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>NVC forwards the case</h4>
+            <p>After USCIS approval, the National Visa Center sends the case to the U.S. embassy or consulate in the K-1 beneficiary's country. K-2 children are included in this transfer.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left">
+            <div class="step-num">3</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>Consular interview &amp; medical exam</h4>
+            <p>Each K-2 child attends their own consular interview (or is interviewed jointly with the K-1 parent, depending on the embassy). Each child also completes a <SmartLink href="/k1-visa-medical-exam">medical exam</SmartLink> with an approved panel physician. Children under a certain age may have a simplified exam.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left">
+            <div class="step-num">4</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>Enter the U.S. on K-2 status</h4>
+            <p>The K-2 child enters the U.S. either with the K-1 parent or within the K-2 visa validity period. The 90-day marriage clock for the K-1 parent starts on the date the <em>K-1 parent</em> enters — not when the K-2 child arrives.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left">
+            <div class="step-num">5</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>K-1 parent marries within 90 days</h4>
+            <p>After the wedding, the K-1 parent files <SmartLink href="/i-485">Form I-485</SmartLink> for <SmartLink href="/adjustment-of-status">adjustment of status</SmartLink>. K-2 children file their own I-485 concurrently as derivatives of the K-1 parent's case.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <div class="step-left">
+            <div class="step-num">6</div>
+            <div class="step-line"></div>
+          </div>
+          <div class="step-content">
+            <h4>K-2 child receives green card</h4>
+            <p>After the I-485 is approved, the K-2 child receives a <SmartLink href="/conditional-green-card">2-year conditional green card</SmartLink> as a stepchild of the U.S. citizen. At the 21–24 month mark, the family files <SmartLink href="/i-751-petition-remove-conditions">Form I-751</SmartLink> jointly to remove conditions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents -->
+    <section class="section">
+      <h2>Documents Required for K-2 Children</h2>
+      <p>At the consular interview, each K-2 child must bring the following documents. Requirements may vary slightly by embassy, so always confirm with the specific consulate.</p>
+
+      <table class="doc-table">
+        <thead>
+          <tr>
+            <th>Document</th>
+            <th>Notes</th>
+            <th>Required?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Valid passport</td>
+            <td>Must be valid for at least 6 months beyond intended stay</td>
+            <td><span class="badge badge-req">Required</span></td>
+          </tr>
+          <tr>
+            <td>Birth certificate</td>
+            <td>With certified translation if not in English</td>
+            <td><span class="badge badge-req">Required</span></td>
+          </tr>
+          <tr>
+            <td>Medical exam results (Form I-693 / DS-2054)</td>
+            <td>Completed by embassy-approved panel physician</td>
+            <td><span class="badge badge-req">Required</span></td>
+          </tr>
+          <tr>
+            <td>DS-160 nonimmigrant visa application</td>
+            <td>Filed online at ceac.state.gov for each child</td>
+            <td><span class="badge badge-req">Required</span></td>
+          </tr>
+          <tr>
+            <td>Proof of relationship to K-1 parent</td>
+            <td>Birth certificate of K-1 parent showing parental relationship</td>
+            <td><span class="badge badge-req">Required</span></td>
+          </tr>
+          <tr>
+            <td>Proof of unmarried status</td>
+            <td>Usually verified by age and lack of marriage certificate</td>
+            <td><span class="badge badge-req">Required</span></td>
+          </tr>
+          <tr>
+            <td>Adoption decree or court order</td>
+            <td>Only if child is adopted — must show legal adoption before age 16</td>
+            <td><span class="badge badge-cond">If applicable</span></td>
+          </tr>
+          <tr>
+            <td>Police certificates</td>
+            <td>Required for children 16 and older from all countries of residence</td>
+            <td><span class="badge badge-cond">If 16+</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- After Arrival -->
+    <section class="section">
+      <h2>After Arrival: School, Work &amp; Green Card</h2>
+
+      <h3>Attending School</h3>
+      <p>K-2 children can enroll in U.S. public or private schools immediately upon entry. No special authorization is needed. Schools are legally required to enroll children regardless of immigration status under federal law.</p>
+
+      <h3>Working</h3>
+      <p>K-2 status does not grant work authorization. Once the K-1 parent files Form I-485 for <SmartLink href="/adjustment-of-status">adjustment of status</SmartLink>, the K-2 child can file concurrently for an <SmartLink href="/employment-authorization">Employment Authorization Document (EAD)</SmartLink> using Form I-765. The EAD allows legal work while the I-485 is pending.</p>
+
+      <h3>Traveling Abroad</h3>
+      <p>After filing I-485, K-2 children who need to travel outside the U.S. must obtain <SmartLink href="/advance-parole">Advance Parole</SmartLink> (Form I-131) before leaving. Leaving without Advance Parole while the I-485 is pending is considered abandonment of the application.</p>
+
+      <h3>The Aging Out Risk</h3>
+      <div class="warning-box">
+        <p><strong>Aging out is a real risk.</strong> If a K-2 child turns 21 before their I-485 is approved, they may "age out" of derivative eligibility. The Child Status Protection Act (CSPA) offers limited protection for K-2 cases. If a child is close to 21, consult an immigration attorney before filing to protect their status.</p>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">Does the K-2 child need their own separate K-1 visa?</div>
+        <div class="faq-a">No. The K-2 is a separate visa category specifically for derivative children of K-1 beneficiaries. They get a K-2 visa stamp — not a K-1. It is processed through the same petition (<SmartLink href="/i-129f">Form I-129F</SmartLink>) but issued as a distinct visa type.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What if the child's other parent (not the K-1 parent) objects?</div>
+        <div class="faq-a">USCIS and the embassy may require evidence that the K-1 parent has legal custody or that the other parent consents to the child's travel to the U.S. A court custody order or a notarized consent letter from the other parent is typically required. This varies by country and situation.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can a K-2 child visit the U.S. on a tourist visa instead?</div>
+        <div class="faq-a">Technically yes, but it's risky. If a child enters on a B-2 tourist visa with immigrant intent (intending to adjust status), they may be denied at the border or have their tourist visa revoked. The K-2 visa is the proper and safe path for children who intend to immigrate with their K-1 parent.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What happens if the K-1 couple does not marry within 90 days?</div>
+        <div class="faq-a">If the K-1 parent fails to marry within 90 days of entering the U.S., both the K-1 parent and K-2 child must depart the U.S. The K-2 child's path to a green card is entirely dependent on the K-1 parent's successful marriage and <SmartLink href="/adjustment-of-status">adjustment of status</SmartLink>.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Are K-2 children eligible for U.S. citizenship?</div>
+        <div class="faq-a">After receiving their green card, K-2 children who are under 18 may automatically acquire citizenship under the Child Citizenship Act of 2000 when their parent naturalizes, provided the child is a lawful permanent resident living with the U.S. citizen parent. K-2 children who are adults (18+) when they get their green card follow the standard <SmartLink href="/naturalization-requirements">naturalization</SmartLink> path after 5 years as a permanent resident.</div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="section">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a href="/k1-visa" class="related-card">
+          <div class="related-cat">Parent Visa</div>
+          <div class="related-title">K-1 Fiancé Visa — Complete Guide 2026</div>
+        </a>
+        <a href="/i-129f" class="related-card">
+          <div class="related-cat">Filing</div>
+          <div class="related-title">Form I-129F Instructions &amp; Checklist</div>
+        </a>
+        <a href="/adjustment-of-status" class="related-card">
+          <div class="related-cat">After Marriage</div>
+          <div class="related-title">Adjustment of Status — Complete Guide</div>
+        </a>
+        <a href="/i-485" class="related-card">
+          <div class="related-cat">Form</div>
+          <div class="related-title">Form I-485: Application for Permanent Residence</div>
+        </a>
+        <a href="/conditional-green-card" class="related-card">
+          <div class="related-cat">Green Card</div>
+          <div class="related-title">Conditional Green Card &amp; I-751 Guide</div>
+        </a>
+        <a href="/k1-visa-checklist" class="related-card">
+          <div class="related-cat">Documents</div>
+          <div class="related-title">K-1 Visa Document Checklist</div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="cta-box">
+      <h4>Navigating K-2 logistics?</h4>
+      <p>Our K-1 complete guide covers every stage from petition to green card.</p>
+      <a href="/k1-visa" class="btn">K-1 Complete Guide →</a>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>K-2 Quick Facts</h4>
+      <ul>
+        <li>Child of K-1 beneficiary only</li>
+        <li>Must be under 21 &amp; unmarried</li>
+        <li>No extra USCIS fee</li>
+        <li>Same I-129F petition</li>
+        <li>Adjusts status via I-485</li>
+        <li>90-day rule applies to K-1 parent</li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>K-1 Process</h4>
+      <ul>
+        <li><a href="/i-129f">Form I-129F</a></li>
+        <li><a href="/k1-visa-processing-time">K-1 Processing Time</a></li>
+        <li><a href="/k1-visa-interview">Consular Interview Prep</a></li>
+        <li><a href="/k1-visa-medical-exam">Medical Exam Guide</a></li>
+        <li><a href="/k1-visa-checklist">K-1 Document Checklist</a></li>
+        <li><a href="/k1-visa-cost">K-1 Cost Breakdown</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>After Arrival</h4>
+      <ul>
+        <li><a href="/adjustment-of-status">Adjustment of Status</a></li>
+        <li><a href="/i-485">Form I-485</a></li>
+        <li><a href="/employment-authorization">EAD Work Permit</a></li>
+        <li><a href="/advance-parole">Advance Parole Travel</a></li>
+        <li><a href="/conditional-green-card">Conditional Green Card</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

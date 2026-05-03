@@ -41,4 +41,6 @@ export const PUBLISHED: Set<string> = new Set([
   '/employment-authorization',
   '/naturalization-requirements',
   '/i-485',
+  '/k2-visa',
+  '/i-129f-processing-time',
 ]);

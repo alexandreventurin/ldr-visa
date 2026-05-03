@@ -1,0 +1,511 @@
+---
+import Base from '../layouts/Base.astro';
+import SmartLink from '../components/SmartLink.astro';
+
+const schema = JSON.stringify([
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "I-129F Processing Time 2026: How Long Does USCIS Take?",
+    "description": "Current I-129F processing times by USCIS service center in 2026 — what to expect after filing, how to check your status, and what causes delays.",
+    "url": "https://ldrvisa.org/i-129f-processing-time",
+    "dateModified": "2026-05-01",
+    "datePublished": "2026-05-01",
+    "author": { "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org" },
+    "publisher": {
+      "@type": "Organization", "name": "LDR Visa", "url": "https://ldrvisa.org",
+      "logo": { "@type": "ImageObject", "url": "https://ldrvisa.org/favicon.svg" }
+    },
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://ldrvisa.org/i-129f-processing-time" }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ldrvisa.org/" },
+      { "@type": "ListItem", "position": 2, "name": "K-1 Fiancé Visa", "item": "https://ldrvisa.org/k1-visa" },
+      { "@type": "ListItem", "position": 3, "name": "I-129F Processing Time", "item": "https://ldrvisa.org/i-129f-processing-time" }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How long does USCIS take to process Form I-129F in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As of 2026, USCIS processes Form I-129F in approximately 7–14 months depending on the service center assigned to your case. The California Service Center (CSC) and Vermont Service Center (VSC) both handle I-129F petitions. Processing times fluctuate — always check the official USCIS processing times page at egov.uscis.gov/processing-times for the most current data."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I check my I-129F case status?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use your receipt number (starts with IOE, EAC, WAC, MSC, or LIN) to check your case status at my.uscis.gov. You can also sign up for case status email or text notifications. If your case is outside the published processing time, you can submit a case inquiry through my.uscis.gov."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens after USCIS approves my I-129F?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "After USCIS approves the I-129F, they mail you the approval notice (Form I-797) and forward the petition to the National Visa Center (NVC). NVC then sends it to the U.S. embassy or consulate in your fiancé's country to schedule the K-1 consular interview. The NVC stage typically takes 3–6 weeks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I expedite my I-129F processing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "USCIS does not offer premium processing for Form I-129F. However, you may request expedited processing if you have a severe financial loss, urgent humanitarian need, or USCIS error that caused a delay. Expedition requests are granted at USCIS's discretion and are rarely approved without substantial documentation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes I-129F delays?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Common causes of I-129F delays include: USCIS issuing a Request for Evidence (RFE) if documents are missing or insufficient, the petition being assigned to a backlogged service center, high filing volumes, and any criminal history or prior immigration violations that require additional review. Responding to an RFE promptly is critical to avoid further delays."
+        }
+      }
+    ]
+  }
+]);
+---
+<Base
+  title="I-129F Processing Time 2026: How Long Does USCIS Take?"
+  description="Current I-129F processing times by USCIS service center in 2026, how to check your case status, what causes delays, and what happens after approval."
+  canonical="https://ldrvisa.org/i-129f-processing-time"
+  ogType="article"
+  schema={schema}
+>
+
+<style>
+  .page-hero { background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%); color: #fff; padding: 4rem 0 3rem; }
+  .page-hero .container { max-width: 900px; }
+  .breadcrumb { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-bottom: 1rem; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); text-decoration: none; }
+  .breadcrumb a:hover { color: #fff; }
+  .page-hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 1rem; line-height: 1.2; }
+  .page-hero .hero-desc { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 650px; margin: 0 0 2rem; }
+  .hero-meta { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-meta-item { font-size: 0.85rem; color: rgba(255,255,255,0.6); }
+
+  /* Timeline banner */
+  .timeline-banner { background: var(--color-surface); border-bottom: 1px solid var(--color-border); padding: 0; overflow: hidden; }
+  .tl-stages { display: flex; }
+  .tl-stage { flex: 1; padding: 1.25rem 1rem; text-align: center; border-right: 1px solid var(--color-border); position: relative; }
+  .tl-stage:last-child { border-right: none; }
+  .tl-stage::after { content: "›"; position: absolute; right: -0.6rem; top: 50%; transform: translateY(-50%); color: var(--color-muted); font-size: 1.2rem; z-index: 1; }
+  .tl-stage:last-child::after { display: none; }
+  .tl-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); margin-bottom: 0.3rem; }
+  .tl-time { font-size: 1.1rem; font-weight: 800; color: var(--color-accent); }
+  .tl-sublabel { font-size: 0.75rem; color: var(--color-muted); margin-top: 0.2rem; }
+  @media(max-width: 600px){ .tl-stages { flex-direction: column; } .tl-stage::after { display: none; } }
+
+  .content-wrap { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 300px; gap: 3rem; align-items: start; }
+  @media(max-width: 860px){ .content-wrap { grid-template-columns: 1fr; } .sidebar { display: none; } }
+  .main-content { min-width: 0; }
+  .sidebar { position: sticky; top: 5rem; }
+
+  .section { margin-bottom: 3rem; }
+  .section h2 { font-size: 1.5rem; font-weight: 700; margin: 0 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--color-accent); }
+  .section h3 { font-size: 1.1rem; font-weight: 700; margin: 1.5rem 0 0.5rem; }
+  .section p { color: var(--color-text); line-height: 1.8; margin: 0.75rem 0; }
+  .section ul { margin: 0.75rem 0 0.75rem 1.5rem; color: var(--color-text); line-height: 1.9; }
+  .section li { margin-bottom: 0.3rem; }
+
+  .stage-card { border: 1px solid var(--color-border); border-radius: 12px; margin-bottom: 1.5rem; overflow: hidden; }
+  .stage-head { background: #1a1a2e; color: #fff; padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+  .stage-name { font-weight: 800; font-size: 1.05rem; }
+  .stage-badge { background: var(--color-accent); color: #fff; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.8rem; font-weight: 700; }
+  .stage-body { padding: 1.25rem 1.5rem; }
+  .stage-body p { margin: 0 0 0.75rem; font-size: 0.95rem; color: var(--color-text); line-height: 1.75; }
+  .stage-body p:last-child { margin-bottom: 0; }
+
+  .sc-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; margin: 1rem 0; }
+  .sc-table th { background: #1a1a2e; color: #fff; padding: 0.65rem 1rem; text-align: left; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+  .sc-table td { padding: 0.65rem 1rem; border-bottom: 1px solid var(--color-border); }
+  .sc-table tr:hover td { background: var(--color-surface); }
+  .sc-table .center { text-align: center; }
+  .time-cell { font-weight: 700; color: var(--color-accent); }
+
+  .callout { background: #eff6ff; border-left: 4px solid var(--color-accent); border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .callout p { margin: 0; font-size: 0.9rem; color: #1e40af; line-height: 1.6; }
+  .warning-box { background: #fff7ed; border: 1px solid #fed7aa; border-left: 4px solid #f97316; border-radius: 0 10px 10px 0; padding: 1rem 1.25rem; margin: 1.25rem 0; }
+  .warning-box p { margin: 0; font-size: 0.9rem; color: #9a3412; line-height: 1.6; }
+
+  .steps-list { list-style: none; padding: 0; margin: 1rem 0; }
+  .steps-list li { display: flex; gap: 1rem; align-items: flex-start; padding: 0.75rem 0; border-bottom: 1px solid var(--color-border); }
+  .steps-list li:last-child { border-bottom: none; }
+  .step-icon { font-size: 1.25rem; flex-shrink: 0; margin-top: 0.1rem; }
+  .step-text { font-size: 0.95rem; color: var(--color-text); line-height: 1.65; }
+  .step-text strong { color: var(--color-heading); display: block; margin-bottom: 0.2rem; }
+
+  .faq-item { border-bottom: 1px solid var(--color-border); padding: 1.25rem 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem; }
+  .faq-a { color: var(--color-text); line-height: 1.75; font-size: 0.95rem; }
+
+  .related-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1rem; }
+  @media(max-width: 500px){ .related-grid { grid-template-columns: 1fr; } }
+  .related-card { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 10px; padding: 1rem 1.25rem; text-decoration: none; color: inherit; display: block; transition: border-color 0.2s, box-shadow 0.2s; }
+  .related-card:hover { border-color: var(--color-accent); box-shadow: 0 2px 12px rgba(37,99,235,0.08); }
+  .related-cat { font-size: 0.75rem; font-weight: 700; color: var(--color-accent); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.35rem; }
+  .related-title { font-size: 0.9rem; font-weight: 600; color: var(--color-heading); line-height: 1.4; }
+
+  .sidebar-box { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 12px; padding: 1.25rem; margin-bottom: 1.25rem; }
+  .sidebar-box h4 { font-size: 0.8rem; font-weight: 700; margin: 0 0 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--color-muted); }
+  .sidebar-box ul { list-style: none; padding: 0; margin: 0; }
+  .sidebar-box li { padding: 0.3rem 0; border-bottom: 1px solid var(--color-border); font-size: 0.9rem; }
+  .sidebar-box li:last-child { border-bottom: none; }
+  .sidebar-box a { color: var(--color-accent); text-decoration: none; }
+  .sidebar-box a:hover { text-decoration: underline; }
+  .cta-box { background: linear-gradient(135deg, #1a1a2e, #0f3460); color: #fff; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.25rem; text-align: center; }
+  .cta-box h4 { color: #fff; font-size: 1rem; margin: 0 0 0.5rem; }
+  .cta-box p { font-size: 0.85rem; color: rgba(255,255,255,0.75); margin: 0 0 1rem; line-height: 1.5; }
+  .cta-box a.btn { display: block; background: var(--color-accent); color: #fff; text-decoration: none; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 700; }
+  .cta-box a.btn:hover { background: #1d4ed8; }
+  .stat-highlight { background: var(--color-surface); border: 2px solid var(--color-accent); border-radius: 10px; padding: 1rem; text-align: center; margin-bottom: 1rem; }
+  .stat-highlight .num { font-size: 2rem; font-weight: 800; color: var(--color-accent); }
+  .stat-highlight .lbl { font-size: 0.8rem; color: var(--color-muted); margin-top: 0.2rem; }
+</style>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="/">Home</a> › <a href="/k1-visa">K-1 Fiancé Visa</a> › I-129F Processing Time
+    </div>
+    <h1>I-129F Processing Time 2026:<br/>How Long Does USCIS Take?</h1>
+    <p class="hero-desc">The I-129F petition is the first — and longest — step of the K-1 fiancé visa. Here's exactly what to expect, service center by service center, and how to track your case.</p>
+    <div class="hero-meta">
+      <span class="hero-meta-item">📅 Updated May 2026</span>
+      <span class="hero-meta-item">⏱ 7 min read</span>
+      <span class="hero-meta-item">✅ Covers all USCIS service centers</span>
+    </div>
+  </div>
+</section>
+
+<div class="timeline-banner">
+  <div class="tl-stages">
+    <div class="tl-stage">
+      <div class="tl-label">I-129F at USCIS</div>
+      <div class="tl-time">7–14 mo</div>
+      <div class="tl-sublabel">Longest stage</div>
+    </div>
+    <div class="tl-stage">
+      <div class="tl-label">NVC Transfer</div>
+      <div class="tl-time">3–6 wks</div>
+      <div class="tl-sublabel">Forwarding only</div>
+    </div>
+    <div class="tl-stage">
+      <div class="tl-label">Embassy Interview</div>
+      <div class="tl-time">1–3 mo</div>
+      <div class="tl-sublabel">Varies by country</div>
+    </div>
+    <div class="tl-stage">
+      <div class="tl-label">Total K-1</div>
+      <div class="tl-time">12–20 mo</div>
+      <div class="tl-sublabel">Petition to visa</div>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
+  <main class="main-content">
+
+    <!-- What Is I-129F -->
+    <section class="section">
+      <h2>What Is Form I-129F and Why Does It Take So Long?</h2>
+      <p><SmartLink href="/i-129f">Form I-129F</SmartLink> (Petition for Alien Fiancé(e)) is the first filing in the <SmartLink href="/k1-visa">K-1 fiancé visa</SmartLink> process. It is filed by the U.S. citizen petitioner and reviewed by USCIS to confirm both parties are legally eligible to marry and that the relationship is genuine.</p>
+
+      <p>Unlike many USCIS forms, the I-129F cannot be filed online — it is paper-only, mailed to a USCIS lockbox. This is one reason processing is slow. USCIS must manually adjudicate each petition, conduct background checks on both parties, and review all supporting evidence of the relationship.</p>
+
+      <div class="callout">
+        <p><strong>The I-129F stage is the bottleneck of the entire K-1 process.</strong> After USCIS approval, the NVC and embassy stages are comparatively fast. Most couples spend 70–80% of their total wait time at the USCIS stage.</p>
+      </div>
+    </section>
+
+    <!-- Current Times by Service Center -->
+    <section class="section">
+      <h2>Current I-129F Processing Times by Service Center (2026)</h2>
+      <p>USCIS assigns each I-129F petition to a service center based on where the petitioner lives. As of 2026, two service centers handle I-129F petitions:</p>
+
+      <table class="sc-table">
+        <thead>
+          <tr>
+            <th>Service Center</th>
+            <th>Receipt Prefix</th>
+            <th class="center">Processing Time (2026)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>California Service Center (CSC)</strong></td>
+            <td>WAC</td>
+            <td class="center time-cell">9–14 months</td>
+          </tr>
+          <tr>
+            <td><strong>Vermont Service Center (VSC)</strong></td>
+            <td>EAC</td>
+            <td class="center time-cell">7–12 months</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warning-box">
+        <p><strong>These times change frequently.</strong> Always verify current processing times directly at <a href="https://egov.uscis.gov/processing-times/" target="_blank" rel="noopener noreferrer">egov.uscis.gov/processing-times</a> using "I-129F" and "Petition for Alien Fiancé(e)" as your filters. Do not rely on secondhand reports from forums — use the official source.</p>
+      </div>
+    </section>
+
+    <!-- What Happens After Filing -->
+    <section class="section">
+      <h2>What Happens After You File the I-129F?</h2>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <span class="stage-name">Week 1–4: Receipt Notice</span>
+          <span class="stage-badge">Form I-797C</span>
+        </div>
+        <div class="stage-body">
+          <p>USCIS mails a receipt notice (Form I-797C) to confirm they received your petition. This notice contains your receipt number — the key to tracking your case. If you don't receive it within 4 weeks of mailing, contact USCIS.</p>
+          <p>Your receipt prefix tells you which service center has your case: WAC = California, EAC = Vermont, LIN = Nebraska (rare for I-129F), MSC = various.</p>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <span class="stage-name">Months 1–14: Active Review</span>
+          <span class="stage-badge">Under Adjudication</span>
+        </div>
+        <div class="stage-body">
+          <p>USCIS is reviewing your petition. Background checks run on both the petitioner and beneficiary. An officer is assigned and reviews the evidence of your <SmartLink href="/bona-fide-marriage">bona fide relationship</SmartLink>, the petitioner's eligibility as a U.S. citizen, and both parties' criminal and immigration history.</p>
+          <p>If anything is missing or unclear, USCIS may issue a <strong>Request for Evidence (RFE)</strong>. You'll have 87 days to respond. A thorough initial filing significantly reduces the chance of an RFE.</p>
+        </div>
+      </div>
+
+      <div class="stage-card">
+        <div class="stage-head">
+          <span class="stage-name">Approval: Form I-797 Notice</span>
+          <span class="stage-badge">Approved</span>
+        </div>
+        <div class="stage-body">
+          <p>When USCIS approves the I-129F, they send an approval notice (Form I-797) and simultaneously forward the petition to the <SmartLink href="/nvc-processing-time">National Visa Center (NVC)</SmartLink>. NVC will then route the case to the U.S. embassy in your fiancé's country. The <SmartLink href="/k1-visa-processing-time">K-1 processing time</SmartLink> guide covers what happens next in detail.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Track -->
+    <section class="section">
+      <h2>How to Track Your I-129F Case Status</h2>
+
+      <ul class="steps-list">
+        <li>
+          <span class="step-icon">🔍</span>
+          <span class="step-text">
+            <strong>USCIS Case Status Online</strong>
+            Go to <a href="https://my.uscis.gov" target="_blank" rel="noopener noreferrer">my.uscis.gov</a> and enter your receipt number. You'll see the current status and the last action taken on your case.
+          </span>
+        </li>
+        <li>
+          <span class="step-icon">📧</span>
+          <span class="step-text">
+            <strong>Email or Text Notifications</strong>
+            Sign up for automatic case status updates at <a href="https://egov.uscis.gov/casestatus/mycasestatus.do" target="_blank" rel="noopener noreferrer">egov.uscis.gov</a>. USCIS will notify you when your case status changes.
+          </span>
+        </li>
+        <li>
+          <span class="step-icon">📊</span>
+          <span class="step-text">
+            <strong>USCIS Processing Times Page</strong>
+            Compare your receipt date to the current processing time at <a href="https://egov.uscis.gov/processing-times/" target="_blank" rel="noopener noreferrer">egov.uscis.gov/processing-times</a>. If your case is outside the published time, you can submit a service request.
+          </span>
+        </li>
+        <li>
+          <span class="step-icon">📞</span>
+          <span class="step-text">
+            <strong>USCIS Contact Center</strong>
+            Call 1-800-375-5283. Have your receipt number ready. Wait times are long — use the automated system first. For cases significantly outside normal processing times, ask to speak with a tier-2 officer.
+          </span>
+        </li>
+        <li>
+          <span class="step-icon">🏛️</span>
+          <span class="step-text">
+            <strong>Congressional Inquiry</strong>
+            If your case is well outside normal processing time and a service request hasn't helped, contact your U.S. Representative's office. Congressional constituent services can submit formal inquiries to USCIS on your behalf — this often prompts faster action.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- What Causes Delays -->
+    <section class="section">
+      <h2>What Causes I-129F Delays?</h2>
+      <p>Some delays are within your control — others are not. Knowing the difference helps you prepare a stronger petition from the start.</p>
+
+      <h3>Within your control (preventable)</h3>
+      <ul>
+        <li><strong>Incomplete petition:</strong> Missing signatures, undated forms, or absent supporting documents trigger RFEs that add months.</li>
+        <li><strong>Insufficient relationship evidence:</strong> USCIS needs to see a genuine relationship. Thin evidence of communication, shared travel, or meeting history causes delays or denials. See the <SmartLink href="/bona-fide-marriage">bona fide marriage guide</SmartLink> for what to include.</li>
+        <li><strong>Wrong filing address:</strong> I-129F must be mailed to the correct USCIS lockbox. Filing to the wrong address causes rejection or significant delay.</li>
+        <li><strong>Failure to disclose prior marriages:</strong> All prior marriages must be listed and dissolution documents included. Omissions trigger RFEs.</li>
+      </ul>
+
+      <h3>Outside your control (systemic)</h3>
+      <ul>
+        <li><strong>Service center backlog:</strong> If the assigned center is backlogged, your case waits. You cannot transfer between service centers voluntarily.</li>
+        <li><strong>Criminal history review:</strong> Any criminal history — even old, minor offenses — triggers additional review by USCIS officers.</li>
+        <li><strong>Prior immigration violations:</strong> Prior overstays, deportations, or fraud findings cause extensive review.</li>
+        <li><strong>USCIS staffing:</strong> High volumes across all petition types slow every center. This is structural and has affected K-1 times significantly since 2020.</li>
+      </ul>
+    </section>
+
+    <!-- Can I Expedite -->
+    <section class="section">
+      <h2>Can I Expedite My I-129F?</h2>
+      <p>USCIS does not offer premium processing for the I-129F — unlike some employment-based petitions, you cannot pay to speed up the review. However, you can request expedited processing in limited circumstances.</p>
+
+      <p>USCIS considers expedite requests based on:</p>
+      <ul>
+        <li>Severe financial loss to a company or person</li>
+        <li>Urgent humanitarian reason or compassionate situation</li>
+        <li>Nonprofit status of the petitioner that benefits the public interest</li>
+        <li>Clear USCIS error</li>
+        <li>Department of Defense or national interest</li>
+      </ul>
+
+      <div class="callout">
+        <p>"My fiancé and I miss each other" is not grounds for expedite. A terminal illness in the family, serious medical condition, or documented financial emergency with specific supporting evidence gives you the best chance. Submit evidence with your expedite request — a written statement alone is rarely sufficient.</p>
+      </div>
+
+      <p>While you wait, make productive use of the time: gather all documents for the next stages (embassy interview, <SmartLink href="/k1-visa-medical-exam">medical exam</SmartLink>), review the <SmartLink href="/k1-visa-checklist">K-1 checklist</SmartLink>, and prepare your <SmartLink href="/bona-fide-marriage">relationship evidence</SmartLink> package.</p>
+    </section>
+
+    <!-- After Approval -->
+    <section class="section">
+      <h2>What Happens After I-129F Approval?</h2>
+      <p>Approval is just the beginning. Here's the path from I-129F approval to K-1 visa in hand:</p>
+
+      <ol style="margin: 1rem 0 1rem 1.5rem; line-height: 2; color: var(--color-text);">
+        <li><strong>USCIS approval notice</strong> — You receive Form I-797. USCIS simultaneously forwards the petition to the NVC.</li>
+        <li><strong>NVC forwarding</strong> — The <SmartLink href="/nvc-processing-time">National Visa Center</SmartLink> receives the petition and routes it to the U.S. embassy or consulate in your fiancé's country (3–6 weeks).</li>
+        <li><strong>Embassy packet</strong> — The embassy contacts your fiancé with instructions to complete the DS-160 and schedule a <SmartLink href="/k1-visa-interview">consular interview</SmartLink>.</li>
+        <li><strong>Medical exam</strong> — Your fiancé completes the required <SmartLink href="/k1-visa-medical-exam">K-1 medical exam</SmartLink> with an embassy-approved physician before the interview.</li>
+        <li><strong>Consular interview</strong> — A consular officer reviews documents and either approves or denies the K-1 visa.</li>
+        <li><strong>Enter the U.S.</strong> — Your fiancé enters the U.S. on the K-1 visa. The 90-day marriage window begins on the date of entry.</li>
+      </ol>
+
+      <p>For the complete timeline covering all stages from petition to green card, see the <SmartLink href="/k1-visa-processing-time">K-1 visa processing time guide</SmartLink>.</p>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q">My case has been pending longer than the published processing time. What do I do?</div>
+        <div class="faq-a">First, submit a case inquiry through <a href="https://my.uscis.gov" target="_blank" rel="noopener noreferrer">my.uscis.gov</a>. If that doesn't result in action within 30–60 days, contact your Congressional representative's office for a constituent services inquiry. This is one of the most effective ways to get USCIS to review a stuck case.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Can I check my processing time if I don't have a receipt number yet?</div>
+        <div class="faq-a">No — you need a receipt number to check case status. The receipt notice (Form I-797C) is mailed by USCIS within 2–4 weeks of receiving your petition. If you haven't received it after 4–6 weeks, USCIS may have rejected the filing or it may be in transit. Check that your check/money order cleared and your mailing address was correct.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">Does the I-129F approval expire?</div>
+        <div class="faq-a">Yes. The approved I-129F petition is valid for 4 months from the date of approval. This is typically enough time for NVC forwarding and embassy scheduling. If your fiancé's visa is not issued within 4 months of the petition approval, the petition may be extended by the consulate for good cause.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What is an RFE and how do I respond?</div>
+        <div class="faq-a">A Request for Evidence (RFE) is a USCIS notice asking for additional documentation or clarification. You have 87 days to respond. Respond completely — address every point in the RFE with specific documents and a cover letter. An incomplete RFE response risks denial. If you receive an RFE, consider consulting an immigration attorney before responding.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q">What happens if USCIS denies my I-129F?</div>
+        <div class="faq-a">A denial doesn't necessarily end your K-1 path. You can file a Motion to Reopen (Form I-290B) if you believe USCIS made a legal or factual error, or file a new I-129F if the issue is fixable. Common denial reasons include <SmartLink href="/k1-visa-denial-reasons">insufficient relationship evidence, income issues, or criminal bars</SmartLink>. Understanding the denial reason is critical before deciding next steps.</div>
+      </div>
+    </section>
+
+    <!-- Related -->
+    <section class="section">
+      <h2>Related Guides</h2>
+      <div class="related-grid">
+        <a href="/k1-visa" class="related-card">
+          <div class="related-cat">Complete Guide</div>
+          <div class="related-title">K-1 Fiancé Visa — Everything You Need to Know</div>
+        </a>
+        <a href="/i-129f" class="related-card">
+          <div class="related-cat">Filing</div>
+          <div class="related-title">Form I-129F Instructions &amp; Checklist</div>
+        </a>
+        <a href="/k1-visa-processing-time" class="related-card">
+          <div class="related-cat">Timeline</div>
+          <div class="related-title">Full K-1 Processing Timeline 2026</div>
+        </a>
+        <a href="/k1-visa-checklist" class="related-card">
+          <div class="related-cat">Documents</div>
+          <div class="related-title">K-1 Complete Document Checklist</div>
+        </a>
+        <a href="/k1-visa-denial-reasons" class="related-card">
+          <div class="related-cat">Avoid Mistakes</div>
+          <div class="related-title">K-1 Denial Reasons &amp; How to Avoid Them</div>
+        </a>
+        <a href="/nvc-processing-time" class="related-card">
+          <div class="related-cat">Next Stage</div>
+          <div class="related-title">NVC Processing Time After I-129F Approval</div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <aside class="sidebar">
+    <div class="stat-highlight">
+      <div class="num">7–14</div>
+      <div class="lbl">months at USCIS in 2026</div>
+    </div>
+
+    <div class="cta-box">
+      <h4>Planning your K-1 timeline?</h4>
+      <p>The full K-1 processing guide covers every stage from petition to entry.</p>
+      <a href="/k1-visa-processing-time" class="btn">Full Timeline Guide →</a>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>Track Your Case</h4>
+      <ul>
+        <li><a href="https://my.uscis.gov" target="_blank" rel="noopener noreferrer">my.uscis.gov status check</a></li>
+        <li><a href="https://egov.uscis.gov/processing-times/" target="_blank" rel="noopener noreferrer">USCIS processing times</a></li>
+        <li><a href="https://egov.uscis.gov/casestatus/mycasestatus.do" target="_blank" rel="noopener noreferrer">Sign up for notifications</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>K-1 Process</h4>
+      <ul>
+        <li><a href="/i-129f">Form I-129F Guide</a></li>
+        <li><a href="/k1-visa-processing-time">Full K-1 Timeline</a></li>
+        <li><a href="/nvc-processing-time">NVC Processing Time</a></li>
+        <li><a href="/k1-visa-interview">Consular Interview Prep</a></li>
+        <li><a href="/k1-visa-medical-exam">Medical Exam Guide</a></li>
+        <li><a href="/k1-visa-checklist">K-1 Document Checklist</a></li>
+      </ul>
+    </div>
+
+    <div class="sidebar-box">
+      <h4>After Approval</h4>
+      <ul>
+        <li><a href="/adjustment-of-status">Adjustment of Status</a></li>
+        <li><a href="/i-485">Form I-485</a></li>
+        <li><a href="/employment-authorization">EAD Work Permit</a></li>
+        <li><a href="/green-card-through-marriage">Green Card Guide</a></li>
+      </ul>
+    </div>
+  </aside>
+</div>
+
+</Base>

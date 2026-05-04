@@ -106,7 +106,7 @@ const schema = JSON.stringify([
     <div class="container">
       <div class="hero-badge">💰 Financial Requirements</div>
       <h1>Affidavit of Support<br/><span>Income Requirements 2026</span></h1>
-      <p class="hero-sub">Exact thresholds, household size rules, joint sponsor options, and asset calculations — everything you need to know before you file I-864 or I-134.</p>
+      <p class="hero-sub">Exact thresholds, household size rules, joint sponsor options, and asset calculations — everything you need to know before you file I-864 or I-134. Not sure if you qualify? <a href="#calculator" class="hero-calc-link">Use the income calculator →</a></p>
 
       <div class="quick-numbers">
         <div class="qn-item">
@@ -253,6 +253,141 @@ const schema = JSON.stringify([
             </div>
           </div>
         </section>
+
+        <!-- Calculator -->
+        <section id="calculator" class="content-section">
+          <h2>Income Eligibility Calculator</h2>
+          <p>Enter your household size and annual income below. The calculator checks whether you meet the 2026 threshold — and if not, shows exactly how much you're short and what assets you'd need to bridge the gap.</p>
+
+          <div class="calc-widget">
+            <div class="calc-inputs">
+              <div class="calc-field">
+                <label for="calc-hh">Household size</label>
+                <input type="number" id="calc-hh" min="2" max="20" value="2" />
+                <span class="calc-hint">You + immigrant + dependents + anyone you've sponsored before. Not sure? <a href="#household-size">See how to count →</a></span>
+              </div>
+              <div class="calc-field">
+                <label for="calc-income">Your annual income ($)</label>
+                <input type="text" id="calc-income" placeholder="e.g. 45,000" inputmode="numeric" />
+                <span class="calc-hint">Gross annual income — wages, self-employment, Social Security, etc.</span>
+              </div>
+              <div class="calc-field">
+                <label class="calc-check-label">
+                  <input type="checkbox" id="calc-citizen-spouse" />
+                  <span>I'm a U.S. citizen sponsoring my spouse or child <span class="calc-tag">uses 3× asset multiplier</span></span>
+                </label>
+              </div>
+              <div class="calc-field">
+                <label class="calc-check-label">
+                  <input type="checkbox" id="calc-military" />
+                  <span>Active duty military sponsoring spouse or child <span class="calc-tag">100% threshold</span></span>
+                </label>
+              </div>
+            </div>
+            <button id="calc-btn" type="button">Check my eligibility →</button>
+            <div id="calc-result" class="calc-result" hidden></div>
+          </div>
+        </section>
+
+        <script>
+          (function() {
+            // 2026 federal poverty guidelines — 48 states + D.C.
+            // 125%: base $25,550 for 2 people, +$6,725 per additional person
+            // 100% (military): base $20,440 for 2 people, +$5,380 per additional
+            function getThreshold(hh, military) {
+              hh = Math.max(2, parseInt(hh) || 2);
+              if (military) {
+                return 20440 + (hh - 2) * 5380;
+              }
+              return 25550 + (hh - 2) * 6725;
+            }
+
+            function fmt(n) {
+              return '$' + Math.round(n).toLocaleString('en-US');
+            }
+
+            function parseIncome(val) {
+              return parseFloat(val.replace(/[$,\s]/g, '')) || 0;
+            }
+
+            const btn    = document.getElementById('calc-btn');
+            const result = document.getElementById('calc-result');
+
+            btn.addEventListener('click', function() {
+              const hh       = parseInt(document.getElementById('calc-hh').value) || 2;
+              const income   = parseIncome(document.getElementById('calc-income').value);
+              const citizen  = document.getElementById('calc-citizen-spouse').checked;
+              const military = document.getElementById('calc-military').checked;
+
+              if (income <= 0) {
+                result.hidden = false;
+                result.innerHTML = '<div class="calc-error">Please enter your annual income to calculate.</div>';
+                return;
+              }
+
+              const required  = getThreshold(hh, military);
+              const pct       = military ? '100%' : '125%';
+              const shortfall = required - income;
+              const multiplier = citizen ? 3 : 5;
+              const assetsNeeded = shortfall > 0 ? Math.ceil(shortfall * multiplier) : 0;
+
+              result.hidden = false;
+
+              if (shortfall <= 0) {
+                const surplus = -shortfall;
+                result.innerHTML = `
+                  <div class="calc-pass">
+                    <div class="calc-verdict-icon">✅</div>
+                    <div>
+                      <div class="calc-verdict-title">You qualify</div>
+                      <div class="calc-verdict-sub">Your income exceeds the ${pct} threshold for a household of ${hh}.</div>
+                    </div>
+                  </div>
+                  <div class="calc-breakdown">
+                    <div class="calc-row"><span>Your annual income</span><span class="calc-num green">${fmt(income)}</span></div>
+                    <div class="calc-row"><span>Required (${pct} for ${hh} people)</span><span class="calc-num">${fmt(required)}</span></div>
+                    <div class="calc-row calc-row-total"><span>Surplus above threshold</span><span class="calc-num green">+${fmt(surplus)}</span></div>
+                  </div>
+                  <p class="calc-note">✔ Your income alone satisfies the requirement. Include recent pay stubs and your latest tax return when filing.</p>
+                `;
+              } else {
+                result.innerHTML = `
+                  <div class="calc-fail">
+                    <div class="calc-verdict-icon">⚠️</div>
+                    <div>
+                      <div class="calc-verdict-title">Income falls short</div>
+                      <div class="calc-verdict-sub">You need ${fmt(shortfall)} more per year — or assets of ${fmt(assetsNeeded)} to compensate.</div>
+                    </div>
+                  </div>
+                  <div class="calc-breakdown">
+                    <div class="calc-row"><span>Your annual income</span><span class="calc-num red">${fmt(income)}</span></div>
+                    <div class="calc-row"><span>Required (${pct} for ${hh} people)</span><span class="calc-num">${fmt(required)}</span></div>
+                    <div class="calc-row calc-row-total"><span>Income shortfall</span><span class="calc-num red">−${fmt(shortfall)}</span></div>
+                  </div>
+                  <div class="calc-options">
+                    <div class="calc-option">
+                      <div class="calc-option-label">Option 1 — Use assets</div>
+                      <div class="calc-option-val">${fmt(assetsNeeded)} in countable assets required</div>
+                      <div class="calc-option-note">${multiplier}× the shortfall · <a href="#assets">See what qualifies →</a></div>
+                    </div>
+                    <div class="calc-option">
+                      <div class="calc-option-label">Option 2 — Joint sponsor</div>
+                      <div class="calc-option-val">Someone who independently earns ${fmt(required)}+</div>
+                      <div class="calc-option-note">For their own household size · <a href="#joint-sponsor">Joint sponsor guide →</a></div>
+                    </div>
+                  </div>
+                `;
+              }
+            });
+
+            // Allow Enter key to trigger calculation
+            ['calc-hh','calc-income'].forEach(function(id) {
+              document.getElementById(id).addEventListener('keydown', function(e) {
+                if (e.key === 'Enter') btn.click();
+              });
+            });
+          })();
+        </script>
 
         <!-- Household size -->
         <section id="household-size" class="content-section">
@@ -735,6 +870,7 @@ const schema = JSON.stringify([
           <nav>
             <a href="#overview" class="sidebar-link">I-134 vs I-864 <span>↓</span></a>
             <a href="#income-table" class="sidebar-link">2026 Income Table <span>↓</span></a>
+            <a href="#calculator" class="sidebar-link">⚡ Income Calculator <span>↓</span></a>
             <a href="#household-size" class="sidebar-link">Household Size Rules <span>↓</span></a>
             <a href="#income-sources" class="sidebar-link">What Counts as Income <span>↓</span></a>
             <a href="#joint-sponsor" class="sidebar-link">Joint Sponsor Guide <span>↓</span></a>
@@ -981,6 +1117,65 @@ const schema = JSON.stringify([
   .qr-label { color: var(--color-muted); }
   .qr-val { font-weight: 700; color: #15803d; }
   .qr-note { font-size: 0.75rem; color: var(--color-muted); padding: 8px 18px 12px; font-style: italic; }
+
+  /* Hero calculator link */
+  .hero-calc-link { color: #16a34a; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+  .hero-calc-link:hover { color: #15803d; }
+
+  /* Calculator widget */
+  .calc-widget { background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%); border: 2px solid #86efac; border-radius: 16px; padding: 1.75rem; margin-top: 1.25rem; }
+  .calc-inputs { display: flex; flex-direction: column; gap: 1.1rem; margin-bottom: 1.25rem; }
+  .calc-field { display: flex; flex-direction: column; gap: 0.35rem; }
+  .calc-field label { font-size: 0.875rem; font-weight: 700; color: var(--color-text); }
+  .calc-field input[type="number"],
+  .calc-field input[type="text"] {
+    padding: 0.65rem 0.9rem; border: 1.5px solid #86efac; border-radius: 8px;
+    font-size: 1rem; font-family: inherit; background: #fff;
+    color: var(--color-text); width: 100%; max-width: 280px;
+    transition: border-color 0.15s;
+  }
+  .calc-field input:focus { outline: none; border-color: #16a34a; box-shadow: 0 0 0 3px rgba(22,163,74,0.15); }
+  .calc-hint { font-size: 0.78rem; color: #4b7a55; line-height: 1.4; }
+  .calc-hint a { color: #15803d; text-decoration: underline; }
+  .calc-check-label { display: flex; align-items: flex-start; gap: 0.5rem; cursor: pointer; font-size: 0.875rem; font-weight: 600; color: var(--color-text); }
+  .calc-check-label input[type="checkbox"] { margin-top: 2px; width: 16px; height: 16px; accent-color: #16a34a; flex-shrink: 0; }
+  .calc-tag { display: inline-block; background: #dcfce7; color: #166534; font-size: 0.7rem; font-weight: 700; padding: 0.1rem 0.45rem; border-radius: 999px; margin-left: 0.35rem; vertical-align: middle; }
+  #calc-btn {
+    background: #16a34a; color: #fff; border: none; border-radius: 10px;
+    padding: 0.8rem 1.75rem; font-size: 1rem; font-weight: 700; cursor: pointer;
+    font-family: inherit; transition: background 0.15s, transform 0.1s;
+    width: 100%; max-width: 280px;
+  }
+  #calc-btn:hover { background: #15803d; }
+  #calc-btn:active { transform: scale(0.98); }
+
+  /* Calculator results */
+  .calc-result { margin-top: 1.25rem; }
+  .calc-error { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 0.875rem 1.1rem; color: #9a3412; font-size: 0.9rem; }
+  .calc-pass, .calc-fail {
+    display: flex; align-items: flex-start; gap: 0.9rem;
+    border-radius: 12px; padding: 1rem 1.25rem; margin-bottom: 1rem;
+  }
+  .calc-pass { background: #dcfce7; border: 1.5px solid #4ade80; }
+  .calc-fail { background: #fff7ed; border: 1.5px solid #fb923c; }
+  .calc-verdict-icon { font-size: 1.5rem; flex-shrink: 0; }
+  .calc-verdict-title { font-size: 1.05rem; font-weight: 800; color: var(--color-text); }
+  .calc-verdict-sub { font-size: 0.875rem; color: var(--color-muted); margin-top: 0.2rem; line-height: 1.5; }
+  .calc-breakdown { background: #fff; border: 1px solid var(--color-border); border-radius: 10px; overflow: hidden; margin-bottom: 1rem; }
+  .calc-row { display: flex; justify-content: space-between; align-items: center; padding: 0.65rem 1rem; border-bottom: 1px solid var(--color-border); font-size: 0.875rem; color: var(--color-muted); }
+  .calc-row:last-child { border-bottom: none; }
+  .calc-row-total { font-weight: 700; background: var(--color-surface); }
+  .calc-num { font-weight: 700; font-size: 0.95rem; color: var(--color-text); }
+  .calc-num.green { color: #16a34a; }
+  .calc-num.red { color: #dc2626; }
+  .calc-note { font-size: 0.83rem; color: #166534; background: #f0fdf4; border-radius: 8px; padding: 0.6rem 0.9rem; margin: 0; line-height: 1.55; }
+  .calc-options { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+  .calc-option { background: #fff; border: 1px solid var(--color-border); border-radius: 10px; padding: 0.9rem 1.1rem; border-top: 3px solid #f97316; }
+  .calc-option-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #c2410c; margin-bottom: 0.35rem; }
+  .calc-option-val { font-size: 0.95rem; font-weight: 700; color: var(--color-text); margin-bottom: 0.25rem; }
+  .calc-option-note { font-size: 0.78rem; color: var(--color-muted); }
+  .calc-option-note a { color: var(--color-accent); text-decoration: underline; }
+  @media (max-width: 640px) { .calc-options { grid-template-columns: 1fr; } }
 
   /* Responsive */
   @media (max-width: 960px) {
